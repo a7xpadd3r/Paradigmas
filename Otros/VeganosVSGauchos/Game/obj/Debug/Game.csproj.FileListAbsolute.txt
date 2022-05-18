@@ -1,0 +1,604 @@
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\bin\Debug\Engine.dll
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\bin\Debug\ship.png
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\bin\Debug\Game.exe
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\bin\Debug\Game.pdb
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\obj\Debug\Game.exe
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\alu703.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Users\alu703.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\ship.png
+C:\Users\alu703.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Users\alu703.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Users\alu703.LABORATORIOS\Downloads\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\alu703.LABORATORIOS\Downloads\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\alu703.LABORATORIOS\Downloads\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\alu703.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\space.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\space.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.pdb
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Engine.dll
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Game.exe
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Game.pdb
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.exe
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\playerIdleAnim_0.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\playerIdleAnim_3.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\playerIdleAnim_2.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\playerIdleAnim_1.png
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Engine.dll
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Game.exe
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Game.pdb
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.exe
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\playerIdleAnim_3.png
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\playerIdleAnim_2.png
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\playerIdleAnim_1.png
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\playerIdleAnim_0.png
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\space.png
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\Background.png
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\Baner.png
+C:\Users\alu701.LABORATORIOS\Downloads\Vegano-Contra-Gaucho-main\ProyectoBase\Game\bin\Debug\fence.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\obj\Debug\Game.pdb
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Background_Level\Background.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Background_Level\BackgroundPause.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartUnSelected.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartSelected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Background_Level\Background.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Background_Level\BackgroundPause.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartSelected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartUnSelected.png
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Background_Level\Background.png
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Background_Level\BackgroundPause.png
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartSelected.png
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartUnSelected.png
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\playerIdleAnim_3.png
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\playerIdleAnim_2.png
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\playerIdleAnim_1.png
+D:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\playerIdleAnim_0.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Line.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\LineBackground.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Line.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\LineBackground.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundMenu.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMSelected.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMUnselected.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsSelected.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsUnselected.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitSelected.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitUnSelected.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetrySelected.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetryUnselected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundMenu.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMSelected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMUnselected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsSelected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsUnselected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitSelected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitUnSelected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetrySelected.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetryUnselected.png
+D:\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
+D:\ProyectoBase\Game\obj\Debug\Game.exe
+D:\ProyectoBase\Game\obj\Debug\Game.pdb
+D:\ProyectoBase\Game\bin\Debug\Texture\Background_Level\Background.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Background_Level\BackgroundPause.png
+D:\ProyectoBase\Game\bin\Debug\Engine.dll
+D:\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundMenu.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\DefeatScreen.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\VictoryScreen.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Boss.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMSelected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMUnselected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartUnSelected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsSelected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsUnselected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitSelected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitUnSelected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetrySelected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetryUnselected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartSelected.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Heart.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Line.png
+D:\ProyectoBase\Game\bin\Debug\Texture\LineBackground.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Player\Player.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\playerIdleAnim_3.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\playerIdleAnim_2.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\playerIdleAnim_1.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\playerIdleAnim_0.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Vegan1.png
+D:\ProyectoBase\Game\bin\Debug\Texture\Vegan2.png
+D:\ProyectoBase\Game\bin\Debug\Game.exe
+D:\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_0.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_1.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_10.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_11.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_12.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_13.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_14.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_15.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_16.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_17.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_18.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_19.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_2.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_20.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_21.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_3.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_4.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_5.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_6.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_7.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_8.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_9.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_0.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_1.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_10.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_11.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_12.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_13.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_14.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_15.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_16.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_17.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_18.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_19.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_2.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_20.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_21.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_3.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_4.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_5.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_6.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_7.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_8.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_9.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\DefeatScreen.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\VictoryScreen.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Boss.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Heart.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_0.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_1.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_10.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_11.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_12.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_13.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_14.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_15.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_16.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_17.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_18.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_19.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_2.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_20.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_21.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_3.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_4.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_5.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_6.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_7.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_8.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_9.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_0.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_1.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_10.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_11.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_12.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_13.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_14.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_15.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_16.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_17.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_18.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_19.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_2.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_20.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_21.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_3.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_4.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_5.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_6.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_7.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_8.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_9.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Vegan1.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\Texture\Vegan2.png
+E:\Paradigma de la programacion 2022 1C\ProyectoBase\Game\bin\Debug\test.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\test.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Background_Level\Background.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Background_Level\BackgroundPause.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundMenu.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\DefeatScreen.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\VictoryScreen.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Boss.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMSelected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMUnselected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartUnSelected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsSelected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsUnselected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitSelected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitUnSelected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetrySelected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetryUnselected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartSelected.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Heart.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Line.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\LineBackground.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_0.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_1.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_10.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_11.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_12.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_13.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_14.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_15.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_16.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_17.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_18.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_19.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_2.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_20.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_21.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_3.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_4.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_5.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_6.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_7.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_8.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_9.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_0.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_1.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_10.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_11.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_12.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_13.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_14.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_15.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_16.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_17.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_18.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_19.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_2.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_20.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_21.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_3.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_4.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_5.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_6.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_7.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_8.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_9.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Vegan1.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Texture\Vegan2.png
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Games UADE\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Games UADE\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Games UADE\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Games UADE\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Games UADE\ProyectoBase\Game\obj\Debug\Game.pdb
+E:\ProyectoBase\Game\bin\Debug\test.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Background_Level\Background.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Background_Level\BackgroundPause.png
+E:\ProyectoBase\Game\bin\Debug\Engine.dll
+E:\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundMenu.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\DefeatScreen.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\VictoryScreen.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Boss.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMSelected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMUnselected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartUnSelected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsSelected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsUnselected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitSelected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitUnSelected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetrySelected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetryUnselected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartSelected.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Heart.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Line.png
+E:\ProyectoBase\Game\bin\Debug\Texture\LineBackground.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_0.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_1.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_10.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_11.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_12.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_13.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_14.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_15.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_16.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_17.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_18.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_19.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_2.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_20.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_21.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_3.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_4.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_5.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_6.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_7.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_8.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_9.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_0.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_1.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_10.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_11.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_12.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_13.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_14.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_15.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_16.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_17.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_18.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_19.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_2.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_20.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_21.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_3.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_4.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_5.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_6.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_7.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_8.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_9.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Vegan1.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Vegan2.png
+E:\ProyectoBase\Game\bin\Debug\Game.exe
+E:\ProyectoBase\Game\bin\Debug\Game.pdb
+E:\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
+E:\ProyectoBase\Game\obj\Debug\Game.exe
+E:\ProyectoBase\Game\obj\Debug\Game.pdb
+E:\ProyectoBase\Game\bin\Debug\Texture\LettuceXl.png
+E:\ProyectoBase\Game\bin\Debug\Texture\Lettuce.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Enemies\Boss.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Enemies\Vegan1.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Enemies\Vegan2.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Lettuce.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\LettuceXl.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Background_Level\Background.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Background_Level\BackgroundPause.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundMenu.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\DefeatScreen.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\VictoryScreen.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMSelected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMUnselected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartUnSelected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsSelected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsUnselected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitSelected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitUnSelected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetrySelected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetryUnselected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartSelected.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Enemies\Boss.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Enemies\Vegan1.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Enemies\Vegan2.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Lettuce.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\LettuceXl.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Line.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\LineBackground.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_0.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_1.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_10.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_11.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_12.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_13.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_14.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_15.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_16.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_17.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_18.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_19.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_2.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_20.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_21.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_3.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_4.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_5.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_6.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_7.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_8.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_9.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_0.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_1.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_10.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_11.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_12.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_13.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_14.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_15.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_16.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_17.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_18.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_19.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_2.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_20.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_21.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_3.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_4.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_5.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_6.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_7.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_8.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_9.png
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\alu603.LABORATORIOS\Downloads\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundCredits.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundDefeat.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundVictory.png
+C:\Games UADE\Paradigma de la programacion 2022 1C\Vegano-Contra-Gaucho\ProyectoBase\Game\bin\Debug\Texture\molly.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Background_Level\Background.png
+D:\Main\ProyectoBase\Game\bin\Debug\Engine.dll
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Background_Level\BackgroundPause.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundCredits.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundMenu.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundDefeat.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundVictory.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMSelected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMUnselected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartUnSelected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsSelected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsUnselected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitSelected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitUnSelected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetrySelected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetryUnselected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartSelected.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Enemies\Boss.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Enemies\Vegan1.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Enemies\Vegan2.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Lettuce.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\LettuceXl.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Line.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\LineBackground.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\molly.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_0.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_1.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_10.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_11.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_12.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_13.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_14.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_15.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_16.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_17.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_18.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_19.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_2.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_20.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_21.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_3.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_4.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_5.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_6.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_7.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_8.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_9.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_0.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_1.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_10.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_11.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_12.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_13.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_14.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_15.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_16.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_17.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_18.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_19.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_2.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_20.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_21.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_3.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_4.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_5.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_6.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_7.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_8.png
+D:\Main\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_9.png
+D:\Main\ProyectoBase\Game\bin\Debug\Game.exe
+D:\Main\ProyectoBase\Game\bin\Debug\Game.pdb
+D:\Main\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+D:\Main\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\Main\ProyectoBase\Game\obj\Debug\Game.exe
+D:\Main\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Background_Level\Background.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Background_Level\BackgroundPause.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundCredits.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundMenu.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundDefeat.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Background_Menus\BackgroundVictory.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMSelected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonBTMUnselected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartUnSelected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsSelected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonCreditsUnselected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitSelected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonExitUnSelected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetrySelected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonRetryUnselected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Button\ButtonStartSelected.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Enemies\Boss.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Enemies\Vegan1.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Enemies\Vegan2.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Lettuce.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\LettuceXl.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Line.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\LineBackground.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\molly.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_0.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_1.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_10.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_11.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_12.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_13.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_14.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_15.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_16.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_17.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_18.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_19.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_2.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_20.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_21.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_3.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_4.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_5.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_6.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_7.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_8.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Bullet\BulletPlayer_9.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_0.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_1.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_10.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_11.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_12.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_13.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_14.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_15.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_16.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_17.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_18.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_19.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_2.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_20.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_21.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_3.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_4.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_5.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_6.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_7.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_8.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Texture\Player\Idle\PlayerAnimIdle_9.png
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Users\arrie\Desktop\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Users\arrie\Desktop\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\arrie\Desktop\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\arrie\Desktop\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\arrie\Desktop\ProyectoBase\Game\obj\Debug\Game.pdb

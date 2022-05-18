@@ -1,0 +1,383 @@
+D:\Paradigmas de la Programacion\ProyectoBase\Game\bin\Debug\Engine.dll
+D:\Paradigmas de la Programacion\ProyectoBase\Game\bin\Debug\Game.exe
+D:\Paradigmas de la Programacion\ProyectoBase\Game\bin\Debug\Game.pdb
+D:\Paradigmas de la Programacion\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
+D:\Paradigmas de la Programacion\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\Paradigmas de la Programacion\ProyectoBase\Game\obj\Debug\Game.exe
+D:\Paradigmas de la Programacion\ProyectoBase\Game\obj\Debug\Game.pdb
+D:\Paradigmas de la Programacion\ProyectoBase\Game\bin\Debug\Textures\ship.png
+D:\Paradigmas de la Programacion\ProyectoBase\Game\bin\Debug\Textures\Player.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.pdb
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Engine.dll
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.exe
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.pdb
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.exe
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\3.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\0.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\1.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\10.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\2.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\3.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\4.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\5.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\6.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\7.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\8.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\9.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\0.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\1.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\2.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\0.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\10.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\4.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\5.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\6.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\7.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\8.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\9.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\0.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\0.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\Credits.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\GameOverScene.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\MenuPrincipal.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\WinScene.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\Credits.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\GameOverScene.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\MenuPrincipal.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\WinScene.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Audio\Starfire (PC-98) - Station.wav
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Audio\Starfire (PC-98) - Station.wav
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\0.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\0.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsButtonNormalTexture.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsSelected.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonNormalTexture.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonSelected.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitButtonNormalTexture.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitSelected.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsButtonNormalTexture.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsSelected.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonNormalTexture.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonSelected.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitButtonNormalTexture.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitSelected.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Audio\Starfire (PC-98) - Station.wav
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\0.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\1.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\10.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\2.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\3.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\4.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\5.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\6.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\7.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\8.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\9.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\0.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\1.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\0.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\1.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\10.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\2.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\3.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\4.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\5.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\6.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\7.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\8.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\9.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\0.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\1.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\2.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\3.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\Background.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\0.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\1.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\2.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\3.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\background2.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsButtonNormalTexture.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsSelected.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonNormalTexture.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonSelected.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitButtonNormalTexture.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitSelected.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\Credits.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\GameOverScene.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\MenuPrincipal.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\WinScene.png
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\German Gleria\Desktop\Repositorio Paradigmas de Programacion - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Audio\Starfire (PC-98) - Station.wav
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\0.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\1.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\10.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\2.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\3.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\4.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\5.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\6.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\7.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\8.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\9.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\0.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\1.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\0.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\1.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\10.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\2.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\3.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\4.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\5.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\6.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\7.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\8.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\9.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\0.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\1.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\2.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\3.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\Background.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\0.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\1.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\2.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\3.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\background2.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsButtonNormalTexture.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsSelected.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonNormalTexture.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonSelected.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitButtonNormalTexture.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitSelected.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\Credits.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\GameOverScene.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\MenuPrincipal.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\WinScene.png
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\German Gleria\Desktop\Develop Original\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\3.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Audio\Starfire (PC-98) - Station.wav
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\0.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\1.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\3.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\0.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\1.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\10.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\2.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\3.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\4.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\5.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\6.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\7.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\8.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Explosion\9.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\0.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\1.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\10.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\2.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\3.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\4.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\5.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\6.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\7.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\8.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Explosion\9.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\0.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\1.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\2.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Player\Idle\3.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\Background.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\0.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\1.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\2.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\3.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\background2.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsButtonNormalTexture.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Credits\CreditsSelected.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonNormalTexture.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Play\PlayButtonSelected.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitButtonNormalTexture.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Buttons\Quit\QuitSelected.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\Credits.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\GameOverScene.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\MenuPrincipal.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Screens\WinScene.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\0.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\1.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\2.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\3.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\4.png
+C:\Users\German Gleria\Desktop\Develop Original - copia\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\5.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\3.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\0.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\1.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\3.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\4.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\0.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\4.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\5.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\3.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Engine.dll
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Audio\Starfire (PC-98) - Station.wav
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Bullet\0.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Bullet\1.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Bullet\3.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\0.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\1.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\2.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\3.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\4.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\5.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\1.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\2.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\3.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\4.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\5.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\0.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\1.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\10.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\2.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\3.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\4.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\5.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\6.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\7.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\8.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Explosion\9.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\0.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\1.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\10.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\2.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\3.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\4.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\5.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\6.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\7.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\8.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Explosion\9.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Idle\0.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Idle\1.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Idle\2.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Player\Idle\3.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Background\Background.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Idle\0.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Idle\1.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Idle\2.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Animations\Enemy\Idle\3.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Background\background2.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Buttons\Credits\CreditsButtonNormalTexture.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Buttons\Credits\CreditsSelected.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Buttons\Play\PlayButtonNormalTexture.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Buttons\Play\PlayButtonSelected.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Buttons\Quit\QuitButtonNormalTexture.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Buttons\Quit\QuitSelected.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Screens\Credits.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Screens\GameOverScene.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Screens\MenuPrincipal.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Textures\Screens\WinScene.png
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Game.exe
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\bin\Debug\Game.pdb
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\obj\Debug\Game.exe
+C:\Users\Camila Liendro\Desktop\Copia Develop\Game\obj\Debug\Game.pdb
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\1.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\2.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyMini\Idle\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Items\Health\icon-health.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Items\Health\icon-health.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\0.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\1.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\2.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Enemy\Idle\3.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\2.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyFast\Idle\5.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyLow\Idle\0.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyLow\Idle\1.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyLow\Idle\2.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyLow\Idle\3.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Items\Speed\icon-speed.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Items\Speed\icon-speed.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyLow\Idle\0.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyLow\Idle\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyLow\Idle\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyLow\Idle\3.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyBoss\Idle\0.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyBoss\Idle\1.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyBoss\Idle\2.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyBoss\Idle\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyBoss\Idle\0.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyBoss\Idle\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyBoss\Idle\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyBoss\Idle\3.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\4.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\5.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\6.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\7.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyTank\Idle\0.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyTank\Idle\1.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyTank\Idle\2.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyTank\Idle\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\4.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\5.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\6.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\Bullet\7.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyTank\Idle\0.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyTank\Idle\1.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyTank\Idle\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Animations\EnemyTank\Idle\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\3.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\2.png
+C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\1.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\3.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\2.png
+D:\Repositorio Paradigmas de Programacion\paradigmas-de-programacion-2021\ProyectoBase\Game\bin\Debug\Textures\Background\1.png
