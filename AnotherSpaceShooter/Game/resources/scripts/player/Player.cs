@@ -4,13 +4,13 @@ using System.Numerics;
 
 namespace Game
 {
-    public class Player
+    public class Player : ShipObject
     {
         public static bool debug = false;
         // Special stuff
         private static ShipConfig ship = null;
         private static Collider collider = null;
-        private static Animation shipAnimation = null;
+        //private static Animation shipAnimation = null;
         private static Animation shipPropellers = null;
         private static Animation smokeDamage = new Animation("Smoke", 0.12f, Effects.GetEffectTextures(1), false);
         private static Animation shieldGreen = new Animation("Smoke", 0.03f, Effects.GetEffectTextures(2));
@@ -38,12 +38,14 @@ namespace Game
         // Events
         public static Action OnShipDestroyed;
 
-        public static void InitializePlayer(ShipConfig withThisShip)
+        public void InitializePlayer(ShipConfig withThisShip)
         {
+            // Ship configs
             ship = withThisShip;
-            shipAnimation = ship.ShipAnim();
+          
+            ShipAnim = ship.ShipAnim();
+            ShipAnim.ChangeFrame(4);
             shipPropellers = ship.PropellersAnim();
-            shipAnimation.ChangeFrame(4);
 
             collider = new Collider(Position, ship.ShipSize(), "Player");
             collider.OnCollision += AnyDamage;
@@ -52,12 +54,12 @@ namespace Game
             Console.WriteLine("Jugador inicializado.");
         }
 
-        private static void AnyDamage(Collider instigator)
+        private void AnyDamage(Collider instigator)
         {
             if (!isShielding && shipIntegrity > 1)
             {
                 shipIntegrity--;
-                shipAnimation.ChangeFrame(shipIntegrity);
+                ShipAnim.ChangeFrame(shipIntegrity);
                 shieldGreen.ChangeFrame(0);
                 smokeDamage.Play();
                 currentShieldTime = 0;
@@ -67,7 +69,7 @@ namespace Game
             else if (!isShielding && shipIntegrity == 1)
             {
                 shipIntegrity = 4;
-                shipAnimation.ChangeFrame(shipIntegrity);
+                ShipAnim.ChangeFrame(shipIntegrity);
                 shieldGreen.ChangeFrame(0);
                 smokeDamage.Play();
                 currentShieldTime = 0;
@@ -84,7 +86,7 @@ namespace Game
             ProyectilesManager.AddProyectile(new Proyectile(Position + RailPosition, currentWeapon));
         }
 
-        public static void Update()
+        public override void Update()
         {
             if (ready)
             {
@@ -96,11 +98,13 @@ namespace Game
 
                 // Update stuff
                 collider.UpdatePos(Position + ship.ShipCollisionOffset());
-                shipAnimation.Update(); shipPropellers.Update(); smokeDamage.Update(); shieldGreen.Update();
-                
+                ShipAnim.Update();
+                shipPropellers.Update(); smokeDamage.Update(); shieldGreen.Update();
+
 
                 // Draw stuff
-                Engine.Draw(shipAnimation.CurrentTexture, Position.X, Position.Y);
+                //Engine.Draw(shipAnimation.CurrentTexture, Position.X, Position.Y);
+                //UpdateShipPosition(Position); // Update ShipObject position for drawing stuff
                 Engine.Draw(shipPropellers.CurrentTexture, Position.X + ship.ShipPropellersPosition().X, Position.Y + ship.ShipPropellersPosition().Y);
                 Engine.Draw(smokeDamage.CurrentTexture, Position.X, Position.Y, 1.7f, 1.7f,0, 55, 65);
 
