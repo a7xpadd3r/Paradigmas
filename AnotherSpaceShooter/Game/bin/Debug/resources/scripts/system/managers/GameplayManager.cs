@@ -12,6 +12,9 @@ namespace Game
         private InterfaceScenes currentScene = null; // Interface?
 
         private MainMenu mMain;
+
+        // GameObject manager
+        public GameObjectManager goManager = new GameObjectManager();
         
 
         public static GameplayManager Instance
@@ -32,17 +35,19 @@ namespace Game
             // Initialize menues
             mMain = new MainMenu(); // Interface?
 
-            Console.WriteLine(playerShip != null);
+            //Console.WriteLine(playerShip != null);
             AllStar();
 
             ChangeScene(Scenes.MainMenu); // Interface?
             OnPlayerDeath += PlayerDeath;
         }
 
-        public static void PlayerDeath()
+        public void PlayerDeath()
         {
 
             MainMenu.changeScene = 6;
+            goManager.WipeGameObjects();
+            CollisionManager.WipeColliders();
 
         }
         
@@ -57,6 +62,7 @@ namespace Game
 
         public static void InitializeGameplayManager()
         {
+
             playerShip = Player.GetShip();
             Player.OnShipDestroyed += LifeLost;
         }
@@ -73,6 +79,7 @@ namespace Game
             StarsManager.UpdateBack();
 
             ManagerLevel1.Update();
+            goManager.Update(); //  Needs to be changed for non-static stuff
             CollisionManager.Update();
             ProyectilesManager.Update();
             LifesOnScreen();

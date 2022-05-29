@@ -70,8 +70,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="resources\scripts\system\GameObject.cs" />
+    <Compile Include="resources\scripts\system\interfaces\iHealth.cs" />
     <Compile Include="resources\scripts\system\interfaces\iScenes.cs" />
     <Compile Include="resources\scripts\system\interfaces\iShipAnimations.cs" />
+    <Compile Include="resources\scripts\system\managers\GameObjectManager.cs" />
     <Compile Include="resources\scripts\system\managers\GameplayManager.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>

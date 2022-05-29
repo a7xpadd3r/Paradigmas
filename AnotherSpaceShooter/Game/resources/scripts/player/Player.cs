@@ -9,18 +9,12 @@ namespace Game
         public static bool debug = false;
         // Special stuff
         private static ShipConfig ship = null;
-        private static Collider collider = null;
-        //private static Animation shipAnimation = null;
-        private static Animation shipPropellers = null;
-        private static Animation smokeDamage = new Animation("Smoke", 0.12f, Effects.GetEffectTextures(1), false);
-        private static Animation shieldGreen = new Animation("Smoke", 0.03f, Effects.GetEffectTextures(2));
 
         // Position stuff
         private static float posX = 500;
         private static float posY = 900;
         public static Vector2 Position => new Vector2(posX, posY);
         private static Vector2 RailPosition => new Vector2(ship.ShipRailPosition().X, ship.ShipRailPosition().Y);
-
         private static bool ready = false;
 
         // Weapons stuff
@@ -31,7 +25,6 @@ namespace Game
 
         // Damage stuff
         private static int shipIntegrity = 4;
-        private static bool isShielding = false;
         private static readonly float shieldTime = 0.8f;
         private static float currentShieldTime = 0;
 
@@ -40,42 +33,49 @@ namespace Game
 
         public void InitializePlayer(ShipConfig withThisShip)
         {
-            // Ship configs
-            ship = withThisShip;
-          
-            ShipAnim = ship.ShipAnim();
-            ShipAnim.ChangeFrame(4);
-            shipPropellers = ship.PropellersAnim();
+            // Tag
+            owner = "Player";
 
-            collider = new Collider(Position, ship.ShipSize(), "Player");
-            collider.OnCollision += AnyDamage;
-            CollisionManager.AddCollider(collider);
-            ready = true;
-            Console.WriteLine("Jugador inicializado.");
+            // Ship configs
+            ship = withThisShip; // Needs to be deprecated
+            ShipConfiguration = ship;
+          
+            // ShipObject references
+            ShipAnim = ShipConfiguration.ShipAnim();
+            ShipPropellersAnim = ShipConfiguration.PropellersAnim();
+            SmokeDamageAnim = new Animation("Smoke", 0.25f, Effects.GetEffectTextures(1), false);
+            ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
+            ShipAnim.ChangeFrame(4); // Intact ship texture
+
+            // Collision
+            objectCollider = new Collider(Position, ship.ShipSize(), "Player");
+            objectCollider.OnCollision += AnyDamage;
+
+            // Final set
+            ready = true; Awake(); Console.WriteLine("Jugador inicializado.");
         }
 
         private void AnyDamage(Collider instigator)
         {
-            if (!isShielding && shipIntegrity > 1)
+            if ((!IsShielding && shipIntegrity > 1) || (!IsShielding && shipIntegrity == 1))
             {
-                shipIntegrity--;
+                if (!IsShielding && shipIntegrity > 1)
+                {
+                    shipIntegrity--;
+                    if (debug) Console.WriteLine("Player --> Evento de daño, integridad " + shipIntegrity + "/4... Instigador --> " + instigator.GetOwner());
+                }
+                else if (!IsShielding && shipIntegrity == 1)
+                {
+                    shipIntegrity = 4;
+                    OnShipDestroyed?.Invoke();
+                    if (debug) Console.WriteLine("Player --> RIP, reiniciando... Instigador --> " + instigator.GetOwner());
+                }
+
                 ShipAnim.ChangeFrame(shipIntegrity);
-                shieldGreen.ChangeFrame(0);
-                smokeDamage.Play();
+                ShieldAnim.ChangeFrame(0);
+                SmokeDamageAnim.Play();
                 currentShieldTime = 0;
-                isShielding = true;
-                if (debug) Console.WriteLine("Player --> Evento de daño, integridad " + shipIntegrity + "/4... Instigador --> " + instigator.GetOwner());
-            }
-            else if (!isShielding && shipIntegrity == 1)
-            {
-                shipIntegrity = 4;
-                ShipAnim.ChangeFrame(shipIntegrity);
-                shieldGreen.ChangeFrame(0);
-                smokeDamage.Play();
-                currentShieldTime = 0;
-                isShielding = true;
-                OnShipDestroyed?.Invoke();
-                if (debug) Console.WriteLine("Player --> RIP, reiniciando... Instigador --> " + instigator.GetOwner());
+                IsShielding = true;
             }
         }
 
@@ -91,22 +91,10 @@ namespace Game
             if (ready)
             {
                 // Movement controls
-                if (Engine.GetKey(Keys.A)) posX -= ship.ShipSpeed() * Program.GetDeltaTime();
-                if (Engine.GetKey(Keys.D)) posX += ship.ShipSpeed() * Program.GetDeltaTime();
-                if (Engine.GetKey(Keys.W)) posY -= (ship.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
-                if (Engine.GetKey(Keys.S)) posY += (ship.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
-
-                // Update stuff
-                collider.UpdatePos(Position + ship.ShipCollisionOffset());
-                ShipAnim.Update();
-                shipPropellers.Update(); smokeDamage.Update(); shieldGreen.Update();
-
-
-                // Draw stuff
-                //Engine.Draw(shipAnimation.CurrentTexture, Position.X, Position.Y);
-                //UpdateShipPosition(Position); // Update ShipObject position for drawing stuff
-                Engine.Draw(shipPropellers.CurrentTexture, Position.X + ship.ShipPropellersPosition().X, Position.Y + ship.ShipPropellersPosition().Y);
-                Engine.Draw(smokeDamage.CurrentTexture, Position.X, Position.Y, 1.7f, 1.7f,0, 55, 65);
+                if (Engine.GetKey(Keys.A)) posX -= ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.D)) posX += ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.W)) posY -= (ShipConfiguration.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.S)) posY += (ShipConfiguration.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
 
                 // Weapons managment
                 if (Engine.GetKey(Keys.SPACE) && canShoot) { Fire(); }
@@ -122,11 +110,17 @@ namespace Game
                     canShoot = true;
                 }
 
-                if (isShielding) { currentShieldTime += Program.GetDeltaTime(); Engine.Draw(shieldGreen.CurrentTexture, Position.X, Position.Y, 4, 4, 0, 0, -10); }
-                if (currentShieldTime >= shieldTime && isShielding) isShielding = false;
+                if (IsShielding) { currentShieldTime += Program.GetDeltaTime(); }
+                if (currentShieldTime >= shieldTime && IsShielding) IsShielding = false;
+
+                // Update position in ShipObject, needed to render stuff
+                UpdateShipPosition(Position);
+                objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
             }
         }
 
+
+        // Needs to be modified for non-static?
         public static Texture GetIntegrityTexture()
         {
             Texture integrity = ship.ShipAnim().GetFrameTexture(shipIntegrity);

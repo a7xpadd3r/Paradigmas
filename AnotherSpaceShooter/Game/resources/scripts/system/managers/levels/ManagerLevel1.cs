@@ -12,7 +12,7 @@ namespace Game
             p1.InitializePlayer(ShipsData.GetShipConfig(0));
 
             dummyE = new DummyEnemy();
-            DummyEnemy.InitializeDummy(ShipsData.GetShipConfig(3));
+            dummyE.InitializeDummy(ShipsData.GetShipConfig(3));
 
             SoundPlayer sfx = new SoundPlayer("resources/sfx/fbattery_loop.wav");
             sfx.PlayLooping();
@@ -25,9 +25,7 @@ namespace Game
         { 
         if(MainMenu.ChangeScene == 1) 
             {
-                DummyEnemy.Update();
-                p1.Update();
-
+                //DummyEnemy.Update();
             }
         
 

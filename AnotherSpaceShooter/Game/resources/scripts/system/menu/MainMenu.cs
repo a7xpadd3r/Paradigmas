@@ -55,6 +55,9 @@ namespace Game
             selected = start;
             KeyInput += ResetInputDelay;
             DummyEnemy.OnDead += EnemyDeath;
+
+            selected = start;
+            selected.Selected();
         }
 
         private void ResetInputDelay()
@@ -117,7 +120,6 @@ namespace Game
 
         public void Update()
         {
-
             switch (changeScene)
             {
                 case 0:

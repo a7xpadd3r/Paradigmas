@@ -3,9 +3,9 @@ using System.Numerics;
 
 namespace Game
 {
-    public class DummyEnemy
+    public class DummyEnemy : ShipObject
     {
-        public static bool debug = false;
+        public static bool debug = true;
         private static bool ready = false;
         private static int life = 10;
         public static Action OnDead;
@@ -13,11 +13,6 @@ namespace Game
 
         // Special stuff
         private static ShipConfig ship = null;
-        private static Collider collider = null;
-        private static Animation shipAnimation = null;
-        private static Animation shipPropellers = null;
-        private static Animation smokeDamage = new Animation("Smoke", 0.12f, Effects.GetEffectTextures(1), false);
-        private static Animation shieldRed = new Animation("Smoke", 0.03f, Effects.GetEffectTextures(3));
 
         // Position stuff
         private static float posX = 900;
@@ -31,72 +26,79 @@ namespace Game
 
         // Damage stuff
         private static int shipIntegrity = 4;
-        private static bool isShielding = false;
         private static readonly float shieldTime = 0.4f;
         private static float currentShieldTime = 0;
 
         // "AI"
         private static bool movingRight = true;
 
-        public static void InitializeDummy(ShipConfig withThisShip)
+        public void InitializeDummy(ShipConfig withThisShip)
         {
-            ship = withThisShip;
-            shipAnimation = ship.ShipAnim();
-            shipPropellers = ship.PropellersAnim();
-            //shipAnimation.ChangeFrame(4);
+            // Tag
+            owner = "Enemy";
 
-            collider = new Collider(Position, ship.ShipSize(), "Player");
-            collider.OnCollision += AnyDamage;
-            CollisionManager.AddCollider(collider);
-            ready = true;
-            if (debug) Console.WriteLine("Dummy inicializado.");
+            // Ship configs
+            ship = withThisShip;
+            ShipConfiguration = ship;
+
+            // ShipObject references
+            ShipAnim = ShipConfiguration.ShipAnim();
+            ShipPropellersAnim = ShipConfiguration.PropellersAnim();
+            SmokeDamageAnim = new Animation("Smoke", 0.13f, Effects.GetEffectTextures(1), false);
+            ShieldAnim = new Animation("EnemyShield", 0.03f, Effects.GetEffectTextures(3));
+            Rotation = -180;
+            //ShipAnimation.ChangeFrame(4);
+
+            objectCollider = new Collider(Position, ship.ShipSize(), "Player");
+            objectCollider.OnCollision += AnyDamage;
+            ready = true; Awake(); if (debug) Console.WriteLine("Dummy inicializado.");
         }
 
-        private static void AnyDamage(Collider instigator)
+        private void AnyDamage(Collider instigator)
         {
             if (instigator.GetOwner() != "EnemyProyectile")
             {
-                if (!isShielding && shipIntegrity > 1)
+                if (!IsShielding && shipIntegrity > 1)
                 {
                     life--;
                     shipIntegrity--;
                     //shipAnimation.ChangeFrame(shipIntegrity);
-                    shieldRed.ChangeFrame(0);
-                    smokeDamage.Play();
+                    ShieldAnim.ChangeFrame(0);
+                    SmokeDamageAnim.Play();
                     currentShieldTime = 0;
-                    isShielding = true;
+                    IsShielding = true;
                     if (debug) Console.WriteLine("DummyEnemy --> Evento de daño, integridad " + shipIntegrity + "/4... Instigador --> " + instigator.GetOwner());
                 }
-                else if (!isShielding && shipIntegrity == 1)
+                else if (!IsShielding && shipIntegrity == 1)
                 {
                     shipIntegrity = 4;
                     //shipAnimation.ChangeFrame(shipIntegrity);
-                    shieldRed.ChangeFrame(0);
-                    smokeDamage.Play();
+                    ShieldAnim.ChangeFrame(0);
+                    SmokeDamageAnim.Play();
                     currentShieldTime = 0;
-                    isShielding = true;
+                    IsShielding = true;
                     if (debug) Console.WriteLine("Dummy --> RIP, reiniciando... Instigador -->" + instigator.GetOwner());
                 }
                 if (Life == 0) OnDead?.Invoke();           
             }
         }
 
-        public static void Update()
+        public override void Update()
         {
             if (ready)
             {
-                collider.UpdatePos(Position + ship.ShipCollisionOffset());
-                shipAnimation.Update(); shipPropellers.Update(); smokeDamage.Update(); shieldRed.Update();
+                UpdateShipPosition(Position);
+                objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
 
-                Engine.Draw(shipPropellers.CurrentTexture, Position.X + ship.ShipPropellersPosition().X, Position.Y + ship.ShipPropellersPosition().Y, 1, 1, -180, ship.ShipDrawOffset().X, ship.ShipDrawOffset().Y);
-                Engine.Draw(shipAnimation.CurrentTexture, Position.X, Position.Y, 1, 1,-180);
-                Engine.Draw(smokeDamage.CurrentTexture, Position.X, Position.Y, 1.7f, 1.7f, -180, 55, 65);
-
+                //ShipAnim.Update(); ShipPropellersAnim.Update(); SmokeDamageAnim.Update(); ShieldAnim.Update();
+                //Engine.Draw(shipPropellers.CurrentTexture, Position.X + ship.ShipPropellersPosition().X, Position.Y + ship.ShipPropellersPosition().Y, 1, 1, -180, ship.ShipDrawOffset().X, ship.ShipDrawOffset().Y);
+                //Engine.Draw(shipAnimation.CurrentTexture, Position.X, Position.Y, 1, 1,-180);
+                //Engine.Draw(smokeDamage.CurrentTexture, Position.X, Position.Y, 1.7f, 1.7f, -180, 55, 65);
                 AI();
             }
         }
 
-        private static void AI()
+        private void AI()
         {
             if (posX > 2000)
                 movingRight = true;
@@ -105,10 +107,10 @@ namespace Game
                 movingRight = false;
 
             if (!movingRight)
-                posX += ship.ShipSpeed() * Program.GetDeltaTime();
+                posX += ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
 
             else if (movingRight)
-                posX -= ship.ShipSpeed() * Program.GetDeltaTime();
+                posX -= ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
 
             if (canShoot)
             {
@@ -127,8 +129,8 @@ namespace Game
                 canShoot = true;
             }
 
-            if (isShielding) { currentShieldTime += Program.GetDeltaTime(); Engine.Draw(shieldRed.CurrentTexture, Position.X, Position.Y, 3.5f, 3.5f, -180, ship.ShipDrawOffset().X - 17, ship.ShipDrawOffset().Y - 28); }
-            if (currentShieldTime >= shieldTime && isShielding) isShielding = false;
+            if (IsShielding) { currentShieldTime += Program.GetDeltaTime(); }
+            if (currentShieldTime >= shieldTime && IsShielding) IsShielding = false;
         }
     }
 }

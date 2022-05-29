@@ -13,7 +13,7 @@ namespace Game
         private readonly static ShipConfig ElCapitanStats = new ShipConfig(400f, new Vector2(48, 0), new Vector2(47.5f, 110f), new Vector2(109.5f, 60), new Vector2(193.6f, 150), new Animation("PlayerAnim", 0, ShipsTextures.GetShipTextures(0), false, true), new Animation("Player", 0.03f, PropellersTextures.GetPropellerTextures(0)));
 
         // Enemy ships
-        private readonly static ShipConfig DummyEnemy1Stats = new ShipConfig(350f, new Vector2(80.2f, 22f), new Vector2(-58f, -118f), new Vector2(75f, 60f), new Vector2(67, -10), new Animation("EnemyAnim", 0, ShipsTextures.GetShipTextures(4), false, true), new Animation("EnemyAnim", 0.038f, PropellersTextures.GetPropellerTextures(0)), new Vector2(10,10));
+        private readonly static ShipConfig DummyEnemy1Stats = new ShipConfig(350f, new Vector2(80.2f, 22f), new Vector2(-48.75f, -105.7f), new Vector2(75f, 60f), new Vector2(67, -10), new Animation("EnemyAnim", 0, ShipsTextures.GetShipTextures(4), false, true), new Animation("EnemyAnim", 0.038f, PropellersTextures.GetPropellerTextures(0)), new Vector2(10,10));
 
         public static ShipConfig GetShipConfig(int selection)
         {
