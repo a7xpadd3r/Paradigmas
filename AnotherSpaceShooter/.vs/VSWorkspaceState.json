@@ -4,9 +4,11 @@
     "\\Game",
     "\\Game\\resources",
     "\\Game\\resources\\scripts",
+    "\\Game\\resources\\scripts\\player",
+    "\\Game\\resources\\scripts\\ships",
     "\\Game\\resources\\scripts\\system",
     "\\Game\\resources\\sfx"
   ],
-  "SelectedNode": "\\Juego.sln",
+  "SelectedNode": "\\Game\\resources\\scripts\\ships\\ShipObject.cs",
   "PreviewInSolutionExplorer": false
 }

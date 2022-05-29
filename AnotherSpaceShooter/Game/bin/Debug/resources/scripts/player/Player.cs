@@ -43,7 +43,7 @@ namespace Game
             // ShipObject references
             ShipAnim = ShipConfiguration.ShipAnim();
             ShipPropellersAnim = ShipConfiguration.PropellersAnim();
-            SmokeDamageAnim = new Animation("Smoke", 0.25f, Effects.GetEffectTextures(1), false);
+            SmokeDamageAnim = new Animation("Smoke", 0.15f, Effects.GetEffectTextures(1), false);
             ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
             ShipAnim.ChangeFrame(4); // Intact ship texture
 
