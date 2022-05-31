@@ -29,11 +29,13 @@ namespace Game
         private bool allowInput = true;
         private Button selected;
         private Action KeyInput;
-
-       public static int ChangeScene => changeScene;
-
-       public static int changeScene;
+        
+        public static int ChangeScene => changeScene;
+        public static int changeScene;
         int BackScene;
+
+        // This stuff needs to be moved
+        ManagerLevel1 theManagerLevel1 = new ManagerLevel1();
 
         public MainMenu()
         {
@@ -54,7 +56,7 @@ namespace Game
 
             selected = start;
             KeyInput += ResetInputDelay;
-            DummyEnemy.OnDead += EnemyDeath;
+            //DummyEnemy.OnDead += EnemyDeath; Needs to be reworked
 
             selected = start;
             selected.Selected();
@@ -195,7 +197,7 @@ namespace Game
             if (selected != null)
             {
                 if (selected == start) {
-                    ManagerLevel1.Gameplay();
+                    theManagerLevel1.Gameplay();
                     changeScene = 1;
                 }
                 if (selected == controls) {

@@ -5,35 +5,47 @@ namespace Game
 {
     public class DummyEnemy : ShipObject
     {
-        public static bool debug = true;
-        private static bool ready = false;
-        private static int life = 10;
-        public static Action OnDead;
-        public static int Life => life;
+        public bool debug = true;
+        private protected bool ready = false;
+        private int life = 10;
+        public Action OnDead;
+        public int Life => life;
 
         // Special stuff
-        private static ShipConfig ship = null;
+        private ShipConfig ship = null;
 
         // Position stuff
-        private static float posX = 900;
-        private static float posY = 200;
-        private static Vector2 Position => new Vector2(posX, posY);
+        private protected float posX = 900;
+        private protected float posY = 200;
+        private protected Vector2 Position => new Vector2(posX, posY);
 
         // Weapons stuff
-        private static bool canShoot = true;
-        private static float recoilTime = 0.4f;
-        private static float currentTime = 0;
+        private protected bool canShoot = true;
+        private protected float recoilTime = 0.4f;
+        private protected float currentTime = 0;
 
         // Damage stuff
-        private static int shipIntegrity = 4;
-        private static readonly float shieldTime = 0.4f;
-        private static float currentShieldTime = 0;
+        private protected int shipIntegrity = 4;
+        private readonly float shieldTime = 0.4f;
+        private protected float currentShieldTime = 0;
 
         // "AI"
-        private static bool movingRight = true;
+        private bool movingRight = true;
+
+        public DummyEnemy(Vector2 newDirection, string newOwner = "Enemy")
+        {
+            this.spawnPosition = newDirection;
+            this.posX = spawnPosition.X;
+            this.posY = spawnPosition.Y;
+            this.owner = newOwner;
+        }
 
         public void InitializeDummy(ShipConfig withThisShip)
         {
+            // Set initial position from GameObject
+            posX = spawnPosition.X;
+            posY = spawnPosition.Y;
+
             // Tag
             owner = "Enemy";
 

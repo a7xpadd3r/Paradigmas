@@ -12,6 +12,7 @@ namespace Game
         private InterfaceScenes currentScene = null; // Interface?
 
         private MainMenu mMain;
+        private Player thePlayer = new Player();
 
         // GameObject manager
         public GameObjectManager goManager = new GameObjectManager();
@@ -24,7 +25,7 @@ namespace Game
 
         private static int currentLifes = 3;
         private readonly static float[] lifesPositionsOnScreen = { 30, 90, 150, 210, 270, 50 }; // Positions in X - X - X and Y 
-        private static ShipConfig playerShip = null;
+        private ShipConfig playerShip = null;
 
         public static Action OnPlayerDeath;
 
@@ -60,11 +61,11 @@ namespace Game
             currentScene.Start();
         }
 
-        public static void InitializeGameplayManager()
+        public void InitializeGameplayManager()
         {
 
-            playerShip = Player.GetShip();
-            Player.OnShipDestroyed += LifeLost;
+            playerShip = thePlayer.GetShip();
+            thePlayer.OnShipDestroyed += LifeLost;
         }
 
         private protected static void LifeLost()
@@ -91,7 +92,7 @@ namespace Game
 
         private static void LifesOnScreen()
         {
-
+            /*
             if (playerShip != null && currentLifes > 0)
             {
                 for (int i = 0; i < currentLifes; i++)
@@ -101,7 +102,7 @@ namespace Game
                     else if (i != currentLifes) 
                         Engine.Draw(playerShip.ShipAnim().GetFrameTexture(playerShip.ShipAnim().AnimationLongitude() - 1), lifesPositionsOnScreen[i], lifesPositionsOnScreen[5], 0.4f, 0.4f);
                 }
-            }
+            }*/
         }
 
         private static void AllStar()

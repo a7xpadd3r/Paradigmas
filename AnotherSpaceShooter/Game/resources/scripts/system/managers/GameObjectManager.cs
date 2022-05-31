@@ -7,7 +7,7 @@ namespace Game
     {
         public static bool debug = true;
         private static protected List<GameObject> CurrentGameObjects { get; } = new List<GameObject>();
-        public List<GameObject> GetAllProyectiles => CurrentGameObjects;
+        public List<GameObject> GetAllGameObjects => CurrentGameObjects;
 
         public void Update()
         {
@@ -26,14 +26,17 @@ namespace Game
             // Check if exists
             if (CurrentGameObjects.Contains(newObject)) return;
             CurrentGameObjects.Add(newObject);
+            if (newObject.objectCollider != null) CollisionManager.AddCollider(newObject.objectCollider);
             if (debug) Console.WriteLine("GameObjectsManager --> '{0}' agregado en la posición {1}.", newObject.Owner, CurrentGameObjects.IndexOf(newObject));
         }
 
-        public void RemoveGameObject(GameObject removeThis)
+        public static void RemoveGameObject(GameObject removeThis)
         {
             // Check if exists
             if (!CurrentGameObjects.Contains(removeThis)) return;
             if (debug) Console.WriteLine("GameObjectsManager --> '{0}' removido en la posición {1}.", removeThis.Owner, CurrentGameObjects.IndexOf(removeThis));
+            if (removeThis.objectCollider != null) CollisionManager.RemoveCollider(removeThis.objectCollider);
+            CurrentGameObjects.Remove(removeThis);
         }
 
         public void WipeGameObjects()

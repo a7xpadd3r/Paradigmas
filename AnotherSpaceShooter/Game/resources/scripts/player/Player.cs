@@ -6,33 +6,37 @@ namespace Game
 {
     public class Player : ShipObject
     {
-        public static bool debug = false;
+        public bool debug = false;
         // Special stuff
-        private static ShipConfig ship = null;
+        private ShipConfig ship = null;
 
         // Position stuff
         private static float posX = 500;
         private static float posY = 900;
         public static Vector2 Position => new Vector2(posX, posY);
-        private static Vector2 RailPosition => new Vector2(ship.ShipRailPosition().X, ship.ShipRailPosition().Y);
-        private static bool ready = false;
+        private Vector2 RailPosition => new Vector2(ship.ShipRailPosition().X, ship.ShipRailPosition().Y);
+        private bool ready = false;
 
         // Weapons stuff
-        private static int currentWeapon = 1;
-        private static bool canShoot = true;
-        private static float recoilTime = 0.4f;
-        private static float currentTime = 0;
+        private int currentWeapon = 1;
+        private bool canShoot = true;
+        private float recoilTime = 0.4f;
+        private float currentTime = 0;
 
         // Damage stuff
-        private static int shipIntegrity = 4;
-        private static readonly float shieldTime = 0.8f;
-        private static float currentShieldTime = 0;
+        private int shipIntegrity = 4;
+        private readonly float shieldTime = 0.8f;
+        private float currentShieldTime = 0;
 
         // Events
-        public static Action OnShipDestroyed;
+        public Action OnShipDestroyed;
 
         public void InitializePlayer(ShipConfig withThisShip)
         {
+            // Set initial position from GameObject
+            posX = spawnPosition.X;
+            posY = spawnPosition.Y;
+
             // Tag
             owner = "Player";
 
@@ -43,7 +47,7 @@ namespace Game
             // ShipObject references
             ShipAnim = ShipConfiguration.ShipAnim();
             ShipPropellersAnim = ShipConfiguration.PropellersAnim();
-            SmokeDamageAnim = new Animation("Smoke", 0.25f, Effects.GetEffectTextures(1), false);
+            SmokeDamageAnim = new Animation("Smoke", 0.15f, Effects.GetEffectTextures(1), false);
             ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
             ShipAnim.ChangeFrame(4); // Intact ship texture
 
@@ -79,7 +83,7 @@ namespace Game
             }
         }
 
-        private static void Fire()
+        private void Fire()
         {
             canShoot = false;
             //bullets.Add(new Proyectile(Position + RailPosition, currentWeapon));
@@ -121,13 +125,13 @@ namespace Game
 
 
         // Needs to be modified for non-static?
-        public static Texture GetIntegrityTexture()
+        public Texture GetIntegrityTexture()
         {
             Texture integrity = ship.ShipAnim().GetFrameTexture(shipIntegrity);
             return integrity;
         }
 
-        public static ShipConfig GetShip()
+        public ShipConfig GetShip()
         {
             ShipConfig shipdata = ship;
             return shipdata;
