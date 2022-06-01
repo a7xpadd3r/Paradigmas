@@ -5,7 +5,6 @@ namespace Game
 {
     public class DummyEnemy : ShipObject
     {
-        public bool debug = true;
         private protected bool ready = false;
 
         // Special stuff
@@ -75,7 +74,6 @@ namespace Game
             IsShielding = true;
             if (life <= 0) Destroy();
         }
-        // if (Life == 0) OnDead?.Invoke();
 
         public override void Update()
         {
@@ -84,11 +82,6 @@ namespace Game
                 UpdateShipPosition(Position);
                 objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
                 callsDamageOnCollision = !IsShielding;
-
-                //ShipAnim.Update(); ShipPropellersAnim.Update(); SmokeDamageAnim.Update(); ShieldAnim.Update();
-                //Engine.Draw(shipPropellers.CurrentTexture, Position.X + ship.ShipPropellersPosition().X, Position.Y + ship.ShipPropellersPosition().Y, 1, 1, -180, ship.ShipDrawOffset().X, ship.ShipDrawOffset().Y);
-                //Engine.Draw(shipAnimation.CurrentTexture, Position.X, Position.Y, 1, 1,-180);
-                //Engine.Draw(smokeDamage.CurrentTexture, Position.X, Position.Y, 1.7f, 1.7f, -180, 55, 65);
                 AI();
             }
         }

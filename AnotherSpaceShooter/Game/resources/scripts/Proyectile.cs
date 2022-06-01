@@ -4,10 +4,9 @@ using System.Numerics;
 
 namespace Game
 {
-    public class Proyectile
+    public class Proyectile : GameObject
     {
         // Basic stuff
-        public string owner { get; private set; }
         public int type { get; private set; }
         protected private float speed = 800; // Default speed.
         protected private readonly float lifeTime = 2f;
