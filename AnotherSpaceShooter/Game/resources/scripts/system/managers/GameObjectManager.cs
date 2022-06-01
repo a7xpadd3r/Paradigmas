@@ -35,8 +35,10 @@ namespace Game
             // Check if exists
             if (!CurrentGameObjects.Contains(removeThis)) return;
             if (debug) Console.WriteLine("GameObjectsManager --> '{0}' removido en la posición {1}.", removeThis.Owner, CurrentGameObjects.IndexOf(removeThis));
+            removeThis.isActive = false;
             if (removeThis.objectCollider != null) CollisionManager.RemoveCollider(removeThis.objectCollider);
             CurrentGameObjects.Remove(removeThis);
+            removeThis = null;
         }
 
         public void WipeGameObjects()

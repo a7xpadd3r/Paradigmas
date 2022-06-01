@@ -159,6 +159,7 @@ namespace Game
         private static List<Texture> shieldGreen = new List<Texture>();
         private static List<Texture> shieldRed = new List<Texture>();
         private static List<Texture> proyectileBeam = new List<Texture>();
+        private static List<Texture> indicatorCircle = new List<Texture>();
 
         public static void InitializeEffects()
         {
@@ -182,6 +183,10 @@ namespace Game
             for (int i = 4; i != 1; i--)
                 proyectileBeam.Add(new Texture("resources/gfx/effect/proyectilebeam-" + i + ".png"));
             proyectileBeam.Add(new Texture("resources/gfx/blank.png"));
+
+            indicatorCircle.Add(new Texture("resources/gfx/effect/hp_full.png"));
+            indicatorCircle.Add(new Texture("resources/gfx/effect/hp_half.png"));
+            indicatorCircle.Add(new Texture("resources/gfx/effect/hp_depleted.png"));
         }
 
         public static List<Texture> GetEffectTextures(int selection)
@@ -203,6 +208,9 @@ namespace Game
                     break;
                 case 4:
                     textures = proyectileBeam;
+                    break;
+                case 5:
+                    textures = indicatorCircle;
                     break;
             }
             return textures;
@@ -260,7 +268,4 @@ namespace Game
         }
 
     }
-
-    
-
 }

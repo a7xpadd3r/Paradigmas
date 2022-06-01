@@ -3,14 +3,14 @@
     "",
     "\\Game",
     "\\Game\\resources",
+    "\\Game\\resources\\gfx",
+    "\\Game\\resources\\gfx\\effect",
     "\\Game\\resources\\scripts",
-    "\\Game\\resources\\scripts\\enemy",
-    "\\Game\\resources\\scripts\\ships",
     "\\Game\\resources\\scripts\\system",
     "\\Game\\resources\\scripts\\system\\interfaces",
     "\\Game\\resources\\scripts\\system\\managers",
     "\\Game\\resources\\sfx"
   ],
-  "SelectedNode": "\\Game\\resources\\scripts\\system\\managers\\GameObjectManager.cs",
+  "SelectedNode": "\\Game\\resources\\gfx\\effect\\proyectilebeam-0.png",
   "PreviewInSolutionExplorer": false
 }

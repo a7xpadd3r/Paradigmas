@@ -13,6 +13,7 @@ namespace Game
         protected private readonly float lifeTime = 2f;
         protected private float currentLifeTime = 0;
         protected private bool beamNeeded = false;
+        protected private float damage = 1;
 
         // Special stuff
         private protected readonly Texture gfx = new Texture("resources/gfx/proyectiles/p_genericproyectile.png"); // Default texture.
@@ -47,6 +48,7 @@ namespace Game
                     this.angle = 0;
                     this.AngleOffset = new Vector2();
                     this.gfx = new Texture("resources/gfx/proyectiles/p_proyectile1.png");
+                    this.damage = 1.8f;
                     break;
                 case 2:
                     this.speed = 700;
@@ -54,6 +56,7 @@ namespace Game
                     this.angle = 0;
                     this.AngleOffset = new Vector2();
                     this.gfx = new Texture("resources/gfx/proyectiles/p_proyectile2.png");
+                    this.damage = 3.3f;
                     break;
                 case 3:
                     this.speed = 1600;
@@ -61,6 +64,7 @@ namespace Game
                     this.angle = 0;
                     this.AngleOffset = new Vector2();
                     this.gfx = new Texture("resources/gfx/proyectiles/p_proyectile3.png");
+                    this.damage = 0.6f;
                     break;
                     
                     // Enemy proyectiles
@@ -68,10 +72,11 @@ namespace Game
                     this.speed = -960;
                     this.Size = new Vector2(5, 10);
                     this.gfx = new Texture("resources/gfx/proyectiles/p_proyectile3.png");
+                    this.damage = 1f;
                     break;
             }
 
-            this.pCollider = new Collider(Position, Size, "Proyectile", ColliderType.Box);
+            this.pCollider = new Collider(Position, Size, "Proyectile", damage);
             CollisionManager.AddCollider(this.pCollider);
             ProyectilesManager.AddProyectile(this);
 

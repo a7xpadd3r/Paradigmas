@@ -539,3 +539,6 @@ H:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SelectS
 H:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SelectShipSelect.png
 H:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SkullFlowerShip.png
 H:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SkullFlowerShipSelect.png
+D:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\hp_depleted.png
+D:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\hp_full.png
+D:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\hp_half.png

@@ -116,6 +116,15 @@
     <Content Include="resources\gfx\blank.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="resources\gfx\effect\hp_depleted.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effect\hp_full.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effect\hp_half.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="resources\gfx\effect\proyectilebeam-0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

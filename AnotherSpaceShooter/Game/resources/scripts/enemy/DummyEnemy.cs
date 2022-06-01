@@ -7,9 +7,6 @@ namespace Game
     {
         public bool debug = true;
         private protected bool ready = false;
-        private int life = 10;
-        public Action OnDead;
-        public int Life => life;
 
         // Special stuff
         private ShipConfig ship = null;
@@ -32,12 +29,13 @@ namespace Game
         // "AI"
         private bool movingRight = true;
 
-        public DummyEnemy(Vector2 newDirection, string newOwner = "Enemy")
+        public DummyEnemy(Vector2 newDirection, string newOwner = "Enemy", int newLifes = 10)
         {
             this.spawnPosition = newDirection;
             this.posX = spawnPosition.X;
             this.posY = spawnPosition.Y;
             this.owner = newOwner;
+            this.life = newLifes;
         }
 
         public void InitializeDummy(ShipConfig withThisShip)
@@ -59,41 +57,25 @@ namespace Game
             SmokeDamageAnim = new Animation("Smoke", 0.13f, Effects.GetEffectTextures(1), false);
             ShieldAnim = new Animation("EnemyShield", 0.03f, Effects.GetEffectTextures(3));
             Rotation = -180;
-            //ShipAnimation.ChangeFrame(4);
+            //ShipAnimation.ChangeFrame(4); if more animatios are added, use this
 
-            objectCollider = new Collider(Position, ship.ShipSize(), "Player");
-            objectCollider.OnCollision += AnyDamage;
-            ready = true; Awake(); if (debug) Console.WriteLine("Dummy inicializado.");
+            objectCollider = new Collider(Position, ship.ShipSize(), "Player", 3);
+            OnDamage += Damage;
+            Awake(); if (debug) Console.WriteLine("Dummy inicializado.");
+            ready = true; 
         }
 
-        private void AnyDamage(Collider instigator)
+        public override void Damage(float amount)
         {
-            if (instigator.GetOwner() != "EnemyProyectile")
-            {
-                if (!IsShielding && shipIntegrity > 1)
-                {
-                    life--;
-                    shipIntegrity--;
-                    //shipAnimation.ChangeFrame(shipIntegrity);
-                    ShieldAnim.ChangeFrame(0);
-                    SmokeDamageAnim.Play();
-                    currentShieldTime = 0;
-                    IsShielding = true;
-                    if (debug) Console.WriteLine("DummyEnemy --> Evento de daño, integridad " + shipIntegrity + "/4... Instigador --> " + instigator.GetOwner());
-                }
-                else if (!IsShielding && shipIntegrity == 1)
-                {
-                    shipIntegrity = 4;
-                    //shipAnimation.ChangeFrame(shipIntegrity);
-                    ShieldAnim.ChangeFrame(0);
-                    SmokeDamageAnim.Play();
-                    currentShieldTime = 0;
-                    IsShielding = true;
-                    if (debug) Console.WriteLine("Dummy --> RIP, reiniciando... Instigador -->" + instigator.GetOwner());
-                }
-                if (Life == 0) OnDead?.Invoke();           
-            }
+            this.life -= amount;
+            Console.WriteLine(life);
+            ShieldAnim.ChangeFrame(0);
+            SmokeDamageAnim.Play();
+            currentShieldTime = 0;
+            IsShielding = true;
+            if (life <= 0) Destroy();
         }
+        // if (Life == 0) OnDead?.Invoke();
 
         public override void Update()
         {
@@ -101,6 +83,7 @@ namespace Game
             {
                 UpdateShipPosition(Position);
                 objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
+                callsDamageOnCollision = !IsShielding;
 
                 //ShipAnim.Update(); ShipPropellersAnim.Update(); SmokeDamageAnim.Update(); ShieldAnim.Update();
                 //Engine.Draw(shipPropellers.CurrentTexture, Position.X + ship.ShipPropellersPosition().X, Position.Y + ship.ShipPropellersPosition().Y, 1, 1, -180, ship.ShipDrawOffset().X, ship.ShipDrawOffset().Y);
@@ -130,7 +113,7 @@ namespace Game
                 //bullets.Add(new Proyectile(Position + RailPosition + new Vector2(-60, 0), 1, "Enemy"));
                 //bullets.Add(new Proyectile(Position + RailPosition + new Vector2(60, 0), 1, "Enemy")); //55
                 //bullets.Add(new Proyectile(Position - ship.ShipRailPosition(), 4, "EnemyProyectile"));
-                ProyectilesManager.AddProyectile(new Proyectile(Position - ship.ShipRailPosition(), 4, "EnemyProyectile"));
+                //ProyectilesManager.AddProyectile(new Proyectile(Position - ship.ShipRailPosition(), 4, "EnemyProyectile"));
             }
 
             if (!canShoot) currentTime += Program.GetDeltaTime();

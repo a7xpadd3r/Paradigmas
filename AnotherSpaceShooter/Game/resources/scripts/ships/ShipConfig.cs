@@ -5,6 +5,7 @@ namespace Game
     public class ShipConfig
     {
         protected private float speed;
+        protected private float life;
         protected private Vector2 railPosition;
         protected private Vector2 propellerPosition;
         protected private Vector2 collisionSize;

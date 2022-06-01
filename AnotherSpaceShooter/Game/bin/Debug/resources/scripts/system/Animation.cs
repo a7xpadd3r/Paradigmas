@@ -25,7 +25,7 @@ namespace Game
             return textures[whatFrame];
         }
 
-        public Animation(string name, float speed, List<Texture> textures = null, bool isLooping = true, bool setManualFrames = false)
+        public Animation(string name, float speed, List<Texture> textures = null, bool isLooping = true, bool setManualFrames = false, bool playOnStart = true)
         {
             this.name = name;
             this.speed = speed;

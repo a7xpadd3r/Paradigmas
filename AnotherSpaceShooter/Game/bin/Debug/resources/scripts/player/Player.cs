@@ -52,7 +52,7 @@ namespace Game
             ShipAnim.ChangeFrame(4); // Intact ship texture
 
             // Collision
-            objectCollider = new Collider(Position, ship.ShipSize(), "Player");
+            objectCollider = new Collider(Position, ship.ShipSize(), "Player", 3);
             objectCollider.OnCollision += AnyDamage;
 
             // Final set

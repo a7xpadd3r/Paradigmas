@@ -11,16 +11,18 @@ namespace Game
         public ColliderType type { get; private set; }
         public Vector2 position { get; private set; }
         public Vector2 size { get; private set; }
+        public float damage { get; private set; }
         private bool ready = false;
 
         public event Action<Collider> OnCollision;
-        public Collider(Vector2 newPos, Vector2 newSize, string newOwner, ColliderType cType = ColliderType.Box, bool cActive = true)
+        public Collider(Vector2 newPos, Vector2 newSize, string newOwner, float newDamage, ColliderType cType = ColliderType.Box, bool cActive = true)
         {
             this.owner = newOwner;
             this.active = cActive;
             this.position = newPos;
             this.size = newSize;
             this.type = cType;
+            this.damage = newDamage;
             this.ready = true;
         }
 

@@ -7,15 +7,21 @@ namespace Game
     {
         public Collider objectCollider = null;
         public bool isActive = true;
-        public int life = 1;
+        public float life = 1;
         public string Owner => owner;
         public string owner = "null";
         public Vector2 spawnPosition = new Vector2(0,0);
-        public Action<int> AnyDamage;
+        public Action<float> AnyDamage;
+        public Action<float> OnDamage;
+        public float damageAmount = 1;
+        public bool callsDamageOnCollision = true;
+        public bool debug = true;
 
         public void Awake()
         {
             GameObjectManager.AddGameObject(this);
+
+            // Collision and damage are two different things.
             objectCollider.OnCollision += OnCollision;
             AnyDamage += Damage;
         }
@@ -34,17 +40,31 @@ namespace Game
 
         public virtual void OnCollision(Collider instigator)
         {
-            Console.WriteLine("'{0}' -> Colisión por parte de '{1}', instigado por '{2}'", Owner, instigator, instigator.GetOwner());
+            //Console.WriteLine("'{0}' -> Colisión por parte de '{1}', instigado por '{2}'", Owner, instigator, instigator.GetOwner());
+            if (callsDamageOnCollision) AnyDamage?.Invoke(instigator.damage);
         }
-        
-        public virtual void Damage(int amount)
+
+        public virtual void Damage(float amount)
         {
             life -= amount;
+            OnDamage?.Invoke(amount);
             if (life <= 0) Destroy();
+        }
+
+        public virtual void OnDeactivated()
+        {
+
+        }
+
+        public virtual void OnDeactivatedHandler()
+        {
+
         }
 
         public virtual void Destroy()
         {
+            objectCollider.OnCollision -= OnCollision;
+            AnyDamage -= Damage;
             GameObjectManager.RemoveGameObject(this);
         }
 
