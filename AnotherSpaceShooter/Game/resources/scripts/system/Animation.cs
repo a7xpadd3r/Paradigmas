@@ -11,8 +11,10 @@ namespace Game
         private int currentFrame = 0;
         private bool isLooping;
         private bool manualFrames = false;
+        public bool IsManualFrame => manualFrames;
         private List<Texture> textures = new List<Texture>();
         public Texture CurrentTexture => textures[currentFrame];
+        public int CurrentFrame => currentFrame;
         public Action OnAnimationFinished;
 
         public int AnimationLongitude()
@@ -25,7 +27,7 @@ namespace Game
             return textures[whatFrame];
         }
 
-        public Animation(string name, float speed, List<Texture> textures = null, bool isLooping = true, bool setManualFrames = false, bool playOnStart = true)
+        public Animation(string name, float speed, List<Texture> textures = null, bool isLooping = true, bool setManualFrames = false)
         {
             this.name = name;
             this.speed = speed;
@@ -56,22 +58,19 @@ namespace Game
             if (!manualFrames)
             {
                 currentTime += Program.GetDeltaTime();
-
                 if (currentTime >= speed)
                 {
                     currentFrame++;
                     currentTime = 0;
-
+                    
                     if (currentFrame >= textures.Count)
                     {
                         OnAnimationFinished?.Invoke();
-                        if (isLooping)
-                            currentFrame = 0;
-                        else
-                            currentFrame = textures.Count - 1;
+                        if (isLooping) currentFrame = 0;
+                        else currentFrame = textures.Count - 1;
+                        }
                     }
                 }
-            }
         }
     }
 }

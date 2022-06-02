@@ -11,57 +11,47 @@ namespace Game
         protected private float speed = 800; // Default speed.
         protected private readonly float lifeTime = 2f;
         protected private float currentLifeTime = 0;
-        protected private bool beamNeeded = false;
-        protected private float damage = 1;
+        protected private float damage = 1; // Default damage
 
         // Special stuff
-        private protected readonly Texture gfx = new Texture("resources/gfx/proyectiles/p_genericproyectile.png"); // Default texture.
-        private protected readonly Animation beamAnim = new Animation("Beam", 0.08f, Effects.GetEffectTextures(4), false);
-        private protected Collider pCollider;
+        private protected readonly Texture gfx = new Texture("resources/gfx/proyectiles/e_proyectile1.png"); // Default texture.
 
         // Position stuff
         private protected float posX = 0;
         private protected float posY = 0;
-        private protected float angle = -180;
+        private protected float offsetX = 140;
+        private protected float offsetY = 80;
         private protected Vector2 Position => new Vector2(posX, posY);
+        private protected Vector2 CollisionOffset => new Vector2(offsetX, offsetY);
         private protected Vector2 Size = new Vector2();
-        private protected Vector2 AngleOffset = new Vector2(33, 25);
 
-        private protected bool draw = true;
-        public bool Active => draw;
-        public bool Death => beamNeeded;
-
-        public Proyectile(Vector2 newPos, int newType, string newOwner = "Proyectile")
+        public Proyectile(Vector2 newPos, int newType, string newOwner)
         {
             this.owner = newOwner;
             this.posX = newPos.X;
             this.posY = newPos.Y;
             this.type = newType;
+            this.owner = newOwner;
+            this.tag = "Proyectile";
 
             switch (type)
             {
                     // Player proyectiles
                 case 1:
                     this.speed = 1000;
-                    this.Size = new Vector2(5,10);
-                    this.angle = 0;
-                    this.AngleOffset = new Vector2();
+                    this.Size = new Vector2(1,1);
                     this.gfx = new Texture("resources/gfx/proyectiles/p_proyectile1.png");
                     this.damage = 1.8f;
                     break;
                 case 2:
                     this.speed = 700;
-                    this.Size = new Vector2(5, 10);
-                    this.angle = 0;
-                    this.AngleOffset = new Vector2();
+                    this.Size = new Vector2(1, 1);
                     this.gfx = new Texture("resources/gfx/proyectiles/p_proyectile2.png");
                     this.damage = 3.3f;
                     break;
                 case 3:
                     this.speed = 1600;
-                    this.Size = new Vector2(5, 10);
-                    this.angle = 0;
-                    this.AngleOffset = new Vector2();
+                    this.Size = new Vector2(1, 1);
                     this.gfx = new Texture("resources/gfx/proyectiles/p_proyectile3.png");
                     this.damage = 0.6f;
                     break;
@@ -69,70 +59,37 @@ namespace Game
                     // Enemy proyectiles
                 case 4:
                     this.speed = -960;
-                    this.Size = new Vector2(5, 10);
-                    this.gfx = new Texture("resources/gfx/proyectiles/p_proyectile3.png");
+                    this.Size = new Vector2(1, 1);
+                    this.gfx = new Texture("resources/gfx/proyectiles/e_proyectile1.png");
                     this.damage = 1f;
                     break;
             }
 
-            this.pCollider = new Collider(Position, Size, "Proyectile", damage);
-            CollisionManager.AddCollider(this.pCollider);
-            ProyectilesManager.AddProyectile(this);
-
-            this.pCollider.OnCollision += HitSomething;
-            this.beamAnim.OnAnimationFinished += DeathAnimationFinished;
-            this.draw = true;
+            objectCollider = new Collider(Position, Size, newOwner, tag, damage);
+            Awake();
         }
 
-        void DeathAnimationFinished()
+        public override void OnCollision(Collider instigator)
         {
-            beamNeeded = false;
-            ProyectilesManager.RemoveProyectile(this);
+            new GenericEffect(Position, new Vector2(3, 3), new Vector2(1, 1), 0, "HitBeam", Effects.GetEffectTextures(4), 0.08f, false);
+            Destroy();
         }
 
-        void HitSomething(Collider instigator)
+        public override void Update()
         {
-            if (instigator.GetOwner() == "Player")
+            objectCollider.UpdatePos(new Vector2(Position.X + CollisionOffset.X, Position.Y + CollisionOffset.Y));
+            currentLifeTime += Program.GetDeltaTime(); 
+            posY -= speed * Program.GetDeltaTime(); 
+            
+            if (currentLifeTime >= lifeTime || posY > 1200 || posY < -100)
             {
-                draw = false;
-                pCollider.SetActive(false);
-                CollisionManager.RemoveCollider(this.pCollider);
-            }
-            if (instigator.GetOwner() == "Proyectile")
-            {
-                beamAnim.ChangeFrame(0);
-                draw = false;
-                pCollider.SetActive(false);
-                CollisionManager.RemoveCollider(this.pCollider);
-            }
-            beamNeeded = true;
-        }
-
-        public void Update()
-        {
-            if (draw)
-            {
-                currentLifeTime += Program.GetDeltaTime(); posY -= speed * Program.GetDeltaTime(); 
-
-                if (pCollider != null) pCollider.UpdatePos(new Vector2(Position.X + 150, Position.Y + 80));
-
-                if (currentLifeTime >= lifeTime || posY > 1200 || posY < -100)
-                {
-                    draw = false;
-                    pCollider.SetActive(false);
-                    CollisionManager.RemoveCollider(this.pCollider);
-                }
-                Engine.Draw(gfx, Position.X, Position.Y, 1, 1, angle, AngleOffset.X, AngleOffset.Y);
+                OnDeactivated();
             }
         }
 
-        public void AfterHit()
+        public override void Render()
         {
-            if (!Active && beamNeeded)
-            {
-                beamAnim.Update();
-                Engine.Draw(beamAnim.CurrentTexture, Position.X, Position.Y, 2, 2, angle, AngleOffset.X, AngleOffset.Y);
-            }
+            Engine.Draw(gfx, Position.X, Position.Y, 1, 1);
         }
     }
 }

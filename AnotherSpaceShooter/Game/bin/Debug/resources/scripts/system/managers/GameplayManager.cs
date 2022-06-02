@@ -12,10 +12,12 @@ namespace Game
         private InterfaceScenes currentScene = null; // Interface?
 
         private MainMenu mMain;
-        private Player thePlayer = new Player();
+        //private Player thePlayer = new Player(); Not needed anymore.
 
         // GameObject manager
         public GameObjectManager goManager = new GameObjectManager();
+        // Others
+        public EffectsManager eManager = new EffectsManager();
         
 
         public static GameplayManager Instance
@@ -25,7 +27,6 @@ namespace Game
 
         private static int currentLifes = 3;
         private readonly static float[] lifesPositionsOnScreen = { 30, 90, 150, 210, 270, 50 }; // Positions in X - X - X and Y 
-        private ShipConfig playerShip = null;
 
         public static Action OnPlayerDeath;
 
@@ -35,10 +36,7 @@ namespace Game
 
             // Initialize menues
             mMain = new MainMenu(); // Interface?
-
-            //Console.WriteLine(playerShip != null);
             AllStar();
-
             ChangeScene(Scenes.MainMenu); // Interface?
             OnPlayerDeath += PlayerDeath;
         }
@@ -63,9 +61,8 @@ namespace Game
 
         public void InitializeGameplayManager()
         {
-
-            playerShip = thePlayer.GetShip();
-            thePlayer.OnShipDestroyed += LifeLost;
+            //playerShip = thePlayer.GetShip();
+            //thePlayer.OnShipDestroyed += LifeLost;
         }
 
         private protected static void LifeLost()
@@ -81,8 +78,8 @@ namespace Game
 
             ManagerLevel1.Update();
             goManager.Update(); //  Needs to be changed for non-static stuff
+            eManager.Update();
             CollisionManager.Update();
-            ProyectilesManager.Update();
             LifesOnScreen();
 
             StarsManager.UpdateFront();

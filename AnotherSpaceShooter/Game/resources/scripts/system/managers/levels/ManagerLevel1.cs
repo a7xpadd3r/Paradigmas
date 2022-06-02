@@ -7,45 +7,47 @@ namespace Game
 {
     class ManagerLevel1
     {
-        static Player p1;
-        static DummyEnemy dummyE;
         List<DummyEnemy> dummys = new List<DummyEnemy>();
+        static List<Player> players = new List<Player>();
+        public static Action<int> OnPlayerDeath; // Use this for player respawn, needs to be moved to a general manager?
 
         public void Gameplay()
         {
-            p1 = new Player();
-            p1.spawnPosition = new Vector2(870,900);
-            p1.InitializePlayer(ShipsData.GetShipConfig(0));
+            OnPlayerDeath += RespawnPlayer;
 
-            //dummyE = new DummyEnemy();
-            //dummyE.InitializeDummy(ShipsData.GetShipConfig(3));
+            // New method of spawing stuff
+            dummys.Add(new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(800,200)));
+            dummys.Add(new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(500,400)));
+            dummys.Add(new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(200,600)));
 
-            dummys.Add(new DummyEnemy(new Vector2(800,200)));
-            dummys.Add(new DummyEnemy(new Vector2(500,400)));
-            dummys.Add(new DummyEnemy(new Vector2(200,600)));
-            //dummys.Add(new DummyEnemy());
-            //dummys.Add(new DummyEnemy());
+            players.Add(new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20));
 
-            for (int i = 0; i < dummys.Count; i++)
-			{
-                DummyEnemy TheDummy = dummys[i];
-                TheDummy.InitializeDummy(ShipsData.GetShipConfig(3));
-			}
+
 
             SoundPlayer sfx = new SoundPlayer("resources/sfx/fbattery_loop.wav");
             sfx.PlayLooping();
             SFX.PlayMusic();
 
-            //GameplayManager.InitializeGameplayManager();
+            //GameplayManager.InitializeGameplayManager();  Needs to be changed.
+        }
+
+        private static void RespawnPlayer(int lifeleft) // Needs to be moved to a general manager?
+        {
+            if (lifeleft > 0)
+            {
+                players.Add(new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20));
+                UI.UpdateLifesLeft();
+            }
         }
 
         public static void Update() 
         { 
         if(MainMenu.ChangeScene == 1) 
             {
-                //DummyEnemy.Update();
+                UI.Update();
+                //DummyEnemy.Update();  Not needed anymore.
             }
-        
+
 
         }
 

@@ -9,13 +9,15 @@ namespace Game
         public bool isActive = true;
         public float life = 1;
         public string Owner => owner;
+        public string Tag => tag;
         public string owner = "null";
+        public string tag = "null";
         public Vector2 spawnPosition = new Vector2(0,0);
         public Action<float> AnyDamage;
         public Action<float> OnDamage;
         public float damageAmount = 1;
         public bool callsDamageOnCollision = true;
-        public bool debug = true;
+        public bool debug = false;
 
         public void Awake()
         {
@@ -53,7 +55,8 @@ namespace Game
 
         public virtual void OnDeactivated()
         {
-
+            // Needs to be changed for Pool stuff
+            GameObjectManager.RemoveGameObject(this);
         }
 
         public virtual void OnDeactivatedHandler()

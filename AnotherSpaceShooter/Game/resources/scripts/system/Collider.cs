@@ -8,6 +8,7 @@ namespace Game
     {
         public bool active { get; private set; }
         public string owner { get; private set; }
+        public string tag { get; private set; }
         public ColliderType type { get; private set; }
         public Vector2 position { get; private set; }
         public Vector2 size { get; private set; }
@@ -15,9 +16,10 @@ namespace Game
         private bool ready = false;
 
         public event Action<Collider> OnCollision;
-        public Collider(Vector2 newPos, Vector2 newSize, string newOwner, float newDamage, ColliderType cType = ColliderType.Box, bool cActive = true)
+        public Collider(Vector2 newPos, Vector2 newSize, string newOwner, string newTag, float newDamage, ColliderType cType = ColliderType.Box, bool cActive = true)
         {
             this.owner = newOwner;
+            this.tag = newTag;
             this.active = cActive;
             this.position = newPos;
             this.size = newSize;
@@ -42,7 +44,11 @@ namespace Game
                         {
                             if (Collision.IsBoxColliding(position, size, currentCollider.position, currentCollider.size))
                             {
-                                OnCollision?.Invoke(currentCollider);
+                                if (this.GetOwner() != currentCollider.GetOwner()) // Only if not the same owner
+                                {
+                                    OnCollision?.Invoke(currentCollider);
+                                    currentCollider.OnCollision?.Invoke(this);
+                                }
                             }
                         }
                 }

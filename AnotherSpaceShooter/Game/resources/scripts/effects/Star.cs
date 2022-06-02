@@ -22,6 +22,14 @@ namespace Game
         private float xModifier = 1;
         private float yModifier = 1;
 
+        // Timer for X/Y position
+        private float playerX = 0;
+        private float newPlayerX = 0;
+        private float playerY = 0;
+        private float newPlayerY = 0;
+        private float time = 0.1f;
+        private float currentTime = 0.1f;
+
 
         public bool Active => active;
 
@@ -39,10 +47,10 @@ namespace Game
             int randomSpeed = random.Next(100, 800);
             speed = randomSpeed;
 
-            int randomXModifier = random.Next(5, 40);
+            int randomXModifier = random.Next(5, 15);
             xModifier = randomXModifier;
 
-            int randomYModifier = random.Next(5, 40);
+            int randomYModifier = random.Next(3, 5);
             yModifier = randomYModifier;
         }
 
@@ -51,7 +59,27 @@ namespace Game
             if (active)
             {
                 posY += speed * Program.GetDeltaTime();
-                Engine.Draw(star, Position.X - PlayerPos.X, Position.Y + PlayerPos.Y);
+                Engine.Draw(star, Position.X, Position.Y);
+
+                if (currentTime <= time)
+                {
+                    playerX = PlayerPos.X;
+                    playerY = PlayerPos.Y;
+                    currentTime += Program.GetDeltaTime();
+                }
+
+                if (currentTime > time)
+                {
+                    newPlayerY = PlayerPos.Y;
+                    newPlayerX = PlayerPos.X;
+                    currentTime = 0;
+                }
+
+                // Update position following the player movements
+                if (newPlayerX < playerX) posX -= speed / xModifier * Program.GetDeltaTime();
+                else if (newPlayerX > playerX) posX += speed / xModifier * Program.GetDeltaTime();
+                if (newPlayerY < playerY) posY += speed / yModifier * Program.GetDeltaTime();
+                else if (newPlayerY > playerY) posY -= speed / yModifier * Program.GetDeltaTime();
 
                 if (posY > 1300)
                 {
@@ -66,8 +94,8 @@ namespace Game
                     speed = random.Next(100, 800);
 
                     // Randomize X modifiers
-                    xModifier = random.Next(5, 40);
-                    yModifier = random.Next(5, 40);
+                    xModifier = random.Next(5, 15);
+                    yModifier = random.Next(3, 5);
                 }
             }
         }

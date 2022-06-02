@@ -74,6 +74,7 @@
     <Compile Include="resources\scripts\system\interfaces\iHealth.cs" />
     <Compile Include="resources\scripts\system\interfaces\iScenes.cs" />
     <Compile Include="resources\scripts\system\interfaces\iShipAnimations.cs" />
+    <Compile Include="resources\scripts\system\managers\EffectsManager.cs" />
     <Compile Include="resources\scripts\system\managers\GameObjectManager.cs" />
     <Compile Include="resources\scripts\system\managers\GameplayManager.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -94,7 +95,6 @@
     <Compile Include="resources\scripts\system\managers\levels\ManagerLevel1.cs" />
     <Compile Include="resources\scripts\system\managers\levels\ManagerLevel2.cs" />
     <Compile Include="resources\scripts\system\managers\levels\ManagerLevel3.cs" />
-    <Compile Include="resources\scripts\system\managers\ProyectilesManager.cs" />
     <Compile Include="resources\scripts\system\managers\StarsManager.cs" />
     <Compile Include="resources\scripts\system\menu\Button.cs" />
     <Compile Include="resources\scripts\system\menu\Win.cs" />
@@ -105,7 +105,9 @@
     <Compile Include="resources\scripts\system\RandomValue.cs" />
     <Compile Include="resources\scripts\system\Render.cs" />
     <Compile Include="resources\scripts\system\Transform.cs" />
+    <Compile Include="resources\scripts\system\UI.cs" />
     <Compile Include="resources\scripts\Textures.cs" />
+    <Compile Include="resources\scripts\utilities\NumbersToSprites.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources\gfx\background.png">
@@ -207,6 +209,9 @@
     <Content Include="resources\gfx\environment\a_var1_stars\var1_star3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="resources\gfx\proyectiles\e_proyectile1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="resources\gfx\scenes\Controls.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -277,6 +282,39 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\ui\ExitButtonSelect.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\dot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\ui\PlayButton.png">

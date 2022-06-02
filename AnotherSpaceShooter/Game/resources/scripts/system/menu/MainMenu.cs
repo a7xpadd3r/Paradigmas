@@ -44,10 +44,10 @@ namespace Game
 
         public void Start()
         {
-            start = new Button(startPos, 1, UI.GetUITextures(0));
-            controls = new Button(controlsPos, 1, UI.GetUITextures(1));
-            credits = new Button(creditsPos, 1, UI.GetUITextures(2));
-            exit = new Button(exitPos, 1, UI.GetUITextures(3));
+            start = new Button(startPos, 1, UITextures.GetUITextures(0));
+            controls = new Button(controlsPos, 1, UITextures.GetUITextures(1));
+            credits = new Button(creditsPos, 1, UITextures.GetUITextures(2));
+            exit = new Button(exitPos, 1, UITextures.GetUITextures(3));
 
             start.AssignButtons(exit, controls);
             controls.AssignButtons(start, credits);

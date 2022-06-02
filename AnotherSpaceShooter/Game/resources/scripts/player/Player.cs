@@ -6,7 +6,7 @@ namespace Game
 {
     public class Player : ShipObject
     {
-        public bool debug = false;
+        public new bool debug = false;
         // Special stuff
         private ShipConfig ship = null;
 
@@ -24,62 +24,82 @@ namespace Game
         private float currentTime = 0;
 
         // Damage stuff
-        private int shipIntegrity = 4;
+        private float originalLifes;
         private readonly float shieldTime = 0.8f;
         private float currentShieldTime = 0;
 
         // Events
         public Action OnShipDestroyed;
 
-        public void InitializePlayer(ShipConfig withThisShip)
+        public Player(ShipConfig withThisShip, Vector2 newPos, string newOwner = "Player", int newLifes = 10)
         {
-            // Set initial position from GameObject
+            // Basic stuff
+            this.spawnPosition = newPos;
+            this.life = newLifes;
+            originalLifes = this.life;
             posX = spawnPosition.X;
             posY = spawnPosition.Y;
 
-            // Tag
-            owner = "Player";
+            // Tags
+            this.owner = newOwner;
+            this.tag = "Ship";
 
             // Ship configs
-            ship = withThisShip; // Needs to be deprecated
-            ShipConfiguration = ship;
-          
+            this.ship = withThisShip; // Needs to be deprecated...
+            this.ShipConfiguration = ship;
+
             // ShipObject references
-            ShipAnim = ShipConfiguration.ShipAnim();
-            ShipPropellersAnim = ShipConfiguration.PropellersAnim();
-            SmokeDamageAnim = new Animation("Smoke", 0.15f, Effects.GetEffectTextures(1), false);
-            ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
-            ShipAnim.ChangeFrame(4); // Intact ship texture
+            this.ShipAnim = ShipConfiguration.ShipAnim();
+            this.ShipPropellersAnim = ShipConfiguration.PropellersAnim();
+            this.SmokeDamageAnim = new Animation("Smoke", 0.15f, Effects.GetEffectTextures(1), false, false);
+            this.ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
+            this.ShipAnim.ChangeFrame(4); // Intact ship texture
+            this.SmokeDamageAnim.OnAnimationFinished += OnSmokeEnded;
+
+            // Update UI
+            UI.UpdateUIShippy(ShipAnim.GetFrameTexture(4));
 
             // Collision
-            objectCollider = new Collider(Position, ship.ShipSize(), "Player", 3);
-            objectCollider.OnCollision += AnyDamage;
+            this.objectCollider = new Collider(Position, this.ship.ShipSize(), this.owner, this.tag, 3);
+            //this.objectCollider.OnCollision += AnyDamage; // Needs to be changed?
 
             // Final set
-            ready = true; Awake(); Console.WriteLine("Jugador inicializado.");
+            Awake(); Console.WriteLine("Jugador inicializado."); this.ready = true;
         }
 
-        private void AnyDamage(Collider instigator)
+        public override void Damage(float amount)
         {
-            if ((!IsShielding && shipIntegrity > 1) || (!IsShielding && shipIntegrity == 1))
+            if (!IsShielding && BlinkingEnded)
             {
-                if (!IsShielding && shipIntegrity > 1)
-                {
-                    shipIntegrity--;
-                    if (debug) Console.WriteLine("Player --> Evento de daño, integridad " + shipIntegrity + "/4... Instigador --> " + instigator.GetOwner());
-                }
-                else if (!IsShielding && shipIntegrity == 1)
-                {
-                    shipIntegrity = 4;
-                    OnShipDestroyed?.Invoke();
-                    if (debug) Console.WriteLine("Player --> RIP, reiniciando... Instigador --> " + instigator.GetOwner());
-                }
+                this.IsShielding = true;
+                this.ShieldAnim.ChangeFrame(0);
+                this.SmokeDamageAnim.Play();
+                this.currentShieldTime = 0;
+                this.life -= amount;
+                this.RenderSmoke = true;
+                if (life <= 0) Destroy();
 
-                ShipAnim.ChangeFrame(shipIntegrity);
-                ShieldAnim.ChangeFrame(0);
-                SmokeDamageAnim.Play();
-                currentShieldTime = 0;
-                IsShielding = true;
+                // Ship texture (shows damage)
+                if ((life * 100) / originalLifes > 85)
+                {
+                    ShipAnim.ChangeFrame(4);
+                    UI.UpdateUIShippy(ShipAnim.GetFrameTexture(4));
+                }
+                else if ((life * 100) / originalLifes < 85 && (life * 100) / originalLifes > 50)
+                {
+                    ShipAnim.ChangeFrame(3);
+                    UI.UpdateUIShippy(ShipAnim.GetFrameTexture(3));
+                }
+                else if ((life * 100) / originalLifes < 50 && (life * 100) / originalLifes > 25)
+                {
+                    ShipAnim.ChangeFrame(2);
+                    UI.UpdateUIShippy(ShipAnim.GetFrameTexture(2));
+                }
+                else if ((life * 100) / originalLifes < 25 && (life * 100) / originalLifes > 0)
+                {
+                    ShipAnim.ChangeFrame(1);
+                    UI.UpdateUIShippy(ShipAnim.GetFrameTexture(1));
+                }
             }
         }
 
@@ -87,13 +107,19 @@ namespace Game
         {
             canShoot = false;
             //bullets.Add(new Proyectile(Position + RailPosition, currentWeapon));
-            ProyectilesManager.AddProyectile(new Proyectile(Position + RailPosition, currentWeapon));
+            //ProyectilesManager.AddProyectile(new Proyectile(Position + RailPosition, currentWeapon, owner));
+            new Proyectile(Position + RailPosition, currentWeapon, owner);
         }
 
         public override void Update()
         {
             if (ready)
             {
+                // Update stuff
+                UpdateShipPosition(Position);
+                objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
+                callsDamageOnCollision = !IsShielding;
+
                 // Movement controls
                 if (Engine.GetKey(Keys.A)) posX -= ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
                 if (Engine.GetKey(Keys.D)) posX += ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
@@ -116,25 +142,16 @@ namespace Game
 
                 if (IsShielding) { currentShieldTime += Program.GetDeltaTime(); }
                 if (currentShieldTime >= shieldTime && IsShielding) IsShielding = false;
-
-                // Update position in ShipObject, needed to render stuff
-                UpdateShipPosition(Position);
-                objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
             }
         }
 
-
-        // Needs to be modified for non-static?
-        public Texture GetIntegrityTexture()
+        public override void Destroy()
         {
-            Texture integrity = ship.ShipAnim().GetFrameTexture(shipIntegrity);
-            return integrity;
-        }
+            new GenericEffect(Position, new Vector2(1.3f, 1.3f), new Vector2(30, 60), 0, "Smoke", Effects.GetEffectTextures(1), 0.12f, false, false, false);
+            this.objectCollider.OnCollision -= this.OnCollision; this.AnyDamage -= Damage; this.SmokeDamageAnim.OnAnimationFinished -= OnSmokeEnded;
 
-        public ShipConfig GetShip()
-        {
-            ShipConfig shipdata = ship;
-            return shipdata;
+            ManagerLevel1.OnPlayerDeath?.Invoke(UI.ShippysLeft); // Maybe needs to be reworked.
+            GameObjectManager.RemoveGameObject(this);
         }
     }
 }

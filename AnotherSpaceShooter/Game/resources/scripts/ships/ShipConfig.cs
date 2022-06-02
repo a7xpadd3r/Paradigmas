@@ -13,6 +13,7 @@ namespace Game
         protected private Vector2 drawOffset;
         protected private Animation shipAnimation;
         protected private Animation propellersAnimation;
+        //protected private GenericEffect destroyedEffect = new GenericEffect(Position, new Vector2(1.3f, 1.3f), new Vector2(138, 170), 0, "Smoke", Effects.GetEffectTextures(1), 0.15f, false, false, true);
 
         public ShipConfig(float newSpeed, Vector2 newRailPos, Vector2 newPropPos, Vector2 newCollSize, Vector2 newCollOffset, Animation newShipAnim, Animation newPropellersAnim, Vector2 newDrawOffset = new Vector2())
         {

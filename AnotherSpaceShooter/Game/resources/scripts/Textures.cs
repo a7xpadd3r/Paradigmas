@@ -9,8 +9,8 @@ namespace Game
     {
         public static void InitializeTextures()
         {
-            
-            UI.InitializeUI();
+
+            UITextures.InitializeUITextures();
             ShipsTextures.InitializeShipsTextures();
             PropellersTextures.InitializePropellersTextures();
             ProyectilesTextures.InitializeProyectilesTextures();
@@ -125,12 +125,14 @@ namespace Game
         private static List<Texture> Proyectile1Textures = new List<Texture>();
         private static List<Texture> Proyectile2Textures = new List<Texture>();
         private static List<Texture> Proyectile3Textures = new List<Texture>();
+        private static List<Texture> Proyectile4Textures = new List<Texture>();
 
         public static void InitializeProyectilesTextures()
         {
             Proyectile1Textures.Add(new Texture("resources/gfx/proyectiles/p_proyectile1.png"));
             Proyectile2Textures.Add(new Texture("resources/gfx/proyectiles/p_proyectile2.png"));
             Proyectile3Textures.Add(new Texture("resources/gfx/proyectiles/p_proyectile3.png"));
+            Proyectile4Textures.Add(new Texture("resources/gfx/proyectiles/e_proyectile1.png"));
         }
 
         public static List<Texture> GetProyectileTextures(int selection)
@@ -146,6 +148,9 @@ namespace Game
                     break;
                 case 2:
                     textures = Proyectile3Textures;
+                    break;
+                case 3:
+                    textures = Proyectile4Textures;
                     break;
             }
             return textures;
@@ -217,15 +222,16 @@ namespace Game
         }
     }
 
-    public static class UI
+    public static class UITextures
     {
         //private static List<Texture> buttonProp = new List<Texture>();
         private static List<Texture> buttonPlay = new List<Texture>();
         private static List<Texture> buttonControls = new List<Texture>();
         private static List<Texture> buttonCredits = new List<Texture>();
         private static List<Texture> buttonExit = new List<Texture>();
+        private static List<Texture> numbers = new List<Texture>();
 
-        public static void InitializeUI()
+        public static void InitializeUITextures()
         {
             //buttonProp.Add(new Texture("resources/gfx/ui/button_propUnselected.png"));
             //buttonProp.Add(new Texture("resources/gfx/ui/button_propSelected.png"));
@@ -237,10 +243,16 @@ namespace Game
             buttonControls.Add(new Texture("resources/gfx/ui/ControlsButtonSelect.jpg"));
 
             buttonCredits.Add(new Texture("resources/gfx/ui/CreditsButton.png"));
-            buttonCredits.Add(new Texture("resources/gfx/ui/CreditsButtonSelect.jpg"));        
+            buttonCredits.Add(new Texture("resources/gfx/ui/CreditsButtonSelect.jpg"));
 
             buttonExit.Add(new Texture("resources/gfx/ui/ExitButton.jpg"));
             buttonExit.Add(new Texture("resources/gfx/ui/ExitButtonSelect.jpg"));
+
+            for (int i = 0; i < 10; i++)
+            {
+                numbers.Add(new Texture("resources/gfx/ui/numbers/" + i + ".png"));
+            }
+            numbers.Add(new Texture("resources/gfx/ui/numbers/dot.png"));
         }
 
         public static List<Texture> GetUITextures(int selection)
@@ -262,6 +274,9 @@ namespace Game
                     break;
                 case 3:
                     textures = buttonExit;
+                    break;
+                case 4:
+                    textures = numbers;
                     break;
             }
             return textures;
