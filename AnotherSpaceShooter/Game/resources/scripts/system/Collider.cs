@@ -6,6 +6,7 @@ namespace Game
     public enum ColliderType { Box, Circle }
     public class Collider
     {
+        public int id { get; set; }
         public bool active { get; private set; }
         public string owner { get; private set; }
         public string tag { get; private set; }

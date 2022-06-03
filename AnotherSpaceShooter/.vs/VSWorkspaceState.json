@@ -3,12 +3,7 @@
     "",
     "\\Game",
     "\\Game\\resources",
-    "\\Game\\resources\\gfx\\effect",
     "\\Game\\resources\\scripts",
-    "\\Game\\resources\\scripts\\effects",
-    "\\Game\\resources\\scripts\\system",
-    "\\Game\\resources\\scripts\\system\\interfaces",
-    "\\Game\\resources\\scripts\\system\\managers",
     "\\Game\\resources\\scripts\\system\\managers\\levels"
   ],
   "SelectedNode": "\\Juego.sln",

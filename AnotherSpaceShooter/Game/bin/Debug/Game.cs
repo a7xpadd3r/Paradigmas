@@ -258,16 +258,10 @@ namespace Game
         public static extern bool GetKey(int key);
     }
 
-    public class Actividades
+    public class ConsoleMesages
     {
         public static void Debug(object message) => Console.WriteLine(message.ToString());
         public static void ClearDebug() => Console.Clear();
-
-        public void Actividad1()
-        {
-            Debug("asdasdasd");
-            //Engine.Draw("ship.png", poxX, posY);
-        }
     }
 
 }

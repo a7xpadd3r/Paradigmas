@@ -165,6 +165,7 @@ namespace Game
         private static List<Texture> shieldRed = new List<Texture>();
         private static List<Texture> proyectileBeam = new List<Texture>();
         private static List<Texture> indicatorCircle = new List<Texture>();
+        private static List<Texture> itemWaiting = new List<Texture>();
 
         public static void InitializeEffects()
         {
@@ -192,6 +193,13 @@ namespace Game
             indicatorCircle.Add(new Texture("resources/gfx/effect/hp_full.png"));
             indicatorCircle.Add(new Texture("resources/gfx/effect/hp_half.png"));
             indicatorCircle.Add(new Texture("resources/gfx/effect/hp_depleted.png"));
+
+            for (int i = 0; i < 6; i++)
+                itemWaiting.Add(new Texture("resources/gfx/effect/itemeffect-white-" + i + ".png"));
+
+            for (int i = 4; i > 0; i--)
+                itemWaiting.Add(new Texture("resources/gfx/effect/itemeffect-white-" + i + ".png"));
+                
         }
 
         public static List<Texture> GetEffectTextures(int selection)
@@ -216,6 +224,9 @@ namespace Game
                     break;
                 case 5:
                     textures = indicatorCircle;
+                    break;
+                case 6:
+                    textures = itemWaiting;
                     break;
             }
             return textures;
@@ -280,6 +291,46 @@ namespace Game
                     break;
             }
             return textures;
+        }
+
+    }
+
+    public static class ItemsTextures
+    {
+        private static Texture wrench = new Texture("resources/gfx/items/wrench.png");
+        private static Texture shield = new Texture("resources/gfx/items/shield.png");
+        private static Texture special = new Texture("resources/gfx/items/special.png");
+        private static Texture blueRail = new Texture("resources/gfx/proyectiles/p_proyectile1.png");
+        private static Texture redDiamond = new Texture("resources/gfx/proyectiles/p_proyectile2.png");
+        private static Texture greenCrast = new Texture("resources/gfx/proyectiles/p_proyectile3.png");
+
+        public static Texture GetItemTexture(int selection)
+        {
+            Texture value = blueRail;
+
+            switch (selection)
+            {
+                case 0:
+                    value = wrench;
+                    break;
+                case 1:
+                    value = shield;
+                    break;
+                case 2:
+                    value = special;
+                    break;
+                case 3:
+                    value = blueRail;
+                    break;
+                case 4:
+                    value = redDiamond;
+                    break;
+                case 5:
+                    value = greenCrast;
+                    break;
+            }
+
+            return value;
         }
 
     }

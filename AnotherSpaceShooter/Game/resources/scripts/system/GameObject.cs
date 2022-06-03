@@ -5,9 +5,11 @@ namespace Game
 {
     public abstract class GameObject
     {
+        public int id;
         public Collider objectCollider = null;
         public bool isActive = true;
         public float life = 1;
+        private float originalLife;
         public string Owner => owner;
         public string Tag => tag;
         public string owner = "null";
@@ -21,11 +23,18 @@ namespace Game
 
         public void Awake()
         {
-            GameObjectManager.AddGameObject(this);
+            id = GameObjectManager.GenerateObjectID();
 
             // Collision and damage are two different things.
-            objectCollider.OnCollision += OnCollision;
+            if (objectCollider != null)
+            {
+                objectCollider.id = id;
+                objectCollider.OnCollision += OnCollision;
+            }
+
+            GameObjectManager.AddGameObject(this);
             AnyDamage += Damage;
+            originalLife = life;
         }
 
         public void BeginPlay()
@@ -42,7 +51,7 @@ namespace Game
 
         public virtual void OnCollision(Collider instigator)
         {
-            //Console.WriteLine("'{0}' -> Colisión por parte de '{1}', instigado por '{2}'", Owner, instigator, instigator.GetOwner());
+            Console.WriteLine("'{0}' -> Colisión por parte de '{1}', instigado por '{2}'", Owner, instigator, instigator.GetOwner());
             if (callsDamageOnCollision) AnyDamage?.Invoke(instigator.damage);
         }
 
@@ -69,11 +78,6 @@ namespace Game
             objectCollider.OnCollision -= OnCollision;
             AnyDamage -= Damage;
             GameObjectManager.RemoveGameObject(this);
-        }
-
-        private void UpdateOwner(string newOwner)
-        {
-            owner = newOwner;
         }
     }
 }

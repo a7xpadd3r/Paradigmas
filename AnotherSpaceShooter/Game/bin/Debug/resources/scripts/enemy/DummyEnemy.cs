@@ -52,36 +52,19 @@ namespace Game
 
             objectCollider = new Collider(Position, ship.ShipSize(), owner, "Ship", 3);
             OnDamage += Damage;
-            Awake(); if (debug) Console.WriteLine("Dummy inicializado.");
+            Awake(); Console.WriteLine("Dummy --> Enemigo dummy creado con el ID {0}", this.id);
             ready = true;
         }
 
-        public void InitializeDummy(ShipConfig withThisShip)
-        {/*
-            // Set initial position from GameObject
-            posX = spawnPosition.X;
-            posY = spawnPosition.Y;
+        public override void OnCollision(Collider instigator)
+        {
+            switch (instigator.owner)
+            {
+                case "Player":
 
-            // Tag
-            this.owner = "Enemy";
-            this.tag = "Ship";
-
-            // Ship configs
-            ship = withThisShip;
-            ShipConfiguration = ship;
-
-            // ShipObject references
-            ShipAnim = ShipConfiguration.ShipAnim();
-            ShipPropellersAnim = ShipConfiguration.PropellersAnim();
-            SmokeDamageAnim = new Animation("Smoke", 0.13f, Effects.GetEffectTextures(1), false);
-            ShieldAnim = new Animation("EnemyShield", 0.03f, Effects.GetEffectTextures(3));
-            Rotation = -180;
-            //ShipAnimation.ChangeFrame(4); if more animatios are added, use this
-
-            objectCollider = new Collider(Position, ship.ShipSize(), owner, "Ship", 3);
-            OnDamage += Damage;
-            Awake(); if (debug) Console.WriteLine("Dummy inicializado.");
-            ready = true; */
+                    if (callsDamageOnCollision) AnyDamage?.Invoke(instigator.damage);
+                    break;
+            }
         }
 
         public override void Damage(float amount)
@@ -90,9 +73,10 @@ namespace Game
             {
                 IsShielding = true;
                 ShieldAnim.ChangeFrame(0);
+                RenderSmoke = true;
                 SmokeDamageAnim.Play();
                 currentShieldTime = 0;
-                this.life -= amount;
+                life -= amount;
                 if (life <= 0) Destroy();
             }
         }
@@ -134,9 +118,9 @@ namespace Game
             if (canShoot)
             {
                 canShoot = false;
-                new Proyectile(new Vector2(Position.X - 50, Position.Y)- ship.ShipRailPosition(), 4, "Enemy");
-                new Proyectile(new Vector2(Position.X + 50, Position.Y) - ship.ShipRailPosition(), 4, "Enemy");
-                new Proyectile(Position - ship.ShipRailPosition(), 4, "Enemy");
+                //new Proyectile(new Vector2(Position.X - 50, Position.Y)- ship.ShipRailPosition(), 4, "Enemy");
+                //new Proyectile(new Vector2(Position.X + 50, Position.Y) - ship.ShipRailPosition(), 4, "Enemy");
+                //new Proyectile(Position - ship.ShipRailPosition(), 4, "Enemy");
             }
 
             if (!canShoot) currentTime += Program.GetDeltaTime();

@@ -58,6 +58,9 @@
     </Compile>
     <Compile Include="resources\scripts\effects\GenericEffect.cs" />
     <Compile Include="resources\scripts\effects\Star.cs" />
+    <Compile Include="resources\scripts\factory\fWeapon.cs" />
+    <Compile Include="resources\scripts\interfaces\iProyectile.cs" />
+    <Compile Include="resources\scripts\items\Item.cs" />
     <Compile Include="resources\scripts\player\PlayerConfig.cs" />
     <Compile Include="resources\scripts\ships\ShipConfig.cs" />
     <Compile Include="resources\scripts\ships\ShipObject.cs" />
@@ -71,15 +74,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="resources\scripts\system\GameObject.cs" />
-    <Compile Include="resources\scripts\system\interfaces\iHealth.cs" />
-    <Compile Include="resources\scripts\system\interfaces\iScenes.cs" />
-    <Compile Include="resources\scripts\system\interfaces\iShipAnimations.cs" />
-    <Compile Include="resources\scripts\system\managers\EffectsManager.cs" />
-    <Compile Include="resources\scripts\system\managers\GameObjectManager.cs" />
-    <Compile Include="resources\scripts\system\managers\GameplayManager.cs">
+    <Compile Include="resources\scripts\interfaces\iGetWeapon.cs" />
+    <Compile Include="resources\scripts\interfaces\iHealth.cs" />
+    <Compile Include="resources\scripts\interfaces\iScenes.cs" />
+    <Compile Include="resources\scripts\interfaces\iShipAnimations.cs" />
+    <Compile Include="resources\scripts\interfaces\iWeapon.cs" />
+    <Compile Include="resources\scripts\managers\EffectsManager.cs" />
+    <Compile Include="resources\scripts\managers\GameObjectManager.cs" />
+    <Compile Include="resources\scripts\managers\GameplayManager.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="resources\scripts\Proyectile.cs">
+    <Compile Include="resources\scripts\utilities\PlayerStalker.cs" />
+    <Compile Include="resources\scripts\weapons\Proyectile.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="resources\scripts\player\Player.cs">
@@ -88,26 +94,29 @@
     <Compile Include="Program.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="resources\scripts\SFX.cs">
+    <Compile Include="resources\scripts\sfx\SFX.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="resources\scripts\system\managers\CollisionManager.cs" />
-    <Compile Include="resources\scripts\system\managers\levels\ManagerLevel1.cs" />
-    <Compile Include="resources\scripts\system\managers\levels\ManagerLevel2.cs" />
-    <Compile Include="resources\scripts\system\managers\levels\ManagerLevel3.cs" />
-    <Compile Include="resources\scripts\system\managers\StarsManager.cs" />
-    <Compile Include="resources\scripts\system\menu\Button.cs" />
-    <Compile Include="resources\scripts\system\menu\Win.cs" />
-    <Compile Include="resources\scripts\system\menu\GameOver.cs" />
-    <Compile Include="resources\scripts\system\menu\Controls.cs" />
-    <Compile Include="resources\scripts\system\menu\MainMenu.cs" />
-    <Compile Include="resources\scripts\system\menu\Credits.cs" />
-    <Compile Include="resources\scripts\system\RandomValue.cs" />
+    <Compile Include="resources\scripts\managers\CollisionManager.cs" />
+    <Compile Include="resources\scripts\managers\levels\ManagerLevel1.cs" />
+    <Compile Include="resources\scripts\managers\levels\ManagerLevel2.cs" />
+    <Compile Include="resources\scripts\managers\levels\ManagerLevel3.cs" />
+    <Compile Include="resources\scripts\managers\StarsManager.cs" />
+    <Compile Include="resources\scripts\menu\Button.cs" />
+    <Compile Include="resources\scripts\menu\Win.cs" />
+    <Compile Include="resources\scripts\menu\GameOver.cs" />
+    <Compile Include="resources\scripts\menu\Controls.cs" />
+    <Compile Include="resources\scripts\menu\MainMenu.cs" />
+    <Compile Include="resources\scripts\menu\Credits.cs" />
+    <Compile Include="resources\scripts\utilities\RandomValue.cs" />
     <Compile Include="resources\scripts\system\Render.cs" />
     <Compile Include="resources\scripts\system\Transform.cs" />
     <Compile Include="resources\scripts\system\UI.cs" />
-    <Compile Include="resources\scripts\Textures.cs" />
+    <Compile Include="resources\scripts\utilities\Textures.cs" />
     <Compile Include="resources\scripts\utilities\NumbersToSprites.cs" />
+    <Compile Include="resources\scripts\weapons\wBlueRail.cs" />
+    <Compile Include="resources\scripts\weapons\wGreenCrast.cs" />
+    <Compile Include="resources\scripts\weapons\wRedDiamond.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources\gfx\background.png">
@@ -126,6 +135,24 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\effect\hp_half.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effect\itemeffect-white-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effect\itemeffect-white-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effect\itemeffect-white-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effect\itemeffect-white-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effect\itemeffect-white-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effect\itemeffect-white-5.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\effect\proyectilebeam-0.png">
@@ -207,6 +234,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\environment\a_var1_stars\var1_star3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\items\shield.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\items\special.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\items\wrench.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\proyectiles\e_proyectile1.png">

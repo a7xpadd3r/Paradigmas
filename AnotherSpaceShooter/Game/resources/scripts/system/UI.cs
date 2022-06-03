@@ -24,7 +24,6 @@ namespace Game
 
         public static void UpdateLifesLeft()
         {
-            Console.WriteLine("asd");
             shippys -= 1;
         }
 

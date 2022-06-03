@@ -30,7 +30,6 @@ namespace Game
         private float time = 0.1f;
         private float currentTime = 0.1f;
 
-
         public bool Active => active;
 
         public Star()

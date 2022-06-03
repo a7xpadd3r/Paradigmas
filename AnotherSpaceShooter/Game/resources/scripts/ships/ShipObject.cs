@@ -17,6 +17,7 @@ namespace Game
         public bool IsShielding { get; set; }
         public bool RenderSmoke = false;
 
+        // Blinkin when appearing
         public bool BlinkingEnded = false;
         private bool blinking = true;
         private bool draw = true;
@@ -25,8 +26,8 @@ namespace Game
         private int howManyBlinks = 15;
         private int currentBlinks = 0;
 
-        // Others
-        Animation Status = new Animation("Status", 0, Effects.GetEffectTextures(5), false, true); // Dot indicator
+        // Dot indicator
+        Animation Status = new Animation("Status", 0, Effects.GetEffectTextures(5), false, true);
 
         public override void Render()
         {
@@ -50,7 +51,7 @@ namespace Game
                 {
                     Engine.Draw(ShipAnim.CurrentTexture, RenderPosition.X, RenderPosition.Y, 1, 1, Rotation);
                     Engine.Draw(ShipPropellersAnim.CurrentTexture, RenderPosition.X + ShipConfiguration.ShipPropellersPosition().X, RenderPosition.Y + ShipConfiguration.ShipPropellersPosition().Y, 1, 1, Rotation);
-                    if (owner == "Player") draw = false;
+                    draw = false;
                 }
             }
 
@@ -59,10 +60,6 @@ namespace Game
                 Engine.Draw(ShipAnim.CurrentTexture, RenderPosition.X, RenderPosition.Y, 1, 1, Rotation);
                 Engine.Draw(ShipPropellersAnim.CurrentTexture, RenderPosition.X + ShipConfiguration.ShipPropellersPosition().X, RenderPosition.Y + ShipConfiguration.ShipPropellersPosition().Y, 1, 1, Rotation);
             }
-
-
-            //Engine.Draw(ShipAnim.CurrentTexture, RenderPosition.X, RenderPosition.Y, 1, 1, Rotation);
-            //Engine.Draw(ShipPropellersAnim.CurrentTexture, RenderPosition.X + ShipConfiguration.ShipPropellersPosition().X, RenderPosition.Y + ShipConfiguration.ShipPropellersPosition().Y, 1, 1, Rotation);
 
             // Updates for each animations
             ShipAnim.Update(); ShipPropellersAnim.Update(); SmokeDamageAnim.Update();
@@ -91,6 +88,15 @@ namespace Game
         public void UpdateShipPosition(Vector2 newPosition)
         {
             RenderPosition = newPosition;
+        }
+
+        public void ResetBlinking(int newBlinksAmount = 15)
+        {
+            blinking = true;
+            BlinkingEnded = false;
+            currentInv = 0;
+            currentBlinks = 0;
+            howManyBlinks = newBlinksAmount;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Game
     {
         List<DummyEnemy> dummys = new List<DummyEnemy>();
         static List<Player> players = new List<Player>();
+        List<Item> items = new List<Item>();
         public static Action<int> OnPlayerDeath; // Use this for player respawn, needs to be moved to a general manager?
 
         public void Gameplay()
@@ -19,6 +20,13 @@ namespace Game
             dummys.Add(new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(800,200)));
             dummys.Add(new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(500,400)));
             dummys.Add(new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(200,600)));
+
+            //new Item(ItemType.Repair, new Vector2(200, 0), 10);
+            //new Item(ItemType.Special, new Vector2(300, 0), 10);
+            //new Item(ItemType.Shield, new Vector2(400, 0), 10);
+            new Item(ItemType.Weapon, new Vector2(500, 0), 30, WeaponTypes.BlueRail);
+            new Item(ItemType.Weapon, new Vector2(600, 0), 30, WeaponTypes.RedDiamond);
+            new Item(ItemType.Weapon, new Vector2(700, 0), 30, WeaponTypes.GreenCrast);
 
             players.Add(new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20));
 

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Scripts",
+    "\\Scripts\\Class",
+    "\\Scripts\\Factory",
+    "\\Scripts\\Interface",
+    "\\Scripts\\Pool",
+    "\\Scripts\\Screens",
+    "\\Scripts\\Static",
+    "\\Scripts\\Weapons"
+  ],
+  "SelectedNode": "\\Scripts\\Class\\PlayerController.cs",
+  "PreviewInSolutionExplorer": false
+}
