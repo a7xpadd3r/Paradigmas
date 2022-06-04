@@ -29,8 +29,9 @@ namespace Game
                     return new wBlueRail();
                 case WeaponTypes.Gamma:
                     return new wBlueRail();
+
                 case WeaponTypes.Enemy1:
-                    return new wBlueRail();
+                    return new eBlueRail();
                 case WeaponTypes.Enemy2:
                     return new wBlueRail();
                 case WeaponTypes.Enemy3:

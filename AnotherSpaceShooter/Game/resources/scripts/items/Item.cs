@@ -28,7 +28,7 @@ namespace Game
         public new ItemType GetType => type;
         public WeaponTypes WeaponType => weaptype;
 
-        public Item(ItemType newType, Vector2 newSpawnPosition, float newSpeed = 80f, WeaponTypes newWeapType = WeaponTypes.BlueRail)
+        public Item(ItemType newType, Vector2 newSpawnPosition, WeaponTypes newWeapType = WeaponTypes.BlueRail, float newSpeed = 80f)
         {
             this.callsDamageOnCollision = false;
             this.spawnPosition = newSpawnPosition;

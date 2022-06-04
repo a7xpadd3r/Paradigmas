@@ -1,46 +1,44 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace Game
 {
-    class wRedDiamond : iWeapon
+    public class eBlueRail : iWeapon
     {
-        // Public stuff
+        // Basic stuff
         public iGetWeapon Owner { get; private set; }
-        WeaponTypes iWeapon.Type => WeaponTypes.RedDiamond;
+        WeaponTypes iWeapon.Type => WeaponTypes.BlueRail;
         private Vector2 spawnPosition = new Vector2();
 
         // Ammo stuff
-        private int ammo = 50;
-        private readonly int ammoAdd = 50;
+        private int ammo = 0;
         public int CurrentAmmo => ammo;
 
         // Firerate stuff
         private bool canShoot = true;
-        private float recoilTime = 0.8f;
+        private float recoilTime = 0.4f;
         private float currentTime = 0;
 
-        public wRedDiamond()
+        public eBlueRail()
         {
 
         }
+
         public void NewOwner(iGetWeapon owner)
         {
             Owner = owner;
         }
         public void AddAmmo()
         {
-            ammo += ammoAdd;
         }
 
         public void Fire()
         {
             if (canShoot)
             {
-                new Proyectile(spawnPosition, 2, "Player");
-                ammo--;
+                new Proyectile(spawnPosition, 4, "Enemy");
                 canShoot = false;
             }
+
         }
 
         public void Update(float delta, Vector2 currentPosition)

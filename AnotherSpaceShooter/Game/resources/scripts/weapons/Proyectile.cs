@@ -71,8 +71,11 @@ namespace Game
 
         public override void OnCollision(Collider instigator)
         {
-            new GenericEffect(Position, new Vector2(3, 3), new Vector2(1, 1), 0, "HitBeam", Effects.GetEffectTextures(4), 0.08f, false);
-            Destroy();
+            if (instigator.tag != "Item")
+            {
+                new GenericEffect(Position, new Vector2(3, 3), new Vector2(1, 1), 0, "HitBeam", Effects.GetEffectTextures(4), 0.08f, false);
+                Destroy();
+            }
         }
 
         public override void Update()

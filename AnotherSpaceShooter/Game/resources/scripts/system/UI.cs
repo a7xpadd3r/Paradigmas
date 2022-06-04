@@ -11,11 +11,13 @@ namespace Game
         private static int shippys = 3;
         private static Texture currentShippy = ShipsTextures.GetShipTextures(currentShip)[4];
         private static Texture initialShippy = currentShippy;
-        private static NumbersToSprites n2s = new NumbersToSprites();
+        private static NumbersToSprites score2sprites = new NumbersToSprites();
+        private static NumbersToSprites ammo2sprites = new NumbersToSprites();
         public static int ShippysLeft => shippys;
 
         // Score
         public static double score = 0;
+        public static double ammo = 0;
         private static Vector2 shippysRenderPos = new Vector2(20, 50);
         private static readonly float shippysOffset = 50;
 
@@ -23,6 +25,11 @@ namespace Game
         private static Animation weapBox = new Animation("WeaponBox", 0.02f, UITextures.GetUITextures(5));
         private static List<iWeapon> PlayerWeapons = new List<iWeapon>();
         private static iWeapon CurrentWeapon = null;
+
+        public static void UpdateAmmo(double howMuch)
+        {
+            ammo = howMuch;
+        }
 
         public static void UpdateScore(double addpoints)
         {
@@ -51,7 +58,8 @@ namespace Game
 
         public static void Update()
         {
-            n2s.RenderNumbers(score, new Vector2(35, 20), new Vector2(1.5f, 1.5f));
+            score2sprites.RenderNumbers(score, new Vector2(35, 20), new Vector2(1.5f, 1.5f));
+            if (ammo > 0) ammo2sprites.RenderNumbers(ammo, new Vector2(1850, 100), new Vector2(1.5f, 1.5f), true);
 
             if (shippys != 0)
             {

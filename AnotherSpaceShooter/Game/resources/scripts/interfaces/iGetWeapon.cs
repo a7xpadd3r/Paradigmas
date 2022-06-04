@@ -8,6 +8,6 @@ namespace Game
         Vector2 OwnerRailPosition { get; }
         iWeapon CurrentWeapon { get; }
         List<iWeapon> AllWeapons { get; }
-        void GetWeapon(iWeapon newWeapon);
+        void GetWeapon(Item theItem);
     }
 }

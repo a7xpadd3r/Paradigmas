@@ -6,19 +6,20 @@ namespace Game
 {
     class wHeatTrail : iWeapon
     {
+        // Basic stuff
         public iGetWeapon Owner { get; private set; }
+        WeaponTypes iWeapon.Type => WeaponTypes.HeatTrail;
         private Animation FireHead = new Animation("FireHead", 0.016f, Effects.GetEffectTextures(7));
-        private float toleranceRangeX = 1f;
-        private float toleranceRangeY = 1f;
-        private bool isDrawing = false;
+        private float toleranceRangeX = 1f, toleranceRangeY = 1f; // A firehead will stop moving when enters this ranges.
+        private bool isDrawing = false; // Used to check when the fireheads needs to follow player movement or needs to be reseted.
+
+        // Ammo stuff
+        private int ammo = 500;
+        private readonly int ammoAdd = 500;
+        public int CurrentAmmo => ammo;
 
         // Damages
-        private float h1damage = 3f;
-        private float h2damage = 4.2f;
-        private float h3damage = 5f;
-        private float h4damage = 6.7f;
-        private float h5damage = 8f;
-        private float h6damage = 10f;
+        private float h1damage = 3f, h2damage = 4.2f, h3damage = 5f, h4damage = 6.7f, h5damage = 8f, h6damage = 10f;
 
         // Positions
         private Vector2 lastKnownPosition;
@@ -28,12 +29,12 @@ namespace Game
         private Vector2 firePositionH4 = new Vector2(-500, -500);
         private Vector2 firePositionH5 = new Vector2(-500, -500);
         private Vector2 firePositionH6 = new Vector2(-500, -500);
-        private float h1X = 0; private float h1Y = 0; private float h1speed = 400f;
-        private float h2X = 0; private float h2Y = 0; private float h2speed = 380f;
-        private float h3X = 0; private float h3Y = 0; private float h3speed = 360f;
-        private float h4X = 0; private float h4Y = 0; private float h4speed = 340f;
-        private float h5X = 0; private float h5Y = 0; private float h5speed = 320f;
-        private float h6X = 0; private float h6Y = 0; private float h6speed = 300f;
+        private float h1X = 0, h1Y = 0, h1speed = 400f;
+        private float h2X = 0, h2Y = 0, h2speed = 380f;
+        private float h3X = 0, h3Y = 0, h3speed = 360f;
+        private float h4X = 0, h4Y = 0, h4speed = 340f;
+        private float h5X = 0, h5Y = 0, h5speed = 320f;
+        private float h6X = 0, h6Y = 0, h6speed = 300f;
 
         // Vectors for draw
         private Vector2 head1 => new Vector2(h1X, h1Y);
@@ -68,24 +69,33 @@ namespace Game
             Owner = owner;
         }
 
+        public void AddAmmo()
+        {
+            ammo += ammoAdd;
+        }
+
         public void Fire()
         {
-            isDrawing = true;
-            firePositionH1 = new Vector2(lastKnownPosition.X - 8, lastKnownPosition.Y - 23);
-            firePositionH2 = new Vector2(lastKnownPosition.X - 13, lastKnownPosition.Y - 65);
-            firePositionH3 = new Vector2(lastKnownPosition.X - 17, lastKnownPosition.Y - 110);
-            firePositionH4 = new Vector2(lastKnownPosition.X - 22, lastKnownPosition.Y - 160);
-            firePositionH5 = new Vector2(lastKnownPosition.X - 26, lastKnownPosition.Y - 220);
-            firePositionH6 = new Vector2(lastKnownPosition.X - 31, lastKnownPosition.Y - 280);
-
-            if (isDrawing)
+            if (ammo > 0)
             {
-                Engine.Draw(FireHead.CurrentTexture, head1.X, head1.Y, head1size.X, head1size.Y);
-                Engine.Draw(FireHead.CurrentTexture, head2.X, head2.Y, head2size.X, head2size.Y);
-                Engine.Draw(FireHead.CurrentTexture, head3.X, head3.Y, head3size.X, head3size.Y);
-                Engine.Draw(FireHead.CurrentTexture, head4.X, head4.Y, head4size.X, head4size.Y);
-                Engine.Draw(FireHead.CurrentTexture, head5.X, head5.Y, head5size.X, head5size.Y);
-                Engine.Draw(FireHead.CurrentTexture, head6.X, head6.Y, head6size.X, head6size.Y);
+                isDrawing = true;
+                firePositionH1 = new Vector2(lastKnownPosition.X - 8, lastKnownPosition.Y - 23);
+                firePositionH2 = new Vector2(lastKnownPosition.X - 13, lastKnownPosition.Y - 65);
+                firePositionH3 = new Vector2(lastKnownPosition.X - 17, lastKnownPosition.Y - 110);
+                firePositionH4 = new Vector2(lastKnownPosition.X - 22, lastKnownPosition.Y - 160);
+                firePositionH5 = new Vector2(lastKnownPosition.X - 26, lastKnownPosition.Y - 220);
+                firePositionH6 = new Vector2(lastKnownPosition.X - 31, lastKnownPosition.Y - 280);
+
+                if (isDrawing)
+                {
+                    ammo -= 1;
+                    Engine.Draw(FireHead.CurrentTexture, head1.X, head1.Y, head1size.X, head1size.Y);
+                    Engine.Draw(FireHead.CurrentTexture, head2.X, head2.Y, head2size.X, head2size.Y);
+                    Engine.Draw(FireHead.CurrentTexture, head3.X, head3.Y, head3size.X, head3size.Y);
+                    Engine.Draw(FireHead.CurrentTexture, head4.X, head4.Y, head4size.X, head4size.Y);
+                    Engine.Draw(FireHead.CurrentTexture, head5.X, head5.Y, head5size.X, head5size.Y);
+                    Engine.Draw(FireHead.CurrentTexture, head6.X, head6.Y, head6size.X, head6size.Y);
+                }
             }
         }
 
@@ -128,12 +138,6 @@ namespace Game
 
                     switch (i)
                     {
-                        case 1:
-                            tempX = h1X;
-                            tempY = h1Y;
-                            tempVector = firePositionH1;
-                            tempSpeed = h1speed;
-                            break;
                         case 2:
                             tempX = h2X;
                             tempY = h2Y;
@@ -208,10 +212,10 @@ namespace Game
             isDrawing = false;
         }
 
-        private bool InRange(float input, float min, float max)
+        private bool InRange(float input1, float min1, float max1)
         {
             bool value = false;
-            if (input > min && input < max) value = true;
+            if (input1 > min1 && input1 < max1) value = true;
             return value;
         }
     }

@@ -7,7 +7,7 @@ namespace Game
 {
     public class EffectsManager
     {
-        public static bool debug = true;
+        public static bool debug = false;
         private static protected List<GenericEffect> CurrentEffects { get; } = new List<GenericEffect>();
         public List<GenericEffect> GetAllEffects => CurrentEffects;
 

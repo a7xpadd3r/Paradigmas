@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Numerics;
 
 namespace Game
 {
-    public class DummyEnemy : ShipObject
+    public class DummyEnemy : ShipObject, iGetWeapon
     {
         private protected bool ready = false;
         private new bool debug = false;
@@ -14,12 +15,13 @@ namespace Game
         // Position stuff
         private protected float posX = 900;
         private protected float posY = 200;
+        public Vector2 OwnerRailPosition => Position - ship.ShipRailPosition();
         private protected Vector2 Position => new Vector2(posX, posY);
 
-        // Weapons stuff
-        private protected bool canShoot = true;
-        private protected float recoilTime = 0.4f;
-        private protected float currentTime = 0;
+        // Weapons stuff - iGetWeapon
+        private int currentWeapIndex = -1;
+        public List<iWeapon> AllWeapons { get; private set; } = new List<iWeapon>();
+        public iWeapon CurrentWeapon => AllWeapons[currentWeapIndex];
 
         // Damage stuff
         private protected int shipIntegrity = 4;
@@ -50,11 +52,16 @@ namespace Game
             Rotation = -180;
             //ShipAnimation.ChangeFrame(4); if more animatios are added, use this
 
+            // Weapons
+            AllWeapons.Add(fWeapon.CreateWeapon(WeaponTypes.Enemy1));
+            currentWeapIndex++;
+
+            // Collider
             objectCollider = new Collider(Position, ship.ShipSize(), owner, "Ship", 3);
             this.realSize = new Vector2(ShipAnim.CurrentTexture.Width, ShipAnim.CurrentTexture.Height);
             OnDamage += Damage;
-            Awake(); Console.WriteLine("Dummy --> Enemigo dummy creado con el ID {0}", this.id);
-            ready = true;
+
+            Awake(); Console.WriteLine("Dummy --> Enemigo dummy creado con el ID {0}", this.id); ready = true;
         }
 
         public override void OnCollision(Collider instigator)
@@ -67,6 +74,8 @@ namespace Game
                     break;
             }
         }
+
+        public void GetWeapon(Item theItem) { /* Nothing goes here... */ }
 
         public override void Damage(float amount)
         {
@@ -87,6 +96,8 @@ namespace Game
             objectCollider.OnCollision -= OnCollision;
             AnyDamage -= Damage;
             new GenericEffect(Position, new Vector2(1.3f, 1.3f), new Vector2(170, 180), 0, "Smoke", Effects.GetEffectTextures(1), 0.12f, false, false, false);
+
+            ManagerLevel1.OnEnemyDeath?.Invoke(Position);
             UI.UpdateScore(250);
             GameObjectManager.RemoveGameObject(this);
         }
@@ -102,12 +113,13 @@ namespace Game
                 if (IsShielding) { currentShieldTime += Program.GetDeltaTime(); }
                 if (currentShieldTime >= shieldTime && IsShielding) IsShielding = false;
 
-                //AI();
+                AI();
             }
         }
 
         private void AI()
         {
+            float delta = Program.GetDeltaTime();
             if (posX > 2000)
                 movingRight = true;
 
@@ -115,25 +127,15 @@ namespace Game
                 movingRight = false;
 
             if (!movingRight)
-                posX += ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
+                posX += ShipConfiguration.ShipSpeed() * delta;
 
             else if (movingRight)
-                posX -= ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
-
-            if (canShoot)
+                posX -= ShipConfiguration.ShipSpeed() * delta;
+            
+            if (CurrentWeapon != null)
             {
-                canShoot = false;
-                //new Proyectile(new Vector2(Position.X - 50, Position.Y)- ship.ShipRailPosition(), 4, "Enemy");
-                //new Proyectile(new Vector2(Position.X + 50, Position.Y) - ship.ShipRailPosition(), 4, "Enemy");
-                //new Proyectile(Position - ship.ShipRailPosition(), 4, "Enemy");
-            }
-
-            if (!canShoot) currentTime += Program.GetDeltaTime();
-
-            if (currentTime >= recoilTime && !canShoot)
-            {
-                currentTime = 0;
-                canShoot = true;
+                CurrentWeapon.Update(delta, OwnerRailPosition);
+                CurrentWeapon.Fire();
             }
         }
     }

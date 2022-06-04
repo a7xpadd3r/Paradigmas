@@ -85,6 +85,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="resources\scripts\utilities\PlayerStalker.cs" />
+    <Compile Include="resources\scripts\weapons\eBlueRail.cs" />
     <Compile Include="resources\scripts\weapons\Proyectile.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>

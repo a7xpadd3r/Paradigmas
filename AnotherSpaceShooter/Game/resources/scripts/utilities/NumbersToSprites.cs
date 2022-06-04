@@ -9,7 +9,7 @@ namespace Game
         private List<Texture> numbersPack1 = UITextures.GetUITextures(4);
         private float separation = 15f;
 
-        public void RenderNumbers(double what, Vector2 where, Vector2 howBig, float angle = 0, Vector2 offset = new Vector2())
+        public void RenderNumbers(double what, Vector2 where, Vector2 howBig, bool isReverse = false, float angle = 0, Vector2 offset = new Vector2())
         {
             List<Texture> numbersToDraw = new List<Texture>();
             float currentNumberOffset = 0;
@@ -55,14 +55,25 @@ namespace Game
                 }
             }
 
-            for (int i = 0; i < numbersToDraw.Count; i++)
+            if (isReverse)
             {
-                Engine.Draw(numbersToDraw[i], where.X + currentNumberOffset, where.Y, howBig.X, howBig.Y, angle, offset.X, offset.Y);
-                currentNumberOffset += separation;
+                int x = 0;
+                for (int i = numbersToDraw.Count -1; i > -1; i--)
+                {
+                    Engine.Draw(numbersToDraw[x], where.X - currentNumberOffset, where.Y, howBig.X, howBig.Y, angle, offset.X, offset.Y);
+                    x++;
+                    currentNumberOffset -= separation;
+                }
             }
 
-            //string toString = what.ToString();
-            //letters[] = toString.Split(); 
+            if (!isReverse)
+            {
+                for (int i = 0; i < numbersToDraw.Count; i++)
+                {
+                    Engine.Draw(numbersToDraw[i], where.X + currentNumberOffset, where.Y, howBig.X, howBig.Y, angle, offset.X, offset.Y);
+                    currentNumberOffset += separation;
+                }
+            }
         }
     }
 }

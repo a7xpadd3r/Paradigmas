@@ -7,6 +7,7 @@ namespace Game
     public class Player : ShipObject, iGetWeapon
     {
         public new bool debug = false;
+
         // Special stuff
         private ShipConfig ship = null;
 
@@ -14,23 +15,21 @@ namespace Game
         private static float posX = 500;
         private static float posY = 900;
         public static Vector2 Position => new Vector2(posX, posY);
-        private Vector2 RailPosition => new Vector2(ship.ShipRailPosition().X, ship.ShipRailPosition().Y);
+        public Vector2 OwnerRailPosition => ship.ShipRailPosition();
         private bool ready = false;
 
         // Weapons stuff - iGetWeapon
         private int currentWeapIndex = -1;
-        public Vector2 OwnerRailPosition => RailPosition;
         public List<iWeapon> AllWeapons { get; private set; } = new List<iWeapon>();
         public iWeapon CurrentWeapon => AllWeapons[currentWeapIndex];
 
-        // Should be moved to every weapon for their own managment
-        private int currentWeapon = 1;
-        private bool canShoot = true;
-        private float recoilTime = 0.4f;
-        private float currentTime = 0;
+        // Delay to prevent flash swap
+        private bool canInput = true;
+        private float currentInputCD = 0;
+        private readonly float inputCD = 0.15f;
 
         // Damage stuff
-        private float originalLifes;
+        private float originalLifes; // This is used to show the ship damage in percentage.
         private readonly float shieldTime = 0.8f;
         private float currentShieldTime = 0;
 
@@ -63,8 +62,9 @@ namespace Game
             this.SmokeDamageAnim.OnAnimationFinished += OnSmokeEnded;
             this.realSize = new Vector2(ShipAnim.CurrentTexture.Width, ShipAnim.CurrentTexture.Height);
 
-            var HeatTrail = fWeapon.CreateWeapon(WeaponTypes.HeatTrail);
-            GetWeapon(HeatTrail);
+            // "Blue Trail" is always the default weapon, because it has infinite ammo.
+            GetWeapon(new Item(ItemType.Weapon, new Vector2(), WeaponTypes.BlueRail));
+            NextWeapon();
 
             // Update UI
             UI.UpdateUIShippy(ShipAnim.GetFrameTexture(4));
@@ -72,7 +72,6 @@ namespace Game
 
             // Collision
             this.objectCollider = new Collider(Position, this.ship.ShipSize(), this.owner, this.tag, 3);
-            //this.objectCollider.OnCollision += AnyDamage; // Needs to be changed?
 
             // Final set
             Awake(); Console.WriteLine("Player --> Jugador creado con el ID {0}", this.id); this.ready = true;
@@ -90,7 +89,7 @@ namespace Game
 
                     case "Item":
                         Item theItem = GameObjectManager.GrabItem(instigator);
-                        if (theItem != null && this.owner == "Player")
+                        if (theItem != null)
                         {
                             switch (theItem.GetType)
                             {
@@ -104,41 +103,7 @@ namespace Game
                                     Console.WriteLine("Special");
                                     break;
                                 case ItemType.Weapon:
-                                    switch (theItem.WeaponType)
-                                    {
-                                        case WeaponTypes.BlueRail:
-                                            var BlueRail = fWeapon.CreateWeapon(WeaponTypes.BlueRail);
-                                            GetWeapon(BlueRail);
-                                            Console.Write("new weapon: " + BlueRail + "\n");
-                                            break;
-                                        case WeaponTypes.RedDiamond:
-                                            var RedDiamond = fWeapon.CreateWeapon(WeaponTypes.RedDiamond);
-                                            GetWeapon(RedDiamond);
-                                            Console.Write("new weapon: " + RedDiamond + "\n");
-                                            break;
-                                        case WeaponTypes.GreenCrast:
-                                            var GreenCrast = fWeapon.CreateWeapon(WeaponTypes.GreenCrast);
-                                            GetWeapon(GreenCrast);
-                                            Console.Write("new weapon: " + GreenCrast + "\n");
-                                            break;
-                                        case WeaponTypes.HeatTrail:
-                                            var HeatTrail = fWeapon.CreateWeapon(WeaponTypes.HeatTrail);
-                                            GetWeapon(HeatTrail);
-                                            Console.Write("new weapon: " + HeatTrail + "\n");
-                                            break;
-                                        case WeaponTypes.OrbWeaver:
-                                            break;
-                                        case WeaponTypes.Gamma:
-                                            break;
-                                        case WeaponTypes.Enemy1:
-                                            break;
-                                        case WeaponTypes.Enemy2:
-                                            break;
-                                        case WeaponTypes.Enemy3:
-                                            break;
-                                        default:
-                                            break;
-                                    }
+                                    GetWeapon(theItem);
                                     break;
                             }
                             GameObjectManager.RemoveItem(theItem);
@@ -163,19 +128,11 @@ namespace Game
             }
         }
 
-        /*
-        private void Fire()
-        {
-            canShoot = false;
-            //bullets.Add(new Proyectile(Position + RailPosition, currentWeapon));
-            //ProyectilesManager.AddProyectile(new Proyectile(Position + RailPosition, currentWeapon, owner));
-            new Proyectile(Position + RailPosition, currentWeapon, owner);
-        }
-        */
         public override void Update()
         {
             if (ready)
             {
+                float delta = Program.GetDeltaTime();
                 // Update stuff
                 UpdateShipPosition(Position);
                 objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
@@ -187,30 +144,44 @@ namespace Game
                 if (Engine.GetKey(Keys.W) && posY > 0) posY -= (ShipConfiguration.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
                 if (Engine.GetKey(Keys.S) && posY < 1040) posY += (ShipConfiguration.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
 
-                // Weapons managment
-                //if (Engine.GetKey(Keys.SPACE) && canShoot) { Fire(); }
-                if (Engine.GetKey(Keys.Num1)) { currentWeapon = 1; recoilTime = 0.5f; }
-                if (Engine.GetKey(Keys.Num2)) { currentWeapon = 2; recoilTime = 0.8f; }
-                if (Engine.GetKey(Keys.Num3)) { currentWeapon = 3; recoilTime = 0.25f; }
-
-                if (!canShoot) currentTime += Program.GetDeltaTime();
-
-                if (currentTime >= recoilTime && !canShoot)
-                {
-                    currentTime = 0;
-                    canShoot = true;
-                }
-
-                if (IsShielding) { currentShieldTime += Program.GetDeltaTime(); }
+                // Shield managment
+                if (IsShielding) { currentShieldTime += delta; }
                 if (currentShieldTime >= shieldTime && IsShielding) IsShielding = false;
 
-                // Weapon managment
+                // Weapon managment, called only if there is at least one weapon available.
+                if (currentInputCD < inputCD) currentInputCD += Program.GetDeltaTime();
+                if (currentInputCD >= inputCD && !canInput) canInput = true;
+
                 if (AllWeapons.Count != 0)
                 {
-                    CurrentWeapon.Update(Program.GetDeltaTime(), Position + RailPosition);
-                    if (Engine.GetKey(Keys.SPACE) /*&& canShoot*/) CurrentWeapon.Fire();
-                    if (Engine.GetKey(Keys.Q)) { NextWeapon(); UI.UpdateCurrentWeapons(CurrentWeapon); }
-                    canShoot = false;
+                    // Remove the weapon if no ammo is available but ONLY if is not Blue Rail.
+                    if (CurrentWeapon.CurrentAmmo <= 0 && CurrentWeapon.Type != WeaponTypes.BlueRail) RemoveWeapon();
+
+                    // Call update on the current weapon
+                    CurrentWeapon.Update(delta, Position + OwnerRailPosition);
+
+                    // Swapping inventory
+                    if (AllWeapons.Count > 1 && !Engine.GetKey(Keys.SPACE) && canInput)
+                    {
+                        if (Engine.GetKey(Keys.Q)) { NextWeapon(); }
+                        if (Engine.GetKey(Keys.E)) { PreviousWeapon(); }
+
+                        if ((Engine.GetKey(Keys.Q)) || (Engine.GetKey(Keys.E)))
+                        {
+                            canInput = false;
+                            currentInputCD = 0;
+                        }
+                    }
+
+                    // Call fire ONLY if there is at least 1 bullet (if is not the Blue Rail one).
+                    if (Engine.GetKey(Keys.SPACE))
+                    {
+                        // Blue Rail always fires.
+                        if (CurrentWeapon.Type == WeaponTypes.BlueRail) CurrentWeapon.Fire();
+
+                        if (CurrentWeapon.CurrentAmmo > 0 && CurrentWeapon.Type != WeaponTypes.BlueRail) 
+                        { CurrentWeapon.Fire(); UI.UpdateAmmo(CurrentWeapon.CurrentAmmo); }
+                    }
                 }
             }
         }
@@ -225,14 +196,64 @@ namespace Game
         }
 
         // Special player functions
-        public void GetWeapon(iWeapon newWeapon)
+        public void GetWeapon(Item theItem)
         {
-            newWeapon.NewOwner(this);
-            AllWeapons.Add(newWeapon);
-
-            if (AllWeapons.Count == 1)
+            // Generate the new weapon by getting the type from the item.
+            var newWeapon = fWeapon.CreateWeapon(WeaponTypes.BlueRail); // Needs to have a default value.
+            switch (theItem.WeaponType)
             {
-                NextWeapon();
+                case WeaponTypes.BlueRail:
+                    newWeapon = fWeapon.CreateWeapon(WeaponTypes.BlueRail);
+                    break;
+                case WeaponTypes.RedDiamond:
+                    newWeapon = fWeapon.CreateWeapon(WeaponTypes.RedDiamond);
+                    break;
+                case WeaponTypes.GreenCrast:
+                    newWeapon = fWeapon.CreateWeapon(WeaponTypes.GreenCrast);
+                    break;
+                case WeaponTypes.HeatTrail:
+                    newWeapon = fWeapon.CreateWeapon(WeaponTypes.HeatTrail);
+                    break;
+                case WeaponTypes.OrbWeaver:
+                    break;
+                case WeaponTypes.Gamma:
+                    break;
+                case WeaponTypes.Enemy1:
+                    break;
+                case WeaponTypes.Enemy2:
+                    break;
+                case WeaponTypes.Enemy3:
+                    break;
+                default:
+                    break;
+            }
+
+            // After that, get the type of this new weapon and check if the player already has it. If it does, then add ammo.
+            bool alreadyInInvetory = false;
+            foreach (iWeapon weapon in AllWeapons) if (weapon.Type == newWeapon.Type) { alreadyInInvetory = true; weapon.AddAmmo(); UI.UpdateAmmo(CurrentWeapon.CurrentAmmo); }
+
+            // If not, then...
+            if (!alreadyInInvetory) { newWeapon.NewOwner(this); AllWeapons.Add(newWeapon); } // Add the new weapon.
+            if (AllWeapons.Count == 1) NextWeapon(); // Swap the weapon if the inventory is empty.
+        }
+
+        private void RemoveWeapon()
+        {
+            AllWeapons.Remove(CurrentWeapon);
+            NextWeapon();
+        }
+
+        private void PreviousWeapon()
+        {
+            if (AllWeapons.Count != 0 && AllWeapons.Count != 1)
+            {
+                {
+                    if (currentWeapIndex == 0) currentWeapIndex = AllWeapons.Count - 1;
+                    else if (currentWeapIndex > 0) currentWeapIndex--;
+                }
+
+                UI.UpdateAmmo(CurrentWeapon.CurrentAmmo);
+                UI.UpdateCurrentWeapons(CurrentWeapon);
             }
         }
 
@@ -247,7 +268,9 @@ namespace Game
                         currentWeapIndex = 0;
                     }
                 }
-                Console.WriteLine("CNW -> " + currentWeapIndex + " Count -> " + AllWeapons.Count + " Name -> " + CurrentWeapon);
+
+                UI.UpdateAmmo(CurrentWeapon.CurrentAmmo);
+                UI.UpdateCurrentWeapons(CurrentWeapon);
             }
         }
 
