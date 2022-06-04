@@ -18,25 +18,25 @@ namespace Game
             switch (type)
             {
                 case WeaponTypes.BlueRail:
-                    return new wBlueRail(0.2f);
+                    return new wBlueRail();
                 case WeaponTypes.RedDiamond:
-                    return new wRedDiamond(0.2f);
+                    return new wRedDiamond();
                 case WeaponTypes.GreenCrast:
-                    return new wGreenCrast(0.2f);
+                    return new wGreenCrast();
                 case WeaponTypes.HeatTrail:
-                    return new wBlueRail(0.2f);
+                    return new wHeatTrail();
                 case WeaponTypes.OrbWeaver:
-                    return new wBlueRail(0.2f);
+                    return new wBlueRail();
                 case WeaponTypes.Gamma:
-                    return new wBlueRail(0.2f);
+                    return new wBlueRail();
                 case WeaponTypes.Enemy1:
-                    return new wBlueRail(0.2f);
+                    return new wBlueRail();
                 case WeaponTypes.Enemy2:
-                    return new wBlueRail(0.2f);
+                    return new wBlueRail();
                 case WeaponTypes.Enemy3:
-                    return new wBlueRail(0.2f);
+                    return new wBlueRail();
                 default:
-                    return new wBlueRail(0.2f);
+                    return new wBlueRail();
             }
         }
     }

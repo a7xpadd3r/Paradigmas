@@ -62,6 +62,7 @@ namespace Game
                             itemTexture = ItemsTextures.GetItemTexture(5);
                             break;
                         case WeaponTypes.HeatTrail:
+                            itemTexture = ItemsTextures.GetItemTexture(6);
                             break;
                         case WeaponTypes.OrbWeaver:
                             break;

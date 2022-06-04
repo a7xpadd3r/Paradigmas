@@ -166,6 +166,7 @@ namespace Game
         private static List<Texture> proyectileBeam = new List<Texture>();
         private static List<Texture> indicatorCircle = new List<Texture>();
         private static List<Texture> itemWaiting = new List<Texture>();
+        private static List<Texture> fire1 = new List<Texture>();
 
         public static void InitializeEffects()
         {
@@ -199,7 +200,9 @@ namespace Game
 
             for (int i = 4; i > 0; i--)
                 itemWaiting.Add(new Texture("resources/gfx/effect/itemeffect-white-" + i + ".png"));
-                
+
+            for (int i = 0; i < 5; i++)
+                fire1.Add(new Texture("resources/gfx/effect/fire1-" + i + ".png"));
         }
 
         public static List<Texture> GetEffectTextures(int selection)
@@ -228,6 +231,9 @@ namespace Game
                 case 6:
                     textures = itemWaiting;
                     break;
+                case 7:
+                    textures = fire1;
+                    break;
             }
             return textures;
         }
@@ -241,6 +247,7 @@ namespace Game
         private static List<Texture> buttonCredits = new List<Texture>();
         private static List<Texture> buttonExit = new List<Texture>();
         private static List<Texture> numbers = new List<Texture>();
+        private static List<Texture> weapbox = new List<Texture>();
 
         public static void InitializeUITextures()
         {
@@ -259,11 +266,16 @@ namespace Game
             buttonExit.Add(new Texture("resources/gfx/ui/ExitButton.jpg"));
             buttonExit.Add(new Texture("resources/gfx/ui/ExitButtonSelect.jpg"));
 
-            for (int i = 0; i < 10; i++)
-            {
-                numbers.Add(new Texture("resources/gfx/ui/numbers/" + i + ".png"));
-            }
+            for (int i = 0; i < 10; i++) numbers.Add(new Texture("resources/gfx/ui/numbers/" + i + ".png"));
             numbers.Add(new Texture("resources/gfx/ui/numbers/dot.png"));
+
+            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+            for (int i = 0; i < 11; i++) weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-" + i + ".png"));
+            for (int i = 10; i > 0; i--) weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-" + i + ".png"));
         }
 
         public static List<Texture> GetUITextures(int selection)
@@ -289,6 +301,9 @@ namespace Game
                 case 4:
                     textures = numbers;
                     break;
+                case 5:
+                    textures = weapbox;
+                    break;
             }
             return textures;
         }
@@ -303,6 +318,7 @@ namespace Game
         private static Texture blueRail = new Texture("resources/gfx/proyectiles/p_proyectile1.png");
         private static Texture redDiamond = new Texture("resources/gfx/proyectiles/p_proyectile2.png");
         private static Texture greenCrast = new Texture("resources/gfx/proyectiles/p_proyectile3.png");
+        private static Texture heatTrail = new Texture("resources/gfx/effect/fire1-0.png");
 
         public static Texture GetItemTexture(int selection)
         {
@@ -328,10 +344,33 @@ namespace Game
                 case 5:
                     value = greenCrast;
                     break;
+                case 6:
+                    value = heatTrail;
+                    break;
+            }
+            return value;
+        }
+    }
+
+    public static class OtherTextures
+    {
+        private static Texture collisionDot = new Texture("resources/gfx/collisiondot.png");
+
+        public static Texture GetOtherTexture(int selection)
+        {
+            Texture value = collisionDot;
+
+            switch (selection)
+            {
+                default:
+                    value = collisionDot;
+                    break;
+                case 0:
+                    value = collisionDot;
+                    break;
             }
 
             return value;
         }
-
     }
 }

@@ -23,6 +23,7 @@ namespace Game
         public List<iWeapon> AllWeapons { get; private set; } = new List<iWeapon>();
         public iWeapon CurrentWeapon => AllWeapons[currentWeapIndex];
 
+        // Should be moved to every weapon for their own managment
         private int currentWeapon = 1;
         private bool canShoot = true;
         private float recoilTime = 0.4f;
@@ -60,18 +61,14 @@ namespace Game
             this.ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
             this.ShipAnim.ChangeFrame(4); // Intact ship texture
             this.SmokeDamageAnim.OnAnimationFinished += OnSmokeEnded;
+            this.realSize = new Vector2(ShipAnim.CurrentTexture.Width, ShipAnim.CurrentTexture.Height);
 
-            // Weapon
-            /*this.ShipInventory = new Inventory();
-            this.ShipInventory.GetWeapon(new Weapon(WeaponClasses.BlueRail, true, 1, 0.6f));
-            this.ShipInventory.GetWeapon(new Weapon(WeaponClasses.RedDiamond, false, 100, 0.2f));
-            this.ShipInventory.GetWeapon(new Weapon(WeaponClasses.GreenCrast, false, 30, 1f));
-            this.ShipInventory.GetWeapon(new Weapon(WeaponClasses.HeatTrail, false, 40, 0.78f));
-            this.ShipInventory.GetWeapon(new Weapon(WeaponClasses.OrbWeaver, false, 40, 0.78f));
-            this.ShipInventory.GetWeapon(new Weapon(WeaponClasses.Gamma, false, 40, 0.78f));*/
+            var HeatTrail = fWeapon.CreateWeapon(WeaponTypes.HeatTrail);
+            GetWeapon(HeatTrail);
 
             // Update UI
             UI.UpdateUIShippy(ShipAnim.GetFrameTexture(4));
+            UI.UpdateWeapons(AllWeapons);
 
             // Collision
             this.objectCollider = new Collider(Position, this.ship.ShipSize(), this.owner, this.tag, 3);
@@ -125,6 +122,9 @@ namespace Game
                                             Console.Write("new weapon: " + GreenCrast + "\n");
                                             break;
                                         case WeaponTypes.HeatTrail:
+                                            var HeatTrail = fWeapon.CreateWeapon(WeaponTypes.HeatTrail);
+                                            GetWeapon(HeatTrail);
+                                            Console.Write("new weapon: " + HeatTrail + "\n");
                                             break;
                                         case WeaponTypes.OrbWeaver:
                                             break;
@@ -207,9 +207,9 @@ namespace Game
                 // Weapon managment
                 if (AllWeapons.Count != 0)
                 {
-                    CurrentWeapon.Update();
-                    if (Engine.GetKey(Keys.SPACE) && canShoot) CurrentWeapon.Fire(Position + RailPosition);
-                    if (Engine.GetKey(Keys.Q)) NextWeapon();
+                    CurrentWeapon.Update(Program.GetDeltaTime(), Position + RailPosition);
+                    if (Engine.GetKey(Keys.SPACE) /*&& canShoot*/) CurrentWeapon.Fire();
+                    if (Engine.GetKey(Keys.Q)) { NextWeapon(); UI.UpdateCurrentWeapons(CurrentWeapon); }
                     canShoot = false;
                 }
             }

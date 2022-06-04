@@ -6,7 +6,7 @@ namespace Game
     class wRedDiamond : iWeapon
     {
         public iGetWeapon Owner { get; private set; }
-        public wRedDiamond(float cd)
+        public wRedDiamond()
         {
 
         }
@@ -15,13 +15,13 @@ namespace Game
             Owner = owner;
         }
 
-        public void Fire(Vector2 spawnPosition)
+        public void Fire()
         {
-            new Proyectile(spawnPosition, 2, "Player");
+            new Proyectile(new Vector2(0,0), 2, "Player");
             Console.WriteLine("Calling fire on Red Diamond weapon");
         }
 
-        public void Update()
+        public void Update(float delta, Vector2 currentPosition)
         {
 
         }

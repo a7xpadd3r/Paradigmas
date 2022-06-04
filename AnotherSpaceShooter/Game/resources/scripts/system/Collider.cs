@@ -13,9 +13,11 @@ namespace Game
         public ColliderType type { get; private set; }
         public Vector2 position { get; private set; }
         public Vector2 size { get; private set; }
+        public Vector2 realSize;
         public float damage { get; private set; }
-        private bool ready = false;
+        private Texture collIndicator = OtherTextures.GetOtherTexture(0);
 
+        private bool ready = false;
         public event Action<Collider> OnCollision;
         public Collider(Vector2 newPos, Vector2 newSize, string newOwner, string newTag, float newDamage, ColliderType cType = ColliderType.Box, bool cActive = true)
         {
@@ -32,16 +34,19 @@ namespace Game
         public void UpdatePos(Vector2 newPos)
         {
             position = newPos;
+            //Console.WriteLine(realSize);
         }
 
         public void CheckForCollisions()
         {
             if (ready && active)
+            {
                 for (int i = 0; i < CollisionManager.GetAllColliders.Count; i++)
                 {
                     Collider currentCollider = CollisionManager.GetAllColliders[i];
+
                     if (currentCollider.active && this != currentCollider)
-                        if (type == ColliderType.Box && currentCollider.type == ColliderType.Box  )
+                        if (type == ColliderType.Box && currentCollider.type == ColliderType.Box)
                         {
                             if (Collision.IsBoxColliding(position, size, currentCollider.position, currentCollider.size))
                             {
@@ -53,6 +58,7 @@ namespace Game
                             }
                         }
                 }
+            }
         }
 
         public void SetActive(bool newStatus)

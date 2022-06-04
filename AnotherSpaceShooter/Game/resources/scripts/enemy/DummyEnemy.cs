@@ -51,6 +51,7 @@ namespace Game
             //ShipAnimation.ChangeFrame(4); if more animatios are added, use this
 
             objectCollider = new Collider(Position, ship.ShipSize(), owner, "Ship", 3);
+            this.realSize = new Vector2(ShipAnim.CurrentTexture.Width, ShipAnim.CurrentTexture.Height);
             OnDamage += Damage;
             Awake(); Console.WriteLine("Dummy --> Enemigo dummy creado con el ID {0}", this.id);
             ready = true;
@@ -97,7 +98,11 @@ namespace Game
                 objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
                 UpdateShipPosition(Position);
                 callsDamageOnCollision = !IsShielding;
-                AI();
+
+                if (IsShielding) { currentShieldTime += Program.GetDeltaTime(); }
+                if (currentShieldTime >= shieldTime && IsShielding) IsShielding = false;
+
+                //AI();
             }
         }
 
@@ -130,9 +135,6 @@ namespace Game
                 currentTime = 0;
                 canShoot = true;
             }
-
-            if (IsShielding) { currentShieldTime += Program.GetDeltaTime(); }
-            if (currentShieldTime >= shieldTime && IsShielding) IsShielding = false;
         }
     }
 }

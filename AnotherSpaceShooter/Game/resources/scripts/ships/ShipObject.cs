@@ -5,7 +5,6 @@ namespace Game
 {
     public abstract class ShipObject : GameObject, iShipAnimations
     {
-        //private Vector2 Position = new Vector2(ShipPosX, ShipPosY);
         public ShipConfig ShipConfiguration { get; set; }
         public Animation ShipAnim { get;  set; }
         public Animation ShipPropellersAnim { get; set; }

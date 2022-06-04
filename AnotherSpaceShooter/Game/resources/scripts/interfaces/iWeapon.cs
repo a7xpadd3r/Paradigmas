@@ -6,7 +6,7 @@ namespace Game
     {
         iGetWeapon Owner { get; }
         void NewOwner(iGetWeapon owner);
-        void Fire(Vector2 spawnPosition);
-        void Update();
+        void Fire();
+        void Update(float delta, Vector2 currentPosition);
     }
 }

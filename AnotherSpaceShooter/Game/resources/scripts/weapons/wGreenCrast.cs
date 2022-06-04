@@ -7,7 +7,7 @@ namespace Game
     {
         public iGetWeapon Owner { get; private set; }
 
-        public wGreenCrast(float cd)
+        public wGreenCrast()
         {
 
         }
@@ -17,13 +17,13 @@ namespace Game
             Owner = owner;
         }
 
-        public void Fire(Vector2 spawnPosition)
+        public void Fire()
         {
-            new Proyectile(spawnPosition, 3, "Player");
+            new Proyectile(new Vector2(0, 0), 3, "Player");
             Console.WriteLine("Calling fire on Green Crast weapon");
         }
 
-        public void Update()
+        public void Update(float delta, Vector2 currentPosition)
         {
 
         }

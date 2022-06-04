@@ -27,6 +27,7 @@ namespace Game
             new Item(ItemType.Weapon, new Vector2(500, 0), 30, WeaponTypes.BlueRail);
             new Item(ItemType.Weapon, new Vector2(600, 0), 30, WeaponTypes.RedDiamond);
             new Item(ItemType.Weapon, new Vector2(700, 0), 30, WeaponTypes.GreenCrast);
+            new Item(ItemType.Weapon, new Vector2(900, 0), 30, WeaponTypes.HeatTrail);
 
             players.Add(new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20));
 

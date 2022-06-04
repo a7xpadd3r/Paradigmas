@@ -15,6 +15,7 @@ namespace Game
         public string owner = "null";
         public string tag = "null";
         public Vector2 spawnPosition = new Vector2(0,0);
+        public Vector2 realSize = new Vector2(0, 0);
         public Action<float> AnyDamage;
         public Action<float> OnDamage;
         public float damageAmount = 1;
@@ -32,6 +33,7 @@ namespace Game
                 objectCollider.OnCollision += OnCollision;
             }
 
+            objectCollider.realSize = realSize;
             GameObjectManager.AddGameObject(this);
             AnyDamage += Damage;
             originalLife = life;
