@@ -69,7 +69,9 @@ namespace Game
         {
             CurrentGameObjects.Clear();
             CurrentItems.Clear();
-            if (debug) Console.WriteLine("GameObjectsManager --> Array vaciado.");
+            CollisionManager.WipeColliders();
+            EffectsManager.WipeEffects();
+            if (debug) Console.WriteLine("GameObjectsManager --> Todo limpiado.");
         }
 
         public static void AddItem(Item newItem)

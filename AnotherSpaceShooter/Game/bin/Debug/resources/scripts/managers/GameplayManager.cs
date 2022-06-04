@@ -43,11 +43,8 @@ namespace Game
 
         public void PlayerDeath()
         {
-
-            MainMenu.changeScene = 6;
             goManager.WipeGameObjects();
-            CollisionManager.WipeColliders();
-
+            MainMenu.changeScene = 6;
         }
         
         // Interface?
@@ -80,26 +77,10 @@ namespace Game
             goManager.Update(); //  Needs to be changed for non-static stuff
             eManager.Update();
             CollisionManager.Update();
-            LifesOnScreen();
 
             StarsManager.UpdateFront();
 
             currentScene.Update(); // Interface?
-        }
-
-        private static void LifesOnScreen()
-        {
-            /*
-            if (playerShip != null && currentLifes > 0)
-            {
-                for (int i = 0; i < currentLifes; i++)
-                {
-                    if (i == currentLifes - 1)
-                        Engine.Draw(Player.GetIntegrityTexture(), lifesPositionsOnScreen[i], lifesPositionsOnScreen[5], 0.4f, 0.4f);
-                    else if (i != currentLifes) 
-                        Engine.Draw(playerShip.ShipAnim().GetFrameTexture(playerShip.ShipAnim().AnimationLongitude() - 1), lifesPositionsOnScreen[i], lifesPositionsOnScreen[5], 0.4f, 0.4f);
-                }
-            }*/
         }
 
         private static void AllStar()

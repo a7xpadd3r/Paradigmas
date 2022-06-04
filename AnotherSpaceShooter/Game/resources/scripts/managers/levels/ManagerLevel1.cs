@@ -8,7 +8,6 @@ namespace Game
     class ManagerLevel1
     {
         static List<DummyEnemy> dummys = new List<DummyEnemy>();
-        static List<Player> players = new List<Player>();
         List<Item> items = new List<Item>();
         public static Action<int> OnPlayerDeath; // Use this for player respawn, needs to be moved to a general manager?
 
@@ -32,7 +31,7 @@ namespace Game
             //new Item(ItemType.Weapon, new Vector2(700, 0), 30, WeaponTypes.GreenCrast);
             //new Item(ItemType.Weapon, new Vector2(900, 0), 30, WeaponTypes.HeatTrail);
 
-            players.Add(new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20));
+            new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20);
 
 
 
@@ -47,9 +46,10 @@ namespace Game
         {
             if (lifeleft > 0)
             {
-                players.Add(new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20));
+                new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20);
                 UI.UpdateLifesLeft();
             }
+            else if (lifeleft <= 0) GameplayManager.OnPlayerDeath?.Invoke();
         }
 
         private static void SpawnEnemy(Vector2 possibleItemSpawnPos)
@@ -60,39 +60,32 @@ namespace Game
             
             if (ItemProbability > 50 && ItemProbability < 70)
             {
-                Console.WriteLine("ManagerLevel1 --> Ítem de reparación creado.", ItemProbability);
                 new Item(ItemType.Repair, possibleItemSpawnPos);
             }
             if (ItemProbability > 80 && ItemProbability < 100)
             {
-                Console.WriteLine("ManagerLevel1 --> Ítem de reparación creado.", ItemProbability);
                 new Item(ItemType.Shield, possibleItemSpawnPos);
             }
 
             if (ItemProbability > 0 && ItemProbability < 1)
             {
-                Console.WriteLine("ManagerLevel1 --> Ítem de reparación creado.", ItemProbability);
                 new Item(ItemType.Weapon, possibleItemSpawnPos, WeaponTypes.BlueRail);
             }
 
             if (ItemProbability > 110 && ItemProbability < 130)
             {
-                Console.WriteLine("ManagerLevel1 --> Ítem de reparación creado.", ItemProbability);
                 new Item(ItemType.Weapon, possibleItemSpawnPos, WeaponTypes.RedDiamond);
             }
 
             if (ItemProbability > 131 && ItemProbability < 160)
             {
-                Console.WriteLine("ManagerLevel1 --> Ítem de reparación creado.", ItemProbability);
                 new Item(ItemType.Weapon, possibleItemSpawnPos, WeaponTypes.GreenCrast);
             }
 
             if (ItemProbability > 190 && ItemProbability < 199)
             {
-                Console.WriteLine("ManagerLevel1 --> Ítem de reparación creado.", ItemProbability);
                 new Item(ItemType.Weapon, possibleItemSpawnPos, WeaponTypes.HeatTrail);
             }
-            Console.WriteLine(ItemProbability); 
         }
 
         public static void Update() 
