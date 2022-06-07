@@ -29,6 +29,8 @@ namespace Game
         private float time = 0.1f;
         private float currentTime = 0.1f;
 
+        private float fullsize => (size.X + size.Y) / 2;
+
         public GenericEffect(Vector2 newRenderPos, Vector2 newSize, Vector2 newOffset, float newRotation,  string newName, List<Texture> newTextures, float newSpeed, bool newLoop = true, bool newManualFrames = false, bool newPlayOnStart = true)
         {
             this.anim = new Animation(newName, newSpeed, newTextures, newLoop, newManualFrames);
@@ -66,10 +68,10 @@ namespace Game
                 }
 
                 // Update position following the player movements
-                if (newPlayerX < playerX) posX -= speed * Program.GetDeltaTime();
-                else if (newPlayerX > playerX) posX += speed * Program.GetDeltaTime();
-                if (newPlayerY < playerY) posY -= speed / 25 * Program.GetDeltaTime();
-                else if (newPlayerY > playerY) posY += speed * Program.GetDeltaTime();
+                if (newPlayerX < playerX) posX -= (speed * fullsize) * Program.GetDeltaTime();
+                else if (newPlayerX > playerX) posX += (speed * fullsize) * Program.GetDeltaTime();
+                if (newPlayerY < playerY) posY -= (speed * fullsize) / 25 * Program.GetDeltaTime();
+                else if (newPlayerY > playerY) posY += (speed * fullsize) * Program.GetDeltaTime();
 
             }
         }

@@ -5,7 +5,7 @@ namespace Game
 {
     public class CollisionManager
     {
-        public static bool debug = false;
+        public static bool debug = true;
         private protected static List<Collider> CurrentColliders { get; } = new List<Collider>();
         public static List<Collider> GetAllColliders => CurrentColliders;
 

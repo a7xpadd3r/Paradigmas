@@ -47,7 +47,6 @@ namespace Game
             // ShipObject references
             ShipAnim = ShipConfiguration.ShipAnim();
             ShipPropellersAnim = ShipConfiguration.PropellersAnim();
-            SmokeDamageAnim = new Animation("Smoke", 0.13f, Effects.GetEffectTextures(1), false);
             ShieldAnim = new Animation("EnemyShield", 0.03f, Effects.GetEffectTextures(3));
             Rotation = -180;
             //ShipAnimation.ChangeFrame(4); if more animatios are added, use this
@@ -83,10 +82,9 @@ namespace Game
             {
                 IsShielding = true;
                 ShieldAnim.ChangeFrame(0);
-                RenderSmoke = true;
-                SmokeDamageAnim.Play();
                 currentShieldTime = 0;
                 life -= amount;
+                new GenericEffect(Position, new Vector2(1.8f, 1.8f), new Vector2(160, 230), 0, "Smoke", Effects.GetEffectTextures(1), 0.12f, false, false, false);
                 if (life <= 0) Destroy();
             }
         }
@@ -95,7 +93,6 @@ namespace Game
         {
             objectCollider.OnCollision -= OnCollision;
             AnyDamage -= Damage;
-            new GenericEffect(Position, new Vector2(1.3f, 1.3f), new Vector2(170, 180), 0, "Smoke", Effects.GetEffectTextures(1), 0.12f, false, false, false);
 
             ManagerLevel1.OnEnemyDeath?.Invoke(Position);
             UI.UpdateScore(250);

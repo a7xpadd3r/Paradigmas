@@ -8,13 +8,11 @@ namespace Game
         public ShipConfig ShipConfiguration { get; set; }
         public Animation ShipAnim { get;  set; }
         public Animation ShipPropellersAnim { get; set; }
-        public Animation SmokeDamageAnim { get; set; }
         public Animation ShieldAnim { get; set; }
         public Vector2 RenderPosition { get; set; }
         public float Rotation = 0;
         public int ShipStatus = 4; // Ships should always have 4 statuses and 1 extra blank to use when the ship is destroyed.
         public bool IsShielding { get; set; }
-        public bool RenderSmoke = false;
 
         // Blinkin when appearing
         public bool BlinkingEnded = false;
@@ -61,7 +59,7 @@ namespace Game
             }
 
             // Updates for each animations
-            ShipAnim.Update(); ShipPropellersAnim.Update(); SmokeDamageAnim.Update();
+            ShipAnim.Update(); ShipPropellersAnim.Update();
 
             if (IsShielding)
             {
@@ -69,19 +67,12 @@ namespace Game
                 ShieldAnim.Update();
             }
 
-            if (RenderSmoke) Engine.Draw(SmokeDamageAnim.CurrentTexture, RenderPosition.X, RenderPosition.Y, 1.7f, 1.7f, Rotation, 55, 65);
-
             if (debug) // Show little dots indicating life status
             {
                 if (life >= 7) { Status.ChangeFrame(0); Engine.Draw(Status.CurrentTexture, RenderPosition.X, RenderPosition.Y, 0.3f, 0.3f, 0, 20, 20); }
                 if (life <= 7 && life > 3) { Status.ChangeFrame(1); Engine.Draw(Status.CurrentTexture, RenderPosition.X, RenderPosition.Y, 0.3f, 0.3f, 0, 20, 20); }
                 if (life <= 3) { Status.ChangeFrame(2); Engine.Draw(Status.CurrentTexture, RenderPosition.X, RenderPosition.Y, 0.3f, 0.3f, 0, 20, 20); }
             }
-        }
-
-        public void OnSmokeEnded()
-        {
-            RenderSmoke = false;
         }
 
         public void UpdateShipPosition(Vector2 newPosition)

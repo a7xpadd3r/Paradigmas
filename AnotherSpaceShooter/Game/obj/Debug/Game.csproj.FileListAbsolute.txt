@@ -582,3 +582,4 @@ H:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox
 H:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-7.png
 H:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-8.png
 H:\GitHub\Paradigmas\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-9.png
+H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\obj\Debug\Game.csproj.AssemblyReference.cache

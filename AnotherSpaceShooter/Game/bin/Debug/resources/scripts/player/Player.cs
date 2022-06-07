@@ -11,7 +11,7 @@ namespace Game
         // Special stuff
         private ShipConfig ship = null;
 
-        // Position stuff
+        // Position stuff - needs to be moved to game object
         private static float posX = 500;
         private static float posY = 900;
         public static Vector2 Position => new Vector2(posX, posY);
@@ -28,7 +28,7 @@ namespace Game
         private float currentInputCD = 0;
         private readonly float inputCD = 0.15f;
 
-        // Damage stuff
+        // Damage stuff - needs to be moved to ship object
         private float originalLifes; // This is used to show the ship damage in percentage.
         private readonly float shieldTime = 0.8f;
         private float currentShieldTime = 0;
@@ -56,10 +56,8 @@ namespace Game
             // ShipObject references
             this.ShipAnim = ShipConfiguration.ShipAnim();
             this.ShipPropellersAnim = ShipConfiguration.PropellersAnim();
-            this.SmokeDamageAnim = new Animation("Smoke", 0.15f, Effects.GetEffectTextures(1), false, false);
             this.ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
             this.ShipAnim.ChangeFrame(4); // Intact ship texture
-            this.SmokeDamageAnim.OnAnimationFinished += OnSmokeEnded;
             this.realSize = new Vector2(ShipAnim.CurrentTexture.Width, ShipAnim.CurrentTexture.Height);
 
             // "Blue Trail" is always the default weapon, because it has infinite ammo.
@@ -119,11 +117,12 @@ namespace Game
             {
                 this.IsShielding = true;
                 this.ShieldAnim.ChangeFrame(0);
-                this.SmokeDamageAnim.Play();
                 this.currentShieldTime = 0;
                 this.life -= amount;
-                this.RenderSmoke = true;
+                new GenericEffect(Position, new Vector2(1.8f, 1.8f), new Vector2(30, 60), 0, "Smoke", Effects.GetEffectTextures(1), 0.12f, false, false, false);
+
                 if (life <= 0) Destroy();
+                
                 UpdateShipTexture();
             }
         }
@@ -188,8 +187,7 @@ namespace Game
 
         public override void Destroy()
         {
-            new GenericEffect(Position, new Vector2(1.3f, 1.3f), new Vector2(30, 60), 0, "Smoke", Effects.GetEffectTextures(1), 0.12f, false, false, false);
-            this.objectCollider.OnCollision -= this.OnCollision; this.AnyDamage -= Damage; this.SmokeDamageAnim.OnAnimationFinished -= OnSmokeEnded;
+            this.objectCollider.OnCollision -= this.OnCollision; this.AnyDamage -= Damage;
 
             ManagerLevel1.OnPlayerDeath?.Invoke(UI.ShippysLeft); // Maybe needs to be reworked.
             GameObjectManager.RemoveGameObject(this);
