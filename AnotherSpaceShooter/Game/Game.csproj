@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="resources\scripts\effects\GenericEffect.cs" />
     <Compile Include="resources\scripts\effects\Star.cs" />
+    <Compile Include="resources\scripts\factory\fProyectiles.cs" />
     <Compile Include="resources\scripts\factory\fWeapon.cs" />
     <Compile Include="resources\scripts\interfaces\iProyectile.cs" />
     <Compile Include="resources\scripts\items\Item.cs" />
@@ -86,6 +87,7 @@
     </Compile>
     <Compile Include="resources\scripts\utilities\PlayerStalker.cs" />
     <Compile Include="resources\scripts\weapons\eBlueRail.cs" />
+    <Compile Include="resources\scripts\weapons\pBlueRail.cs" />
     <Compile Include="resources\scripts\weapons\Proyectile.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
@@ -121,6 +123,9 @@
     <Compile Include="resources\scripts\weapons\wRedDiamond.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="resources\gfx\30x30.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="resources\gfx\background.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -263,6 +268,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\items\wrench.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\proyectiles\e_proyectile1.png">

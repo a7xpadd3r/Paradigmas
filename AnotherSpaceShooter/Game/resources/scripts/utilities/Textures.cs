@@ -127,12 +127,19 @@ namespace Game
         private static List<Texture> Proyectile3Textures = new List<Texture>();
         private static List<Texture> Proyectile4Textures = new List<Texture>();
 
+        private static List<Texture> pBlueRail = new List<Texture>();
+        private static Animation aBlueRail = new Animation("Blue Rail Anim", 0.12f, pBlueRail);
+
         public static void InitializeProyectilesTextures()
         {
             Proyectile1Textures.Add(new Texture("resources/gfx/proyectiles/p_proyectile1.png"));
             Proyectile2Textures.Add(new Texture("resources/gfx/proyectiles/p_proyectile2.png"));
             Proyectile3Textures.Add(new Texture("resources/gfx/proyectiles/p_proyectile3.png"));
-            Proyectile4Textures.Add(new Texture("resources/gfx/proyectiles/e_proyectile1.png"));
+
+            for (int i = 0; i < 5; i++)
+            {
+                pBlueRail.Add(new Texture("resources/gfx/proyectiles/bluerail/pbluerail-" + i + ".png"));
+            }
         }
 
         public static List<Texture> GetProyectileTextures(int selection)
@@ -154,6 +161,18 @@ namespace Game
                     break;
             }
             return textures;
+        }
+
+        public static Animation GetProyectileAnim(int selection)
+        {
+            Animation value = aBlueRail;
+            switch (selection)
+            {
+                case 0:
+                    value = aBlueRail;
+                    break;
+            }
+            return value;
         }
     }
 

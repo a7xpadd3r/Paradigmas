@@ -35,7 +35,9 @@ namespace Game
         {
             if (canShoot)
             {
-                new Proyectile(spawnPosition, 1, "Player");
+                new pBlueRail(spawnPosition);
+
+                //new Proyectile(spawnPosition, 1, "Player");
                 canShoot = false;
             }
             

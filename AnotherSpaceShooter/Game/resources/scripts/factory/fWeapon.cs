@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Game
 {
     public enum WeaponTypes
     {
-        BlueRail, RedDiamond, GreenCrast, HeatTrail, OrbWeaver, Gamma,
-        Enemy1, Enemy2, Enemy3
+        BlueRail, RedDiamond, GreenCrast, HeatTrail, OrbWeaver, Gamma, // Player weapons
+        Enemy1, Enemy2, Enemy3 // Enemy weapons
     }
     public static class fWeapon
     {

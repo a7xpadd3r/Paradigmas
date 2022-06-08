@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Runtime.InteropServices;
 
 namespace Game
@@ -232,6 +233,11 @@ namespace Game
         public static void Draw(Texture texture, float x = 0, float y = 0, float scaX = 1, float scaY = 1, float angle = 0, float offsetX = 0, float offsetY = 0)
         {
             Draw(texture.Id, x, y, texture.Width * scaX, texture.Height * scaY, angle, offsetX, offsetY);
+        }
+
+        public static void DrawTransform(Texture texture, Transform transform, Vector2 offset = new Vector2())
+        {
+            Draw(texture.Id, transform.position.X, transform.position.Y, texture.Width * transform.scale.X, texture.Height * transform.scale.Y, transform.angle, offset.X, offset.Y);
         }
 
         public static bool GetKey(Keys key)

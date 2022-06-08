@@ -29,11 +29,11 @@ namespace Game
             // Collision and damage are two different things.
             if (objectCollider != null)
             {
+                objectCollider.realSize = realSize;
                 objectCollider.id = id;
                 objectCollider.OnCollision += OnCollision;
             }
-
-            objectCollider.realSize = realSize;
+            
             GameObjectManager.AddGameObject(this);
             AnyDamage += Damage;
             originalLife = life;

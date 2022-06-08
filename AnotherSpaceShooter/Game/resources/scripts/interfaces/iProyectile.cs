@@ -4,10 +4,13 @@ namespace Game
 {
     public interface iProyectile
     {
-        WeaponTypes Type { get; }
-        Vector2 Position { get; set; }
-        float Speed { get; }
-        float Damage { get; }
-        void Reset();  // Pool?
+        Transform transform { get; set; }
+        Animation animation { get; set; }
+        float speed { get; }
+        float damage { get; }
+        bool active { get; }
+        void Update();
+        void Render();
+        void Reset();       // Pool?
     }
 }

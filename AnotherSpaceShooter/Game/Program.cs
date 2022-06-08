@@ -19,6 +19,10 @@ namespace Game
                 Engine.Clear();
                 DeltaTime();
                 GameplayManager.Instance.ManagerUpdate();
+
+                //Engine.Draw("resources/gfx/30x30.png", 500, 500, 1, 1, 0);
+                //Engine.Draw("resources/gfx/30x30.png", 500, 500, 1, 1, 90f,15f,15f);
+
                 Engine.Show();
             }
         }
