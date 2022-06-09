@@ -29,6 +29,11 @@ namespace Game
 
         // Enemy ships
         private static List<Texture> GenericShipTextures = new List<Texture>();
+        private static List<Texture> eMosquitoe = new List<Texture>();
+
+        // Animations (for those ships that doesn't need damage states)
+        private static Animation aMosquitoe = new Animation("Mosquitoe Ship Anim", 0.09f, eMosquitoe);
+
 
         public static void InitializeShipsTextures()
         {
@@ -46,6 +51,10 @@ namespace Game
 
             // Generic ship textures
             GenericShipTextures.Add(new Texture("resources/gfx/ships/dummyenemy/de1.png"));
+
+            // Enemy textures
+            for (int i = 0; i < 7; i++) eMosquitoe.Add(new Texture("resources/gfx/ships/enemy/mosquitoe/mosquitoe-" + i + ".png"));
+            for (int i = 6; i > 0; i--) eMosquitoe.Add(new Texture("resources/gfx/ships/enemy/mosquitoe/mosquitoe-" + i + ".png"));
         }
 
         public static List<Texture> GetShipTextures(int selection)
@@ -59,15 +68,24 @@ namespace Game
                 case 1:
                     results = Ship2Textures;
                     break;
-                case 2:
-                    results = Ship3Textures;
-                    break;
 
                 case 4:
                     results = GenericShipTextures;
                     break;
             }
             return results;
+        }
+
+        public static Animation GetShipAnimation(int selection)
+        {
+            Animation result = aMosquitoe;
+            switch (selection)
+            {
+                case 0:
+                    result = aMosquitoe;
+                    break;
+            }
+            return result;
         }
     }
 
@@ -122,13 +140,26 @@ namespace Game
 
     public static class ProyectilesTextures
     {
+        // Deprecated
         private static List<Texture> Proyectile1Textures = new List<Texture>();
         private static List<Texture> Proyectile2Textures = new List<Texture>();
         private static List<Texture> Proyectile3Textures = new List<Texture>();
         private static List<Texture> Proyectile4Textures = new List<Texture>();
+        // Deprecated
 
         private static List<Texture> pBlueRail = new List<Texture>();
-        private static Animation aBlueRail = new Animation("Blue Rail Anim", 0.12f, pBlueRail);
+        private static Animation aBlueRail = new Animation("Blue Rail Anim", 0.04f, pBlueRail);                     // Animation
+
+        private static List<Texture> pRedDiamond = new List<Texture>();
+        private static Animation aRedDiamond = new Animation("Red Diamond Anim", 0.04f, pRedDiamond);           // Animation
+        private static List<Texture> pRedDiamondBall = new List<Texture>();
+        private static Animation aRedDiamondBall = new Animation("Red Diamond Ball Anim", 0.12f, pRedDiamondBall);  // Animation
+
+        private static List<Texture> pGreenCrast = new List<Texture>();
+        private static Animation aGreenCrast = new Animation("Green Crast Anim", 0.23f, pGreenCrast);  // Animation
+
+        private static List<Texture> pHeatTrail = Effects.GetEffectTextures(7);
+        private static Animation aHeatTrail = new Animation("Heat Trail Anim", 0.23f, pHeatTrail);  // Animation
 
         public static void InitializeProyectilesTextures()
         {
@@ -136,33 +167,36 @@ namespace Game
             Proyectile2Textures.Add(new Texture("resources/gfx/proyectiles/p_proyectile2.png"));
             Proyectile3Textures.Add(new Texture("resources/gfx/proyectiles/p_proyectile3.png"));
 
-            for (int i = 0; i < 5; i++)
-            {
-                pBlueRail.Add(new Texture("resources/gfx/proyectiles/bluerail/pbluerail-" + i + ".png"));
-            }
-        }
+            for (int i = 0; i < 5; i++) pBlueRail.Add(new Texture("resources/gfx/proyectiles/bluerail/pbluerail-" + i + ".png"));
 
+            for (int i = 0; i < 7; i++) pRedDiamond.Add(new Texture("resources/gfx/proyectiles/reddiamond/preddiamond_" + i + ".png"));
+            for (int i = 5; i < 0; i--) pRedDiamond.Add(new Texture("resources/gfx/proyectiles/reddiamond/preddiamond_" + i + ".png"));
+            for (int i = 0; i < 7; i++) pRedDiamondBall.Add(new Texture("resources/gfx/proyectiles/reddiamond/preddiamondball_" + i + ".png"));
+            for (int i = 5; i < 0; i--) pRedDiamondBall.Add(new Texture("resources/gfx/proyectiles/reddiamond/preddiamondball_" + i + ".png"));
+
+            for (int i = 0; i < 7; i++) pGreenCrast.Add(new Texture("resources/gfx/proyectiles/greencrast/pgreencrast_" + i + ".png"));
+            for (int i = 5; i < 0; i--) pGreenCrast.Add(new Texture("resources/gfx/proyectiles/greencrast/pgreencrast_" + i + ".png"));
+        }
         public static List<Texture> GetProyectileTextures(int selection)
         {
             List<Texture> textures = new List<Texture>();
             switch (selection)
             {
                 case 0:
-                    textures = Proyectile1Textures;
+                    textures = pBlueRail;
                     break;
                 case 1:
-                    textures = Proyectile2Textures;
+                    textures = pRedDiamond;
                     break;
                 case 2:
-                    textures = Proyectile3Textures;
+                    textures = pGreenCrast;
                     break;
                 case 3:
-                    textures = Proyectile4Textures;
+                    textures = pHeatTrail;
                     break;
             }
             return textures;
         }
-
         public static Animation GetProyectileAnim(int selection)
         {
             Animation value = aBlueRail;
@@ -170,6 +204,18 @@ namespace Game
             {
                 case 0:
                     value = aBlueRail;
+                    break;
+                case 1:
+                    value = aRedDiamond;
+                    break;
+                case 2:
+                    value = aRedDiamondBall;
+                    break;
+                case 3:
+                    value = aGreenCrast;
+                    break;
+                case 4:
+                    value = aHeatTrail;
                     break;
             }
             return value;
@@ -334,9 +380,9 @@ namespace Game
         private static Texture wrench = new Texture("resources/gfx/items/wrench.png");
         private static Texture shield = new Texture("resources/gfx/items/shield.png");
         private static Texture special = new Texture("resources/gfx/items/special.png");
-        private static Texture blueRail = new Texture("resources/gfx/proyectiles/p_proyectile1.png");
-        private static Texture redDiamond = new Texture("resources/gfx/proyectiles/p_proyectile2.png");
-        private static Texture greenCrast = new Texture("resources/gfx/proyectiles/p_proyectile3.png");
+        private static Texture blueRail = new Texture("resources/gfx/proyectiles/bluerail/pbluerail-0.png");
+        private static Texture redDiamond = new Texture("resources/gfx/proyectiles/reddiamond/preddiamond_0.png");
+        private static Texture greenCrast = new Texture("resources/gfx/proyectiles/greencrast/pgreencrast_0.png");
         private static Texture heatTrail = new Texture("resources/gfx/effect/fire1-0.png");
 
         public static Texture GetItemTexture(int selection)
@@ -374,11 +420,11 @@ namespace Game
     public static class OtherTextures
     {
         private static Texture collisionDot = new Texture("resources/gfx/collisiondot.png");
-
+        private static Texture dummyship = new Texture("resources/gfx/ships/dummyship_128.png");
+        
         public static Texture GetOtherTexture(int selection)
         {
-            Texture value = collisionDot;
-
+            Texture value;
             switch (selection)
             {
                 default:
@@ -386,6 +432,9 @@ namespace Game
                     break;
                 case 0:
                     value = collisionDot;
+                    break;
+                case 1:
+                    value = dummyship;
                     break;
             }
 

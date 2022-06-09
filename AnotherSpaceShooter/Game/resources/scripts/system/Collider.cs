@@ -6,14 +6,17 @@ namespace Game
     public enum ColliderType { Box, Circle }
     public class Collider
     {
+        public bool drawcollisions = true;
         public int id { get; set; }
         public bool active { get; private set; }
         public string owner { get; private set; }
         public string tag { get; private set; }
         public ColliderType type { get; private set; }
+        public Transform transform { get; private set; }
         public Vector2 position { get; private set; }
         public Vector2 size { get; private set; }
-        public Vector2 realSize;
+        public Vector2 offset { get; private set; }
+        public Vector2 realSize { get; set; }
         public float damage { get; private set; }
         private Texture collIndicator = OtherTextures.GetOtherTexture(0);
 
@@ -33,12 +36,23 @@ namespace Game
 
         public void UpdatePos(Vector2 newPos)
         {
-            position = newPos;
+            this.position = newPos;
             //Console.WriteLine(realSize);
+        }
+
+        public void UpdateTransform(Transform newTransform)
+        {
+            transform = newTransform;
         }
 
         public void CheckForCollisions()
         {
+            /*
+            Engine.Draw(OtherTextures.GetOtherTexture(0), position.X - offset.X, position.Y - offset.Y, realSize.X, 4);
+            Engine.Draw(OtherTextures.GetOtherTexture(0), position.X - offset.X, position.Y + offset.Y, realSize.X, 4);
+            Engine.Draw(OtherTextures.GetOtherTexture(0), position.X - offset.X, position.Y - offset.Y, 4, realSize.Y);
+            Engine.Draw(OtherTextures.GetOtherTexture(0), position.X + offset.X, position.Y - offset.Y, 4, realSize.Y);*/
+
             if (ready && active)
             {
                 for (int i = 0; i < CollisionManager.GetAllColliders.Count; i++)

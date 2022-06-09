@@ -58,8 +58,12 @@
     </Compile>
     <Compile Include="resources\scripts\effects\GenericEffect.cs" />
     <Compile Include="resources\scripts\effects\Star.cs" />
+    <Compile Include="resources\scripts\enemy\eDummy.cs" />
+    <Compile Include="resources\scripts\enemy\eMosquitoe.cs" />
+    <Compile Include="resources\scripts\factory\fEnemy.cs" />
     <Compile Include="resources\scripts\factory\fProyectiles.cs" />
     <Compile Include="resources\scripts\factory\fWeapon.cs" />
+    <Compile Include="resources\scripts\interfaces\iEnemy.cs" />
     <Compile Include="resources\scripts\interfaces\iProyectile.cs" />
     <Compile Include="resources\scripts\items\Item.cs" />
     <Compile Include="resources\scripts\player\PlayerConfig.cs" />
@@ -70,6 +74,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="resources\scripts\system\Collider.cs" />
+    <Compile Include="resources\scripts\system\ColliderProperties.cs" />
+    <Compile Include="resources\scripts\system\ColliderRework.cs" />
     <Compile Include="resources\scripts\system\Collision.cs" />
     <Compile Include="resources\scripts\enemy\DummyEnemy.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -88,7 +94,9 @@
     <Compile Include="resources\scripts\utilities\PlayerStalker.cs" />
     <Compile Include="resources\scripts\weapons\eBlueRail.cs" />
     <Compile Include="resources\scripts\weapons\pBlueRail.cs" />
-    <Compile Include="resources\scripts\weapons\Proyectile.cs">
+    <Compile Include="resources\scripts\weapons\pGreenCrast.cs" />
+    <Compile Include="resources\scripts\weapons\pRedDiamond.cs" />
+    <Compile Include="resources\scripts\deprecated\Proyectile.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="resources\scripts\player\Player.cs">
@@ -112,11 +120,11 @@
     <Compile Include="resources\scripts\menu\MainMenu.cs" />
     <Compile Include="resources\scripts\menu\Credits.cs" />
     <Compile Include="resources\scripts\utilities\RandomValue.cs" />
-    <Compile Include="resources\scripts\system\Render.cs" />
     <Compile Include="resources\scripts\system\Transform.cs" />
     <Compile Include="resources\scripts\system\UI.cs" />
     <Compile Include="resources\scripts\utilities\Textures.cs" />
     <Compile Include="resources\scripts\utilities\NumbersToSprites.cs" />
+    <Compile Include="resources\scripts\weapons\pRedDiamondBall.cs" />
     <Compile Include="resources\scripts\weapons\wBlueRail.cs" />
     <Compile Include="resources\scripts\weapons\wGreenCrast.cs" />
     <Compile Include="resources\scripts\weapons\wHeatTrail.cs" />
@@ -136,6 +144,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\collisiondot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ships\dummyship.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\effect\fire1-0.png">
@@ -288,6 +299,69 @@
     <Content Include="resources\gfx\proyectiles\e_proyectile1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamondball_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamondball_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamondball_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamondball_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamondball_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamondball_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamondball_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="resources\gfx\scenes\Controls.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -304,6 +378,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\scenes\YouWin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ships\dummyship_128.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\ships\elcapitan\ElCapitan-1.png">
@@ -331,6 +408,24 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\proyectiles\p_proyectile3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ships\enemy\mosquitoe\mosquitoe-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ships\enemy\mosquitoe\mosquitoe-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ships\enemy\mosquitoe\mosquitoe-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ships\enemy\mosquitoe\mosquitoe-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ships\enemy\mosquitoe\mosquitoe-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ships\enemy\mosquitoe\mosquitoe-5.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\ui\button_propSelected.png">

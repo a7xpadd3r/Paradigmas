@@ -237,7 +237,7 @@ namespace Game
 
         public static void DrawTransform(Texture texture, Transform transform, Vector2 offset = new Vector2())
         {
-            Draw(texture.Id, transform.position.X, transform.position.Y, texture.Width * transform.scale.X, texture.Height * transform.scale.Y, transform.angle, offset.X, offset.Y);
+            Draw(texture.Id, transform.Position.X, transform.Position.Y, texture.Width * transform.Scale.X, texture.Height * transform.Scale.Y, transform.Rotation, offset.X, offset.Y);
         }
 
         public static bool GetKey(Keys key)

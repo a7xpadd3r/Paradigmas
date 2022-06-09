@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nnZlvzXmvt9AY7dnlbikCjDYXpZsEUQfgimj6SgYsDd3udPraPK3KbdfL3iBSTyPyfLaPJrtcf3cc3IPqDn36A==",
+  "dgSpecHash": "KgUWl+Swmr362gVYCZLgiLxAFvxxj7Zni0hvC89MU77E3odzbuGoVbFmbjhXbebkra3qFYdERRkYZrfRa4vq/A==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\Paradigmas\\AnotherSpaceShooter\\UnitTest1\\UnitTest1.csproj",
+  "projectFilePath": "H:\\GitHub\\PARADIGMAS\\AnotherSpaceShooter\\UnitTest1\\UnitTest1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arrie\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\arrie\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

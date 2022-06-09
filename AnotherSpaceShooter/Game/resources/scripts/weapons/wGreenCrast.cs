@@ -9,6 +9,7 @@ namespace Game
         public iGetWeapon Owner { get; private set; }
         WeaponTypes iWeapon.Type => WeaponTypes.GreenCrast;
         private Vector2 spawnPosition = new Vector2();
+        public Transform bulletTransform => new Transform(spawnPosition, new Vector2(1, 1));
 
         // Ammo stuff
         private int ammo = 250;
@@ -38,7 +39,7 @@ namespace Game
         {
             if (canShoot)
             {
-                new Proyectile(spawnPosition, 3, "Player");
+                new pGreenCrast(bulletTransform);
                 ammo--;
                 canShoot = false;
             }

@@ -7,6 +7,7 @@ namespace Game
         // Basic stuff
         public iGetWeapon Owner { get; private set; }
         WeaponTypes iWeapon.Type => WeaponTypes.BlueRail;
+        public Transform bulletTransform => new Transform(spawnPosition, new Vector2(1, 1));
         private Vector2 spawnPosition = new Vector2();
 
         // Ammo stuff
@@ -35,9 +36,7 @@ namespace Game
         {
             if (canShoot)
             {
-                new pBlueRail(spawnPosition);
-
-                //new Proyectile(spawnPosition, 1, "Player");
+                new pBlueRail(bulletTransform);
                 canShoot = false;
             }
             

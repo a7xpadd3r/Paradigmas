@@ -11,6 +11,7 @@ namespace Game
         private static protected List<Item> CurrentItems { get; } = new List<Item>();
         public static List<GameObject> GetAllGameObjects => CurrentGameObjects;
         public static List<Item> GetAllItems => CurrentItems;
+        private GameObject Player;
 
         public void Update()
         {
@@ -19,9 +20,11 @@ namespace Game
                 if (CurrentGameObjects[i].isActive)
                 {
                     GameObject cGameObject = CurrentGameObjects[i];
-                    if (cGameObject.isActive) { cGameObject.Update(); cGameObject.Render(); }
+                    if (cGameObject.isActive && cGameObject.owner != "Player" && cGameObject.tag != "Ship") { cGameObject.Update(); cGameObject.Render(); }
+                    else if (cGameObject.isActive && cGameObject.owner == "Player" && cGameObject.tag == "Ship") Player = cGameObject;
                 }
             }
+            if (Player != null) { Player.Update(); Player.Render(); }
         }
 
         public static int GenerateObjectID()

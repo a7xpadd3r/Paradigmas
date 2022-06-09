@@ -8,7 +8,6 @@ namespace Game
         Animation animation { get; set; }
         float speed { get; }
         float damage { get; }
-        bool active { get; }
         void Update();
         void Render();
         void Reset();       // Pool?

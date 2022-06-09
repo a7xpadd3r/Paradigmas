@@ -22,7 +22,7 @@ namespace Game
         private static readonly float shippysOffset = 50;
 
         // Weapon selection
-        private static Animation weapBox = new Animation("WeaponBox", 0.02f, UITextures.GetUITextures(5));
+        private static Animation weapBox = new Animation("WeaponBox", 0.06f, UITextures.GetUITextures(5));
         private static List<iWeapon> PlayerWeapons = new List<iWeapon>();
         private static iWeapon CurrentWeapon = null;
 
@@ -58,9 +58,11 @@ namespace Game
 
         public static void Update()
         {
+            // Draw score & ammo
             score2sprites.RenderNumbers(score, new Vector2(35, 20), new Vector2(1.5f, 1.5f));
             if (ammo > 0) ammo2sprites.RenderNumbers(ammo, new Vector2(1850, 100), new Vector2(1.5f, 1.5f), true);
 
+            // Draw lifes left
             if (shippys != 0)
             {
                 float currentShippyOffset = 0;
@@ -76,6 +78,7 @@ namespace Game
                 }
             }
 
+            // Draw inventory & selected weapon
             if (PlayerWeapons.Count != 0)
             {
                 weapBox.Update();
@@ -83,22 +86,35 @@ namespace Game
                 foreach (iWeapon weap in PlayerWeapons)
                 {
                     string theWeap = weap.ToString(); // Janky stuff but does the job.
+                    var invAnimations = ProyectilesTextures.GetProyectileAnim(0);
                     switch (theWeap)
                     {
                         case "Game.wBlueRail":
-                            Engine.Draw(ItemsTextures.GetItemTexture(3), drawX, 20, 1.3f, 1.3f, 0, 17.5f, -10);
+                            invAnimations = ProyectilesTextures.GetProyectileAnim(0);
+                            Engine.Draw(invAnimations.CurrentTexture, drawX, 20, 1.3f, 1.3f, 0, 17.5f, -3);
+                            //Engine.Draw(ItemsTextures.GetItemTexture(3), drawX, 20, 1.3f, 1.3f, 0, 17.5f, -10);
                             break;
                         case "Game.wRedDiamond":
-                            Engine.Draw(ItemsTextures.GetItemTexture(4), drawX, 20, 1.3f, 1.3f, 0, 17.5f, -10);
+                            invAnimations = ProyectilesTextures.GetProyectileAnim(1);
+                            Engine.Draw(invAnimations.CurrentTexture, drawX, 20, 1.3f, 1.3f, 0, 17.5f, -3);
+                            //Engine.Draw(ItemsTextures.GetItemTexture(4), drawX, 20, 1.3f, 1.3f, 0, 17.5f, -10);
                             break;
                         case "Game.wGreenCrast":
-                            Engine.Draw(ItemsTextures.GetItemTexture(5), drawX, 20, 1.3f, 1.3f, 0, 17.5f, -10);
+                            invAnimations = ProyectilesTextures.GetProyectileAnim(3);
+                            Engine.Draw(invAnimations.CurrentTexture, drawX, 20, 1.3f, 1.3f, 0, 17.5f, -3);
+                            //Engine.Draw(ItemsTextures.GetItemTexture(5), drawX, 20, 1.3f, 1.3f, 0, 17.5f, -10);
                             break;
                         case "Game.wHeatTrail":
-                            Engine.Draw(ItemsTextures.GetItemTexture(6), drawX, 20, 1.3f, 1.3f, 0, 17.5f, -10);
+                            invAnimations = ProyectilesTextures.GetProyectileAnim(4);
+                            Engine.Draw(invAnimations.CurrentTexture, drawX, 20, 1.3f, 1.3f, 0, 17.5f, -9);
+                            //Engine.Draw(ItemsTextures.GetItemTexture(6), drawX, 20, 1.3f, 1.3f, 0, 17.5f, -10);
                             break;
                     }
-                    if (CurrentWeapon == weap) Engine.Draw(weapBox.CurrentTexture, drawX - 28.5f, 20, 2, 2); // Draw the indicator.
+                    if (CurrentWeapon == weap)
+                    {
+                        weapBox.Update();
+                        Engine.Draw(weapBox.CurrentTexture, drawX - 28.5f, 20, 2, 2); // Draw the indicator.
+                    }
                     drawX -= 90;
                 }
             }

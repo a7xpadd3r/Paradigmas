@@ -6,6 +6,7 @@ namespace Game
     {
         iGetWeapon Owner { get; }
         WeaponTypes Type { get; }
+        Transform bulletTransform { get; }
         int CurrentAmmo { get; }
         void NewOwner(iGetWeapon owner);
         void Fire();

@@ -9,6 +9,7 @@ namespace Game
         // Basic stuff
         public iGetWeapon Owner { get; private set; }
         WeaponTypes iWeapon.Type => WeaponTypes.HeatTrail;
+        public Transform bulletTransform => new Transform();
         private Animation FireHead = new Animation("FireHead", 0.016f, Effects.GetEffectTextures(7));
         private float toleranceRangeX = 1f, toleranceRangeY = 1f; // A firehead will stop moving when enters this ranges.
         private bool isDrawing = false; // Used to check when the fireheads needs to follow player movement or needs to be reseted.

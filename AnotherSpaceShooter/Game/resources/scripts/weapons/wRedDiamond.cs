@@ -8,6 +8,7 @@ namespace Game
         // Public stuff
         public iGetWeapon Owner { get; private set; }
         WeaponTypes iWeapon.Type => WeaponTypes.RedDiamond;
+        public Transform bulletTransform => new Transform(spawnPosition, new Vector2(1, 1));
         private Vector2 spawnPosition = new Vector2();
 
         // Ammo stuff
@@ -37,7 +38,7 @@ namespace Game
         {
             if (canShoot)
             {
-                new Proyectile(spawnPosition, 2, "Player");
+                new pRedDiamond(bulletTransform);
                 ammo--;
                 canShoot = false;
             }

@@ -20,8 +20,18 @@ namespace Game
             OnPlayerDeath += RespawnPlayer;
             OnEnemyDeath += SpawnEnemy;
 
+            new eDummy(new Vector2(372, 500),90);
+            //new eDummy(new Vector2(500, 500));
+           // new eDummy(new Vector2(628, 500));
+
+            //new eDummy(new Vector2(500, 372));
+           // new eDummy(new Vector2(500, 628));
+
             // New method of spawing stuff
-            new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(800,200));
+            //new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(200,200));
+            //new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(600, 200));
+            //new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(600, 600));
+            //new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(800, 200));
 
             //new Item(ItemType.Repair, new Vector2(200, 0), 10);
             //new Item(ItemType.Special, new Vector2(300, 0), 10);
@@ -33,15 +43,11 @@ namespace Game
 
             new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20);
 
-            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
-            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
-            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
-            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
-            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
-            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
-            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
-            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
-            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
+
+            for (int i = 0; i < 5; i++)
+            {
+                new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
+            }
 
 
             SoundPlayer sfx = new SoundPlayer("resources/sfx/fbattery_loop.wav");

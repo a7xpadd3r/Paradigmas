@@ -4,7 +4,7 @@ using System.Numerics;
 
 namespace Game
 {
-    public class DummyEnemy : ShipObject, iGetWeapon
+    public class DummyEnemy : ShipObject, iGetWeapon, iEnemy
     {
         private protected bool ready = false;
         private new bool debug = false;
@@ -109,12 +109,12 @@ namespace Game
 
                 if (IsShielding) { currentShieldTime += Program.GetDeltaTime(); }
                 if (currentShieldTime >= shieldTime && IsShielding) IsShielding = false;
-
                 AI();
+                Render();
             }
         }
 
-        private void AI()
+        public void AI()
         {
             float delta = Program.GetDeltaTime();
             if (posX > 2000)
@@ -128,12 +128,17 @@ namespace Game
 
             else if (movingRight)
                 posX -= ShipConfiguration.ShipSpeed() * delta;
-            
+
             if (CurrentWeapon != null)
             {
                 CurrentWeapon.Update(delta, OwnerRailPosition);
                 CurrentWeapon.Fire();
             }
+        }
+
+        public void Reset()
+        {
+            throw new NotImplementedException();
         }
     }
 }

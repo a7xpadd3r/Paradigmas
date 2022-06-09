@@ -22,6 +22,11 @@ namespace Game
         public bool callsDamageOnCollision = true;
         public bool debug = false;
 
+        // Should have this from the beginning
+        public Vector2 Position => new Vector2(posX, posY);
+        public float posX = 0;
+        public float posY = 0;
+
         public void Awake()
         {
             id = GameObjectManager.GenerateObjectID();
@@ -77,7 +82,7 @@ namespace Game
 
         public virtual void Destroy()
         {
-            objectCollider.OnCollision -= OnCollision;
+            if (objectCollider != null) objectCollider.OnCollision -= OnCollision;
             AnyDamage -= Damage;
             GameObjectManager.RemoveGameObject(this);
         }
