@@ -43,7 +43,7 @@ namespace Game
             this.ShipPropellersAnim = ShipConfiguration.ConfigPropellersAnim;
             this.ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
 
-            this.colliderProperties = new ColliderProperties(this.Position, TextureSize);
+            this.colliderProperties = new ColliderProperties(this.Position, TextureSize, true, new Vector2(50,60));
             this.ShipAnim.ChangeFrame(4); // Intact ship texture
             AllWeapons.Add(fWeapon.CreateWeapon(WeaponTypes.BlueRail));
             NextWeapon();

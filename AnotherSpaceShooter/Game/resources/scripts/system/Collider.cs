@@ -7,7 +7,7 @@ namespace Game
     public class Collider
     {
         // Debug
-        public bool drawcollisions = true;
+        public bool drawcollisions = false;
         private Texture collIndicator = OtherTextures.GetOtherTexture(0);
         private Texture collRedIndicator = OtherTextures.GetOtherTexture(2);
 
