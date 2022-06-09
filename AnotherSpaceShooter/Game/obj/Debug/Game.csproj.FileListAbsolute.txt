@@ -188,7 +188,6 @@ H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\sfx\gulp.wav
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\sfx\level2.mid
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\Game.cs
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\system\Animation.cs
-H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\enemy\DummyEnemy.cs
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\player\Player.cs
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\Program.cs
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\Game.exe
@@ -662,3 +661,4 @@ H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enem
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-5.png
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\dummyship.png
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\dummyship_128.png
+H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\collisionreddot.png

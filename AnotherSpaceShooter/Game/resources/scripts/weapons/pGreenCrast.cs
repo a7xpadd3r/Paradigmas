@@ -9,7 +9,7 @@ namespace Game
         public Transform transform { get; set; }
         public Animation animation { get; set; }
         public float speed { get; set; }
-        public float damage { get; set; }
+        public Vector2 texturesize { get; set; }
 
         private bool canSpawnEffect = true;
         private float currentEDelay = 0;
@@ -17,30 +17,39 @@ namespace Game
 
         public pGreenCrast(Transform newTransform)
         {
+            this.owner = "Player";
+            this.tag = "Proyectile";
             this.transform = newTransform;
             this.speed = 1600;
-            this.animation = ProyectilesTextures.GetProyectileAnim(3);
             this.damage = 0.6f;
+            this.animation = ProyectilesTextures.GetProyectileAnim(3);
+            this.texturesize = new Vector2(animation.CurrentTexture.Width, animation.CurrentTexture.Height);
             this.transform.UpdateTransform(newTransform);
-            this.objectCollider = new Collider(transform.Position, transform.Scale, "Player", "Proyectile", damage);
+            this.colliderProperties = new ColliderProperties(this.Position, texturesize);
             Awake();
         }
 
         public override void OnCollision(Collider instigator)
         {
-            if (instigator.tag != "Item") if (canSpawnEffect) { new GenericEffect(transform.Position, new Vector2(3, 3), new Vector2(1, 1), 0, "HitBeam", Effects.GetEffectTextures(4), 0.08f, false); canSpawnEffect = false; }
+            //Console.WriteLine(instigator);
+            if (instigator.tag != "Item" && instigator.owner != this.owner)
+            {
+                new GenericEffect(transform.Position, new Vector2(3, 3), new Vector2(1, 1), 0, "HitBeam", Effects.GetEffectTextures(4), 0.08f, false);
+                Destroy();
+            }
         }
 
         public override void Update()
         {
-            if (isActive)
+            if (this.active)
             {
                 float delta = Program.GetDeltaTime();
+
                 float posY = transform.Position.Y;
                 posY -= speed * delta;
                 transform.UpdatePosition(new Vector2(transform.Position.X, posY)); // Set new position
+                this.collider.UpdateColliderPosition(transform.Position);
 
-                objectCollider.UpdatePos(new Vector2(transform.Position.X + 149, transform.Position.Y + 90));
                 animation.Update();
                 Render();
 

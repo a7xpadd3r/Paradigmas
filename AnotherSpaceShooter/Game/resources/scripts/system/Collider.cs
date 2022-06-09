@@ -6,84 +6,84 @@ namespace Game
     public enum ColliderType { Box, Circle }
     public class Collider
     {
+        // Debug
         public bool drawcollisions = true;
-        public int id { get; set; }
+        private Texture collIndicator = OtherTextures.GetOtherTexture(0);
+        private Texture collRedIndicator = OtherTextures.GetOtherTexture(2);
+
+        // Collisions Basics
+        public ColliderType type { get; private set; }
+        public int Id { get; private set; }
         public bool active { get; private set; }
         public string owner { get; private set; }
         public string tag { get; private set; }
-        public ColliderType type { get; private set; }
-        public Transform transform { get; private set; }
-        public Vector2 position { get; private set; }
-        public Vector2 size { get; private set; }
-        public Vector2 offset { get; private set; }
-        public Vector2 realSize { get; set; }
+        public ColliderProperties properties { get; private set; }
         public float damage { get; private set; }
-        private Texture collIndicator = OtherTextures.GetOtherTexture(0);
 
-        private bool ready = false;
+        // Events
         public event Action<Collider> OnCollision;
-        public Collider(Vector2 newPos, Vector2 newSize, string newOwner, string newTag, float newDamage, ColliderType cType = ColliderType.Box, bool cActive = true)
+
+        public Collider(ColliderProperties newProperties, string newOwner, string newTag, int newID, float newDamage, ColliderType newType = ColliderType.Box, bool isActive = true)
         {
+            this.properties = newProperties;
             this.owner = newOwner;
             this.tag = newTag;
-            this.active = cActive;
-            this.position = newPos;
-            this.size = newSize;
-            this.type = cType;
+            this.Id = newID;
             this.damage = newDamage;
-            this.ready = true;
+            this.type = newType;
+            this.active = isActive;
         }
 
-        public void UpdatePos(Vector2 newPos)
+        public void UpdateColliderProperties(ColliderProperties newProperties)
         {
-            this.position = newPos;
-            //Console.WriteLine(realSize);
+            this.properties = newProperties;
         }
 
-        public void UpdateTransform(Transform newTransform)
+        public void UpdateColliderPosition(Vector2 value)
         {
-            transform = newTransform;
+            this.properties.UpdatePosition(value);
         }
 
-        public void CheckForCollisions()
+        public void CheckCollision()
         {
-            /*
-            Engine.Draw(OtherTextures.GetOtherTexture(0), position.X - offset.X, position.Y - offset.Y, realSize.X, 4);
-            Engine.Draw(OtherTextures.GetOtherTexture(0), position.X - offset.X, position.Y + offset.Y, realSize.X, 4);
-            Engine.Draw(OtherTextures.GetOtherTexture(0), position.X - offset.X, position.Y - offset.Y, 4, realSize.Y);
-            Engine.Draw(OtherTextures.GetOtherTexture(0), position.X + offset.X, position.Y - offset.Y, 4, realSize.Y);*/
-
-            if (ready && active)
+            if (active)
             {
+                if (drawcollisions) DrawCollision();
+
                 for (int i = 0; i < CollisionManager.GetAllColliders.Count; i++)
                 {
-                    Collider currentCollider = CollisionManager.GetAllColliders[i];
+                    Collider instigator = CollisionManager.GetAllColliders[i];
 
-                    if (currentCollider.active && this != currentCollider)
-                        if (type == ColliderType.Box && currentCollider.type == ColliderType.Box)
+                    if (instigator.active && instigator != this)
+                    {
+                        if (this.type == ColliderType.Box && instigator.type == ColliderType.Box)
                         {
-                            if (Collision.IsBoxColliding(position, size, currentCollider.position, currentCollider.size))
+                            Vector2 shortThisPos = this.properties.Position - this.properties.TextureCenter;
+                            Vector2 shortInstigatorPos = instigator.properties.Position - instigator.properties.TextureCenter;
+
+                            if (Collision.IsBoxColliding(shortThisPos, this.properties.Size, shortInstigatorPos, instigator.properties.Size))
                             {
-                                if (this.GetOwner() != currentCollider.GetOwner()) // Only if not the same owner
+                                if (this.owner != instigator.owner)
                                 {
-                                    OnCollision?.Invoke(currentCollider);
-                                    currentCollider.OnCollision?.Invoke(this);
+                                    // Call event
+                                    this.OnCollision?.Invoke(instigator);
+                                    instigator.OnCollision?.Invoke(this);
                                 }
                             }
                         }
+                    }
                 }
             }
         }
 
-        public void SetActive(bool newStatus)
+        private void DrawCollision() // Draws a box c:
         {
-            active = newStatus;
-            //Console.WriteLine("{0} not active anymore", this);
+            Engine.DrawTransform(collIndicator, new Transform(new Vector2(properties.Position.X, properties.Position.Y - properties.TextureCenter.Y), new Vector2(properties.Size.Y, 1)));
+            Engine.DrawTransform(collRedIndicator, new Transform(new Vector2(properties.Position.X, properties.Position.Y + properties.TextureCenter.Y), new Vector2(properties.Size.Y, 1)));
+
+            Engine.DrawTransform(collIndicator, new Transform(new Vector2(properties.Position.X - properties.TextureCenter.X, properties.Position.Y), new Vector2(1, properties.Size.Y)));
+            Engine.DrawTransform(collRedIndicator, new Transform(new Vector2(properties.Position.X + properties.TextureCenter.X, properties.Position.Y), new Vector2(1, properties.Size.Y)));
         }
 
-        public string GetOwner()
-        {
-            return owner;
-        }
     }
 }

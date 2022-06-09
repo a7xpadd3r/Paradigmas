@@ -15,6 +15,7 @@ namespace Game
             PropellersTextures.InitializePropellersTextures();
             ProyectilesTextures.InitializeProyectilesTextures();
             Effects.InitializeEffects();
+            OtherTextures.InitializeOtherTextures();
 
             Console.WriteLine("Texturas inicializadas.");
         }
@@ -421,14 +422,24 @@ namespace Game
     {
         private static Texture collisionDot = new Texture("resources/gfx/collisiondot.png");
         private static Texture dummyship = new Texture("resources/gfx/ships/dummyship_128.png");
-        
+        private static Texture collisionRedDot = new Texture("resources/gfx/collisionreddot.png");
+        private static Texture blankTexture = new Texture("resources/gfx/blank.png");
+
+        private static List<Texture> lNull = new List<Texture>();
+        private static Animation aNullAnim = new Animation("None", 1, lNull);
+
+        public static void InitializeOtherTextures()
+        {
+            lNull.Add(dummyship);
+        }
+
         public static Texture GetOtherTexture(int selection)
         {
             Texture value;
             switch (selection)
             {
                 default:
-                    value = collisionDot;
+                    value = blankTexture;
                     break;
                 case 0:
                     value = collisionDot;
@@ -436,8 +447,23 @@ namespace Game
                 case 1:
                     value = dummyship;
                     break;
+                case 2:
+                    value = collisionRedDot;
+                    break;
             }
 
+            return value;
+        }
+
+        public static Animation GetOtherAnimation(int selection)
+        {
+            Animation value;
+            switch (selection)
+            {
+                default:
+                    value = aNullAnim;
+                    break;
+            }
             return value;
         }
     }

@@ -9,7 +9,7 @@ namespace Game
         public Transform transform { get; set; }
         public Animation animation { get; set; }
         public float speed { get; set; }
-        public float damage { get; set; }
+        public Vector2 texturesize { get; set; }
 
         // How many times this proyectile can spawn
         public int currentIterations { get; private set; }
@@ -19,6 +19,8 @@ namespace Game
 
         public pRedDiamondBall(Transform newTransform, string newDirection = "up", int newLastHit = -1, int iterationsCount = 0)
         {
+            this.owner = "Player";
+            this.tag = "Proyectile";
             this.transform = newTransform;
             this.transform.UpdateTransform(newTransform); // Just in case.
             this.animation = ProyectilesTextures.GetProyectileAnim(2);
@@ -44,15 +46,16 @@ namespace Game
                     break;
             }
 
-            this.objectCollider = new Collider(transform.Position, transform.Scale, "Player", "Proyectile", damage);
+            this.texturesize = new Vector2(animation.CurrentTexture.Width, animation.CurrentTexture.Height);
+            this.colliderProperties = new ColliderProperties(this.Position, this.texturesize);
             Awake();
         }
 
         public override void OnCollision(Collider instigator)
         {
-            if (instigator.tag != "Item" && lastHit != instigator.id)
+            if (instigator.tag != "Item" && lastHit != instigator.Id)
             {
-                lastHit = instigator.id;
+                lastHit = instigator.Id;
                 new GenericEffect(transform.Position, new Vector2(3, 3), new Vector2(1, 1), 0, "HitBeam", Effects.GetEffectTextures(4), 0.08f, false);
                 Destroy();
             }
@@ -60,7 +63,7 @@ namespace Game
 
         public override void Update()
         {
-            if (isActive)
+            if (active)
             {
                 float delta = Program.GetDeltaTime();
                 float posX = transform.Position.X;
@@ -82,8 +85,10 @@ namespace Game
                         break;
                 }
 
-                transform.UpdatePosition(new Vector2(posX, posY)); // Set new position
-                objectCollider.UpdatePos(new Vector2(posX + 149, transform.Position.Y + 90));
+                Vector2 newPos = new Vector2(posX, posY);
+                this.transform.UpdatePosition(newPos);
+                this.collider.UpdateColliderPosition(newPos);
+
                 animation.Update();
                 Render();
 
@@ -96,7 +101,7 @@ namespace Game
         }
         public override void Render()
         {
-            Engine.DrawTransform(animation.CurrentTexture, transform, new Vector2(animation.CurrentTexture.Width /2, animation.CurrentTexture.Height /2));
+            Engine.DrawTransform(animation.CurrentTexture, transform);
         }
 
         public override void Destroy()
@@ -117,7 +122,7 @@ namespace Game
                 }
             }
 
-            objectCollider.OnCollision -= OnCollision;
+            collider.OnCollision -= OnCollision;
             AnyDamage -= Damage;
             GameObjectManager.RemoveGameObject(this);
         }

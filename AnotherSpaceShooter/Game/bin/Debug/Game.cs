@@ -235,9 +235,9 @@ namespace Game
             Draw(texture.Id, x, y, texture.Width * scaX, texture.Height * scaY, angle, offsetX, offsetY);
         }
 
-        public static void DrawTransform(Texture texture, Transform transform, Vector2 offset = new Vector2())
+        public static void DrawTransform(Texture texture, Transform transform)
         {
-            Draw(texture.Id, transform.Position.X, transform.Position.Y, texture.Width * transform.Scale.X, texture.Height * transform.Scale.Y, transform.Rotation, offset.X, offset.Y);
+            Draw(texture.Id, transform.Position.X, transform.Position.Y, texture.Width * transform.Scale.X, texture.Height * transform.Scale.Y, transform.Rotation, (texture.Width * transform.Scale.X) / 2, (texture.Height * transform.Scale.Y)/ 2);//offset.X, offset.Y);
         }
 
         public static bool GetKey(Keys key)

@@ -73,13 +73,9 @@
     <Compile Include="resources\scripts\system\Animation.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="resources\scripts\system\Collider.cs" />
     <Compile Include="resources\scripts\system\ColliderProperties.cs" />
-    <Compile Include="resources\scripts\system\ColliderRework.cs" />
+    <Compile Include="resources\scripts\system\Collider.cs" />
     <Compile Include="resources\scripts\system\Collision.cs" />
-    <Compile Include="resources\scripts\enemy\DummyEnemy.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="resources\scripts\system\GameObject.cs" />
     <Compile Include="resources\scripts\interfaces\iGetWeapon.cs" />
     <Compile Include="resources\scripts\interfaces\iHealth.cs" />
@@ -144,6 +140,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\collisiondot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\collisionreddot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\ships\dummyship.png">

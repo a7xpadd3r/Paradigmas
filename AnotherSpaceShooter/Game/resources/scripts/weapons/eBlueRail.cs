@@ -36,7 +36,7 @@ namespace Game
         {
             if (canShoot)
             {
-                new Proyectile(spawnPosition, 4, "Enemy");
+                //new Proyectile(spawnPosition, 4, "Enemy");
                 canShoot = false;
             }
 

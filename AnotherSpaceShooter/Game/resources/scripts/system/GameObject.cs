@@ -5,69 +5,67 @@ namespace Game
 {
     public abstract class GameObject
     {
-        public int id;
-        public Collider objectCollider = null;
-        public bool isActive = true;
-        public float life = 1;
-        private float originalLife;
-        public string Owner => owner;
-        public string Tag => tag;
-        public string owner = "null";
-        public string tag = "null";
-        public Vector2 spawnPosition = new Vector2(0,0);
-        public Vector2 realSize = new Vector2(0, 0);
+        public bool debug = false;
+        public bool ready = false;
+        public bool active = false;
+        // Identification
+        public int Id { get; private set; }
+        public string owner { get; set; }
+        public string tag { get; set; }
+
+        // Position
+        public float posX { get; private set; }
+        public float posY { get; private set; }
+        public Vector2 Position => new Vector2(posX, posY);
+
+        // Collision
+        public Collider collider { get; private set; }
+        public ColliderProperties colliderProperties { get; set; }
+        public float damage { get; set; }
+        public bool callsDamageOnCollision { get; set; }
+
+        // Events
         public Action<float> AnyDamage;
         public Action<float> OnDamage;
-        public float damageAmount = 1;
-        public bool callsDamageOnCollision = true;
-        public bool debug = false;
 
-        // Should have this from the beginning
-        public Vector2 Position => new Vector2(posX, posY);
-        public float posX = 0;
-        public float posY = 0;
+        // Stats
+        public float currentLifes { get; set; }
+        public float originalLifes { get; private set; }
 
         public void Awake()
         {
-            id = GameObjectManager.GenerateObjectID();
+            this.Id = GameObjectManager.GenerateObjectID();
 
             // Collision and damage are two different things.
-            if (objectCollider != null)
+            if (this.collider == null && this.colliderProperties != null)
             {
-                objectCollider.realSize = realSize;
-                objectCollider.id = id;
-                objectCollider.OnCollision += OnCollision;
+                this.collider = new Collider(colliderProperties, this.owner, this.tag, this.Id, this.damage);
+                this.collider.OnCollision += OnCollision;
             }
             
             GameObjectManager.AddGameObject(this);
-            AnyDamage += Damage;
-            originalLife = life;
+            this.AnyDamage += Damage;
+            this.ready = true;
+            this.active = true;
         }
 
-        public void BeginPlay()
-        {
-        }
+        public void BeginPlay() { }
+        public virtual void Render() { }
+        public virtual void Update() { }
 
-        public virtual void Render()
-        {
-        }
+        public virtual void OnCollision(Collider instigator) { }
+        /*
+    {
+        Console.WriteLine("'{0}' -> Colisión por parte de '{1}', instigado por '{2}'", this.owner, instigator, instigator.owner);
+        if (callsDamageOnCollision) this.AnyDamage?.Invoke(instigator.damage);
+    }*/
 
-        public virtual void Update()
+        public virtual void Damage(float amount) { }/*
         {
-        }
-
-        public virtual void OnCollision(Collider instigator)
-        {
-            Console.WriteLine("'{0}' -> Colisión por parte de '{1}', instigado por '{2}'", Owner, instigator, instigator.GetOwner());
-            if (callsDamageOnCollision) AnyDamage?.Invoke(instigator.damage);
-        }
-
-        public virtual void Damage(float amount)
-        {
-            life -= amount;
-            OnDamage?.Invoke(amount);
-            if (life <= 0) Destroy();
-        }
+            this.currentLifes -= amount;
+            this.OnDamage?.Invoke(amount);
+            if (this.currentLifes <= 0) Destroy();
+        }*/
 
         public virtual void OnDeactivated()
         {
@@ -75,16 +73,22 @@ namespace Game
             GameObjectManager.RemoveGameObject(this);
         }
 
-        public virtual void OnDeactivatedHandler()
-        {
-
-        }
+        public virtual void OnDeactivatedHandler() { }
 
         public virtual void Destroy()
         {
-            if (objectCollider != null) objectCollider.OnCollision -= OnCollision;
+            if (this.collider != null) this.collider.OnCollision -= OnCollision;
             AnyDamage -= Damage;
             GameObjectManager.RemoveGameObject(this);
+        }
+
+        public virtual void UpdatePosition(Vector2 newPosition, bool bypassColliderPosition = false, Vector2 bypassedPosition = new Vector2())
+        {
+            this.posX = newPosition.X;
+            this.posY = newPosition.Y;
+            if (this.collider != null && !bypassColliderPosition) this.collider.UpdateColliderPosition(this.Position);
+            if (this.collider != null && bypassColliderPosition) this.collider.UpdateColliderPosition(bypassedPosition);
+
         }
     }
 }

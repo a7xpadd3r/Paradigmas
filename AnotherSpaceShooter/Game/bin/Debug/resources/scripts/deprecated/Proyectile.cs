@@ -5,7 +5,7 @@ using System.Numerics;
 namespace Game
 {
     public class Proyectile : GameObject
-    {
+    {/*
         // Basic stuff
         public int type { get; private set; }
         protected private float speed = 800; // Default speed.
@@ -65,7 +65,7 @@ namespace Game
                     break;
             }
 
-            objectCollider = new Collider(Position, Size, newOwner, tag, damage);
+            objectCollider = new Collider(new ColliderProperties(   //(Position, Size, newOwner, tag, damage);
             Awake();
         }
 
@@ -93,6 +93,6 @@ namespace Game
         public override void Render()
         {
             Engine.Draw(gfx, Position.X, Position.Y, 1, 1);
-        }
+        }*/
     }
 }

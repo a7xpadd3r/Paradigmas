@@ -16,7 +16,7 @@ namespace Game
         private float posX = 0;
         private float posY = -50;
         private Vector2 Position => new Vector2(posX, posY);
-        private Vector2 PlayerPos => new Vector2(Player.Position.X / xModifier, (Player.Position.Y / yModifier) * -2);
+        private Vector2 PlayerPos => new Vector2(StarsManager.PlayerPos.X / xModifier, (StarsManager.PlayerPos.Y / yModifier) * -2);
 
         // This adds movement with the player
         private float xModifier = 1;

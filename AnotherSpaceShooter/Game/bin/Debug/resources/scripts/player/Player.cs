@@ -9,14 +9,7 @@ namespace Game
         public new bool debug = false;
 
         // Special stuff
-        private ShipConfig ship = null;
-
-        // Position stuff - needs to be moved to game object
-        private static float posX = 500;
-        private static float posY = 900;
-        public static Vector2 Position => new Vector2(posX, posY);
-        public Vector2 OwnerRailPosition => ship.ShipRailPosition();
-        private bool ready = false;
+        public Vector2 OwnerRailPosition => ShipConfiguration.ConfigShipRailPosition;
 
         // Weapons stuff - iGetWeapon
         private int currentWeapIndex = -1;
@@ -29,7 +22,6 @@ namespace Game
         private readonly float inputCD = 0.15f;
 
         // Damage stuff - needs to be moved to ship object
-        private float originalLifes; // This is used to show the ship damage in percentage.
         private readonly float shieldTime = 0.8f;
         private float currentShieldTime = 0;
 
@@ -39,40 +31,29 @@ namespace Game
         public Player(ShipConfig withThisShip, Vector2 newPos, string newOwner = "Player", int newLifes = 10)
         {
             // Basic stuff
-            this.spawnPosition = newPos;
-            this.life = newLifes;
-            originalLifes = this.life;
-            posX = spawnPosition.X;
-            posY = spawnPosition.Y;
-
-            // Tags
             this.owner = newOwner;
             this.tag = "Ship";
+            this.UpdatePosition(newPos);
+            this.currentLifes = newLifes;
 
             // Ship configs
-            this.ship = withThisShip; // Needs to be deprecated...
-            this.ShipConfiguration = ship;
-
-            // ShipObject references
-            this.ShipAnim = ShipConfiguration.ShipAnim();
-            this.ShipPropellersAnim = ShipConfiguration.PropellersAnim();
+            //this.ship = ; // Needs to be deprecated...
+            this.ShipConfiguration = withThisShip;
+            this.ShipAnim = ShipConfiguration.ConfigShipAnim;
+            this.ShipPropellersAnim = ShipConfiguration.ConfigPropellersAnim;
             this.ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
-            this.ShipAnim.ChangeFrame(4); // Intact ship texture
-            this.realSize = new Vector2(ShipAnim.CurrentTexture.Width, ShipAnim.CurrentTexture.Height);
 
-            // "Blue Trail" is always the default weapon, because it has infinite ammo.
-            GetWeapon(new Item(ItemType.Weapon, new Vector2(), WeaponTypes.BlueRail));
+            this.colliderProperties = new ColliderProperties(this.Position, TextureSize);
+            this.ShipAnim.ChangeFrame(4); // Intact ship texture
+            AllWeapons.Add(fWeapon.CreateWeapon(WeaponTypes.BlueRail));
             NextWeapon();
 
             // Update UI
             UI.UpdateUIShippy(ShipAnim.GetFrameTexture(4));
             UI.UpdateWeapons(AllWeapons);
 
-            // Collision
-            this.objectCollider = new Collider(Position, this.ship.ShipSize(), this.owner, this.tag, 3);
-
             // Final set
-            Awake(); Console.WriteLine("Player --> Jugador creado con el ID {0}", this.id); this.ready = true;
+            Awake(); Console.WriteLine("Player --> Jugador creado con el ID {0}", this.Id);
         }
 
         public override void OnCollision(Collider instigator)
@@ -118,10 +99,10 @@ namespace Game
                 this.IsShielding = true;
                 this.ShieldAnim.ChangeFrame(0);
                 this.currentShieldTime = 0;
-                this.life -= amount;
+                this.currentLifes -= amount;
                 new GenericEffect(Position, new Vector2(1.8f, 1.8f), new Vector2(30, 60), 0, "Smoke", Effects.GetEffectTextures(1), 0.12f, false, false, false);
 
-                if (life <= 0) Destroy();
+                if (this.currentLifes <= 0) Destroy();
                 
                 UpdateShipTexture();
             }
@@ -129,21 +110,25 @@ namespace Game
 
         public override void Update()
         {
-            if (ready)
+            if (ready && active)
             {
                 float delta = Program.GetDeltaTime();
-                // Update stuff
-                UpdateShipPosition(Position);
-                objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
-                callsDamageOnCollision = !IsShielding;
 
                 // Movement controls
-                if (Engine.GetKey(Keys.A) && posX > -55) posX -= ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
-                if (Engine.GetKey(Keys.D) && posX < 1840) posX += ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
-                if (Engine.GetKey(Keys.W) && posY > 0) posY -= (ShipConfiguration.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
-                if (Engine.GetKey(Keys.S) && posY < 1040) posY += (ShipConfiguration.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
+                float posX = Position.X;
+                float posY = Position.Y;
+                if (Engine.GetKey(Keys.A) && posX > -55) posX -= ShipConfiguration.ConfigShipSpeed * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.D) && posX < 1840) posX += ShipConfiguration.ConfigShipSpeed * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.W) && posY > 0) posY -= (ShipConfiguration.ConfigShipSpeed / 1.1f) * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.S) && posY < 1040) posY += (ShipConfiguration.ConfigShipSpeed / 1.1f) * Program.GetDeltaTime();
+
+                // Update this stuff
+                Vector2 newPosition = new Vector2(posX, posY);
+                this.UpdatePosition(newPosition/*, true, newPosition + this.TextureSize*/);     // For the  GameObject
+                UpdateShipPosition(new Transform(newPosition, new Vector2(1,1)));                // For rendering the ship
 
                 // Shield managment
+                this.callsDamageOnCollision = !IsShielding;
                 if (IsShielding) { currentShieldTime += delta; }
                 if (currentShieldTime >= shieldTime && IsShielding) IsShielding = false;
 
@@ -187,7 +172,7 @@ namespace Game
 
         public override void Destroy()
         {
-            this.objectCollider.OnCollision -= this.OnCollision; this.AnyDamage -= Damage;
+            this.collider.OnCollision -= this.OnCollision; this.AnyDamage -= Damage;
 
             ManagerLevel1.OnPlayerDeath?.Invoke(UI.ShippysLeft); // Maybe needs to be reworked.
             GameObjectManager.RemoveGameObject(this);
@@ -275,22 +260,22 @@ namespace Game
         private void UpdateShipTexture()
         {
             // Ship texture (shows damage)
-            if ((life * 100) / originalLifes > 85)
+            if ((currentLifes * 100) / originalLifes > 85)
             {
                 ShipAnim.ChangeFrame(4);
                 UI.UpdateUIShippy(ShipAnim.GetFrameTexture(4));
             }
-            else if ((life * 100) / originalLifes < 85 && (life * 100) / originalLifes > 50)
+            else if ((currentLifes * 100) / originalLifes < 85 && (currentLifes * 100) / originalLifes > 50)
             {
                 ShipAnim.ChangeFrame(3);
                 UI.UpdateUIShippy(ShipAnim.GetFrameTexture(3));
             }
-            else if ((life * 100) / originalLifes < 50 && (life * 100) / originalLifes > 25)
+            else if ((currentLifes * 100) / originalLifes < 50 && (currentLifes * 100) / originalLifes > 25)
             {
                 ShipAnim.ChangeFrame(2);
                 UI.UpdateUIShippy(ShipAnim.GetFrameTexture(2));
             }
-            else if ((life * 100) / originalLifes < 25 && (life * 100) / originalLifes > 0)
+            else if ((currentLifes * 100) / originalLifes < 25 && (currentLifes * 100) / originalLifes > 0)
             {
                 ShipAnim.ChangeFrame(1);
                 UI.UpdateUIShippy(ShipAnim.GetFrameTexture(1));
@@ -299,11 +284,11 @@ namespace Game
 
         private void RepairShip()
         {
-            life += 5;
-            if (life > originalLifes) life = originalLifes; // If grabs more than it should, set max.
+            currentLifes += 5;
+            if (currentLifes > originalLifes) currentLifes = originalLifes; // If grabs more than it should, set max.
             UpdateShipTexture();
             ResetBlinking(5);
-            Console.WriteLine("Player --> Nave reparada con {0}, nuevo estado: {1}", 5, life);
+            Console.WriteLine("Player --> Nave reparada con {0}, nuevo estado: {1}", 5, currentLifes);
         }
 
         private void Shield()

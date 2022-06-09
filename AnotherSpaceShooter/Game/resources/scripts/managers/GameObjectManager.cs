@@ -1,30 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace Game
 {
     public class GameObjectManager
     {
-        public static bool debug = false;
+        public static bool debug = true;
         private static Random random = new Random();
         private static protected List<GameObject> CurrentGameObjects { get; } = new List<GameObject>();
         private static protected List<Item> CurrentItems { get; } = new List<Item>();
         public static List<GameObject> GetAllGameObjects => CurrentGameObjects;
         public static List<Item> GetAllItems => CurrentItems;
-        private GameObject Player;
 
         public void Update()
         {
             for (int i = 0; i < CurrentGameObjects.Count; i++)
             {
-                if (CurrentGameObjects[i].isActive)
+                if (CurrentGameObjects[i].active)
                 {
                     GameObject cGameObject = CurrentGameObjects[i];
-                    if (cGameObject.isActive && cGameObject.owner != "Player" && cGameObject.tag != "Ship") { cGameObject.Update(); cGameObject.Render(); }
-                    else if (cGameObject.isActive && cGameObject.owner == "Player" && cGameObject.tag == "Ship") Player = cGameObject;
+                    if (cGameObject.active) 
+                    { 
+                        cGameObject.Update();
+                        cGameObject.Render();
+                        if (cGameObject.owner == "Player" && cGameObject.tag == "Ship") StarsManager.PlayerPos = cGameObject.Position;
+                    }
                 }
             }
-            if (Player != null) { Player.Update(); Player.Render(); }
         }
 
         public static int GenerateObjectID()
@@ -36,7 +39,7 @@ namespace Game
             // Add every ID to a temporal list
             foreach (GameObject item in CurrentGameObjects)
             {
-                temporalIDs.Add(item.id);
+                temporalIDs.Add(item.Id);
             }
 
             // Generate a new one while there is a coincidence
@@ -54,17 +57,17 @@ namespace Game
             // Check if exists
             if (CurrentGameObjects.Contains(newObject)) return;
             CurrentGameObjects.Add(newObject);
-            if (newObject.objectCollider != null) CollisionManager.AddCollider(newObject.objectCollider);
-            if (debug) Console.WriteLine("GameObjectsManager --> Nuevo objeto: '{0}' (dueño '{1}') agregado en la posición {2} con el ID {3}.", newObject.Tag, newObject.Owner, CurrentGameObjects.IndexOf(newObject), newObject.id);
+            if (newObject.collider != null) CollisionManager.AddCollider(newObject.collider);
+            if (debug) Console.WriteLine("GameObjectsManager --> Nuevo objeto: '{0}' (dueño '{1}') agregado en la posición {2} con el ID {3}.", newObject.tag, newObject.owner, CurrentGameObjects.IndexOf(newObject), newObject.Id);
         }
 
         public static void RemoveGameObject(GameObject removeThis)
         {
             // Check if exists
             if (!CurrentGameObjects.Contains(removeThis)) return;
-            if (debug) Console.WriteLine("GameObjectsManager --> Objeto eliminado: '{0}' (dueño '{1}' removido de la posición {2} con el ID {3}.", removeThis.Tag, removeThis.Owner, CurrentGameObjects.IndexOf(removeThis), removeThis.id);
-            if (removeThis.objectCollider != null) CollisionManager.RemoveCollider(removeThis.objectCollider);
-            removeThis.isActive = false;
+            if (debug) Console.WriteLine("GameObjectsManager --> Objeto eliminado: '{0}' (dueño '{1}' removido de la posición {2} con el ID {3}.", removeThis.tag, removeThis.owner, CurrentGameObjects.IndexOf(removeThis), removeThis.Id);
+            if (removeThis.collider != null) CollisionManager.RemoveCollider(removeThis.collider);
+            removeThis.active = false;
             CurrentGameObjects.Remove(removeThis);
         }
 
@@ -80,12 +83,12 @@ namespace Game
         public static void AddItem(Item newItem)
         {
             CurrentItems.Add(newItem);
-            Console.WriteLine("GameObjectsManager --> Nuevo ítem agregado del tipo '{0}' en la ubicación {1} con el ID {2}.", newItem.GetType, CurrentItems.IndexOf(newItem), newItem.id);
+            Console.WriteLine("GameObjectsManager --> Nuevo ítem agregado del tipo '{0}' en la ubicación {1} con el ID {2}.", newItem.GetType, CurrentItems.IndexOf(newItem), newItem.Id);
         }
 
         public static Item GrabItem(Collider reference)
         {
-            int refID = reference.id;
+            int refID = reference.Id;
             Item value = null;
             if (GetAllItems.Count > 0 )
             {
@@ -95,19 +98,19 @@ namespace Game
                 // Add every ID to a temporal list
                 foreach (GameObject item in GetAllGameObjects)
                 {
-                    tempGameObjectsIDs.Add(item.id);
+                    tempGameObjectsIDs.Add(item.Id);
                 }
 
                 foreach (Item item in GetAllItems)
                 {
-                    tempItemsIDs.Add(item.id);
+                    tempItemsIDs.Add(item.Id);
                 }
 
                 if (tempGameObjectsIDs.Contains(refID) && tempItemsIDs.Contains(refID))
                 {
                     for (int i = 0; i < GetAllItems.Count; i++)
                     {
-                        if (GetAllItems[i].id == refID) value = GetAllItems[i];
+                        if (GetAllItems[i].Id == refID) value = GetAllItems[i];
                     }
                 }
             }
@@ -117,7 +120,7 @@ namespace Game
         public static void RemoveItem(Item removeItem)
         {
             if (!CurrentItems.Contains(removeItem)) return;
-            Console.WriteLine("GameObjectsManager + ItemsObjects) --> Removiendo ítem del tipo '{0}' de la ubicación {1} con el ID {2}.", removeItem.GetType, CurrentItems.IndexOf(removeItem), removeItem.id);
+            Console.WriteLine("GameObjectsManager + ItemsObjects) --> Removiendo ítem del tipo '{0}' de la ubicación {1} con el ID {2}.", removeItem.GetType, CurrentItems.IndexOf(removeItem), removeItem.Id);
             removeItem.Destroy();
             CurrentItems.Remove(removeItem);
         }

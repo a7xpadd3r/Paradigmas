@@ -7,8 +7,7 @@ namespace Game
 {
     class ManagerLevel1
     {
-        static List<DummyEnemy> dummys = new List<DummyEnemy>();
-        List<Item> items = new List<Item>();
+        //List<Item> items = new List<Item>();
         public static Action<int> OnPlayerDeath; // Use this for player respawn, needs to be moved to a general manager?
 
         // Temporal - testing enemies
@@ -20,7 +19,7 @@ namespace Game
             OnPlayerDeath += RespawnPlayer;
             OnEnemyDeath += SpawnEnemy;
 
-            new eDummy(new Vector2(372, 500),90);
+            new eDummy(new Vector2(500, 500));
             //new eDummy(new Vector2(500, 500));
            // new eDummy(new Vector2(628, 500));
 
@@ -42,12 +41,13 @@ namespace Game
             //new Item(ItemType.Weapon, new Vector2(900, 0), 30, WeaponTypes.HeatTrail);
 
             new Player(ShipsData.GetShipConfig(0), new Vector2(900, 900), "Player", 20);
-
+            new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.RedDiamond);
+            /*
 
             for (int i = 0; i < 5; i++)
             {
-                new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.HeatTrail);
-            }
+                new Item(ItemType.Weapon, new Vector2(900, 0), WeaponTypes.GreenCrast);
+            }*/
 
 
             SoundPlayer sfx = new SoundPlayer("resources/sfx/fbattery_loop.wav");
@@ -69,8 +69,7 @@ namespace Game
 
         private static void SpawnEnemy(Vector2 possibleItemSpawnPos)
         {
-            dummys.Add(new DummyEnemy(ShipsData.GetShipConfig(3), new Vector2(random.Next(200, 800), random.Next(100, 300))));
-
+            /*
             float ItemProbability = random.Next(0, 200);
             
             if (ItemProbability > 50 && ItemProbability < 70)
@@ -100,7 +99,7 @@ namespace Game
             if (ItemProbability > 190 && ItemProbability < 199)
             {
                 new Item(ItemType.Weapon, possibleItemSpawnPos, WeaponTypes.HeatTrail);
-            }
+            }*/
         }
 
         public static void Update() 

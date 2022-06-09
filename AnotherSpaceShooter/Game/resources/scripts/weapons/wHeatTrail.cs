@@ -38,31 +38,27 @@ namespace Game
         private float h6X = 0, h6Y = 0, h6speed = 300f;
 
         // Vectors for draw
-        private Vector2 head1 => new Vector2(h1X, h1Y);
-        private Vector2 head1size => new Vector2(1.5f, 1.5f);
-        private Vector2 head2 => new Vector2(h2X, h2Y);
-        private Vector2 head2size => new Vector2(1.8f, 1.8f);
-        private Vector2 head3 => new Vector2(h3X, h3Y);
-        private Vector2 head3size => new Vector2(2.1f, 2.1f);
-        private Vector2 head4 => new Vector2(h4X, h4Y);
-        private Vector2 head4size => new Vector2(2.4f, 2.4f);
-        private Vector2 head5 => new Vector2(h5X, h5Y);
-        private Vector2 head5size => new Vector2(2.7f, 2.7f);
-        private Vector2 head6 => new Vector2(h6X, h6Y);
-        private Vector2 head6size => new Vector2(3f, 3f);
+
+        private Transform tHead1 => new Transform(new Vector2(h1X + 10, h1Y + 20), new Vector2(1.5f, 1.5f));
+        private Transform tHead2 => new Transform(new Vector2(h2X + 17, h2Y + 20), new Vector2(1.8f, 1.8f));
+        private Transform tHead3 => new Transform(new Vector2(h3X + 20, h3Y + 20), new Vector2(2.1f, 2.1f));
+        private Transform tHead4 => new Transform(new Vector2(h4X + 25, h4Y + 20), new Vector2(2.4f, 2.4f));
+        private Transform tHead5 => new Transform(new Vector2(h5X + 29, h5Y + 20), new Vector2(2.7f, 2.7f));
+        private Transform tHead6 => new Transform(new Vector2(h6X + 33, h6Y + 20), new Vector2(3f, 3f));
 
         // Colliders
         private List<Collider> HeadsColliders = new List<Collider>();
         private Vector2 colliderOffset = new Vector2(170, 90);
+        private Vector2 imagesize => new Vector2(FireHead.CurrentTexture.Width, FireHead.CurrentTexture.Height);
 
         public wHeatTrail()
         {
-            HeadsColliders.Add(new Collider(head1, head1size * 1.2f, "Player", "Proyectile", h1damage));
-            HeadsColliders.Add(new Collider(head2, head2size * 1.2f, "Player", "Proyectile", h2damage));
-            HeadsColliders.Add(new Collider(head3, head3size * 1.2f, "Player", "Proyectile", h3damage));
-            HeadsColliders.Add(new Collider(head4, head4size * 1.2f, "Player", "Proyectile", h4damage));
-            HeadsColliders.Add(new Collider(head5, head5size * 1.2f, "Player", "Proyectile", h5damage));
-            HeadsColliders.Add(new Collider(head6, head6size * 1.2f, "Player", "Proyectile", h6damage));
+            HeadsColliders.Add(new Collider(new ColliderProperties(tHead1.Position, tHead1.Scale * 25), "Player", "Proyectile", 0, h1damage));
+            HeadsColliders.Add(new Collider(new ColliderProperties(tHead2.Position, tHead2.Scale * 25), "Player", "Proyectile", 0, h2damage));
+            HeadsColliders.Add(new Collider(new ColliderProperties(tHead3.Position, tHead3.Scale * 25), "Player", "Proyectile", 0, h3damage));
+            HeadsColliders.Add(new Collider(new ColliderProperties(tHead4.Position, tHead4.Scale * 25), "Player", "Proyectile", 0, h4damage));
+            HeadsColliders.Add(new Collider(new ColliderProperties(tHead5.Position, tHead5.Scale * 25), "Player", "Proyectile", 0, h5damage));
+            HeadsColliders.Add(new Collider(new ColliderProperties(tHead6.Position, tHead6.Scale * 25), "Player", "Proyectile", 0, h6damage));
         }
 
         public void NewOwner(iGetWeapon owner)
@@ -90,12 +86,12 @@ namespace Game
                 if (isDrawing)
                 {
                     ammo -= 1;
-                    Engine.Draw(FireHead.CurrentTexture, head1.X, head1.Y, head1size.X, head1size.Y);
-                    Engine.Draw(FireHead.CurrentTexture, head2.X, head2.Y, head2size.X, head2size.Y);
-                    Engine.Draw(FireHead.CurrentTexture, head3.X, head3.Y, head3size.X, head3size.Y);
-                    Engine.Draw(FireHead.CurrentTexture, head4.X, head4.Y, head4size.X, head4size.Y);
-                    Engine.Draw(FireHead.CurrentTexture, head5.X, head5.Y, head5size.X, head5size.Y);
-                    Engine.Draw(FireHead.CurrentTexture, head6.X, head6.Y, head6size.X, head6size.Y);
+                    Engine.DrawTransform(FireHead.CurrentTexture, tHead1);
+                    Engine.DrawTransform(FireHead.CurrentTexture, tHead2);
+                    Engine.DrawTransform(FireHead.CurrentTexture, tHead3);
+                    Engine.DrawTransform(FireHead.CurrentTexture, tHead4);
+                    Engine.DrawTransform(FireHead.CurrentTexture, tHead5);
+                    Engine.DrawTransform(FireHead.CurrentTexture, tHead6);
                 }
             }
         }
@@ -117,16 +113,16 @@ namespace Game
             if (isDrawing)
             {
                 FireHead.Update();
-                HeadsColliders[0].UpdatePos(head1 + colliderOffset);
-                HeadsColliders[1].UpdatePos(head2 + colliderOffset);
-                HeadsColliders[2].UpdatePos(head3 + colliderOffset);
-                HeadsColliders[3].UpdatePos(head4 + colliderOffset);
-                HeadsColliders[4].UpdatePos(head5 + colliderOffset);
-                HeadsColliders[5].UpdatePos(head6 + colliderOffset);
+                HeadsColliders[0].UpdateColliderPosition(tHead1.Position - new Vector2(18, 10));
+                HeadsColliders[1].UpdateColliderPosition(tHead2.Position - new Vector2(22, 11));
+                HeadsColliders[2].UpdateColliderPosition(tHead3.Position - new Vector2(25, 12));
+                HeadsColliders[3].UpdateColliderPosition(tHead4.Position - new Vector2(30, 13));
+                HeadsColliders[4].UpdateColliderPosition(tHead5.Position - new Vector2(36, 14));
+                HeadsColliders[5].UpdateColliderPosition(tHead6.Position - new Vector2(39, 15));
 
                 foreach (Collider collider in HeadsColliders)
                 {
-                    collider.CheckForCollisions();
+                    collider.CheckCollision();
                 }
 
 

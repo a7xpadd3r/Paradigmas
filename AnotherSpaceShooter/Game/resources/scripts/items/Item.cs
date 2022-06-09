@@ -7,13 +7,13 @@ namespace Game
     public class Item : GameObject
     {
         // Basic stuff
-        private float posX = 0;
-        private float posY = 0;
+        //private float posX = 0;
+        //private float posY = 0;
         private float sizeX = 5f;
         private float sizeY = 5f;
         private float offsetX = 175f;
         private float offsetY = 125f;
-        private Vector2 Position => new Vector2(posX, posY);
+        //private Vector2 Position => new Vector2(posX, posY);
         private Vector2 Size => new Vector2(sizeX, sizeY);
         private Vector2 Offset => new Vector2(offsetX, offsetY);
 
@@ -28,10 +28,15 @@ namespace Game
         public new ItemType GetType => type;
         public WeaponTypes WeaponType => weaptype;
 
+        private Transform transform => new Transform(Position, Size);
+
         public Item(ItemType newType, Vector2 newSpawnPosition, WeaponTypes newWeapType = WeaponTypes.BlueRail, float newSpeed = 80f)
         {
+            this.owner = "Item";
+            this.tag = this.owner;
+            this.speed = newSpeed;
+            this.UpdatePosition(newSpawnPosition);
             this.callsDamageOnCollision = false;
-            this.spawnPosition = newSpawnPosition;
             this.type = newType;
             this.weaptype = newWeapType;
 
@@ -80,11 +85,7 @@ namespace Game
                     break;
             }
 
-            this.speed = newSpeed;
-            posX = spawnPosition.X;
-            posY = spawnPosition.Y;
-            this.objectCollider = new Collider(Position, new Vector2(20,20), "Item", "Item", 0, ColliderType.Box);
-
+            this.colliderProperties = new ColliderProperties(this.Position, new Vector2(itemTexture.Width, itemTexture.Height));
             GameObjectManager.AddItem(this);
             Awake();
         }
@@ -96,8 +97,13 @@ namespace Game
 
         public override void Update()
         {
+            float posX = Position.X;
+            float posY = Position.Y;
             posY += speed * Program.GetDeltaTime();
-            objectCollider.UpdatePos(Position);
+            Vector2 newPosition = new Vector2(posX, posY);
+
+            this.UpdatePosition(newPosition);
+            this.collider.UpdateColliderPosition(newPosition);
             glow.Update();
 
             if (posY > 1400) { GameObjectManager.RemoveItem(this); Destroy(); }
@@ -105,8 +111,9 @@ namespace Game
 
         public override void Render()
         {
-            Engine.Draw(glow.CurrentTexture, Position.X, Position.Y, Size.X, Size.Y, 0, Offset.X, Offset.Y);
-            Engine.Draw(itemTexture, Position.X, Position.Y, 1.2f, 1.2f, 0, Offset.X - 21, Offset.Y - 19);
+            Engine.DrawTransform(glow.CurrentTexture, transform);
+            //Engine.Draw(glow.CurrentTexture, Position.X, Position.Y, Size.X, Size.Y, 0, Offset.X, Offset.Y);
+            //Engine.Draw(itemTexture, Position.X, Position.Y, 1.2f, 1.2f, 0, Offset.X - 21, Offset.Y - 19);
         }
     }
 }

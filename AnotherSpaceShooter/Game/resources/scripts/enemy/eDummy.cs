@@ -3,12 +3,12 @@ using System.Numerics;
 
 namespace Game
 {
-    public class eDummy : GameObject, iEnemy
+    public class eDummy : ShipObject, iEnemy
     {
         // Basic stuff
         private Texture texture = OtherTextures.GetOtherTexture(1);
         private Transform render => new Transform(Position, new Vector2(1, 1), custRot);
-        private Vector2 renderOffset => new Vector2(texture.Width / 2, texture.Height / 2);
+        private Vector2 renderOffset => new Vector2(texture.Width, texture.Height);
 
         // AI stuff
         private bool isMoving = false;
@@ -19,36 +19,36 @@ namespace Game
 
         public eDummy(Vector2 newSpawnPosition = new Vector2(), float newRotation = 0, float newLifes = 30)
         {
-            this.life = newLifes;
-            this.spawnPosition = newSpawnPosition;
-            this.realSize = new Vector2(texture.Width, texture.Height);
-            this.posX = this.spawnPosition.X;
-            this.posY = this.spawnPosition.Y;
+            this.ShipConfiguration = ShipsData.GetShipConfig(3);
+            this.ShipAnim = OtherTextures.GetOtherAnimation(0);
+            this.currentLifes = newLifes;
+            this.UpdatePosition(newSpawnPosition);
             this.custRot = newRotation;
-            this.objectCollider = new Collider(this.spawnPosition, this.realSize, "Enemy", "Ship", 1);
+            this.colliderProperties = new ColliderProperties(this.Position, renderOffset);
             Awake();
         }
 
         public override void Update()
         {
-            this.objectCollider.UpdatePos(new Vector2(Position.X + texture.Width, Position.Y + renderOffset.Y));
-            Render();
+            //this.objectCollider.UpdatePos(new Vector2(Position.X + texture.Width, Position.Y + renderOffset.Y));
+            if (ready && active)
+            {
+                UpdateShipPosition(render);
+                collider.UpdateColliderPosition(Position);
+                Render();
+            }
         }
-
+        
+        /*
         public override void Render()
         {
-            Engine.DrawTransform(texture, render, renderOffset);
-            Engine.Draw(OtherTextures.GetOtherTexture(0), Position.X - renderOffset.X, Position.Y - renderOffset.Y, texture.Width, 4);
-            Engine.Draw(OtherTextures.GetOtherTexture(0), Position.X - renderOffset.X, Position.Y + renderOffset.Y, texture.Width, 4);
-            Engine.Draw(OtherTextures.GetOtherTexture(0), Position.X - renderOffset.X, Position.Y - renderOffset.Y, 4, texture.Height);
-            Engine.Draw(OtherTextures.GetOtherTexture(0), Position.X + renderOffset.X, Position.Y - renderOffset.Y, 4, texture.Height);
-
+            Engine.DrawTransform(texture, render);
         }
-
+        */
         public override void OnCollision(Collider instigator)
         {
             
-            new GenericEffect(Position + renderOffset, new Vector2(1.8f, 1.8f), new Vector2(160, 230), 0, "Smoke", Effects.GetEffectTextures(1), 0.12f, false, false, false);
+            new GenericEffect(Position, new Vector2(1.8f, 1.8f), new Vector2(160, 230), 0, "Smoke", Effects.GetEffectTextures(1), 0.12f, false, false, false);
         }
 
         public void AI()

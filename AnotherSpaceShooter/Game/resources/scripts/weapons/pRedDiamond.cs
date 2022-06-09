@@ -9,41 +9,45 @@ namespace Game
         public Transform transform { get; set; }
         public Animation animation { get; set; }
         public float speed { get; set; }
-        public float damage { get; set; }
+        public Vector2 texturesize { get; set; }
 
         // Iterations
         private int instigatorID = -1;
 
         public pRedDiamond(Transform newTransform)
         {
+            this.owner = "Player";
+            this.tag = "Proyectile";
             this.transform = newTransform;
-            this.transform.UpdateTransform(newTransform); // Just in case.
             this.speed = 700;
-            this.animation = ProyectilesTextures.GetProyectileAnim(1);
             this.damage = 3.3f;
-            this.objectCollider = new Collider(transform.Position, transform.Scale, "Player", "Proyectile", damage);
+            this.animation = ProyectilesTextures.GetProyectileAnim(1);
+            this.texturesize = new Vector2(animation.CurrentTexture.Width, animation.CurrentTexture.Height);
+            this.transform.UpdateTransform(newTransform);
+            this.colliderProperties = new ColliderProperties(this.Position, texturesize);
             Awake();
         }
 
         public override void OnCollision(Collider instigator)
         {
-            if (instigator.tag != "Item")
+            //Console.WriteLine(instigator);
+            if (instigator.tag != "Item" && instigator.owner != this.owner)
             {
-                instigatorID = instigator.id;
+                instigatorID = instigator.Id;
                 new GenericEffect(transform.Position, new Vector2(3, 3), new Vector2(1, 1), 0, "HitBeam", Effects.GetEffectTextures(4), 0.08f, false);
                 Destroy();
             }
         }
-
+        
         public override void Update()
         {
-            if (isActive)
+            if (active)
             {
                 float posY = transform.Position.Y;
                 posY -= speed * Program.GetDeltaTime();
-
                 transform.UpdatePosition(new Vector2(transform.Position.X, posY)); // Set new position
-                objectCollider.UpdatePos(new Vector2(transform.Position.X + 149, transform.Position.Y + 90));
+                this.collider.UpdateColliderPosition(transform.Position);
+
                 animation.Update();
                 Render();
 
@@ -63,7 +67,7 @@ namespace Game
                 new pRedDiamondBall(new Transform(new Vector2(transform.Position.X, transform.Position.Y), transform.Scale), "left", instigatorID);
                 new pRedDiamondBall(new Transform(new Vector2(transform.Position.X, transform.Position.Y), transform.Scale), "right", instigatorID);
             }
-            objectCollider.OnCollision -= OnCollision;
+            collider.OnCollision -= OnCollision;
             AnyDamage -= Damage;
             GameObjectManager.RemoveGameObject(this);
         }

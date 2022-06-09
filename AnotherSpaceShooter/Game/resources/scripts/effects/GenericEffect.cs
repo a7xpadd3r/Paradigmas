@@ -9,13 +9,14 @@ namespace Game
         public float speed = 200f;
         private float posX;
         private float posY;
+        public Transform RenderTransform => new Transform(renderPos - new Vector2(fullsize, fullsize), size, 0);
         public Vector2 renderPos => new Vector2(posX, posY);
         public Vector2 size;
         public Vector2 offset;
         public float rotation;
         public bool isActive = true;
         public string name = "none";
-        private Vector2 PlayerPos => new Vector2(Player.Position.X, Player.Position.Y);
+        private Vector2 PlayerPos => StarsManager.PlayerPos;
 
         // Timer for X/Y position
         private float playerX = 0;
@@ -46,7 +47,8 @@ namespace Game
             {
                 posY += speed * Program.GetDeltaTime();
 
-                Engine.Draw(anim.CurrentTexture, renderPos.X, renderPos.Y, size.X, size.Y, rotation, offset.X, offset.Y);
+                //Engine.Draw(anim.CurrentTexture, renderPos.X, renderPos.Y, size.X, size.Y, rotation, offset.X, offset.Y);
+                Engine.DrawTransform(anim.CurrentTexture, RenderTransform);
                 anim.Update();
 
                 if (currentTime <= time)

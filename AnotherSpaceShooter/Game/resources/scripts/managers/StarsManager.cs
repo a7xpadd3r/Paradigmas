@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace Game
 {
@@ -10,6 +11,7 @@ namespace Game
         private protected static List<Star> CurrentStarsFront { get; } = new List<Star>();
         public static List<Star> GetAllBackStars => CurrentStarsBack;
         public static List<Star> GetAllFrontStars => CurrentStarsFront;
+        public static Vector2 PlayerPos = new Vector2(0, 0);
 
         public static void UpdateBack()
         {
