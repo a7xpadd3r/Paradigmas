@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="resources\scripts\effects\GenericEffect.cs" />
     <Compile Include="resources\scripts\effects\Star.cs" />
+    <Compile Include="resources\scripts\enemybatches\MosquitoeBatch.cs" />
     <Compile Include="resources\scripts\enemy\eDummy.cs" />
     <Compile Include="resources\scripts\enemy\eMosquitoe.cs" />
     <Compile Include="resources\scripts\factory\fEnemy.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="resources\scripts\interfaces\iEnemy.cs" />
     <Compile Include="resources\scripts\interfaces\iProyectile.cs" />
     <Compile Include="resources\scripts\items\Item.cs" />
+    <Compile Include="resources\scripts\items\ItemGenerator.cs" />
     <Compile Include="resources\scripts\player\PlayerConfig.cs" />
     <Compile Include="resources\scripts\ships\ShipConfig.cs" />
     <Compile Include="resources\scripts\ships\ShipObject.cs" />
@@ -75,7 +77,6 @@
     </Compile>
     <Compile Include="resources\scripts\system\Collider.cs" />
     <Compile Include="resources\scripts\system\ColliderProperties.cs" />
-    <Compile Include="resources\scripts\system\ColliderRework.cs" />
     <Compile Include="resources\scripts\system\Collision.cs" />
     <Compile Include="resources\scripts\enemy\DummyEnemy.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -91,6 +92,7 @@
     <Compile Include="resources\scripts\managers\GameplayManager.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="resources\scripts\system\Renderer.cs" />
     <Compile Include="resources\scripts\utilities\PlayerStalker.cs" />
     <Compile Include="resources\scripts\weapons\eBlueRail.cs" />
     <Compile Include="resources\scripts\weapons\pBlueRail.cs" />

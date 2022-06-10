@@ -189,6 +189,8 @@ namespace Game
         [DllImport("Engine.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern bool GetRunning();
 
+        public static Vector2 ScreenSize => new Vector2(1920, 1080);
+
         public static void Initialize(string title = "Totally not another generic shoot 'em up game", int windowWidth = 1920, int windowHeight = 1080, bool fullscreen = false)
         {
             int res = InitInternal(title, windowWidth, windowHeight, fullscreen);
@@ -235,6 +237,11 @@ namespace Game
             Draw(texture.Id, x, y, texture.Width * scaX, texture.Height * scaY, angle, offsetX, offsetY);
         }
 
+        public static void Draw(Texture texture, Transform transform, Vector2 offset)
+        {
+            Draw(texture.Id, transform.Position.X, transform.Position.Y, texture.Width * transform.Scale.X, texture.Height * transform.Scale.Y, transform.Rotation, offset.X, offset.Y);
+        }
+
         public static void DrawTransform(Texture texture, Transform transform, Vector2 offset = new Vector2())
         {
             Draw(texture.Id, transform.Position.X, transform.Position.Y, texture.Width * transform.Scale.X, texture.Height * transform.Scale.Y, transform.Rotation, offset.X, offset.Y);
@@ -246,6 +253,12 @@ namespace Game
             return GetKey((int)key);
         }
 
+        public static bool FloatInRange(float input, float min, float max)
+        {
+            bool value = false;
+            if (input > min && input < min) value = true;
+            return value;
+        }
 
         [DllImport("Engine.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern void Draw(int texture, float x, float y, float scaX, float scaY, float angle, float offsetX, float offsetY);

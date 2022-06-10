@@ -12,8 +12,8 @@ namespace Game
         private float originalLife;
         public string Owner => owner;
         public string Tag => tag;
-        public string owner = "null";
-        public string tag = "null";
+        public string owner { get; set;}
+        public string tag { get; set; }
         public Vector2 spawnPosition = new Vector2(0,0);
         public Vector2 realSize = new Vector2(0, 0);
         public Action<float> AnyDamage;

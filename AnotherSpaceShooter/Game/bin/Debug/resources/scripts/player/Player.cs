@@ -15,7 +15,7 @@ namespace Game
         private static float posX = 500;
         private static float posY = 900;
         public static Vector2 Position => new Vector2(posX, posY);
-        public Vector2 OwnerRailPosition => ship.ShipRailPosition();
+        public Vector2 OwnerRailPosition => ship.ShipRailPosition;
         private bool ready = false;
 
         // Weapons stuff - iGetWeapon
@@ -54,8 +54,8 @@ namespace Game
             this.ShipConfiguration = ship;
 
             // ShipObject references
-            this.ShipAnim = ShipConfiguration.ShipAnim();
-            this.ShipPropellersAnim = ShipConfiguration.PropellersAnim();
+            this.ShipAnim = ShipConfiguration.ShipAnim;
+            this.ShipPropellersAnim = ShipConfiguration.PropellersAnim;
             this.ShieldAnim = new Animation("PlayerShield", 0.03f, Effects.GetEffectTextures(2));
             this.ShipAnim.ChangeFrame(4); // Intact ship texture
             this.realSize = new Vector2(ShipAnim.CurrentTexture.Width, ShipAnim.CurrentTexture.Height);
@@ -69,7 +69,7 @@ namespace Game
             UI.UpdateWeapons(AllWeapons);
 
             // Collision
-            this.objectCollider = new Collider(Position, this.ship.ShipSize(), this.owner, this.tag, 3);
+            this.objectCollider = new Collider(Position, this.ship.ShipSize, this.owner, this.tag, 3);
 
             // Final set
             Awake(); Console.WriteLine("Player --> Jugador creado con el ID {0}", this.id); this.ready = true;
@@ -134,14 +134,14 @@ namespace Game
                 float delta = Program.GetDeltaTime();
                 // Update stuff
                 UpdateShipPosition(Position);
-                objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
+                objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset);
                 callsDamageOnCollision = !IsShielding;
 
                 // Movement controls
-                if (Engine.GetKey(Keys.A) && posX > -55) posX -= ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
-                if (Engine.GetKey(Keys.D) && posX < 1840) posX += ShipConfiguration.ShipSpeed() * Program.GetDeltaTime();
-                if (Engine.GetKey(Keys.W) && posY > 0) posY -= (ShipConfiguration.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
-                if (Engine.GetKey(Keys.S) && posY < 1040) posY += (ShipConfiguration.ShipSpeed() / 1.1f) * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.A) && posX > -55) posX -= ShipConfiguration.ShipSpeed * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.D) && posX < 1840) posX += ShipConfiguration.ShipSpeed * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.W) && posY > 0) posY -= (ShipConfiguration.ShipSpeed / 1.1f) * Program.GetDeltaTime();
+                if (Engine.GetKey(Keys.S) && posY < 1040) posY += (ShipConfiguration.ShipSpeed / 1.1f) * Program.GetDeltaTime();
 
                 // Shield managment
                 if (IsShielding) { currentShieldTime += delta; }

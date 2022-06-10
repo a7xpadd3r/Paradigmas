@@ -11,7 +11,6 @@ namespace Game
         private static protected List<Item> CurrentItems { get; } = new List<Item>();
         public static List<GameObject> GetAllGameObjects => CurrentGameObjects;
         public static List<Item> GetAllItems => CurrentItems;
-        private GameObject Player;
 
         public void Update()
         {
@@ -20,11 +19,9 @@ namespace Game
                 if (CurrentGameObjects[i].isActive)
                 {
                     GameObject cGameObject = CurrentGameObjects[i];
-                    if (cGameObject.isActive && cGameObject.owner != "Player" && cGameObject.tag != "Ship") { cGameObject.Update(); cGameObject.Render(); }
-                    else if (cGameObject.isActive && cGameObject.owner == "Player" && cGameObject.tag == "Ship") Player = cGameObject;
+                    if (cGameObject.isActive) { cGameObject.Update(); cGameObject.Render(); }
                 }
             }
-            if (Player != null) { Player.Update(); Player.Render(); }
         }
 
         public static int GenerateObjectID()
@@ -52,10 +49,10 @@ namespace Game
         public static void AddGameObject(GameObject newObject)
         {
             // Check if exists
+            if (debug) Console.WriteLine("GameObjectsManager --> Nuevo objeto: '{0}' (dueño '{1}') agregado en la posición {2} con el ID {3}.", newObject.Tag, newObject.Owner, CurrentGameObjects.IndexOf(newObject), newObject.id);
             if (CurrentGameObjects.Contains(newObject)) return;
             CurrentGameObjects.Add(newObject);
             if (newObject.objectCollider != null) CollisionManager.AddCollider(newObject.objectCollider);
-            if (debug) Console.WriteLine("GameObjectsManager --> Nuevo objeto: '{0}' (dueño '{1}') agregado en la posición {2} con el ID {3}.", newObject.Tag, newObject.Owner, CurrentGameObjects.IndexOf(newObject), newObject.id);
         }
 
         public static void RemoveGameObject(GameObject removeThis)

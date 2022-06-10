@@ -13,10 +13,10 @@ namespace Game
         private ShipConfig ship = null;
 
         // Position stuff
-        private protected float posX = 900;
-        private protected float posY = 200;
-        public Vector2 OwnerRailPosition => Position - ship.ShipRailPosition();
-        private protected Vector2 Position => new Vector2(posX, posY);
+        private protected new float posX = 900;
+        private protected new float posY = 200;
+        public Vector2 OwnerRailPosition => Position - ship.ShipRailPosition;
+        private protected new Vector2 Position => new Vector2(posX, posY);
 
         // Weapons stuff - iGetWeapon
         private int currentWeapIndex = -1;
@@ -45,8 +45,8 @@ namespace Game
             ShipConfiguration = ship;
 
             // ShipObject references
-            ShipAnim = ShipConfiguration.ShipAnim();
-            ShipPropellersAnim = ShipConfiguration.PropellersAnim();
+            ShipAnim = ShipConfiguration.ShipAnim;
+            ShipPropellersAnim = ShipConfiguration.PropellersAnim;
             ShieldAnim = new Animation("EnemyShield", 0.03f, Effects.GetEffectTextures(3));
             Rotation = -180;
             //ShipAnimation.ChangeFrame(4); if more animatios are added, use this
@@ -56,7 +56,7 @@ namespace Game
             currentWeapIndex++;
 
             // Collider
-            objectCollider = new Collider(Position, ship.ShipSize(), owner, "Ship", 3);
+            objectCollider = new Collider(Position, ship.ShipSize, owner, "Ship", 3);
             this.realSize = new Vector2(ShipAnim.CurrentTexture.Width, ShipAnim.CurrentTexture.Height);
             OnDamage += Damage;
 
@@ -103,7 +103,7 @@ namespace Game
         {
             if (ready)
             {
-                objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset());
+                objectCollider.UpdatePos(Position + ShipConfiguration.ShipCollisionOffset);
                 UpdateShipPosition(Position);
                 callsDamageOnCollision = !IsShielding;
 
@@ -124,10 +124,10 @@ namespace Game
                 movingRight = false;
 
             if (!movingRight)
-                posX += ShipConfiguration.ShipSpeed() * delta;
+                posX += ShipConfiguration.ShipSpeed * delta;
 
             else if (movingRight)
-                posX -= ShipConfiguration.ShipSpeed() * delta;
+                posX -= ShipConfiguration.ShipSpeed * delta;
 
             if (CurrentWeapon != null)
             {

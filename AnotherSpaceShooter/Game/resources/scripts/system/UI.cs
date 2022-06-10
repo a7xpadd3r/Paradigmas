@@ -26,6 +26,10 @@ namespace Game
         private static List<iWeapon> PlayerWeapons = new List<iWeapon>();
         private static iWeapon CurrentWeapon = null;
 
+        // Others
+        private static int enemyDeathToll = 0;
+        public static int EnemyDeathToll => enemyDeathToll;
+
         public static void UpdateAmmo(double howMuch)
         {
             ammo = howMuch;
@@ -34,6 +38,7 @@ namespace Game
         public static void UpdateScore(double addpoints)
         {
             score += addpoints;
+            enemyDeathToll++;
         }
 
         public static void UpdateCurrentWeapons(iWeapon updateCurrent)

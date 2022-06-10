@@ -53,8 +53,8 @@ namespace Game
             GenericShipTextures.Add(new Texture("resources/gfx/ships/dummyenemy/de1.png"));
 
             // Enemy textures
-            for (int i = 0; i < 7; i++) eMosquitoe.Add(new Texture("resources/gfx/ships/enemy/mosquitoe/mosquitoe-" + i + ".png"));
-            for (int i = 6; i > 0; i--) eMosquitoe.Add(new Texture("resources/gfx/ships/enemy/mosquitoe/mosquitoe-" + i + ".png"));
+            for (int i = 0; i < 6; i++) eMosquitoe.Add(new Texture("resources/gfx/ships/enemy/mosquitoe/mosquitoe-" + i + ".png"));
+            for (int i = 5; i > 0; i--) eMosquitoe.Add(new Texture("resources/gfx/ships/enemy/mosquitoe/mosquitoe-" + i + ".png"));
         }
 
         public static List<Texture> GetShipTextures(int selection)
@@ -72,16 +72,25 @@ namespace Game
                 case 4:
                     results = GenericShipTextures;
                     break;
+                case 5:
+                    results = eMosquitoe;
+                    break;
             }
             return results;
         }
 
-        public static Animation GetShipAnimation(int selection)
+        public static Animation GetShipAnimation(EnemyTypes selection)
         {
-            Animation result = aMosquitoe;
+            Animation result;
             switch (selection)
             {
-                case 0:
+                case EnemyTypes.Dummy:
+                    result = aMosquitoe;
+                    break;
+                case EnemyTypes.Mosquitoe:
+                    result = aMosquitoe;
+                    break;
+                default:
                     result = aMosquitoe;
                     break;
             }

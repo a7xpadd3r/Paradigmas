@@ -60,7 +60,7 @@ namespace Game
                 int x = 0;
                 for (int i = numbersToDraw.Count -1; i > -1; i--)
                 {
-                    Engine.Draw(numbersToDraw[x], where.X - currentNumberOffset, where.Y, howBig.X, howBig.Y, angle, offset.X, offset.Y);
+                    Engine.Draw(numbersToDraw[x], where.X - (numbersToDraw.Count * 15) - currentNumberOffset, where.Y, howBig.X, howBig.Y, angle, offset.X, offset.Y);
                     x++;
                     currentNumberOffset -= separation;
                 }

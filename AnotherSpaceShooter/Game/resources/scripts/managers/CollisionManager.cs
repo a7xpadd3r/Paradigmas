@@ -20,16 +20,6 @@ namespace Game
                         cCollider.CheckForCollisions();
                 }
             }
-
-
-            for (int i = 0; i < COLLV2.Count; i++)
-            {
-                if (COLLV2[i].active)
-                {
-                    ColliderRework col = COLLV2[i];
-                    if (col.active) col.CheckCollision();
-                }
-            }
         }
 
         public static void AddCollider(Collider newCollider)
@@ -52,20 +42,5 @@ namespace Game
         {
             CurrentColliders.Clear();
         }
-
-
-
-
-
-        private protected static List<ColliderRework> COLLV2 { get; } = new List<ColliderRework>();
-        public static List<ColliderRework> NewColliders => COLLV2;
-
-        public static void AddNew(ColliderRework nColl)
-        {
-            if (!COLLV2.Contains(nColl)) COLLV2.Add(nColl);
-        }
-
-
-
     }
 }

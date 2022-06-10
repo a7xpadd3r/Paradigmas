@@ -47,21 +47,21 @@ namespace Game
                 if (draw)
                 {
                     Engine.Draw(ShipAnim.CurrentTexture, RenderPosition.X, RenderPosition.Y, 1, 1, Rotation);
-                    Engine.Draw(ShipPropellersAnim.CurrentTexture, RenderPosition.X + ShipConfiguration.ShipPropellersPosition().X, RenderPosition.Y + ShipConfiguration.ShipPropellersPosition().Y, 1, 1, Rotation);
+                    Engine.Draw(ShipPropellersAnim.CurrentTexture, RenderPosition.X + ShipConfiguration.ShipPropellersPosition.X, RenderPosition.Y + ShipConfiguration.ShipPropellersPosition.Y, 1, 1, Rotation);
                     draw = false;
                 }
             }
 
             if (owner != "Player")
             {
-                Engine.Draw(ShipAnim.CurrentTexture, RenderPosition.X, RenderPosition.Y, 1, 1, Rotation);
-                Engine.Draw(ShipPropellersAnim.CurrentTexture, RenderPosition.X + ShipConfiguration.ShipPropellersPosition().X, RenderPosition.Y + ShipConfiguration.ShipPropellersPosition().Y, 1, 1, Rotation);
+                if (ShipAnim != null) Engine.Draw(ShipAnim.CurrentTexture, RenderPosition.X, RenderPosition.Y, 1, 1, Rotation);
+                if (ShipPropellersAnim != null) Engine.Draw(ShipPropellersAnim.CurrentTexture, RenderPosition.X + ShipConfiguration.ShipPropellersPosition.X, RenderPosition.Y + ShipConfiguration.ShipPropellersPosition.Y, 1, 1, Rotation);
             }
 
             // Updates for each animations
-            ShipAnim.Update(); ShipPropellersAnim.Update();
+            if (ShipAnim != null) ShipAnim.Update(); if (ShipPropellersAnim != null) ShipPropellersAnim.Update();
 
-            if (IsShielding)
+            if (IsShielding && ShieldAnim != null)
             {
                 Engine.Draw(ShieldAnim.CurrentTexture, RenderPosition.X, RenderPosition.Y, 4, 4, Rotation, 0, -10);
                 ShieldAnim.Update();
