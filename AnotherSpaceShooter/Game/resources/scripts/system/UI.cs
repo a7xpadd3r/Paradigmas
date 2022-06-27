@@ -8,7 +8,7 @@ namespace Game
     {
         // Shippys
         private static int currentShip = 0;
-        private static int shippys = 3;
+        public static int shippys = 3;
         private static Texture currentShippy = ShipsTextures.GetShipTextures(currentShip)[4];
         private static Texture initialShippy = currentShippy;
         private static NumbersToSprites score2sprites = new NumbersToSprites();

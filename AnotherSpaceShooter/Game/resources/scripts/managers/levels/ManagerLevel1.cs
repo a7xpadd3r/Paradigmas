@@ -14,6 +14,40 @@ namespace Game
         static List<MosquitoeBatch> newBatch = new List<MosquitoeBatch>();
         private static Vector2 lastEnemyDeathPos;
 
+        public static float delay = 0.2f;
+        public static float currentDelay = 0;
+        public static bool allowInput = true;
+
+        public static void WinLoseScreen()
+        {
+
+            if (!allowInput) currentDelay += Program.GetDeltaTime();
+            if (currentDelay >= delay && !allowInput)
+            {
+                currentDelay = 0;
+                allowInput = true;
+            }
+
+            if (Engine.GetKey(Keys.P) && allowInput)
+            {
+                allowInput = false;
+                GameplayManager.OnPlayerDeath();
+                UI.score = 0;
+                UI.ammo = 0;
+                UI.shippys = 3;
+            }
+
+            if (Engine.GetKey(Keys.G) && allowInput)
+            {
+                allowInput = false;
+                GameplayManager.OnPlayerWin();
+                UI.score = 0;
+                UI.ammo = 0;
+                UI.shippys = 3;
+            }
+
+        }
+
         public void Gameplay()
         {
             OnPlayerDeath += RespawnPlayer;
@@ -50,9 +84,10 @@ namespace Game
 
         public static void Update() 
         {
-            if (MainMenu.ChangeScene == 1) 
+            if (MainMenu.ChangeScene == 1)
             {
                 UI.Update();
+                WinLoseScreen();
 
                 // Testing enemy batches
                 if (newBatch.Count != 0)
@@ -66,7 +101,10 @@ namespace Game
 
                     if (currentBatch != null) { currentBatch.UpdateSpawner(); }
                 }
+
             }
         }
+
+        
     }
 }

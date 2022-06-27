@@ -29,6 +29,7 @@ namespace Game
         private readonly static float[] lifesPositionsOnScreen = { 30, 90, 150, 210, 270, 50 }; // Positions in X - X - X and Y 
 
         public static Action OnPlayerDeath;
+        public static Action OnPlayerWin;
 
         public void InitializeGame()
         {
@@ -39,6 +40,7 @@ namespace Game
             AllStar();
             ChangeScene(Scenes.MainMenu); // Interface?
             OnPlayerDeath += PlayerDeath;
+            OnPlayerWin += PlayerWin;
         }
 
         public void PlayerDeath()
@@ -46,7 +48,13 @@ namespace Game
             goManager.WipeGameObjects();
             MainMenu.changeScene = 6;
         }
-        
+
+        public void PlayerWin()
+        {
+            goManager.WipeGameObjects();
+            MainMenu.changeScene = 5;
+        }
+
         // Interface?
         public void ChangeScene(Scenes toWhat) // Interface?
         {

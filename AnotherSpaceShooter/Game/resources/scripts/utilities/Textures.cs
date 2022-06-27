@@ -325,31 +325,32 @@ namespace Game
 
         public static void InitializeUITextures()
         {
+
             //buttonProp.Add(new Texture("resources/gfx/ui/button_propUnselected.png"));
             //buttonProp.Add(new Texture("resources/gfx/ui/button_propSelected.png"));
+                buttonPlay.Add(new Texture("resources/gfx/ui/PlayButton.png"));
+                buttonPlay.Add(new Texture("resources/gfx/ui/PlayButtonSelect.png"));
 
-            buttonPlay.Add(new Texture("resources/gfx/ui/PlayButton.png"));
-            buttonPlay.Add(new Texture("resources/gfx/ui/PlayButtonSelect.png"));
+                buttonControls.Add(new Texture("resources/gfx/ui/ControlsButton.jpg"));
+                buttonControls.Add(new Texture("resources/gfx/ui/ControlsButtonSelect.jpg"));
 
-            buttonControls.Add(new Texture("resources/gfx/ui/ControlsButton.jpg"));
-            buttonControls.Add(new Texture("resources/gfx/ui/ControlsButtonSelect.jpg"));
+                buttonCredits.Add(new Texture("resources/gfx/ui/CreditsButton.png"));
+                buttonCredits.Add(new Texture("resources/gfx/ui/CreditsButtonSelect.jpg"));
 
-            buttonCredits.Add(new Texture("resources/gfx/ui/CreditsButton.png"));
-            buttonCredits.Add(new Texture("resources/gfx/ui/CreditsButtonSelect.jpg"));
+                buttonExit.Add(new Texture("resources/gfx/ui/ExitButton.jpg"));
+                buttonExit.Add(new Texture("resources/gfx/ui/ExitButtonSelect.jpg"));
 
-            buttonExit.Add(new Texture("resources/gfx/ui/ExitButton.jpg"));
-            buttonExit.Add(new Texture("resources/gfx/ui/ExitButtonSelect.jpg"));
+                for (int i = 0; i < 10; i++) numbers.Add(new Texture("resources/gfx/ui/numbers/" + i + ".png"));
+                numbers.Add(new Texture("resources/gfx/ui/numbers/dot.png"));
 
-            for (int i = 0; i < 10; i++) numbers.Add(new Texture("resources/gfx/ui/numbers/" + i + ".png"));
-            numbers.Add(new Texture("resources/gfx/ui/numbers/dot.png"));
+                weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+                weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+                weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+                weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+                weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
+                for (int i = 0; i < 11; i++) weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-" + i + ".png"));
+                for (int i = 10; i > 0; i--) weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-" + i + ".png"));
 
-            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
-            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
-            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
-            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
-            weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-0.png"));
-            for (int i = 0; i < 11; i++) weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-" + i + ".png"));
-            for (int i = 10; i > 0; i--) weapbox.Add(new Texture("resources/gfx/ui/weapbox/weapbox-" + i + ".png"));
         }
 
         public static List<Texture> GetUITextures(int selection)

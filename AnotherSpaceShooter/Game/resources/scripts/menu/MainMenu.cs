@@ -98,11 +98,6 @@ namespace Game
 
         }
 
-        public void EnemyDeath()
-        {
-            changeScene = 5;
-        }
-
         public void SceneKey()
         {
 

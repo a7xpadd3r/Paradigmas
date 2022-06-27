@@ -324,11 +324,8 @@ C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\sfx\
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\Game.cs
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\system\Animation.cs
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\enemy\DummyEnemy.cs
-C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\system\managers\GameplayManager.cs
-C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\Proyectile.cs
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\player\Player.cs
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\Program.cs
-C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\SFX.cs
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\Game.exe
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\Game.pdb
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\obj\Debug\Game.csproj.AssemblyReference.cache
@@ -348,12 +345,10 @@ C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SelectShipSelect.png
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SkullFlowerShip.png
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SkullFlowerShipSelect.png
-C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\Controls.png
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\GameOver.png
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\SelectShip.png
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\YouWin.png
 C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\MainMenu.png
-C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\Credits.png
 C:\Users\Martín Coria\Desktop\SpaceShooter V1.0\Game\bin\Debug\resources\gfx\background.png
 C:\Users\Martín Coria\Desktop\SpaceShooter V1.0\Game\bin\Debug\Engine.dll
 C:\Users\Martín Coria\Desktop\SpaceShooter V1.0\Game\bin\Debug\resources\gfx\blank.png
@@ -662,3 +657,240 @@ H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enem
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\dummyship.png
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\dummyship_128.png
 H:\GitHub\PARADIGMAS\AnotherSpaceShooter\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\30x30.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\collisiondot.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\dummyship.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-0.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-2.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-3.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-4.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\hp_depleted.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\hp_full.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\hp_half.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-0.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-2.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-3.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-4.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-5.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\items\shield.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\items\special.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\items\wrench.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-0.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-2.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-3.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-4.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\e_proyectile1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_0.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_2.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_3.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_4.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_5.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_6.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_0.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_2.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_3.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_4.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_5.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_6.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_0.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_2.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_3.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_4.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_5.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_6.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\dummyship_128.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-0.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-2.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-3.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-4.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-5.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\0.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\2.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\3.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\4.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\5.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\6.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\7.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\8.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\9.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\dot.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-0.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-1.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-10.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-2.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-3.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-4.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-5.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-6.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-7.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-8.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-9.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\managers\GameplayManager.cs
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\deprecated\Proyectile.cs
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\sfx\SFX.cs
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\Credits.png
+C:\Users\Martín Coria\Desktop\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\Controls.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\30x30.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\background.png
+F:\AnotherSpaceShooter\Game\bin\Debug\Engine.dll
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\blank.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\collisiondot.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\Controls.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\Credits.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\dummyship.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\fire1-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\hp_depleted.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\hp_full.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\hp_half.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\itemeffect-white-5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\proyectilebeam-0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\proyectilebeam-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\proyectilebeam-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\proyectilebeam-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\proyectilebeam-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\proyectilebeam-5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldgreen-0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldgreen-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldgreen-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldgreen-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldgreen-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldgreen-5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldred-0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldred-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldred-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldred-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldred-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\shieldred-5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\smoke1-0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\smoke1-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\smoke1-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\smoke1-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\effect\smoke1-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\environment\a_var1_stars\var1_star0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\environment\a_var1_stars\var1_star1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\environment\a_var1_stars\var1_star2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\environment\a_var1_stars\var1_star3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\items\shield.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\items\special.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\items\wrench.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\bluerail\pbluerail-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\e_proyectile1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\greencrast\pgreencrast_6.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamondball_6.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\reddiamond\preddiamond_6.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\GameOver.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\MainMenu.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\SelectShip.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\scenes\YouWin.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\dummyship_128.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\elcapitan\ElCapitan-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\elcapitan\ElCapitan-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\elcapitan\ElCapitan-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\elcapitan\ElCapitan-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\dummyenemy\de1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\p_genericproyectile.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\p_proyectile1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\p_proyectile2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\proyectiles\p_proyectile3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ships\enemy\mosquitoe\mosquitoe-5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\button_propSelected.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\button_propUnselected.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\ControlsButton.jpg
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\ControlsButtonSelect.jpg
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\CreditsButton.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\CreditsButtonSelect.jpg
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\ElCapitanShip.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\ExitButton.jpg
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\ExitButtonSelect.jpg
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\6.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\7.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\8.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\9.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\numbers\dot.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\PlayButton.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\PlayButtonSelect.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SelectShip.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SelectShipSelect.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SkullFlowerShip.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\SkullFlowerShipSelect.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-0.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-10.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-5.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-6.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-7.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-8.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\ui\weapbox\weapbox-9.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\sfx\fbattery_loop.wav
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\propellers\elcapitan_propeller1.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\propellers\elcapitan_propeller2.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\propellers\elcapitan_propeller3.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\gfx\propellers\elcapitan_propeller4.png
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\sfx\gulp.wav
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\sfx\level2.mid
+F:\AnotherSpaceShooter\Game\bin\Debug\Game.cs
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\system\Animation.cs
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\enemy\DummyEnemy.cs
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\managers\GameplayManager.cs
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\deprecated\Proyectile.cs
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\player\Player.cs
+F:\AnotherSpaceShooter\Game\bin\Debug\Program.cs
+F:\AnotherSpaceShooter\Game\bin\Debug\resources\scripts\sfx\SFX.cs
+F:\AnotherSpaceShooter\Game\bin\Debug\Game.exe
+F:\AnotherSpaceShooter\Game\bin\Debug\Game.pdb
+F:\AnotherSpaceShooter\Game\obj\Debug\Game.csprojAssemblyReference.cache
+F:\AnotherSpaceShooter\Game\obj\Debug\Game.exe
+F:\AnotherSpaceShooter\Game\obj\Debug\Game.pdb

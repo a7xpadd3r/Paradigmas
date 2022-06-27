@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32407.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{4B96137A-5E6A-434B-BBF0-8B3C9342750C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest1", "UnitTest1\UnitTest1.csproj", "{7D3AB43E-69E9-43C2-9CBF-5BFCFB22DB62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject2", "NUnitTestProject2\NUnitTestProject2.csproj", "{1F8EAE7E-F4CC-4411-A753-E325D8F0EFCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +23,14 @@ Global
 		{4B96137A-5E6A-434B-BBF0-8B3C9342750C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4B96137A-5E6A-434B-BBF0-8B3C9342750C}.Release|Win32.ActiveCfg = Release|Any CPU
 		{4B96137A-5E6A-434B-BBF0-8B3C9342750C}.Release|Win32.Build.0 = Release|Any CPU
-		{7D3AB43E-69E9-43C2-9CBF-5BFCFB22DB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D3AB43E-69E9-43C2-9CBF-5BFCFB22DB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D3AB43E-69E9-43C2-9CBF-5BFCFB22DB62}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{7D3AB43E-69E9-43C2-9CBF-5BFCFB22DB62}.Debug|Win32.Build.0 = Debug|Any CPU
-		{7D3AB43E-69E9-43C2-9CBF-5BFCFB22DB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D3AB43E-69E9-43C2-9CBF-5BFCFB22DB62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D3AB43E-69E9-43C2-9CBF-5BFCFB22DB62}.Release|Win32.ActiveCfg = Release|Any CPU
-		{7D3AB43E-69E9-43C2-9CBF-5BFCFB22DB62}.Release|Win32.Build.0 = Release|Any CPU
+		{1F8EAE7E-F4CC-4411-A753-E325D8F0EFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8EAE7E-F4CC-4411-A753-E325D8F0EFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8EAE7E-F4CC-4411-A753-E325D8F0EFCE}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{1F8EAE7E-F4CC-4411-A753-E325D8F0EFCE}.Debug|Win32.Build.0 = Debug|Any CPU
+		{1F8EAE7E-F4CC-4411-A753-E325D8F0EFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8EAE7E-F4CC-4411-A753-E325D8F0EFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F8EAE7E-F4CC-4411-A753-E325D8F0EFCE}.Release|Win32.ActiveCfg = Release|Any CPU
+		{1F8EAE7E-F4CC-4411-A753-E325D8F0EFCE}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

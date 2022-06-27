@@ -71,7 +71,7 @@ namespace Game
             CurrentItems.Clear();
             CollisionManager.WipeColliders();
             EffectsManager.WipeEffects();
-            if (debug) Console.WriteLine("GameObjectsManager --> Todo limpiado.");
+            Console.WriteLine("GameObjectsManager --> Todo limpiado.");
         }
 
         public static void AddItem(Item newItem)
@@ -117,6 +117,10 @@ namespace Game
             Console.WriteLine("GameObjectsManager + ItemsObjects) --> Removiendo ítem del tipo '{0}' de la ubicación {1} con el ID {2}.", removeItem.GetType, CurrentItems.IndexOf(removeItem), removeItem.id);
             removeItem.Destroy();
             CurrentItems.Remove(removeItem);
+        }
+
+        public void ReturnGameObjects()
+        {
         }
     }
 }

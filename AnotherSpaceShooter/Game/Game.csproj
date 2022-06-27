@@ -94,6 +94,7 @@
     </Compile>
     <Compile Include="resources\scripts\system\Renderer.cs" />
     <Compile Include="resources\scripts\utilities\PlayerStalker.cs" />
+    <Compile Include="resources\scripts\utilities\PoolGenerics.cs" />
     <Compile Include="resources\scripts\weapons\eBlueRail.cs" />
     <Compile Include="resources\scripts\weapons\pBlueRail.cs" />
     <Compile Include="resources\scripts\weapons\pGreenCrast.cs" />
@@ -146,6 +147,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\collisiondot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\scenes\Controls.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\scenes\Credits.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\ships\dummyship.png">
@@ -362,12 +369,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_6.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\gfx\scenes\Controls.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\gfx\scenes\Credits.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\scenes\GameOver.png">
