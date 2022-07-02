@@ -42,11 +42,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="resources\scripts\collision\Collider.cs" />
     <Compile Include="resources\scripts\manager\GameManager.cs" />
+    <Compile Include="resources\scripts\ship\ShipData.cs" />
+    <Compile Include="resources\scripts\ship\ShipsProperties.cs" />
     <Compile Include="resources\scripts\system\BackgroundSprites.cs" />
     <Compile Include="resources\scripts\player\Player.cs" />
     <Compile Include="resources\scripts\system\Animation.cs" />
     <Compile Include="resources\scripts\system\GameObject.cs" />
-    <Compile Include="resources\scripts\system\ShipObject.cs" />
+    <Compile Include="resources\scripts\ship\ShipObject.cs" />
     <Compile Include="resources\scripts\system\Transform.cs" />
     <Compile Include="resources\scripts\Textures.cs" />
   </ItemGroup>
@@ -70,6 +72,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\notexture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\propellers\set1\elcapitan_propeller1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\propellers\set1\elcapitan_propeller2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\propellers\set1\elcapitan_propeller3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\propellers\set1\elcapitan_propeller4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\ship\elcapitan\ElCapitan-0.png">

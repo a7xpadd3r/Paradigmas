@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public class ShipObject
+    public class ShipObject : GameObject
     {
         //public Animation 
     }

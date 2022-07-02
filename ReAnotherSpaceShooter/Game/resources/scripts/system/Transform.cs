@@ -4,9 +4,6 @@ namespace Game
 {
     public class Transform
     {
-        //public Vector2 position { get; set; }
-        //public Vector2 scale { get; set; }
-        //public float angle { get; set; }
         private float posX = 0;
         private float posY = 0;
         private float width = 1;

@@ -8,5 +8,9 @@ namespace Game
 {
     public class Player : ShipObject
     {
+        public void Asd()
+        {
+            
+        }
     }
 }

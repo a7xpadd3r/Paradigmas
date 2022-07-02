@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Game",
+    "\\Game\\resources",
+    "\\Game\\resources\\scripts",
+    "\\Game\\resources\\scripts\\system"
   ],
-  "SelectedNode": "\\Juego.sln",
+  "SelectedNode": "\\Game\\resources\\scripts\\system\\GameObject.cs",
   "PreviewInSolutionExplorer": false
 }

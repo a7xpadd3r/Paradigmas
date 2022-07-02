@@ -6,45 +6,71 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public enum Ships { ElCapitan }
+    public enum ShipsAnimations { ElCapitan }
+    public enum ShipPropeller { Red }
     public enum Background { Stars, Planets }
     public class Textures
     {
         // Textures
-        private Texture notexture = new Texture("resources/gfx/notexture.png");
+        private static Texture notexture = new Texture("resources/gfx/notexture.png");
 
         // Lists
-        private List<Texture> notexturelist = new List<Texture>();
-        private List<Texture> stars = new List<Texture>();
-        private List<Texture> planets = new List<Texture>();
+        private static List<Texture> notexturelist = new List<Texture>();
+
+        private static List<Texture> elcapitan = new List<Texture>();
+
+        private static List<Texture> propellersset1 = new List<Texture>();
+
+        private static List<Texture> stars = new List<Texture>();
+        private static List<Texture> planets = new List<Texture>();
 
         public void InitializeTextures()
         {
             // Create textures list
             notexturelist.Add(new Texture("resources/gfx/notexture.png"));
-            
+
+            // Ships
+            elcapitan.Add(new Texture("resources/gfx/ship/elcapitan/ElCapitan-3.png"));
+
             // Stars
             for (int i = 0; i < 4; i++) stars.Add(new Texture("resources/gfx/background/star/var1_star" + i + ".png"));
             planets.Add(new Texture("resources/gfx/background/deco1.png"));
         }
 
-        public Texture GetShipTexture(Ships whichone)
+        public static Animation GetShipAnimation(ShipsAnimations whichone)
         {
-            Texture value = notexture;
+            Animation value = new Animation("null", 0, notexturelist, false, true);
             switch (whichone)
             {
-                case Ships.ElCapitan:
-                    value = new Texture("resources/gfx/ship/elcapitan/ElCapitan-3.png");
+                case ShipsAnimations.ElCapitan:
+                    value = new Animation("ElCapitanAnim", 0, elcapitan, false, true);
                     break;
 
                 default:
-                    value = notexture;
+                    value = new Animation("null", 0, notexturelist, false, true);
                     break;
             }
             return value;
         }
 
-        public List<Texture> GetBackgroundSprite(Background wichone)
+        public static Animation GetPropellerAnimation(ShipPropeller whichone)
+        {
+            Animation value = new Animation("null", 0, notexturelist, false, true);
+
+            switch (whichone)
+            {
+                case ShipPropeller.Red:
+                    break;
+
+                default:
+                    value = new Animation("null", 0, notexturelist, false, true);
+                    break;
+            }
+
+            return value;
+        }
+
+        public static List<Texture> GetBackgroundSprite(Background wichone)
         {
             List<Texture> value = notexturelist;
             switch (wichone)

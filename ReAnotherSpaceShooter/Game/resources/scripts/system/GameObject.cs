@@ -14,20 +14,24 @@ namespace Game
         public string objectOwner { get; private set; }
         public string objectTag { get; private set; }
         public bool objectActive { get; private set; }
+        public Collider objectCollider { get; private set; }
+        public Transform objectTransform { get; set; }
 
-        // Position
-        public Transform objectTransform { get; private set; }
-
-        // Sprites
+        // Animation or sprite
+        public Texture objectTexture { get; private set; }
+        public Animation objectAnimation { get; private set; }
 
         // Public values
         public bool Active => objectActive;
         public int ID => objectID;
         public string Owner => objectOwner;
         public string Tag => objectTag;
+        public Collider Collider => objectCollider;
         public Vector2 Position => objectTransform.Position;
         public Vector2 Size => objectTransform.Scale;
         public float Rotation => objectTransform.Rotation;
+        public Texture Texture => objectTexture;
+        public Animation Animation => objectAnimation;
 
         // Functions
         public virtual void Awake() { }
