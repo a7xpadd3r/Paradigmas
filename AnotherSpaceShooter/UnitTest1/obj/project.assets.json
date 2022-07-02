@@ -4946,11 +4946,16 @@
   },
   "packageFolders": {
     "C:\\Users\\arrie\\.nuget\\packages\\": {},
+<<<<<<< Updated upstream:AnotherSpaceShooter/UnitTest1/obj/project.assets.json
     "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> Stashed changes:AnotherSpaceShooter/NUnitTestProject2/obj/project.assets.json
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream:AnotherSpaceShooter/UnitTest1/obj/project.assets.json
       "projectUniqueName": "H:\\GitHub\\PARADIGMAS\\AnotherSpaceShooter\\UnitTest1\\UnitTest1.csproj",
       "projectName": "UnitTest1",
       "projectPath": "H:\\GitHub\\PARADIGMAS\\AnotherSpaceShooter\\UnitTest1\\UnitTest1.csproj",
@@ -4959,6 +4964,16 @@
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+=======
+      "projectUniqueName": "D:\\GitHub\\Paradigmas\\AnotherSpaceShooter\\NUnitTestProject2\\NUnitTestProject2.csproj",
+      "projectName": "NUnitTestProject2",
+      "projectPath": "D:\\GitHub\\Paradigmas\\AnotherSpaceShooter\\NUnitTestProject2\\NUnitTestProject2.csproj",
+      "packagesPath": "C:\\Users\\arrie\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\Paradigmas\\AnotherSpaceShooter\\NUnitTestProject2\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+>>>>>>> Stashed changes:AnotherSpaceShooter/NUnitTestProject2/obj/project.assets.json
       ],
       "configFilePaths": [
         "C:\\Users\\arrie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4973,9 +4988,19 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
+<<<<<<< Updated upstream:AnotherSpaceShooter/UnitTest1/obj/project.assets.json
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
+=======
+        "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
+          "projectReferences": {
+            "D:\\GitHub\\Paradigmas\\AnotherSpaceShooter\\Game\\Game.csproj": {
+              "projectPath": "D:\\GitHub\\Paradigmas\\AnotherSpaceShooter\\Game\\Game.csproj"
+            }
+          }
+>>>>>>> Stashed changes:AnotherSpaceShooter/NUnitTestProject2/obj/project.assets.json
         }
       },
       "warningProperties": {
@@ -5020,7 +5045,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< Updated upstream:AnotherSpaceShooter/UnitTest1/obj/project.assets.json
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes:AnotherSpaceShooter/NUnitTestProject2/obj/project.assets.json
       }
     }
   }

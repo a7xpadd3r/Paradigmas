@@ -7,6 +7,7 @@ namespace Game
     public class Star
     {
         private static List<Texture> stars = Effects.GetEffectTextures(0);
+        private static Texture planet = new Texture("resources/gfx/environment/deco1.png");
         private Texture star = stars[3];
         private static Random random = new Random();
         bool active = true;
@@ -29,6 +30,9 @@ namespace Game
         private float newPlayerY = 0;
         private float time = 0.1f;
         private float currentTime = 0.1f;
+
+        // Other
+        private Transform transform = new Transform(new Vector2(1500, 1000), new Vector2(1, 1), 0);
 
         public bool Active => active;
 
@@ -58,7 +62,9 @@ namespace Game
             if (active)
             {
                 posY += speed * Program.GetDeltaTime();
+                Engine.Draw(planet, transform, new Vector2(0, 0));
                 Engine.Draw(star, Position.X, Position.Y);
+                
 
                 if (currentTime <= time)
                 {

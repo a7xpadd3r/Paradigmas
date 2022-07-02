@@ -148,6 +148,18 @@
     <Content Include="resources\gfx\collisiondot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+<<<<<<< Updated upstream
+=======
+    <Content Include="resources\gfx\environment\deco1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\scenes\Controls.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\scenes\Credits.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+>>>>>>> Stashed changes
     <Content Include="resources\gfx\ships\dummyship.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

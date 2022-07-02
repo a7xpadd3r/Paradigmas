@@ -8,9 +8,9 @@ namespace Game
 {
     public class Renderer
     {
-        public void RenderTexture()
+        public void RenderTexture(Texture texture, Transform transform)
         {
-
+            Engine.DrawTransform(texture, transform);
         }
     }
 }
