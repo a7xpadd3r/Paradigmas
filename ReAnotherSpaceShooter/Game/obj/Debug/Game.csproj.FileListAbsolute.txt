@@ -1,0 +1,21 @@
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\bin\Debug\Engine.dll
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\bin\Debug\ship.png
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\bin\Debug\Game.exe
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\bin\Debug\Game.pdb
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\obj\Debug\Game.exe
+P:\SPARDOX\ACADEMICO\UADE Materias\IOO\ProyectoBase\Game\obj\Debug\Game.pdb
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\Engine.dll
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\ship.png
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\Game.exe
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\Game.pdb
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\obj\Debug\Game.exe
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\obj\Debug\Game.pdb
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\notexture.png
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\ship\elcapitan\ElCapitan-0.png
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\ship\elcapitan\ElCapitan-1.png
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\ship\elcapitan\ElCapitan-2.png
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\ship\elcapitan\ElCapitan-3.png
