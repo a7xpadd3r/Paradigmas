@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public class GameManager
+    public interface iProyectile
     {
-        public static void Update()
-        {
-
-        }
+        ProyectileData ProyectileStats { get; }
+        void Update();
     }
 }

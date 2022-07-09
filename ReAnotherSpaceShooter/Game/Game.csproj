@@ -40,20 +40,60 @@
   <ItemGroup>
     <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="resources\Index.cs" />
     <Compile Include="resources\scripts\collision\Collider.cs" />
-    <Compile Include="resources\scripts\manager\GameManager.cs" />
+    <Compile Include="resources\scripts\collision\ColliderVectors.cs" />
+    <Compile Include="resources\scripts\collision\Collision.cs" />
+    <Compile Include="resources\scripts\collision\CollisionTester128.cs" />
+    <Compile Include="resources\scripts\collision\CollisionTester64x128.cs" />
+    <Compile Include="resources\scripts\factory\fWeapons.cs" />
+    <Compile Include="resources\scripts\interface\iGetWeapon.cs" />
+    <Compile Include="resources\scripts\interface\iProyectile.cs" />
+    <Compile Include="resources\scripts\interface\iShip.cs" />
+    <Compile Include="resources\scripts\interface\iWeapon.cs" />
+    <Compile Include="resources\scripts\item\Item.cs" />
+    <Compile Include="resources\scripts\manager\game\FirstStageManager.cs" />
+    <Compile Include="resources\scripts\manager\game\GameManager.cs" />
+    <Compile Include="resources\scripts\manager\mCollisions.cs" />
+    <Compile Include="resources\scripts\manager\mEffects.cs" />
+    <Compile Include="resources\scripts\manager\mGameObject.cs" />
+    <Compile Include="resources\scripts\misc\GenericEffect.cs" />
+    <Compile Include="resources\scripts\pool\fyPoolDay.cs" />
+    <Compile Include="resources\scripts\pool\PoolGenerics.cs" />
+    <Compile Include="resources\scripts\proyectile\bOrbWeaver.cs" />
+    <Compile Include="resources\scripts\proyectile\PoolProyectile.cs" />
+    <Compile Include="resources\scripts\proyectile\pOrbWeaver.cs" />
+    <Compile Include="resources\scripts\proyectile\ProyectileData.cs" />
+    <Compile Include="resources\scripts\proyectile\ProyectileProperties.cs" />
     <Compile Include="resources\scripts\ship\ShipData.cs" />
     <Compile Include="resources\scripts\ship\ShipsProperties.cs" />
     <Compile Include="resources\scripts\system\BackgroundSprites.cs" />
     <Compile Include="resources\scripts\player\Player.cs" />
     <Compile Include="resources\scripts\system\Animation.cs" />
+    <Compile Include="resources\scripts\system\DoubleVector2.cs" />
     <Compile Include="resources\scripts\system\GameObject.cs" />
     <Compile Include="resources\scripts\ship\ShipObject.cs" />
+    <Compile Include="resources\scripts\system\Render.cs" />
     <Compile Include="resources\scripts\system\Transform.cs" />
+    <Compile Include="resources\scripts\system\TripleVector2.cs" />
     <Compile Include="resources\scripts\Textures.cs" />
+    <Compile Include="resources\scripts\ui\Button.cs" />
+    <Compile Include="resources\scripts\ui\UI.cs" />
+    <Compile Include="resources\scripts\weapon\wBlueRail.cs" />
+    <Compile Include="resources\scripts\weapon\wGamma.cs" />
+    <Compile Include="resources\scripts\weapon\wGreenCrast.cs" />
+    <Compile Include="resources\scripts\weapon\wHeatTrail.cs" />
+    <Compile Include="resources\scripts\weapon\wOrbWeaver.cs" />
+    <Compile Include="resources\scripts\weapon\wRedDiamond.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Engine.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\128x64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\64x64.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\background\deco1.png">
@@ -71,6 +111,114 @@
     <Content Include="resources\gfx\background\star\var1_star3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="resources\gfx\blank.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\collisions\ElCapitanBox.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\dotgreen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\dotred.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\beam1\proyectilebeam-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\beam1\proyectilebeam-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\beam1\proyectilebeam-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\beam1\proyectilebeam-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\beam1\proyectilebeam-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\beam1\proyectilebeam-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\itemglow\itemeffect-white-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\itemglow\itemeffect-white-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\itemglow\itemeffect-white-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\itemglow\itemeffect-white-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\itemglow\itemeffect-white-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\itemglow\itemeffect-white-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\orbweaverimpact\orbweaverimpact_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\orbweaverimpact\orbweaverimpact_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\orbweaverimpact\orbweaverimpact_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\orbweaverimpact\orbweaverimpact_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\orbweaverimpact\orbweaverimpact_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\orbweaverimpact\orbweaverimpact_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\orbweaverimpact\orbweaverimpact_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\orbweaverimpact\orbweaverimpact_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\smoke1\smoke1-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\smoke1\smoke1-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\smoke1\smoke1-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\smoke1\smoke1-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\smoke1\smoke1-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\thunderline\thunderline_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\thunderline\thunderline_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\thunderline\thunderline_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\effects\thunderline\thunderline_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\items\shield.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\items\special.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\items\wrench.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="resources\gfx\notexture.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -86,6 +234,213 @@
     <Content Include="resources\gfx\propellers\set1\elcapitan_propeller4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\bluerail\pbluerail-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\gamma\gamma_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\gamma\gamma_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\gamma\gamma_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\gamma\gamma_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\gamma\gamma_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\gamma\gamma_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\greencrast\pgreencrast_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\heattrail\fire1-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\heattrail\fire1-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\heattrail\fire1-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\heattrail\fire1-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\heattrail\fire1-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\orbweaverball\wOrbWeaverLoop_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\orbweaverball\wOrbWeaverLoop_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\orbweaverball\wOrbWeaverLoop_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\orbweaverball\wOrbWeaverLoop_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_00.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_06.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_07.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_08.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_09.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_010.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_011.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\orbweaver\wOrbWeaver_012.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\ball\preddiamondball_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\ball\preddiamondball_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\ball\preddiamondball_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\ball\preddiamondball_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\ball\preddiamondball_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\ball\preddiamondball_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\ball\preddiamondball_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\proyectiles\reddiamond\preddiamond_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\green\shieldgreen-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\green\shieldgreen-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\green\shieldgreen-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\green\shieldgreen-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\green\shieldgreen-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\green\shieldgreen-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\red\shieldred-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\red\shieldred-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\red\shieldred-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\red\shieldred-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\red\shieldred-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\shield\red\shieldred-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\32x32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\8x8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="resources\gfx\ship\elcapitan\ElCapitan-0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -98,13 +453,38 @@
     <Content Include="resources\gfx\ship\elcapitan\ElCapitan-3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="resources\sfx\effects\electro4.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\sfx\effects\electro5.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\sfx\effects\electro6.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\sfx\music\fbattery_loop.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\sfx\effects\gulp.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ship.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
-    <Folder Include="resources\sfx\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,10 +7,13 @@ namespace Game
     {
         private static float deltaTime;
         protected static DateTime lastFrameTime = DateTime.Now;
+        public static float GetDeltaTime => deltaTime;
 
         static void Main(string[] args)
         {
             Engine.Initialize();
+            Textures.InitializeTextures();
+            GameManager.InitializeGame();
 
             while(true)
             {
@@ -26,11 +29,6 @@ namespace Game
             TimeSpan deltaSpan = DateTime.Now - lastFrameTime;
             deltaTime = (float)deltaSpan.TotalSeconds;
             lastFrameTime = DateTime.Now;
-        }
-
-        public static float GetDeltaTime()
-        {
-            return deltaTime;
         }
     }
 }

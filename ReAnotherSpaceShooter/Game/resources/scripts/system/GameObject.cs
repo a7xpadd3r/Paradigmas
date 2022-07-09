@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public class GameObject : Collider
+    public class GameObject
     {
         // Basic values
-        public int objectID { get; private set; }
-        public string objectOwner { get; private set; }
-        public string objectTag { get; private set; }
-        public bool objectActive { get; private set; }
-        public Collider objectCollider { get; private set; }
+        public int objectID { get; set; }
+        public string objectOwner { get; set; }
+        public string objectTag { get; set; }
+        public bool objectActive { get; set; }
+        public Collider objectCollider { get; set; }
         public Transform objectTransform { get; set; }
 
         // Animation or sprite
-        public Texture objectTexture { get; private set; }
-        public Animation objectAnimation { get; private set; }
+        public Texture objectTexture { get; set; }
+        public Animation objectAnimation { get; set; }
 
         // Public values
         public bool Active => objectActive;
@@ -37,10 +37,8 @@ namespace Game
         public virtual void Awake() { }
         public virtual void BeginPlay() { }
         public virtual void Update() { }
-        public virtual void OnCollision(Collider instigator) { }
         public virtual void Damage(float amount) { }
         public virtual void Sleep() { }
         public virtual void Destroy() { }
-
     }
 }

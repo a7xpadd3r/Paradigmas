@@ -1,48 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace Game
 {
     public class Animation
     {
+        // Stats
         private string name;
         private float speed;
         private float currentTime = 0;
         private int currentFrame = 0;
         private bool isLooping;
+        private int loopsleft = 0;
+        private int originalloops = 0;
         private bool manualFrames = false;
+        private bool playonstart = true;
         public bool IsManualFrame => manualFrames;
         private List<Texture> textures = new List<Texture>();
         public Texture CurrentTexture => textures[currentFrame];
         public int CurrentFrame => currentFrame;
+
+        // Events
+        public Action OnAnimationLooped;
         public Action OnAnimationFinished;
+        public Vector2 TextureSize => new Vector2(CurrentTexture.Width, CurrentTexture.Height);
 
-        public int AnimationLongitude()
-        {
-            return textures.Count;
-        }
+        public int AnimationLongitude() { return textures.Count; }
+        public Texture GetFrameTexture(int whatFrame) { return textures[whatFrame]; }
 
-        public Texture GetFrameTexture(int whatFrame)
+        public Animation(string name, float speed, List<Texture> textures = null, bool isLooping = true, int maxloops = -1, bool setManualFrames = false, bool playOnStart = true)
         {
-            return textures[whatFrame];
-        }
-
-        public Animation(string name, float speed, List<Texture> textures = null, bool isLooping = true, bool setManualFrames = false)
-        {
+            this.playonstart = playOnStart;
             this.name = name;
             this.speed = speed;
             this.isLooping = isLooping;
             this.currentFrame = 0;
+            this.originalloops = maxloops;
+            this.loopsleft = maxloops;
             this.manualFrames = setManualFrames;
 
-            if (textures != null)
-                this.textures = textures;
+            if (textures != null) this.textures = textures;
         }
 
         public void Play()
         {
+            this.loopsleft = this.originalloops;
             this.currentFrame = 0;
             this.currentTime = 0;
+            this.playonstart = true;
         }
 
         public void ChangeFrame(int newFrame)
@@ -55,9 +61,9 @@ namespace Game
 
         public void Update()
         {
-            if (!manualFrames)
+            if (!manualFrames && playonstart && (loopsleft > 0 || loopsleft == -1))
             {
-                currentTime += Program.GetDeltaTime();
+                currentTime += Program.GetDeltaTime;
                 if (currentTime >= speed)
                 {
                     currentFrame++;
@@ -65,9 +71,9 @@ namespace Game
 
                     if (currentFrame >= textures.Count)
                     {
-                        OnAnimationFinished?.Invoke();
-                        if (isLooping) currentFrame = 0;
-                        else currentFrame = textures.Count - 1;
+                        if (isLooping && loopsleft > 0) { currentFrame = 0; loopsleft--; OnAnimationLooped?.Invoke(); }
+                        else if (isLooping && loopsleft == -1) { currentFrame = 0; OnAnimationLooped?.Invoke(); }
+                        else { currentFrame = textures.Count -1; OnAnimationFinished?.Invoke(); /*isLooping = false;*/ }
                     }
                 }
             }

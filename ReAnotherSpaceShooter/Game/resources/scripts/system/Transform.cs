@@ -2,6 +2,7 @@
 
 namespace Game
 {
+    public enum Position { X, Y }
     public class Transform
     {
         private float posX = 0;
@@ -38,6 +39,19 @@ namespace Game
             this.posY = newPosition.Y;
         }
 
+        public void UpdatePosition(Position direction, float value)
+        {
+            switch (direction)
+            {
+                case Game.Position.X:
+                    this.posX = value;
+                    break;
+                case Game.Position.Y:
+                    this.posY = value;
+                    break;
+            }
+        }
+
         public void UpdateScale(Vector2 newScale)
         {
             this.width = newScale.X;
@@ -48,5 +62,6 @@ namespace Game
         {
             this.rotation = newRotation;
         }
+
     }
 }

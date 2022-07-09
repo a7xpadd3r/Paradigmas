@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Runtime.InteropServices;
 
 namespace Game
@@ -159,11 +160,13 @@ namespace Game
             public int id;
             public int width;
             public int height;
+            public Vector2 scale;
         }
 
         public int Id { get; private set; }
         public int Width { get; private set; }
         public int Height { get; private set; }
+        public Vector2 Scale { get; private set; }
 
         public Texture(string path)
         {
@@ -171,6 +174,7 @@ namespace Game
             Id = data.id;
             Width = data.width;
             Height = data.height;
+            Scale = new Vector2(Width, Height);
         }
 
         [DllImport("Engine.dll", CallingConvention = CallingConvention.Cdecl)]
