@@ -16,7 +16,6 @@ namespace Game
         public static Vector2 PlayerPosition => lastplayerpos;
         public static int PlayerLifes => playerlifes;
         public static ShipData PlayerShip => currentshipdata;
-
         private static Vector2 lastplayerpos = new Vector2();
         private static int playerlifes = 3;
         private readonly static int initialplayerlifes = 3;
