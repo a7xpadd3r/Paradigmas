@@ -20,7 +20,7 @@ namespace Game
         // Public stuff
         public int CurrentAmmo => ammo;
         Vector2 iWeapon.BulletOut { get; set; }
-
+        public float AdditionalSpeed { get; set; }
         public iGetWeapon Owner { get; set; }
 
         public wGamma() 

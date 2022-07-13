@@ -11,13 +11,13 @@ namespace Game
         private float recoilTime = 0.4f;
         private float currentTime = 0;
         public WeaponTypes ThisType => WeaponTypes.RedDiamond;
-        public int AddAmmoAmount => 60;
+        public int AddAmmoAmount => 65;
 
         // Public stuff
         public int CurrentAmmo => ammo;
         Vector2 iWeapon.BulletOut { get; set; }
         public iGetWeapon Owner { get; set; }
-
+        public float AdditionalSpeed { get; set; }
         public wRedDiamond() { this.recoilTime = ProyectileProperties.RedDiamond.Recoil; }
 
         public void NewOwner(iGetWeapon owner)

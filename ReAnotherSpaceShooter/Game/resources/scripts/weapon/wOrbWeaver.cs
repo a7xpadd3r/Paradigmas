@@ -28,7 +28,7 @@ namespace Game
         // Public stuff
         public int CurrentAmmo => ammo;
         Vector2 iWeapon.BulletOut { get; set; }
-
+        public float AdditionalSpeed { get; set; }
         public iGetWeapon Owner { get; set; }
 
         public wOrbWeaver() 
@@ -74,12 +74,11 @@ namespace Game
 
                 if (canthrowball)
                 {
+                    ammo--;
                     int newID = mGameObject.GenerateObjectID();
                     var pOrbWeaver = fyPoolDay.Pool.CreateOrbWeaverProyectile(this.weapowner, newID);
                     pOrbWeaver.Awake(this.renderpos);
-
                     canthrowball = false;
-                    ammo--;
                 }
             }
 

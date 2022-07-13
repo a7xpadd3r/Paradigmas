@@ -7,6 +7,7 @@ namespace Game
         Vector2 BulletOut { get; set; }
         int CurrentAmmo { get; }
         int AddAmmoAmount { get; }
+        float AdditionalSpeed { get; }
         WeaponTypes ThisType { get; }
         void Fire(string owner, Vector2 currentPosition);
         void AddAmmo();

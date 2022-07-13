@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace Game
 {
-    class Button
+    public class Button
     {
         private Vector2 position;
         private float size;

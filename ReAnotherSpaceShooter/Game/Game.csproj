@@ -49,15 +49,17 @@
     <Compile Include="resources\scripts\factory\fWeapons.cs" />
     <Compile Include="resources\scripts\interface\iGetWeapon.cs" />
     <Compile Include="resources\scripts\interface\iProyectile.cs" />
+    <Compile Include="resources\scripts\interface\iScene.cs" />
     <Compile Include="resources\scripts\interface\iShip.cs" />
     <Compile Include="resources\scripts\interface\iWeapon.cs" />
     <Compile Include="resources\scripts\item\Item.cs" />
-    <Compile Include="resources\scripts\manager\game\FirstStageManager.cs" />
-    <Compile Include="resources\scripts\manager\game\GameManager.cs" />
+    <Compile Include="resources\scripts\manager\GameManager.cs" />
     <Compile Include="resources\scripts\manager\mCollisions.cs" />
     <Compile Include="resources\scripts\manager\mEffects.cs" />
     <Compile Include="resources\scripts\manager\mGameObject.cs" />
+    <Compile Include="resources\scripts\manager\mBackground.cs" />
     <Compile Include="resources\scripts\misc\GenericEffect.cs" />
+    <Compile Include="resources\scripts\misc\Star.cs" />
     <Compile Include="resources\scripts\pool\fyPoolDay.cs" />
     <Compile Include="resources\scripts\pool\PoolGenerics.cs" />
     <Compile Include="resources\scripts\proyectile\bOrbWeaver.cs" />
@@ -65,9 +67,12 @@
     <Compile Include="resources\scripts\proyectile\pOrbWeaver.cs" />
     <Compile Include="resources\scripts\proyectile\ProyectileData.cs" />
     <Compile Include="resources\scripts\proyectile\ProyectileProperties.cs" />
+    <Compile Include="resources\scripts\scenes\sGameOver.cs" />
+    <Compile Include="resources\scripts\scenes\sMainMenu.cs" />
     <Compile Include="resources\scripts\ship\ShipData.cs" />
+    <Compile Include="resources\scripts\ship\ShipPropellerData.cs" />
+    <Compile Include="resources\scripts\ship\ShipShieldData.cs" />
     <Compile Include="resources\scripts\ship\ShipsProperties.cs" />
-    <Compile Include="resources\scripts\system\BackgroundSprites.cs" />
     <Compile Include="resources\scripts\player\Player.cs" />
     <Compile Include="resources\scripts\system\Animation.cs" />
     <Compile Include="resources\scripts\system\DoubleVector2.cs" />
@@ -78,6 +83,7 @@
     <Compile Include="resources\scripts\system\TripleVector2.cs" />
     <Compile Include="resources\scripts\Textures.cs" />
     <Compile Include="resources\scripts\ui\Button.cs" />
+    <Compile Include="resources\scripts\ui\NumbersToSprites.cs" />
     <Compile Include="resources\scripts\ui\UI.cs" />
     <Compile Include="resources\scripts\weapon\wBlueRail.cs" />
     <Compile Include="resources\scripts\weapon\wGamma.cs" />
@@ -220,6 +226,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\notexture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\propellers\blue\blue_propeller1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\propellers\blue\blue_propeller2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\propellers\blue\blue_propeller3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\propellers\blue\blue_propeller4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\propellers\set1\elcapitan_propeller1.png">
@@ -451,6 +469,162 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gfx\ship\elcapitan\ElCapitan-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ship\skullflower\skullflower_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ship\skullflower\skullflower_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ship\skullflower\skullflower_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ship\skullflower\skullflower_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ship\sonicship\sonicship_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ship\sonicship\sonicship_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ship\sonicship\sonicship_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ship\sonicship\sonicship_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\button_propSelected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\button_propUnselected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\ControlsButton.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\ControlsButtonSelect.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\CreditsButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\CreditsButtonSelect.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\ElCapitanShip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\ExitButton.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\ExitButtonSelect.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\numbers\dot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\PlayButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\PlayButtonSelect.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\scenes\Controls.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\scenes\Credits.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\scenes\GameOver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\scenes\MainMenu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\scenes\SelectShip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\scenes\YouWin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\SonicShip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\SonicShipSelect.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\SkullFlowerShip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\SkullFlowerShipSelect.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\ElCapitanShipSelected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gfx\ui\WeaponBox\weapbox-9.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\sfx\effects\electro4.wav">

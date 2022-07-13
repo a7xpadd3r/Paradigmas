@@ -4,13 +4,13 @@
     "\\Game",
     "\\Game\\resources",
     "\\Game\\resources\\scripts",
-    "\\Game\\resources\\scripts\\collision",
     "\\Game\\resources\\scripts\\item",
     "\\Game\\resources\\scripts\\manager",
     "\\Game\\resources\\scripts\\player",
+    "\\Game\\resources\\scripts\\proyectile",
     "\\Game\\resources\\scripts\\system",
     "\\Game\\resources\\scripts\\weapon"
   ],
-  "SelectedNode": "\\Game\\resources\\scripts\\weapon\\wBlueRail.cs",
+  "SelectedNode": "\\Game\\resources\\scripts\\manager\\GameManager.cs",
   "PreviewInSolutionExplorer": false
 }

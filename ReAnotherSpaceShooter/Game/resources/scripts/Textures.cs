@@ -2,12 +2,13 @@
 
 namespace Game
 {
-    public enum ShipsAnimations { ElCapitan }
-    public enum ShipPropeller { Red }
+    public enum ShipsAnimations { ElCapitan, SonicShip, SkullFlower }
+    public enum ShipPropeller { Red, Blue }
     public enum ShieldColor { Green, Red, Blue, White }
     public enum Proyectile { BlueRail, RedTrail, RedTrailBall, GreenCrast, HeatTrail, OrbWeaver, GammaBeam }
     public enum EffectsAnimations { PurpleBeam, Smoke1, OrbWeaverCharge, ThunderLine, OrbWeaverImpact, ItemGlow }
     public enum Background { Stars, Planets }
+    public enum UITextures { PlayButton, ControlsButton, CreditsButton, ExitButton, ElCapitanShip, SonicShip, SkullFlowerShip, SlotBox, Numbers, WeaponList }
     public enum DebugAnimation { Box128, Box64, Box32, Box16, Box8, Box64x128 }
     public enum DebugTexture { GreenDot, RedDot }
     public class Textures
@@ -21,7 +22,6 @@ namespace Game
         private static Texture greendot = new Texture("resources/gfx/dotgreen.png");
         private static Texture reddot = new Texture("resources/gfx/dotred.png");
 
-        // Lists
         // Default
         private static List<Texture> notexturelist128 = new List<Texture>();
         private static List<Texture> notexturelist64 = new List<Texture>();
@@ -30,9 +30,12 @@ namespace Game
 
         // Ships
         private static List<Texture> elcapitan = new List<Texture>();
+        private static List<Texture> sonicship = new List<Texture>();
+        private static List<Texture> skullflower = new List<Texture>();
 
         // Propellers
         private static List<Texture> propellersset1 = new List<Texture>();
+        private static List<Texture> propellersset2 = new List<Texture>();
 
         // Shields
         private static List<Texture> shieldgreen = new List<Texture>();
@@ -63,6 +66,25 @@ namespace Game
         public static List<Texture> ItemsList => itemlist;
         private static List<Texture> itemlist = new List<Texture>();
 
+        // Interface
+        private static List<Texture> numbers = new List<Texture>();
+        private static List<Texture> playbutton = new List<Texture>();
+        private static List<Texture> controlsbutton = new List<Texture>();
+        private static List<Texture> creditsbuttons = new List<Texture>();
+        private static List<Texture> exitbutton = new List<Texture>();
+        private static List<Texture> ielcapitanship = new List<Texture>();
+        private static List<Texture> isonicship = new List<Texture>();
+        private static List<Texture> iskullflower = new List<Texture>();
+        private static List<Texture> slotbox = new List<Texture>();
+        private static List<Texture> weaponlist = new List<Texture>();
+
+        // Spash
+        public static readonly Texture splashmainmenu = new Texture("resources/gfx/ui/scenes/MainMenu.png");
+        public static readonly Texture splashcontrols = new Texture("resources/gfx/ui/scenes/Controls.png");
+        public static readonly Texture splashcredits = new Texture("resources/gfx/ui/scenes/Credits.png");
+        public static readonly Texture splashwin = new Texture("resources/gfx/ui/scenes/YouWin.png");
+        public static readonly Texture splashlose = new Texture("resources/gfx/ui/scenes/GameOver.png");
+
         // Default
         private static Animation noanim = new Animation("null", 0, notexturelist128, false, 0, true);
 
@@ -77,11 +99,25 @@ namespace Game
             // Ships
             //elcapitan.Add(notexture128);
             elcapitan.Add(new Texture("resources/gfx/ship/elcapitan/ElCapitan-3.png"));
+            elcapitan.Add(new Texture("resources/gfx/ship/elcapitan/ElCapitan-2.png"));
+            elcapitan.Add(new Texture("resources/gfx/ship/elcapitan/ElCapitan-1.png"));
+            elcapitan.Add(new Texture("resources/gfx/ship/elcapitan/ElCapitan-0.png"));
+            sonicship.Add(new Texture("resources/gfx/ship/sonicship/sonicship_3.png"));
+            sonicship.Add(new Texture("resources/gfx/ship/sonicship/sonicship_2.png"));
+            sonicship.Add(new Texture("resources/gfx/ship/sonicship/sonicship_1.png"));
+            sonicship.Add(new Texture("resources/gfx/ship/sonicship/sonicship_0.png"));
+            skullflower.Add(new Texture("resources/gfx/ship/skullflower/skullflower_3.png"));
+            skullflower.Add(new Texture("resources/gfx/ship/skullflower/skullflower_2.png"));
+            skullflower.Add(new Texture("resources/gfx/ship/skullflower/skullflower_1.png"));
+            skullflower.Add(new Texture("resources/gfx/ship/skullflower/skullflower_0.png"));
 
             // Propellers
             for (int i = 1; i < 5; i++) propellersset1.Add(new Texture("resources/gfx/propellers/set1/elcapitan_propeller" + i + ".png"));
             propellersset1.Add(new Texture("resources/gfx/propellers/set1/elcapitan_propeller3.png"));
             propellersset1.Add(new Texture("resources/gfx/propellers/set1/elcapitan_propeller2.png"));
+            for (int i = 1; i < 5; i++) propellersset2.Add(new Texture("resources/gfx/propellers/blue/blue_propeller" + i + ".png"));
+            propellersset2.Add(new Texture("resources/gfx/propellers/blue/blue_propeller3.png"));
+            propellersset2.Add(new Texture("resources/gfx/propellers/blue/blue_propeller2.png"));
 
             // Shields
             shieldgreen.Add(transparent);
@@ -124,43 +160,63 @@ namespace Game
             itemlist.Add(new Texture("resources/gfx/proyectiles/orbweaver/wOrbWeaver_012.png"));
             itemlist.Add(new Texture("resources/gfx/proyectiles/gamma/gamma_0.png"));
 
+            // UI
+            for (int i = 0; i < 10; i++) numbers.Add(new Texture("resources/gfx/ui/numbers/" + i + ".png"));
+            numbers.Add(new Texture("resources/gfx/ui/numbers/dot.png"));
+            playbutton.Add(new Texture("resources/gfx/ui/PlayButton.png"));
+            playbutton.Add(new Texture("resources/gfx/ui/PlayButtonSelect.png"));
+            controlsbutton.Add(new Texture("resources/gfx/ui/ControlsButton.jpg"));
+            controlsbutton.Add(new Texture("resources/gfx/ui/ControlsButtonSelect.jpg"));
+            creditsbuttons.Add(new Texture("resources/gfx/ui/CreditsButton.png"));
+            creditsbuttons.Add(new Texture("resources/gfx/ui/CreditsButtonSelect.jpg"));
+            exitbutton.Add(new Texture("resources/gfx/ui/ExitButton.jpg"));
+            exitbutton.Add(new Texture("resources/gfx/ui/ExitButtonSelect.jpg"));
+            ielcapitanship.Add(new Texture("resources/gfx/ui/ElCapitanShip.png"));
+            ielcapitanship.Add(new Texture("resources/gfx/ui/ElCapitanShipSelected.png"));
+            isonicship.Add(new Texture("resources/gfx/ui/SonicShip.png"));
+            isonicship.Add(new Texture("resources/gfx/ui/SonicShipSelected.png"));
+            iskullflower.Add(new Texture("resources/gfx/ui/SkullFlowerShip.png"));
+            iskullflower.Add(new Texture("resources/gfx/ui/SkullFlowerShipSelect.png"));
+            slotbox.Add(new Texture("resources/gfx/ui/WeaponBox/weapbox-0.png"));
+            slotbox.Add(new Texture("resources/gfx/ui/WeaponBox/weapbox-0.png"));
+            slotbox.Add(new Texture("resources/gfx/ui/WeaponBox/weapbox-0.png"));
+            slotbox.Add(new Texture("resources/gfx/ui/WeaponBox/weapbox-0.png"));
+            slotbox.Add(new Texture("resources/gfx/ui/WeaponBox/weapbox-0.png"));
+            for (int i = 0; i < 11; i++) slotbox.Add(new Texture("resources/gfx/ui/WeaponBox/weapbox-" + i + ".png"));
+            for (int i = 10; i > 0; i--) slotbox.Add(new Texture("resources/gfx/ui/WeaponBox/weapbox-" + i + ".png"));
+
+            weaponlist.Add(new Texture("resources/gfx/proyectiles/bluerail/pbluerail-0.png"));
+            weaponlist.Add(new Texture("resources/gfx/proyectiles/reddiamond/preddiamond_0.png"));
+            weaponlist.Add(new Texture("resources/gfx/proyectiles/greencrast/pgreencrast_0.png"));
+            weaponlist.Add(new Texture("resources/gfx/proyectiles/heattrail/fire1-0.png"));
+            weaponlist.Add(new Texture("resources/gfx/proyectiles/orbweaver/orbweaverball/wOrbWeaverLoop_3.png"));
+            weaponlist.Add(new Texture("resources/gfx/proyectiles/gamma/gamma_0.png"));
+
             // Stars
             for (int i = 0; i < 4; i++) stars.Add(new Texture("resources/gfx/background/star/var1_star" + i + ".png"));
             planets.Add(new Texture("resources/gfx/background/deco1.png"));
         }
-
         public static Animation GetShipAnimation(ShipsAnimations whichone)
         {
             Animation value = noanim;
             switch (whichone)
             {
-                case ShipsAnimations.ElCapitan:
-                    value = new Animation("ElCapitanAnim", 0, elcapitan, false, 0, true);
-                    break;
-
-                default:
-                    break;
+                case ShipsAnimations.ElCapitan: value = new Animation("ElCapitanAnim", 0, elcapitan, false, 0, true); break;
+                case ShipsAnimations.SonicShip: value = new Animation("SonicShipAnim", 0, sonicship, false, 0, true); break;
+                case ShipsAnimations.SkullFlower: value = new Animation("SkullFlowerAnim", 0, skullflower, false, 0, true); break;
             }
             return value;
         }
-
         public static Animation GetPropellerAnimation(ShipPropeller whichone)
         {
             Animation value = noanim;
-
             switch (whichone)
             {
-                case ShipPropeller.Red:
-                    value = new Animation("Propellers", 0.03f, propellersset1);
-                    break;
-
-                default:
-                    break;
+                case ShipPropeller.Red: value = new Animation("Propellers", 0.03f, propellersset1); break;
+                case ShipPropeller.Blue: value = new Animation("Blue Propeller", 0.05f, propellersset2); break;
             }
-
             return value;
         }
-
         public static Animation GetShieldAnimation(ShieldColor whichcolor)
         {
             Animation value = noanim;
@@ -183,7 +239,6 @@ namespace Game
 
             return value;
         }
-
         public static Animation GetProyectileAnimation(Proyectile whichone)
         {
             Animation value = noanim;
@@ -199,7 +254,6 @@ namespace Game
             }
             return value;
         }
-
         public static Animation GetEffectAnimation(EffectsAnimations whichone)
         {
             Animation value = noanim;
@@ -228,7 +282,6 @@ namespace Game
             }
             return value;
         }
-
         public static List<Texture> GetBackgroundSprite(Background wichone)
         {
             List<Texture> value = notexturelist128;
@@ -246,7 +299,24 @@ namespace Game
             }
             return value;
         }
-
+        public static List<Texture> GetUITextures(UITextures whichone)
+        {
+            List<Texture> value = notexturelist128;
+            switch (whichone)
+            {
+                case UITextures.PlayButton:      value = playbutton;     break;
+                case UITextures.ControlsButton:  value = controlsbutton; break;
+                case UITextures.CreditsButton:   value = creditsbuttons; break;
+                case UITextures.ExitButton:      value = exitbutton;     break;
+                case UITextures.ElCapitanShip:   value = ielcapitanship; break;
+                case UITextures.SonicShip:       value = isonicship;     break;
+                case UITextures.SkullFlowerShip: value = iskullflower;   break;
+                case UITextures.SlotBox:         value = slotbox;        break;
+                case UITextures.Numbers:         value = numbers;        break;
+                case UITextures.WeaponList:      value = weaponlist;     break;
+            }
+            return value;
+        }
         public static Animation GetDebugAnimation(DebugAnimation whichone)
         {
             Animation value = noanim;
@@ -275,7 +345,6 @@ namespace Game
 
             return value;
         }
-
         public static Texture GetDebugTexture(DebugTexture whattexture)
         {
             Texture value = notexture128;

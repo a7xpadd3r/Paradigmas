@@ -7,14 +7,14 @@
     }
     public static class fWeapons
     {
-        public static iWeapon CreateWeapon(WeaponTypes type)
+        public static iWeapon CreateWeapon(WeaponTypes type, float AdditionalSpeed = 0)
         {
             switch (type)
             {
                 case WeaponTypes.BlueRail: return new wBlueRail();
                 case WeaponTypes.RedDiamond: return new wRedDiamond();
                 case WeaponTypes.GreenCrast: return new wGreenCrast();
-                case WeaponTypes.HeatTrail: return new wHeatTrail();
+                case WeaponTypes.HeatTrail: return new wHeatTrail(AdditionalSpeed);
                 case WeaponTypes.OrbWeaver: return new wOrbWeaver();
                 case WeaponTypes.Gamma: return new wGamma();
 

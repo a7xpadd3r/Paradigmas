@@ -21,6 +21,7 @@ namespace Game
             this.objectTransform = new Transform(spawnPosition, new Vector2(1, 1));
             this.objectAnimation = Textures.GetDebugAnimation(DebugAnimation.Box128);
             this.objectCollider = new Collider(0, this.objectOwner, "Enemy", spawnPosition, this.objectAnimation.TextureSize, this.objectID);
+            this.objectCollider.UpdateDamage(2.5f);
             this.objectCollider.OnCollision += OnHit;
 
             mGameObject.AddGameObject(this);

@@ -65,56 +65,10 @@ namespace Game
 
         public static void WipeGameObjects()
         {
-            CurrentGameObjects.Clear();
-            mEffects.WipeEffects();
             if (DBG) Console.WriteLine("Mánager -> Limpiando juego...");
+            CurrentGameObjects.Clear();
+            mCollisions.WipeColliders();
+            mEffects.WipeEffects();
         }
-
-        /*
-        public static void AddItem(Item newItem)
-        {
-            CurrentItems.Add(newItem);
-            Console.WriteLine("GameObjectsManager --> Nuevo ítem agregado del tipo '{0}' en la ubicación {1} con el ID {2}.", newItem.GetType, CurrentItems.IndexOf(newItem), newItem.id);
-        }
-
-        public static Item GrabItem(Collider reference)
-        {
-            int refID = reference.id;
-            Item value = null;
-            if (GetAllItems.Count > 0)
-            {
-                List<int> tempGameObjectsIDs = new List<int>();
-                List<int> tempItemsIDs = new List<int>();
-
-                // Add every ID to a temporal list
-                foreach (GameObject item in GetAllGameObjects)
-                {
-                    tempGameObjectsIDs.Add(item.id);
-                }
-
-                foreach (Item item in GetAllItems)
-                {
-                    tempItemsIDs.Add(item.id);
-                }
-
-                if (tempGameObjectsIDs.Contains(refID) && tempItemsIDs.Contains(refID))
-                {
-                    for (int i = 0; i < GetAllItems.Count; i++)
-                    {
-                        if (GetAllItems[i].id == refID) value = GetAllItems[i];
-                    }
-                }
-            }
-            return value;
-        }
-
-        public static void RemoveItem(Item removeItem)
-        {
-            if (!CurrentItems.Contains(removeItem)) return;
-            Console.WriteLine("GameObjectsManager + ItemsObjects) --> Removiendo ítem del tipo '{0}' de la ubicación {1} con el ID {2}.", removeItem.GetType, CurrentItems.IndexOf(removeItem), removeItem.id);
-            removeItem.Destroy();
-            CurrentItems.Remove(removeItem);
-        }
-    */
     }
 }

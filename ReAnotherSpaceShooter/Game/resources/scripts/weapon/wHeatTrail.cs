@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Numerics;
 
 namespace Game
@@ -6,10 +7,10 @@ namespace Game
     public class wHeatTrail : iWeapon
     {
         // Weapon stats
-        private int ammo = 500;
+        private int ammo = 600;
         private Animation FireHead = Textures.GetProyectileAnimation(Proyectile.HeatTrail);
         public WeaponTypes ThisType => WeaponTypes.HeatTrail;
-        public int AddAmmoAmount => 650;
+        public int AddAmmoAmount => 750;
 
         // Heat Trail data
         private float toleranceRangeX = 5, toleranceRangeY = 5;
@@ -49,11 +50,13 @@ namespace Game
         // Public stuff
         public int CurrentAmmo => ammo;
         Vector2 iWeapon.BulletOut { get; set; }
-
         public iGetWeapon Owner { get; set; }
+        public float AdditionalSpeed { get; set; }
 
-        public wHeatTrail()
+        public wHeatTrail(float newAdditionalSpeed)
         {
+            this.AdditionalSpeed = newAdditionalSpeed;
+
             HeadsColliders.Add(new Collider(h1damage, "Player", "Proyectile", lastKnownPosition, new Vector2(40, 20), 0));
             HeadsColliders.Add(new Collider(h2damage, "Player", "Proyectile", lastKnownPosition, new Vector2(50, 30), 0));
             HeadsColliders.Add(new Collider(h3damage, "Player", "Proyectile", lastKnownPosition, new Vector2(60, 38), 0));
@@ -129,32 +132,32 @@ namespace Game
                     var tempX = h1X;
                     var tempY = h1Y;
                     var tempVector = firePositionH1;
-                    var tempSpeed = h1speed;
+                    var tempSpeed = h1speed + AdditionalSpeed;
                     switch (i)
                     {
                         case 2:
                             tempX = h2X;
                             tempY = h2Y;
                             tempVector = firePositionH2;
-                            tempSpeed = h2speed;
+                            tempSpeed = h2speed + AdditionalSpeed;
                             break;
                         case 3:
                             tempX = h3X;
                             tempY = h3Y;
                             tempVector = firePositionH3;
-                            tempSpeed = h3speed;
+                            tempSpeed = h3speed + AdditionalSpeed;
                             break;
                         case 4:
                             tempX = h4X;
                             tempY = h4Y;
                             tempVector = firePositionH4;
-                            tempSpeed = h4speed;
+                            tempSpeed = h4speed + AdditionalSpeed;
                             break;
                         case 5:
                             tempX = h5X;
                             tempY = h5Y;
                             tempVector = firePositionH5;
-                            tempSpeed = h5speed;
+                            tempSpeed = h5speed + AdditionalSpeed;
                             break;
                     }
 
@@ -166,7 +169,6 @@ namespace Game
                         if (tempY > tempVector.Y) tempY -= tempSpeed * delta;
                         else if (tempY < tempVector.Y) tempY += tempSpeed * delta;
                     }
-
                     
                     switch (i)
                     {

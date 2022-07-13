@@ -34,7 +34,7 @@ namespace Game
         public Animation Animation => objectAnimation;
 
         // Functions
-        public virtual void Awake() { }
+        //public virtual void Awake() { }
         public virtual void BeginPlay() { }
         public virtual void Update() { }
         public virtual void Damage(float amount) { }

@@ -14,10 +14,11 @@ namespace Game
         public int AddAmmoAmount => 0;
 
         // Public stuff
+        public double Ammo => (double)ammo;
         public int CurrentAmmo => ammo;
         Vector2 iWeapon.BulletOut { get; set; }
-
         public iGetWeapon Owner { get; set; }
+        public float AdditionalSpeed { get; set; }
 
         public wBlueRail() { this.recoilTime = ProyectileProperties.BlueRail.Recoil; }
 

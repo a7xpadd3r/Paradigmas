@@ -8,11 +8,13 @@ namespace Game
         private static fyPoolDay pool;
         public static fyPoolDay Pool => pool ?? (pool = new fyPoolDay());
 
-        private PoolGeneric<PoolProyectile> pProyectiles = new PoolGeneric<PoolProyectile>();     // Proyectiles pool
-        private PoolGeneric<pOrbWeaver> pOrbWeaver = new PoolGeneric<pOrbWeaver>();               // Orb Weaver balls pool
-        private PoolGeneric<bOrbWeaver> bOrbWeaver = new PoolGeneric<bOrbWeaver>();               // Orb Weaver bomb pool
-        private PoolGeneric<Item> nItem = new PoolGeneric<Item>();                                 // Items pool
-        private PoolGeneric<GenericEffect> pEffects = new PoolGeneric<GenericEffect>();           // Effects pool
+        private PoolGeneric<PoolProyectile> pProyectiles = new PoolGeneric<PoolProyectile>();  // Proyectiles pool
+        private PoolGeneric<pOrbWeaver> pOrbWeaver = new PoolGeneric<pOrbWeaver>();            // Orb Weaver balls pool
+        private PoolGeneric<bOrbWeaver> bOrbWeaver = new PoolGeneric<bOrbWeaver>();            // Orb Weaver bomb pool
+        private PoolGeneric<Item> pItem = new PoolGeneric<Item>();                             // Items pool
+        private PoolGeneric<GenericEffect> pEffects = new PoolGeneric<GenericEffect>();        // Effects pool
+
+        private PoolGeneric<Player> pPlayer = new PoolGeneric<Player>();    // Player pool
 
         public PoolProyectile CreateProyectile(string owner, int objectID)
         {
@@ -74,7 +76,7 @@ namespace Game
         }
         public Item CreateItem(string owner, int objectID)
         {
-            var item = nItem.GetOrCreate(owner);
+            var item = pItem.GetOrCreate(owner);
 
             if (item.Value == null)
             {
@@ -83,7 +85,7 @@ namespace Game
                 {
                     if (DBG) Console.WriteLine("Pool -> Objecto con HASH:{0} durmiendo...", item.GetHashCode());
                     item.Value.SetActive(false);
-                    nItem.InUseToAvailable(item);
+                    pItem.InUseToAvailable(item);
                 };
             }
 
@@ -107,6 +109,26 @@ namespace Game
 
             if (DBG) Console.WriteLine("Pool -> Efecto con HASH:{0} despertando...", effect.GetHashCode());
             return effect.Value;
+        }
+
+        public Player CreatePlayer(int newobjID, string owner = "Player")
+        {
+            var player = pPlayer.GetOrCreate(owner);
+            
+            if (player.Value == null)
+            {
+                player.Value = new Player(newobjID, owner);
+                player.Value.OnPlayerDeath += () =>
+                {
+                    if (DBG) Console.WriteLine("Pool -> Jugador con HASH:{0} durmiendo...", player.GetHashCode());
+                    player.Value.SetActive(false);
+                    pPlayer.InUseToAvailable(player);
+                };
+            }
+
+            if (DBG) Console.WriteLine("Pool -> Jugador con HASH:{0} despertando...", player.GetHashCode());
+            player.Value.SetActive(true);
+            return player.Value;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Numerics;
 
 namespace Game
@@ -6,79 +6,92 @@ namespace Game
     public class ShipData
     {
         // Basic stuff
-        public float MaxSpeed ;
+        public float MaxSpeed;
         public float Durability;
 
         // GFX
         public Animation ShipAnim;
-        public Animation RedPropeller = Textures.GetPropellerAnimation(ShipPropeller.Red);
-        public Animation BluePropeller = Textures.GetPropellerAnimation(ShipPropeller.Red);
         public Animation ShieldAnim;
+        public List<ShipPropellerData> ShipPropellers;
 
         // Vectors
         public Vector2 RailPosition;
         public DoubleVector2 ColliderVectors;
         public DoubleVector2 ShieldVectors;
 
-        public Vector2 FirstPropellerPosition;
-        public Vector2 SecondPropellerPosition;
-        public Vector2 ThirdPropellerPosition;
-        public Vector2 FourthPropellerPosition;
+        // Shield
+        public bool IsShielding => shielding;
+        private bool shielding = false;
+        private float currentshieldCD = 0;
+        private float maxshieldCD = 0.8f;
 
-        // Full build with DoubleVector2 - no shield parameters
-        public ShipData(float newMaxSpeed, float newDurability, Animation newShipAnim, Animation newShieldAnim, DoubleVector2 newColliderVectors, Vector2 newRailPosition, Vector2 propellerpos1, Vector2 propellerpos2 = new Vector2(), Vector2 propellerpos3 = new Vector2(), Vector2 propellerpos4 = new Vector2())
+        public void ShipUpdate(float delta)
+        {
+            this.ShipAnim.Update();
+            this.ShieldAnim.Update();
+
+            if (shielding) currentshieldCD += delta;
+            if (shielding && currentshieldCD >= maxshieldCD) { shielding = false; currentshieldCD = 0; }
+        }
+
+        public void UpdateShieldStatus(bool newShieldStatus) { shielding = newShieldStatus; }
+        public void UpdateMaxShieldCD(float newMax) { maxshieldCD = newMax; }
+        public void ShipDamage(float currentHP, float maxHP)
+        {
+            // Ship texture (shows damage)
+            if ((currentHP * 100) / maxHP > 85) { ShipAnim.ChangeFrame(0); }
+            else if ((currentHP * 100) / maxHP < 85 && (currentHP * 100) / maxHP > 50) { ShipAnim.ChangeFrame(1); }
+            else if ((currentHP * 100) / maxHP < 50 && (currentHP * 100) / maxHP > 25) { ShipAnim.ChangeFrame(2); }
+            else if ((currentHP * 100) / maxHP < 25 && (currentHP * 100) / maxHP > 0) { ShipAnim.ChangeFrame(3); }
+        }
+
+        public ShipData(float newMaxSpeed, float newDurability, Vector2 newRailPosition, Animation newShipAnim, ShipShieldData newShieldData, ShipPropellerData newPropeller, DoubleVector2 newColliderVectors)
         {
             this.MaxSpeed = newMaxSpeed;
             this.Durability = newDurability;
+            this.RailPosition = newRailPosition;
+
             this.ShipAnim = newShipAnim;
-            this.ShieldAnim = newShieldAnim;
+            this.ShipAnim.ChangeFrame(0);
+            this.ShieldAnim = newShieldData.ShieldAnim;
+            this.ShieldVectors = newShieldData.ShieldVectors;
+
             this.ColliderVectors = newColliderVectors;
-            this.RailPosition = newRailPosition;
-
-            this.FirstPropellerPosition = propellerpos1;
-            this.SecondPropellerPosition = propellerpos2;
-            this.ThirdPropellerPosition = propellerpos3;
-            this.FourthPropellerPosition = propellerpos4;
+            this.ShipPropellers = new List<ShipPropellerData>();
+            this.ShipPropellers.Add(newPropeller);
         }
-
-        // Only 1 propeller with DoubleVector2 and some vectors - no shield parameters
-        public ShipData(float newMaxSpeed, float newDurability, Animation newShipAnim, Animation newShieldAnim, DoubleVector2 newColliderVectors, Vector2 newRailPosition, Vector2 propellerpos1)
+        public ShipData(float newMaxSpeed, float newDurability, Vector2 newRailPosition, Animation newShipAnim, ShipShieldData newShieldData, ShipPropellerData newPropeller1, ShipPropellerData newPropeller2, DoubleVector2 newColliderVectors)
         {
             this.MaxSpeed = newMaxSpeed;
             this.Durability = newDurability;
+            this.RailPosition = newRailPosition;
+
             this.ShipAnim = newShipAnim;
-            this.ShieldAnim = newShieldAnim;
+            this.ShipAnim.ChangeFrame(0);
+            this.ShieldAnim = newShieldData.ShieldAnim;
+            this.ShieldVectors = newShieldData.ShieldVectors;
+
             this.ColliderVectors = newColliderVectors;
-            this.RailPosition = newRailPosition;
-
-            this.FirstPropellerPosition = propellerpos1;
+            this.ShipPropellers = new List<ShipPropellerData>();
+            this.ShipPropellers.Add(newPropeller1);
+            this.ShipPropellers.Add(newPropeller2);
         }
-
-        // Only 1 propeller (default) with Vectors2 - no shield parameters
-        public ShipData(float newMaxSpeed, float newDurability, Animation newShipAnim, Animation newShieldAnim, Vector2 newRailPosition, Vector2 newColliderOffset, Vector2 newColliderSize, Vector2 propellerpos1)
+        public ShipData(float newMaxSpeed, float newDurability, Vector2 newRailPosition, Animation newShipAnim, ShipShieldData newShieldData, ShipPropellerData newPropeller1, ShipPropellerData newPropeller2, ShipPropellerData newPropeller3, DoubleVector2 newColliderVectors)
         {
             this.MaxSpeed = newMaxSpeed;
             this.Durability = newDurability;
-            this.ShipAnim = newShipAnim;
-            this.ShieldAnim = newShieldAnim;
             this.RailPosition = newRailPosition;
-            this.ColliderVectors = new DoubleVector2(newColliderOffset, newColliderSize);
 
-            this.FirstPropellerPosition = propellerpos1;
-        }
-
-        // Only 1 propeller with Vectors2 - shield parameters
-        public ShipData(float newMaxSpeed, float newDurability, Animation newShipAnim, Animation newShieldAnim, DoubleVector2 newShieldVectors, Vector2 newRailPosition, Vector2 newColliderOffset, Vector2 newColliderSize, Vector2 propellerpos1)
-        {
-            this.MaxSpeed = newMaxSpeed;
-            this.Durability = newDurability;
             this.ShipAnim = newShipAnim;
-            this.ShieldAnim = newShieldAnim;
-            this.RailPosition = newRailPosition;
-            this.ColliderVectors = new DoubleVector2(newColliderOffset, newColliderSize);
-            this.ShieldVectors = newShieldVectors;
+            this.ShipAnim.ChangeFrame(0);
+            this.ShieldAnim = newShieldData.ShieldAnim;
+            this.ShieldVectors = newShieldData.ShieldVectors;
 
-            this.FirstPropellerPosition = propellerpos1;
+            this.ColliderVectors = newColliderVectors;
+            this.ShipPropellers = new List<ShipPropellerData>();
+            this.ShipPropellers.Add(newPropeller1);
+            this.ShipPropellers.Add(newPropeller2);
+            this.ShipPropellers.Add(newPropeller3);
         }
     }
 }

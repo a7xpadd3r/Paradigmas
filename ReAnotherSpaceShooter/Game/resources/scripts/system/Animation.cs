@@ -20,6 +20,7 @@ namespace Game
         private List<Texture> textures = new List<Texture>();
         public Texture CurrentTexture => textures[currentFrame];
         public int CurrentFrame => currentFrame;
+        public string AnimationName => name;
 
         // Events
         public Action OnAnimationLooped;
@@ -45,9 +46,9 @@ namespace Game
 
         public void Play()
         {
-            this.loopsleft = this.originalloops;
             this.currentFrame = 0;
             this.currentTime = 0;
+            this.loopsleft = this.originalloops;
             this.playonstart = true;
         }
 
@@ -73,7 +74,7 @@ namespace Game
                     {
                         if (isLooping && loopsleft > 0) { currentFrame = 0; loopsleft--; OnAnimationLooped?.Invoke(); }
                         else if (isLooping && loopsleft == -1) { currentFrame = 0; OnAnimationLooped?.Invoke(); }
-                        else { currentFrame = textures.Count -1; OnAnimationFinished?.Invoke(); /*isLooping = false;*/ }
+                        else { currentFrame = textures.Count -1; OnAnimationFinished?.Invoke(); }
                     }
                 }
             }
