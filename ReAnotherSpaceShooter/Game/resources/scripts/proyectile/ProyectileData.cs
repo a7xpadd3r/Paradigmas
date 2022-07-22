@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Game
+﻿namespace Game
 {
     public class ProyectileData
     {
@@ -23,16 +17,6 @@ namespace Game
             this.Animation = newAnim;
             this.colliderVectors = newColliderVectors;
             this.beamStats = newBeamSize;
-        }
-
-        public ProyectileData(ProyectileProperties selection)
-        {
-            switch (selection)
-            {
-                default:
-                    Console.WriteLine(selection);
-                    break;
-            }
         }
     }
 }

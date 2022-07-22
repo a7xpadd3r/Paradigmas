@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Game
 {
-    public enum ShipsAnimations { ElCapitan, SonicShip, SkullFlower }
-    public enum ShipPropeller { Red, Blue }
-    public enum ShieldColor { Green, Red, Blue, White }
-    public enum Proyectile { BlueRail, RedTrail, RedTrailBall, GreenCrast, HeatTrail, OrbWeaver, GammaBeam }
+    public enum ShipsAnimations { ElCapitan, SonicShip, SkullFlower, Mosquitoe, Slider, Tremor, sMosquitoe, sSlider, sTremor }
+    public enum ShipPropeller { Red, Blue, White }
+    public enum ShieldColor { Green, Red, }
+    public enum Proyectile { BlueRail, RedTrail, RedTrailBall, GreenCrast, HeatTrail, OrbWeaver, GammaBeam, Enemy1, Enemy2, Enemy3 }
     public enum EffectsAnimations { PurpleBeam, Smoke1, OrbWeaverCharge, ThunderLine, OrbWeaverImpact, ItemGlow }
     public enum Background { Stars, Planets }
     public enum UITextures { PlayButton, ControlsButton, CreditsButton, ExitButton, ElCapitanShip, SonicShip, SkullFlowerShip, SlotBox, Numbers, WeaponList }
@@ -32,14 +33,36 @@ namespace Game
         private static List<Texture> elcapitan = new List<Texture>();
         private static List<Texture> sonicship = new List<Texture>();
         private static List<Texture> skullflower = new List<Texture>();
+        private static List<Texture> mosquitoe = new List<Texture>();
+        private static List<Texture> slider = new List<Texture>();
+        private static List<Texture> tremor = new List<Texture>();
+        private static List<Texture> specialmosquitoe = new List<Texture>();
+        private static List<Texture> specialslider = new List<Texture>();
+        private static List<Texture> specialtremor = new List<Texture>();
+
+        public static Animation MosquitoeAnim => new Animation("MosquitoeAnim", 0.001f, mosquitoe);
+        public static Animation SpecialMosquitoeAnim => new Animation("SpecialMosquitoeAnim", 0.001f, specialmosquitoe);
+
+        public static List<Texture> SliderTextures => slider;
+        public static List<Texture> SpecialSliderTextures => specialslider;
+        public static List<Texture> TremorTextures => tremor;
+        public static List<Texture> SpecialTremorTextures => specialtremor;
+
 
         // Propellers
         private static List<Texture> propellersset1 = new List<Texture>();
         private static List<Texture> propellersset2 = new List<Texture>();
+        private static List<Texture> propellersset3 = new List<Texture>();
+        public static Animation RedPropeller => new Animation("Propellers", 0.03f, propellersset1);
+        public static Animation BluePropeller => new Animation("Blue Propeller", 0.05f, propellersset2);
+        public static Animation WhitePropeller => new Animation("White Propeller", 0.021f, propellersset3);
 
         // Shields
         private static List<Texture> shieldgreen = new List<Texture>();
         private static List<Texture> shieldred = new List<Texture>();
+
+        public static List<Texture> GreenShield => shieldgreen;
+        public static List<Texture> RedShield => shieldred;
 
         // Proyectiles
         private static List<Texture> pbluerail = new List<Texture>();
@@ -50,6 +73,9 @@ namespace Game
         private static List<Texture> worbweaver = new List<Texture>();
         private static List<Texture> porbweaver = new List<Texture>();
         private static List<Texture> pgamma = new List<Texture>();
+        private static List<Texture> enemy1 = new List<Texture>();
+        private static List<Texture> enemy2 = new List<Texture>();
+        private static List<Texture> enemy3 = new List<Texture>();
 
         // Effects
         private static List<Texture> purplebeam = new List<Texture>();
@@ -110,6 +136,14 @@ namespace Game
             skullflower.Add(new Texture("resources/gfx/ship/skullflower/skullflower_2.png"));
             skullflower.Add(new Texture("resources/gfx/ship/skullflower/skullflower_1.png"));
             skullflower.Add(new Texture("resources/gfx/ship/skullflower/skullflower_0.png"));
+            for (int i = 0; i < 6; i++) mosquitoe.Add(new Texture("resources/gfx/ship/enemies/mosquitoe/mosquitoe-" + i + ".png"));
+            for (int i = 5; i > 0; i--) mosquitoe.Add(new Texture("resources/gfx/ship/enemies/mosquitoe/mosquitoe-" + i + ".png"));
+            for (int i = 0; i < 6; i++) specialmosquitoe.Add(new Texture("resources/gfx/ship/enemies/mosquitoe/mosquitoe-special_" + i + ".png"));
+            for (int i = 6; i < 0; i--) specialmosquitoe.Add(new Texture("resources/gfx/ship/enemies/mosquitoe/mosquitoe-special_" + i + ".png"));
+            for (int i = 0; i < 4; i++) slider.Add(new Texture("resources/gfx/ship/enemies/slider/slider" + i + ".png"));
+            for (int i = 0; i < 4; i++) specialslider.Add(new Texture("resources/gfx/ship/enemies/slider/slider_special" + i + ".png"));
+            for (int i = 0; i < 4; i++) tremor.Add(new Texture("resources/gfx/ship/enemies/tremor/tremper" + i + ".png"));
+            for (int i = 0; i < 4; i++) specialtremor.Add(new Texture("resources/gfx/ship/enemies/tremor/tremper_special" + i + ".png"));
 
             // Propellers
             for (int i = 1; i < 5; i++) propellersset1.Add(new Texture("resources/gfx/propellers/set1/elcapitan_propeller" + i + ".png"));
@@ -118,14 +152,17 @@ namespace Game
             for (int i = 1; i < 5; i++) propellersset2.Add(new Texture("resources/gfx/propellers/blue/blue_propeller" + i + ".png"));
             propellersset2.Add(new Texture("resources/gfx/propellers/blue/blue_propeller3.png"));
             propellersset2.Add(new Texture("resources/gfx/propellers/blue/blue_propeller2.png"));
+            for (int i = 1; i < 5; i++) propellersset3.Add(new Texture("resources/gfx/propellers/white/white_propeller" + i + ".png"));
+            propellersset3.Add(new Texture("resources/gfx/propellers/white/white_propeller3.png"));
+            propellersset3.Add(new Texture("resources/gfx/propellers/white/white_propeller3.png"));
 
             // Shields
             shieldgreen.Add(transparent);
             for (int i = 0; i != 6; i++) shieldgreen.Add(new Texture("resources/gfx/shield/green/shieldgreen-" + i + ".png"));
             for (int i = 5; i != 1; i--) shieldgreen.Add(new Texture("resources/gfx/shield/green/shieldgreen-" + i + ".png"));
             shieldred.Add(transparent);
-            for (int i = 0; i != 6; i++) shieldred.Add(new Texture("resources/gfx/shield/green/shieldgreen-" + i + ".png"));
-            for (int i = 5; i != 1; i--) shieldred.Add(new Texture("resources/gfx/shield/green/shieldgreen-" + i + ".png"));
+            for (int i = 0; i != 6; i++) shieldred.Add(new Texture("resources/gfx/shield/red/shieldred-" + i + ".png"));
+            for (int i = 5; i != 1; i--) shieldred.Add(new Texture("resources/gfx/shield/red/shieldred-" + i + ".png"));
 
             // Proyectiles
             for (int i = 0; i < 5; i++) pbluerail.Add(new Texture("resources/gfx/proyectiles/bluerail/pbluerail-" + i + ".png"));
@@ -137,6 +174,11 @@ namespace Game
             for (int i = 0; i < 12; i++) worbweaver.Add(new Texture("resources/gfx/proyectiles/orbweaver/wOrbWeaver_0" + i + ".png"));
             for (int i = 0; i < 3; i++) porbweaver.Add(new Texture("resources/gfx/proyectiles/orbweaver/orbweaverball/wOrbWeaverLoop_" + i + ".png"));
             for (int i = 0; i < 5; i++) pgamma.Add(new Texture("resources/gfx/proyectiles/gamma/gamma_" + i + ".png"));
+
+            for (int i = 0; i < 5; i++) enemy1.Add(new Texture("resources/gfx/proyectiles/enemybluerail/pEnemyBlueRail-" + i + ".png"));
+            for (int i = 0; i < 7; i++) enemy2.Add(new Texture("resources/gfx/proyectiles/enemyreddiamond/pEnemyRedDiamond-" + i + ".png"));
+            for (int i = 0; i < 6; i++) enemy3.Add(new Texture("resources/gfx/proyectiles/enemygreencrast/pEnemyGreenCrast-" + i + ".png"));
+            for (int i = 5; i < 0; i--) enemy3.Add(new Texture("resources/gfx/proyectiles/enemygreencrast/pEnemyGreenCrast-" + i + ".png"));
 
             // Effects
             for (int i = 5; i != 0; i--) purplebeam.Add(new Texture("resources/gfx/effects/beam1/proyectilebeam-" + i + ".png"));
@@ -204,6 +246,12 @@ namespace Game
                 case ShipsAnimations.ElCapitan: value = new Animation("ElCapitanAnim", 0, elcapitan, false, 0, true); break;
                 case ShipsAnimations.SonicShip: value = new Animation("SonicShipAnim", 0, sonicship, false, 0, true); break;
                 case ShipsAnimations.SkullFlower: value = new Animation("SkullFlowerAnim", 0, skullflower, false, 0, true); break;
+                case ShipsAnimations.Mosquitoe: value = new Animation("MosquitoeAnim", 0.001f, mosquitoe); break;
+                case ShipsAnimations.sMosquitoe: value = new Animation("SpecialMosquitoeAnim", 0.001f, specialmosquitoe); break;
+                case ShipsAnimations.Slider: value = new Animation("SliderAnim", 0, slider, false, 0, true); break;
+                case ShipsAnimations.sSlider: value = new Animation("SpecialSliderAnim", 0, specialslider, false, 0, true); break;
+                case ShipsAnimations.Tremor: value = new Animation("TremorAnim", 0, tremor, false, 0, true); break;
+                case ShipsAnimations.sTremor: value = new Animation("SpecialTremorAnim", 0, specialtremor, false, 0, true); break;
             }
             return value;
         }
@@ -214,6 +262,7 @@ namespace Game
             {
                 case ShipPropeller.Red: value = new Animation("Propellers", 0.03f, propellersset1); break;
                 case ShipPropeller.Blue: value = new Animation("Blue Propeller", 0.05f, propellersset2); break;
+                case ShipPropeller.White: value = new Animation("White Propeller", 0.021f, propellersset3); break;
             }
             return value;
         }
@@ -224,16 +273,10 @@ namespace Game
             switch (whichcolor)
             {
                 case ShieldColor.Green:
-                    value = new Animation("GreenShield", 0.03f, shieldgreen, true, 3, false, false);
+                    value = new Animation("GreenShield", 0.03f, shieldgreen, true, 2, false, false);
                     break;
                 case ShieldColor.Red:
-                    value = new Animation("RedShield", 0.03f, shieldred, true, 1, false, false);
-                    break;
-                case ShieldColor.Blue:
-                    break;
-                case ShieldColor.White:
-                    break;
-                default:
+                    value = new Animation("RedShield", 0.027f, shieldred, true, 1, false, false);
                     break;
             }
 
@@ -251,6 +294,9 @@ namespace Game
                 case Proyectile.HeatTrail:    value = new Animation("Heat Trail Anim", 0.05f, pheattrail);            break;
                 case Proyectile.OrbWeaver:    value = new Animation("Orb Weaver Anim", 0.05f, porbweaver);            break;
                 case Proyectile.GammaBeam:    value = new Animation("Gamma Anim", 0.05f, pgamma, false, 1);           break;
+                case Proyectile.Enemy1:       value = new Animation("Enemy Blue Rail Anim", 0.08f, enemy1);           break;
+                case Proyectile.Enemy2:       value = new Animation("Enemy Red Trail Anim", 0.15f, enemy2);           break;
+                case Proyectile.Enemy3:       value = new Animation("Enemy Green Crast Anim", 0.30f, enemy3);         break;
             }
             return value;
         }

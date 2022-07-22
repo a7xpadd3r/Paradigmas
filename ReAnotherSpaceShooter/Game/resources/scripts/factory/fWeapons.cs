@@ -18,9 +18,9 @@
                 case WeaponTypes.OrbWeaver: return new wOrbWeaver();
                 case WeaponTypes.Gamma: return new wGamma();
 
-                case WeaponTypes.Enemy1: return new wBlueRail();
-                case WeaponTypes.Enemy2: return new wBlueRail();
-                case WeaponTypes.Enemy3: return new wBlueRail();
+                case WeaponTypes.Enemy1: return new wEnemyBlueRail();
+                case WeaponTypes.Enemy2: return new wEnemyRedDiamond();
+                case WeaponTypes.Enemy3: return new wEnemyGreenCrast();
                 default: return new wBlueRail();
             }
         }

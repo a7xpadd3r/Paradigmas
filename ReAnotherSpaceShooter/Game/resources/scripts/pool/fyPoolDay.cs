@@ -14,7 +14,10 @@ namespace Game
         private PoolGeneric<Item> pItem = new PoolGeneric<Item>();                             // Items pool
         private PoolGeneric<GenericEffect> pEffects = new PoolGeneric<GenericEffect>();        // Effects pool
 
-        private PoolGeneric<Player> pPlayer = new PoolGeneric<Player>();    // Player pool
+        private PoolGeneric<Player> pPlayer = new PoolGeneric<Player>();            // Player pool
+        private PoolGeneric<Mosquitoe> pMosquitoe = new PoolGeneric<Mosquitoe>();   // Mosquitoe pool
+        private PoolGeneric<Slider> pSlider = new PoolGeneric<Slider>();            // Slider pool
+        private PoolGeneric<Tremor> pTremor = new PoolGeneric<Tremor>();            // Tremor pool
 
         public PoolProyectile CreateProyectile(string owner, int objectID)
         {
@@ -129,6 +132,58 @@ namespace Game
             if (DBG) Console.WriteLine("Pool -> Jugador con HASH:{0} despertando...", player.GetHashCode());
             player.Value.SetActive(true);
             return player.Value;
+        }
+        public Mosquitoe CreateMosquitoe(int newObjectID, string owner = "Enemy")
+        {
+            var mosquitoe = pMosquitoe.GetOrCreate(owner);
+
+            if (mosquitoe.Value == null)
+            {
+                mosquitoe.Value = new Mosquitoe(newObjectID, owner);
+                mosquitoe.Value.OnEnemyDeath += () =>
+                {
+                    if (DBG) Console.WriteLine("Pool -> Mosquitoe con HASH:{0} durmiendo...", mosquitoe.GetHashCode());
+                    mosquitoe.Value.SetActive(false);
+                    pMosquitoe.InUseToAvailable(mosquitoe);
+                };
+            }
+            if (DBG) Console.WriteLine("Pool -> Mosquitoe con HASH:{0} despertando...", mosquitoe.GetHashCode());
+            mosquitoe.Value.SetActive(true);
+            return mosquitoe.Value;
+        }
+        public Slider CreateSlider(int newObjectID, string owner = "Enemy")
+        {
+            var slider = pSlider.GetOrCreate(owner);
+
+            if (slider.Value == null)
+            {
+                slider.Value = new Slider(newObjectID, owner);
+                slider.Value.OnEnemyDeath += () =>
+                {
+                    if (DBG) Console.WriteLine("Pool -> Slider con HASH:{0} durmiendo...", slider.GetHashCode());
+                    slider.Value.SetActive(false);
+                };
+            }
+            if (DBG) Console.WriteLine("Pool -> Mosquitoe con HASH:{0} despertando...", slider.GetHashCode());
+            slider.Value.SetActive(true);
+            return slider.Value;
+        }
+        public Tremor CreateTremor(int newObjectID, string owner = "Enemy")
+        {
+            var tremor = pTremor.GetOrCreate(owner);
+
+            if (tremor.Value == null)
+            {
+                tremor.Value = new Tremor(newObjectID, owner);
+                tremor.Value.OnEnemyDeath += () =>
+                {
+                    if (DBG) Console.WriteLine("Pool -> Tremor con HASH:{0} durmiendo...", tremor.GetHashCode());
+                    tremor.Value.SetActive(true);
+                };
+            }
+            if (DBG) Console.WriteLine("Pool -> Tremor con HASH:{0} despertando...", tremor.GetHashCode());
+            tremor.Value.SetActive(true);
+            return tremor.Value;
         }
     }
 }

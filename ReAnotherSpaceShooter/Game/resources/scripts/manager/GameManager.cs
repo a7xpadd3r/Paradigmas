@@ -11,6 +11,7 @@ namespace Game
         // Manager status
         private static GameStatus currentScreen = GameStatus.None;
         public GameStatus CurrentGameStatus => currentScreen;
+        static mStageSpawner enemySpawn = new mStageSpawner();
 
         // Player relevant stuff
         public static Vector2 PlayerPosition => lastplayerpos;
@@ -22,6 +23,8 @@ namespace Game
         static Player theplayer;
         static ShipData currentshipdata;
         private static int score = 0;
+        private static int latestscore = 0;
+        private static NumbersToSprites score2sprites = new NumbersToSprites();
 
         // Other
         static UI ui = new UI(0);
@@ -38,20 +41,45 @@ namespace Game
         static sMainMenu mainmenuscene;
         static sGameOver gameoverscene;
 
+        // Enemy spawner timer
+        private static bool canSpawn = true;
+        private static float currentCD = 0;
+        private static readonly float maxCD = 0.25f;
+
+        // SFX
+        static SoundPlayer music = new SoundPlayer("resources/sfx/music/fbattery_loop.wav");
+        public static WMPLib.WindowsMediaPlayer genericweapon = new WMPLib.WindowsMediaPlayer();
+        public static WMPLib.WindowsMediaPlayer changeweapon = new WMPLib.WindowsMediaPlayer();
+
+        public static WMPLib.WindowsMediaPlayer chargeorb = new WMPLib.WindowsMediaPlayer();
+        public static WMPLib.WindowsMediaPlayer fireorb = new WMPLib.WindowsMediaPlayer();
+        public static WMPLib.WindowsMediaPlayer orbdamage = new WMPLib.WindowsMediaPlayer();
+
         // Start
         public static void InitializeGame()
         {
             for (int i = 0; i < 30; i++) mBackgroud.AddBackStar(new Star());
             for (int i = 0; i < 30; i++) mBackgroud.AddFrontStar(new Star());
 
+            MakeSounds();
             OnMainMenuScreen += MainMenu;
             OnGameScreen += ResetGame;
             OnEndScreen += EndGame;
-
-            SoundPlayer music = new SoundPlayer("resources/sfx/music/fbattery_loop.wav");
-            //music.Play();
-
             OnMainMenuScreen?.Invoke();
+        }
+        public static void MakeSounds()
+        {
+            genericweapon.URL = "resources/sfx/effects/gulp.wav";
+            genericweapon.controls.stop();
+            changeweapon.URL = "resources/sfx/effects/wpn_moveselect.wav";
+            changeweapon.controls.stop();
+            chargeorb.URL = "resources/sfx/effects/displacer_spin.wav";
+            chargeorb.controls.stop();
+            fireorb.URL = "resources/sfx/effects/displacer_fire.wav";
+            fireorb.controls.stop();
+            orbdamage.URL = "resources/sfx/effects/electro6.wav";
+            orbdamage.controls.stop();
+
         }
         public static void Update()
         {
@@ -77,6 +105,7 @@ namespace Game
         }
         private static void ResetGame()
         {
+            music.PlayLooping();
             score = 0;
             mainmenuscene.OnStartGame -= ResetGame; mainmenuscene = null;
             OnScoreUpdate += UpdateUIScore;
@@ -89,15 +118,26 @@ namespace Game
             ui = null;
             ui = new UI(shipselection); 
             ui.UpdateLifes(playerlifes);
+            enemySpawn = new mStageSpawner();
+            enemySpawn.Win += Win;
         }
         private static void EndGame(bool win)
         {
+            music.Stop();
+            latestscore = score;
             OnScoreUpdate -= UpdateUIScore;
             currentScreen = GameStatus.End;
             ui = null;
             theplayer = null;
             currentshipdata = null;
             mGameObject.WipeGameObjects();
+        }
+        public static void SpawnItem(Vector2 spawnPosition, ItemType type, WeaponTypes weaptype = WeaponTypes.BlueRail)
+        {
+            int newid = mGameObject.GenerateObjectID();
+            var itemspecial = fyPoolDay.Pool.CreateItem("World", newid);
+
+            itemspecial.Awake(spawnPosition, type, weaptype);
         }
 
         // Player events
@@ -160,6 +200,20 @@ namespace Game
             if (PlayerLifes > 0) { playerlifes--; GenerateNewPlayer(); }
             else { gameoverscene = new sGameOver(false); OnEndScreen?.Invoke(false); }
         }
+        private static void Win()
+        {
+            if (theplayer != null)
+            {
+                theplayer.CurrentShipDamage -= UpdateCurrentShipDamage;
+                theplayer.OnPlayerDeath -= PlayerSleeping;
+                theplayer.OnAmmoUpdate -= UpdateUIAmmo;
+                theplayer.OnWeaponsUpdate -= UpdateWeapons;
+                theplayer.OnWeaponChange -= UpdateCurrentWeapon;
+            }
+
+            gameoverscene = new sGameOver(true); 
+            OnEndScreen?.Invoke(true);
+        }
 
         // Gameplay updates
         private static void MainMenuUpdate()
@@ -182,6 +236,9 @@ namespace Game
                 GiveItem(ItemType.Weapon, WeaponTypes.HeatTrail); GiveItem(ItemType.Weapon, WeaponTypes.OrbWeaver);
                 GiveItem(ItemType.Weapon, WeaponTypes.Gamma);
             }
+
+            SpawnEnemyHotkey();
+            if (enemySpawn != null) enemySpawn.Update(Program.GetDeltaTime);
         }
         private static void EndUpdate()
         {
@@ -189,6 +246,7 @@ namespace Game
 
             gameoverscene.OnExitScene += MainMenu;
             gameoverscene.Update();
+            score2sprites.RenderNumbers(latestscore, new Vector2(900, 600), new Vector2(2, 2));
         }
         private static void UnconditionalBackUpdate(float delta) { mBackgroud.UpdateBack(delta); }
         private static void UnconditionalFrontUpdate(float delta) { mBackgroud.UpdateFront(delta); }
@@ -208,8 +266,67 @@ namespace Game
         // UI Updates
         private static void UpdateUIAmmo(double newamount) { if (ui != null) ui.UpdateAmmo(newamount); }
         private static void UpdateWeapons(List<iWeapon> weaponlist) { if (ui != null) ui.UpdateWeapons(weaponlist); }
-        private static void UpdateCurrentWeapon(iWeapon newweapon) { if (ui != null) ui.UpdateCurrentWeapon(newweapon);  }
+        private static void UpdateCurrentWeapon(iWeapon newweapon) { if (ui != null) ui.UpdateCurrentWeapon(newweapon); }
         private static void UpdateCurrentShipDamage(Texture newtexture) { if (ui != null) ui.UpdateShipLifeTexture(newtexture); }
-        private static void UpdateUIScore(int howmuch) { score += howmuch; ui.score = score; }
+        private static void UpdateUIScore(int howmuch) { score += howmuch; if (score < 0) score = 0; ui.score = score; }
+
+        // Enemy spawn
+        private static void SpawnEnemyHotkey()
+        {
+            // Spawn enemies
+            if (Engine.GetKey(Keys.F1) && canSpawn)
+            {
+                canSpawn = false;
+                int newid = mGameObject.GenerateObjectID();
+                var newmosquitoe = fyPoolDay.Pool.CreateMosquitoe(newid);
+                newmosquitoe.Awake(new Vector2(260, 100), false, MovementType.WaveY, AxisY.None, -100, 2020, -100, 1180);
+            }
+            if (Engine.GetKey(Keys.F2) && canSpawn)
+            {
+                canSpawn = false;
+                int newid = mGameObject.GenerateObjectID();
+                var newmosquitoe = fyPoolDay.Pool.CreateMosquitoe(newid);
+                newmosquitoe.Awake(new Vector2(460, 100), true);
+            }
+            if (Engine.GetKey(Keys.F3) && canSpawn)
+            {
+                canSpawn = false;
+                int newid = mGameObject.GenerateObjectID();
+                var newslider = fyPoolDay.Pool.CreateSlider(newid);
+                newslider.Awake(new Vector2(760, 100), false);
+            }
+            if (Engine.GetKey(Keys.F4) && canSpawn)
+            {
+                canSpawn = false;
+                int newid = mGameObject.GenerateObjectID();
+                var newslider = fyPoolDay.Pool.CreateSlider(newid);
+                newslider.Awake(new Vector2(960, 100), true);
+            }
+            if (Engine.GetKey(Keys.F5) && canSpawn)
+            {
+                canSpawn = false;
+                int newid = mGameObject.GenerateObjectID();
+                var newtremor = fyPoolDay.Pool.CreateTremor(newid);
+                newtremor.Awake(new Vector2(1260, 100), false);
+            }
+            if (Engine.GetKey(Keys.F6) && canSpawn)
+            {
+                canSpawn = false;
+                int newid = mGameObject.GenerateObjectID();
+                var newtremor = fyPoolDay.Pool.CreateTremor(newid);
+                newtremor.Awake(new Vector2(1460, 100), true);
+            }
+
+            if (!canSpawn && currentCD < maxCD) currentCD += Program.GetDeltaTime;
+            if (!canSpawn && currentCD > maxCD) { currentCD = 0; canSpawn = true; }
+        }
+
+        // Utils
+        public static Direction ProyectileDirection(Vector2 input)
+        {
+            Direction value = Direction.Down;
+            if (input.Y > PlayerPosition.Y) value = Direction.Up;
+            return value;
+        }
     }
 }

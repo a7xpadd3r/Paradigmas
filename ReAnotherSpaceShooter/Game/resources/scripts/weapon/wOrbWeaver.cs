@@ -59,6 +59,7 @@ namespace Game
             {
                 this.chargeanim.Update();
                 Renderer.DrawCenter(this.chargeanim.CurrentTexture, this.renderpos, new Vector2(1.5f, 1.5f));
+                GameManager.chargeorb.controls.play();
             }
             else if (this.ballcharged && isfiring)
             {
@@ -78,6 +79,7 @@ namespace Game
                     int newID = mGameObject.GenerateObjectID();
                     var pOrbWeaver = fyPoolDay.Pool.CreateOrbWeaverProyectile(this.weapowner, newID);
                     pOrbWeaver.Awake(this.renderpos);
+                    GameManager.fireorb.controls.play();
                     canthrowball = false;
                 }
             }

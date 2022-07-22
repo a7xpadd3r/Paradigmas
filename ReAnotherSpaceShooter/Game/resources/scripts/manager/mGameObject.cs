@@ -20,7 +20,8 @@ namespace Game
                 if (CurrentGameObjects[i].Active)
                 {
                     GameObject cGameObject = CurrentGameObjects[i];
-                    if (cGameObject.Active) { cGameObject.Update(); }
+                    if (cGameObject.Active) 
+                    { cGameObject.Update(); }
                 }
             }
         }
@@ -65,6 +66,7 @@ namespace Game
 
         public static void WipeGameObjects()
         {
+            Console.Clear();
             if (DBG) Console.WriteLine("Mánager -> Limpiando juego...");
             CurrentGameObjects.Clear();
             mCollisions.WipeColliders();

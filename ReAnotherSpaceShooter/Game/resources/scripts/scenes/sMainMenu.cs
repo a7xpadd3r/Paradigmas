@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Media;
 using System.Numerics;
 
 namespace Game
@@ -33,6 +34,7 @@ namespace Game
         public Action<int> OnShipChange;
         private ShipData currentshipdata;
         private float t = 0;
+        static SoundPlayer buttons = new SoundPlayer("resources/sfx/effects/WindowClose.wav");
 
         // Ship selection & textures
         private int currentship = 0;
@@ -196,7 +198,7 @@ namespace Game
         public void Selection(Button current)
         {
             if (selected != null) selected.Unselected();
-
+            buttons.Play();
             selected = current;
             selected.Selected();
         }

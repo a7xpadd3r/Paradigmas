@@ -21,7 +21,6 @@ namespace Game
 
         // Events
         public Action OnSleep;
-
         public PoolProyectile(string newOwner, int newID)
         {
             this.owner = newOwner;
@@ -54,15 +53,14 @@ namespace Game
                 case WeaponTypes.Gamma:
                     break;
                 case WeaponTypes.Enemy1:
-                    break;
+                    this.pdata = ProyectileProperties.EnemyBlueRail;    break;
                 case WeaponTypes.Enemy2:
-                    break;
+                    this.pdata = ProyectileProperties.EnemyRedDiamond; break;
                 case WeaponTypes.Enemy3:
-                    break;
-                default:
-                    break;
+                    this.pdata = ProyectileProperties.EnemyGreenCrast; break;
             }
 
+            dmg = this.pdata.Damage;
             this.proyectiledirection = newDirection;
             this.objectAnimation = this.pdata.Animation;
             this.objectCollider = new Collider(dmg, this.objectOwner, this.objectTag, spawnPosition, this.objectAnimation.TextureSize, this.pdata.colliderVectors, this.objectID);
@@ -143,7 +141,7 @@ namespace Game
         public override void Sleep()
         {
             mGameObject.RemoveGameObject(this);
-            this.objectCollider.OnCollision -= OnHit;
+            if (this.objectCollider != null) this.objectCollider.OnCollision -= OnHit;
             this.objectCollider = null;
             this.lasthit = this.objectCollider;
             this.currenthits = 0;

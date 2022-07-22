@@ -1,5 +1,4 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace Game
 {
@@ -22,11 +21,7 @@ namespace Game
 
         public wBlueRail() { this.recoilTime = ProyectileProperties.BlueRail.Recoil; }
 
-        public void NewOwner(iGetWeapon owner)
-        {
-            Owner = owner;
-            
-        }
+        public void NewOwner(iGetWeapon owner) { Owner = owner; }
 
         public void AddAmmo() { ammo += AddAmmoAmount; }
 
@@ -34,12 +29,12 @@ namespace Game
         {
             if (canShoot)
             {
+                GameManager.genericweapon.controls.play();
                 int newID = mGameObject.GenerateObjectID();
                 var pBlueRail = fyPoolDay.Pool.CreateProyectile(owner, newID);
                 pBlueRail.Awake(currentPosition, WeaponTypes.BlueRail);
                 canShoot = false;
             }
-            //if (canShoot) { new pBlueRail(owner, currentPosition); canShoot = false; }
         }
 
         public void Update(float delta)

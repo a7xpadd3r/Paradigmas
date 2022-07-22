@@ -7,8 +7,8 @@ namespace Game
     public class Player : ShipObject, iGetWeapon
     {
         // Status
-        private float currentlife = 20;
-        private float maxlife = 20;
+        private float currentlife = 7;
+        private float maxlife = 7;
 
         // Weapons
         private int currentWeaponIndex = -1;
@@ -42,7 +42,7 @@ namespace Game
             this.Ship.ShipDamage(this.currentlife, maxlife);
             this.objectTag = "Ship";
             this.objectTransform = new Transform(spawnPosition, new Vector2(1, 1), 0);
-            this.objectCollider = new Collider(5, this.objectOwner, "Ship", ShipCollidersVectors, this.objectID);
+            this.objectCollider = new Collider(5, this.objectOwner, "Ship", this.ShipCollidersVectors, this.objectID);
             this.objectCollider.OnCollision += OnHit;
             this.AllWeapons.Clear();
 
@@ -72,7 +72,7 @@ namespace Game
 
                 if (this.currentlife > 0) this.currentlife -= instigator.Damage / this.Ship.Durability;
                 if (currentlife <= 0) Sleep();
-                else if (this.currentlife > 0) { this.Ship.ShieldAnim.Play(); this.Ship.UpdateShieldStatus(true); }
+                else if (this.currentlife > 0) { this.Ship.ShieldAnim.Play(); this.Ship.UpdateShieldStatus(true); GameManager.OnScoreUpdate(-25); }
             }
             this.Ship.ShipDamage(this.currentlife, maxlife);
             CurrentShipDamage?.Invoke(this.Ship.ShipAnim.CurrentTexture);
@@ -133,7 +133,7 @@ namespace Game
             switch (type)
             {
                 case ItemType.Repair: Repair(maxlife / 1.8f); break;
-                case ItemType.Shield: ResetBlinking(30); break;
+                case ItemType.Shield: ResetBlinking(45); break;
             }
         }
         public void GetWeapon(WeaponTypes type)
@@ -174,6 +174,7 @@ namespace Game
                 canSwapWeapon = false;
                 OnAmmoUpdate?.Invoke(this.CurrentWeapon.CurrentAmmo);
                 OnWeaponChange?.Invoke(CurrentWeapon);
+                GameManager.changeweapon.controls.play();
             }
         }
         private void NextWeapon()
@@ -185,6 +186,7 @@ namespace Game
                 canSwapWeapon = false;
                 OnAmmoUpdate?.Invoke(this.CurrentWeapon.CurrentAmmo);
                 OnWeaponChange?.Invoke(CurrentWeapon);
+                GameManager.changeweapon.controls.play();
             }
         }
         private void WeaponSwapCD(float delta)
@@ -194,16 +196,16 @@ namespace Game
         }
         public override void Sleep()
         {
+            GameManager.OnScoreUpdate(-250);
             this.objectCollider.OnCollision -= OnHit;
             mGameObject.RemoveGameObject(this);
             this.objectCollider = null;
-            OnPlayerDeath?.Invoke();
+            this.OnPlayerDeath?.Invoke();
         }
         public void SetActive(bool newStatus) { this.objectActive = newStatus; }
         public void ForceUpdateUI()
         {
             OnWeaponChange?.Invoke(CurrentWeapon);
-            Console.WriteLine(CurrentWeapon.ThisType);
         }
 
         // Repair & Invulnerability
@@ -221,25 +223,26 @@ namespace Game
             if (repairamount > this.maxlife) repairamount = this.maxlife;
             this.currentlife = repairamount;
             ResetBlinking();
+            CurrentShipDamage?.Invoke(this.Ship.ShipAnim.CurrentTexture);
         }
         private void Invincibility(float delta)
         {
-            if (blinking && currentInv < invFramesDuration) currentInv += delta;
-            if (blinking && currentInv >= invFramesDuration && currentBlinks < howManyBlinks)
+            if (this.blinking && this.currentInv < this.invFramesDuration) this.currentInv += delta;
+            if (this.blinking && this.currentInv >= this.invFramesDuration && this.currentBlinks < this.howManyBlinks)
             {
-                currentBlinks++;
-                currentInv = 0;
-                draw = true;
+                this.currentBlinks++;
+                this.currentInv = 0;
+                this.draw = true;
             }
-            if (currentBlinks >= howManyBlinks) { blinking = false; draw = true; BlinkingEnded = true; }
+            if (this.currentBlinks >= this.howManyBlinks) { this.blinking = false; this.draw = true; this.BlinkingEnded = true; this.howManyBlinks = 0; }
         }
-        private void ResetBlinking(int newBlinksAmount = 10)
+        private void ResetBlinking(int newBlinksAmount = 5)
         {
-            blinking = true;
-            BlinkingEnded = false;
-            currentInv = 0;
-            currentBlinks = 0;
-            howManyBlinks = newBlinksAmount;
+            this.blinking = true;
+            this.BlinkingEnded = false;
+            this.currentInv = 0;
+            this.currentBlinks = 0;
+            this.howManyBlinks += newBlinksAmount;
         }
     }
 }

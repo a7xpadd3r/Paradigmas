@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Numerics;
 
 namespace Game
@@ -8,6 +9,7 @@ namespace Game
         // Basic stuff
         public float MaxSpeed;
         public float Durability;
+        public float Damage = 1;
 
         // GFX
         public Animation ShipAnim;
@@ -33,7 +35,6 @@ namespace Game
             if (shielding) currentshieldCD += delta;
             if (shielding && currentshieldCD >= maxshieldCD) { shielding = false; currentshieldCD = 0; }
         }
-
         public void UpdateShieldStatus(bool newShieldStatus) { shielding = newShieldStatus; }
         public void UpdateMaxShieldCD(float newMax) { maxshieldCD = newMax; }
         public void ShipDamage(float currentHP, float maxHP)
@@ -92,6 +93,20 @@ namespace Game
             this.ShipPropellers.Add(newPropeller1);
             this.ShipPropellers.Add(newPropeller2);
             this.ShipPropellers.Add(newPropeller3);
+        }
+
+        // Enemy mosquitoe
+        public ShipData(float newMaxSpeed, float newDurability, Vector2 newRailPosition, Animation newShipAnim, DoubleVector2 newColliderVectors)
+        {
+            this.MaxSpeed = newMaxSpeed;
+            this.Durability = newDurability;
+            this.RailPosition = newRailPosition;
+
+            this.ShipAnim = newShipAnim;
+            this.ShipAnim.ChangeFrame(0);
+
+            this.ColliderVectors = newColliderVectors;
+            this.Damage = newDurability;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Game
         // Basic
         private string owner;
         private int objectid;
-        private int iterations = 3;
+        private int iterations = 5;
         private ProyectileData pdata = ProyectileProperties.OrbWeaver;
 
         // Orb Weaver stuff
@@ -53,12 +53,13 @@ namespace Game
 
         private void OnHit(Collider instigator)
         {
-            if (this.ignorelist.Contains(instigator) || instigator.ColliderOwner == "Player" && instigator.ColliderOwner != "World") return;
+            if (this.ignorelist.Contains(instigator) || instigator.ColliderOwner == "Player") return;
 
             this.ignorelist.Add(instigator);
             int newID = mGameObject.GenerateObjectID();
             var bOrbWeaverB = fyPoolDay.Pool.CreateOrbWeaverBomb("Player", newID);
             bOrbWeaverB.Awake(this.Position);
+            GameManager.orbdamage.controls.play();
             this.iterations--;
 
             if (this.iterations < 0) { Sleep(); }

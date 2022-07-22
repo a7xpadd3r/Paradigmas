@@ -41,7 +41,6 @@ namespace Game
             this.objectCollider.OnCollision += OnHit;
 
             mGameObject.AddGameObject(this);
-            Console.WriteLine("ID: {0} - Item generado.", this.ID);
             RefreshTexture();
         }
         public override void Update()
