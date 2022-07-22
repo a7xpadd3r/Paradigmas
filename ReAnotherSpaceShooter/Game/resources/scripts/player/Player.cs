@@ -132,8 +132,8 @@ namespace Game
         {
             switch (type)
             {
-                case ItemType.Repair: Repair(maxlife / 1.8f); break;
-                case ItemType.Shield: ResetBlinking(45); break;
+                case ItemType.Repair: Repair(3); /*GameManager.repair.controls.play();*/ break;
+                case ItemType.Shield: ResetBlinking(45); /*GameManager.shield.controls.play();*/ break;
             }
         }
         public void GetWeapon(WeaponTypes type)
@@ -174,7 +174,6 @@ namespace Game
                 canSwapWeapon = false;
                 OnAmmoUpdate?.Invoke(this.CurrentWeapon.CurrentAmmo);
                 OnWeaponChange?.Invoke(CurrentWeapon);
-                GameManager.changeweapon.controls.play();
             }
         }
         private void NextWeapon()
@@ -186,7 +185,6 @@ namespace Game
                 canSwapWeapon = false;
                 OnAmmoUpdate?.Invoke(this.CurrentWeapon.CurrentAmmo);
                 OnWeaponChange?.Invoke(CurrentWeapon);
-                GameManager.changeweapon.controls.play();
             }
         }
         private void WeaponSwapCD(float delta)

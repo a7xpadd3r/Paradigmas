@@ -791,21 +791,6 @@
     <Content Include="resources\gfx\ui\WeaponBox\weapbox-9.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\sfx\effects\displacer_fire.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\sfx\effects\displacer_spin.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\sfx\effects\electro4.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\sfx\effects\electro5.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\sfx\effects\electro6.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="resources\sfx\effects\gen_3A.wav" />
     <Content Include="resources\sfx\effects\st6_0A.wav" />
     <Content Include="resources\sfx\effects\st6_0D.wav" />
@@ -816,9 +801,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\sfx\music\fbattery_loop.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\sfx\effects\gulp.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ship.png">

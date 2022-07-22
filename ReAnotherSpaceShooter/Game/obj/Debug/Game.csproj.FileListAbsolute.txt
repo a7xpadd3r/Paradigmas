@@ -79,12 +79,8 @@ H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\effects\
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\effects\beam1\proyectilebeam-4.png
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\effects\beam1\proyectilebeam-5.png
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\music\fbattery_loop.wav
-H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\gulp.wav
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\obj\Debug\Interop.WMPLib.dll
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\obj\Debug\Game.csproj.ResolveComReference.cache
-H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\electro4.wav
-H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\electro5.wav
-H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\electro6.wav
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\effects\smoke1\smoke1-0.png
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\effects\smoke1\smoke1-1.png
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\effects\smoke1\smoke1-2.png
@@ -268,6 +264,4 @@ H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\propelle
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\propellers\white\white_propeller3.png
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\propellers\white\white_propeller4.png
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\WindowClose.wav
-H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\displacer_fire.wav
-H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\displacer_spin.wav
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\wpn_moveselect.wav

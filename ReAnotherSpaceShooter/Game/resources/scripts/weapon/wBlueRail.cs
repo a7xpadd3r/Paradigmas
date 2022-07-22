@@ -29,7 +29,6 @@ namespace Game
         {
             if (canShoot)
             {
-                GameManager.genericweapon.controls.play();
                 int newID = mGameObject.GenerateObjectID();
                 var pBlueRail = fyPoolDay.Pool.CreateProyectile(owner, newID);
                 pBlueRail.Awake(currentPosition, WeaponTypes.BlueRail);

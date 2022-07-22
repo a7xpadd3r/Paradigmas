@@ -59,7 +59,6 @@ namespace Game
             int newID = mGameObject.GenerateObjectID();
             var bOrbWeaverB = fyPoolDay.Pool.CreateOrbWeaverBomb("Player", newID);
             bOrbWeaverB.Awake(this.Position);
-            GameManager.orbdamage.controls.play();
             this.iterations--;
 
             if (this.iterations < 0) { Sleep(); }

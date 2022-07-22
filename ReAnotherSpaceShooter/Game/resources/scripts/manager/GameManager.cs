@@ -48,12 +48,10 @@ namespace Game
 
         // SFX
         static SoundPlayer music = new SoundPlayer("resources/sfx/music/fbattery_loop.wav");
-        public static WMPLib.WindowsMediaPlayer genericweapon = new WMPLib.WindowsMediaPlayer();
-        public static WMPLib.WindowsMediaPlayer changeweapon = new WMPLib.WindowsMediaPlayer();
-
-        public static WMPLib.WindowsMediaPlayer chargeorb = new WMPLib.WindowsMediaPlayer();
-        public static WMPLib.WindowsMediaPlayer fireorb = new WMPLib.WindowsMediaPlayer();
-        public static WMPLib.WindowsMediaPlayer orbdamage = new WMPLib.WindowsMediaPlayer();
+        public static WMPLib.WindowsMediaPlayer grabitem = new WMPLib.WindowsMediaPlayer();
+        public static WMPLib.WindowsMediaPlayer shield = new WMPLib.WindowsMediaPlayer();
+        public static WMPLib.WindowsMediaPlayer repair = new WMPLib.WindowsMediaPlayer();
+        public static WMPLib.WindowsMediaPlayer respawn = new WMPLib.WindowsMediaPlayer();
 
         // Start
         public static void InitializeGame()
@@ -69,17 +67,14 @@ namespace Game
         }
         public static void MakeSounds()
         {
-            genericweapon.URL = "resources/sfx/effects/gulp.wav";
-            genericweapon.controls.stop();
-            changeweapon.URL = "resources/sfx/effects/wpn_moveselect.wav";
-            changeweapon.controls.stop();
-            chargeorb.URL = "resources/sfx/effects/displacer_spin.wav";
-            chargeorb.controls.stop();
-            fireorb.URL = "resources/sfx/effects/displacer_fire.wav";
-            fireorb.controls.stop();
-            orbdamage.URL = "resources/sfx/effects/electro6.wav";
-            orbdamage.controls.stop();
-
+            repair.URL = "resources/sfx/effects/st6_0A.wav";
+            repair.controls.stop();
+            shield.URL = "resources/sfx/effects/st6_0D.wav";
+            shield.controls.stop();
+            grabitem.URL = "resources/sfx/effects/gen_3A.wav";
+            grabitem.controls.stop();
+            respawn.URL = "resources/sfx/effects/displacer_fire.wav";
+            respawn.controls.stop();
         }
         public static void Update()
         {
