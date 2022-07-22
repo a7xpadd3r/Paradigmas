@@ -9,8 +9,8 @@ namespace Game
 
         public sGameOver(bool didyouwin)
         {
-            if (!didyouwin) scenerender = Textures.splashlose;
-            else scenerender = Textures.splashwin;
+            if (!didyouwin) { scenerender = Textures.splashlose; GameManager.PlayMusic(MusicTracks.Lose); }
+            else { scenerender = Textures.splashwin; GameManager.PlayMusic(MusicTracks.Win); }
         }
 
         public void Update()

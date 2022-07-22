@@ -132,8 +132,8 @@ namespace Game
         {
             switch (type)
             {
-                case ItemType.Repair: Repair(3); /*GameManager.repair.controls.play();*/ break;
-                case ItemType.Shield: ResetBlinking(45); /*GameManager.shield.controls.play();*/ break;
+                case ItemType.Repair: Repair(3); GameManager.PlaySound(Sounds.Repair); break;
+                case ItemType.Shield: ResetBlinking(45); GameManager.PlaySound(Sounds.Shield); break;
             }
         }
         public void GetWeapon(WeaponTypes type)
@@ -157,6 +157,7 @@ namespace Game
             OnAmmoUpdate?.Invoke(this.CurrentWeapon.CurrentAmmo);
             OnWeaponsUpdate?.Invoke(AllWeapons);
             OnWeaponChange?.Invoke(CurrentWeapon);
+            if (type != WeaponTypes.BlueRail) GameManager.PlaySound(Sounds.ItemGrab);
         }
         private void RemoveWeapon() 
         {
@@ -197,6 +198,7 @@ namespace Game
             GameManager.OnScoreUpdate(-250);
             this.objectCollider.OnCollision -= OnHit;
             mGameObject.RemoveGameObject(this);
+            GameManager.PlaySound(Sounds.Respawn);
             this.objectCollider = null;
             this.OnPlayerDeath?.Invoke();
         }

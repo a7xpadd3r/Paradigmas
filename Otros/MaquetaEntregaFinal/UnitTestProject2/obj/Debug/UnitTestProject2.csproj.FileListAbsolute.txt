@@ -1,2 +1,0 @@
-C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\UnitTestProject2\obj\Debug\UnitTestProject2.csproj.AssemblyReference.cache
-C:\Users\Camila Liendro\Documents\Liendro Camila\Paradigmas de Videojuegos (IOO)\Repositorio\paradigmas-de-programacion-2021\ProyectoBase\UnitTestProject2\obj\Debug\UnitTestProject2.csproj.CoreCompileInputs.cache

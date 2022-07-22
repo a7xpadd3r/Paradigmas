@@ -264,4 +264,9 @@ H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\propelle
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\propellers\white\white_propeller3.png
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\gfx\propellers\white\white_propeller4.png
 H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\WindowClose.wav
-H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\wpn_moveselect.wav
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\sprout.wav
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\storedpowerup.wav
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\throw.wav
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\bob-omb.wav
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\effects\inventory.wav
+H:\GitHub\Paradigmas\ReAnotherSpaceShooter\Game\bin\Debug\resources\sfx\music\gameover.wav

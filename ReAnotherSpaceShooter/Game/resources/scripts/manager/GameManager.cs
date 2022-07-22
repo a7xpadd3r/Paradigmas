@@ -6,6 +6,8 @@ using System.Numerics;
 namespace Game
 {
     public enum GameStatus { Main, Game, End, None }
+    public enum Sounds { ItemGrab, Shield, Repair, Special, Respawn }
+    public enum MusicTracks { Intro, Stage, Win, Lose }
     public class GameManager
     {
         // Manager status
@@ -47,11 +49,15 @@ namespace Game
         private static readonly float maxCD = 0.25f;
 
         // SFX
+        private static bool playsomesounds = false;
         static SoundPlayer music = new SoundPlayer("resources/sfx/music/fbattery_loop.wav");
-        public static WMPLib.WindowsMediaPlayer grabitem = new WMPLib.WindowsMediaPlayer();
-        public static WMPLib.WindowsMediaPlayer shield = new WMPLib.WindowsMediaPlayer();
-        public static WMPLib.WindowsMediaPlayer repair = new WMPLib.WindowsMediaPlayer();
-        public static WMPLib.WindowsMediaPlayer respawn = new WMPLib.WindowsMediaPlayer();
+        public static SoundPlayer gameover = new SoundPlayer("resources/sfx/music/gameover.wav");
+        public static SoundPlayer win = new SoundPlayer("resources/sfx/music/gameover.wav");
+        private static WMPLib.WindowsMediaPlayer grabitem = new WMPLib.WindowsMediaPlayer();
+        private static WMPLib.WindowsMediaPlayer shield = new WMPLib.WindowsMediaPlayer();
+        private static WMPLib.WindowsMediaPlayer repair = new WMPLib.WindowsMediaPlayer();
+        private static WMPLib.WindowsMediaPlayer respawn = new WMPLib.WindowsMediaPlayer();
+        private static WMPLib.WindowsMediaPlayer special = new WMPLib.WindowsMediaPlayer();
 
         // Start
         public static void InitializeGame()
@@ -67,14 +73,16 @@ namespace Game
         }
         public static void MakeSounds()
         {
-            repair.URL = "resources/sfx/effects/st6_0A.wav";
+            repair.URL = "resources/sfx/effects/storedpowerup.wav";
             repair.controls.stop();
-            shield.URL = "resources/sfx/effects/st6_0D.wav";
+            shield.URL = "resources/sfx/effects/throw.wav";
             shield.controls.stop();
-            grabitem.URL = "resources/sfx/effects/gen_3A.wav";
+            grabitem.URL = "resources/sfx/effects/sprout.wav";
             grabitem.controls.stop();
-            respawn.URL = "resources/sfx/effects/displacer_fire.wav";
+            respawn.URL = "resources/sfx/effects/bob-omb.wav";
             respawn.controls.stop();
+            special.URL = "resources/sfx/effects/inventory.wav";
+            special.controls.stop();
         }
         public static void Update()
         {
@@ -100,7 +108,7 @@ namespace Game
         }
         private static void ResetGame()
         {
-            music.PlayLooping();
+            PlayMusic(MusicTracks.Stage);
             score = 0;
             mainmenuscene.OnStartGame -= ResetGame; mainmenuscene = null;
             OnScoreUpdate += UpdateUIScore;
@@ -142,7 +150,7 @@ namespace Game
             {
                 case ItemType.Repair:   theplayer.GetItem(ItemType.Repair);          break;
                 case ItemType.Shield:   theplayer.GetItem(ItemType.Shield);          break;
-                case ItemType.Special:  playerlifes++; ui.UpdateLifes(playerlifes);  break;
+                case ItemType.Special:  PlaySound(Sounds.Special); playerlifes++; ui.UpdateLifes(playerlifes);  break;
                 case ItemType.Weapon:
                     switch (weaptype)
                     {
@@ -322,6 +330,31 @@ namespace Game
             Direction value = Direction.Down;
             if (input.Y > PlayerPosition.Y) value = Direction.Up;
             return value;
+        }
+        public static void PlaySound(Sounds whichone)
+        {
+            if (playsomesounds)
+            {
+                switch (whichone)
+                {
+                    case Sounds.ItemGrab: GameManager.grabitem.controls.play(); break;
+                    case Sounds.Shield: GameManager.shield.controls.play(); break;
+                    case Sounds.Repair: GameManager.repair.controls.play(); break;
+                    case Sounds.Special: GameManager.special.controls.play(); break;
+                    case Sounds.Respawn: GameManager.respawn.controls.play(); break;
+                    default:    GameManager.grabitem.controls.play(); break;
+                }
+            }
+        }
+        public static void PlayMusic(MusicTracks whichone)
+        {
+            switch (whichone)
+            {
+                case MusicTracks.Intro: break;
+                case MusicTracks.Stage: music.PlayLooping(); break;
+                case MusicTracks.Win: break;
+                case MusicTracks.Lose: gameover.Play(); break;
+            }
         }
     }
 }

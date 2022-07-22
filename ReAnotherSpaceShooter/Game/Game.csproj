@@ -791,13 +791,25 @@
     <Content Include="resources\gfx\ui\WeaponBox\weapbox-9.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\sfx\effects\gen_3A.wav" />
-    <Content Include="resources\sfx\effects\st6_0A.wav" />
-    <Content Include="resources\sfx\effects\st6_0D.wav" />
-    <Content Include="resources\sfx\effects\WindowClose.wav">
+    <Content Include="resources\sfx\effects\bob-omb.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\sfx\effects\wpn_moveselect.wav">
+    <Content Include="resources\sfx\music\gameover.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\sfx\effects\inventory.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\sfx\effects\sprout.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\sfx\effects\storedpowerup.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\sfx\effects\throw.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\sfx\effects\WindowClose.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\sfx\music\fbattery_loop.wav">

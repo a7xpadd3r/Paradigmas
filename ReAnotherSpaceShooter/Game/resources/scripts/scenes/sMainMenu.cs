@@ -102,12 +102,14 @@ namespace Game
             {
                 allowInput = false;
                 if (currentship == 0) currentship = 2; else currentship--;
+                buttons.Play();
             }
 
             if (Engine.GetKey(Keys.D) && allowInput && changeScene == 0)
             {
                 allowInput = false;
                 if (currentship == 2) currentship = 0; else currentship++;
+                buttons.Play();
             }
         }
         public void SceneKey()

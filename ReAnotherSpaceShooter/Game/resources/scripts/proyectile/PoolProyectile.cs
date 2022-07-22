@@ -28,6 +28,7 @@ namespace Game
         }
         public void Awake(Vector2 spawnPosition, WeaponTypes newType, Direction newDirection = Direction.Up, int newMaxHits = 1, bool newIterates = false)
         {
+            this.maxhits = newMaxHits;
             this.iteration = newIterates;
             this.objectid = this.objectID;
             this.objectOwner = this.owner;

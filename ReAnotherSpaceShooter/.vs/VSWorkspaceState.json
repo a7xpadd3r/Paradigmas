@@ -4,13 +4,13 @@
     "\\Game",
     "\\Game\\resources",
     "\\Game\\resources\\scripts",
-    "\\Game\\resources\\scripts\\manager",
+    "\\Game\\resources\\scripts\\enemy",
     "\\Game\\resources\\scripts\\misc",
     "\\Game\\resources\\scripts\\player",
     "\\Game\\resources\\scripts\\proyectile",
     "\\Game\\resources\\scripts\\system",
     "\\Game\\resources\\scripts\\weapon"
   ],
-  "SelectedNode": "\\Game\\resources\\Index.cs",
+  "SelectedNode": "\\Juego.sln",
   "PreviewInSolutionExplorer": false
 }
