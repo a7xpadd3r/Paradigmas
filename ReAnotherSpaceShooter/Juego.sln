@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{9206BDC1-E380-42A8-AD9A-C806CBAE434E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest1", "..\AnotherSpaceShooter\UnitTest1\UnitTest1.csproj", "{2B50BB57-3754-4DF1-8E5E-61B3C4CA1F4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{84B55128-BA5A-4D5B-99EF-35BCE8D97B9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{4B96137A-5E6A-434B-BBF0-8B3C9342750C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4B96137A-5E6A-434B-BBF0-8B3C9342750C}.Release|Win32.ActiveCfg = Release|Any CPU
 		{4B96137A-5E6A-434B-BBF0-8B3C9342750C}.Release|Win32.Build.0 = Release|Any CPU
-		{2B50BB57-3754-4DF1-8E5E-61B3C4CA1F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B50BB57-3754-4DF1-8E5E-61B3C4CA1F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B50BB57-3754-4DF1-8E5E-61B3C4CA1F4E}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{2B50BB57-3754-4DF1-8E5E-61B3C4CA1F4E}.Debug|Win32.Build.0 = Debug|Any CPU
-		{2B50BB57-3754-4DF1-8E5E-61B3C4CA1F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B50BB57-3754-4DF1-8E5E-61B3C4CA1F4E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B50BB57-3754-4DF1-8E5E-61B3C4CA1F4E}.Release|Win32.ActiveCfg = Release|Any CPU
-		{2B50BB57-3754-4DF1-8E5E-61B3C4CA1F4E}.Release|Win32.Build.0 = Release|Any CPU
+		{84B55128-BA5A-4D5B-99EF-35BCE8D97B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B55128-BA5A-4D5B-99EF-35BCE8D97B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B55128-BA5A-4D5B-99EF-35BCE8D97B9E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{84B55128-BA5A-4D5B-99EF-35BCE8D97B9E}.Debug|Win32.Build.0 = Debug|Any CPU
+		{84B55128-BA5A-4D5B-99EF-35BCE8D97B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B55128-BA5A-4D5B-99EF-35BCE8D97B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B55128-BA5A-4D5B-99EF-35BCE8D97B9E}.Release|Win32.ActiveCfg = Release|Any CPU
+		{84B55128-BA5A-4D5B-99EF-35BCE8D97B9E}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
