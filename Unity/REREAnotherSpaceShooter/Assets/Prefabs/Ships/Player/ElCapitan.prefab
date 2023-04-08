@@ -271,8 +271,7 @@ GameObject:
   - component: {fileID: 8124463291164634327}
   - component: {fileID: 8124463291164634326}
   - component: {fileID: 8124463291164634328}
-  - component: {fileID: 8124463291164634329}
-  - component: {fileID: 8124463291164634331}
+  - component: {fileID: 1080491118591406975}
   m_Layer: 3
   m_Name: ElCapitan
   m_TagString: Player
@@ -409,10 +408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6202129c7501e48aff40ab2a51b99e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementScript: {fileID: 8124463291164634329}
-  mainShipScript: {fileID: 8124463291164634331}
+  mainShipScript: {fileID: 1080491118591406975}
   projectileOut: {fileID: 8124463289427453247}
---- !u!114 &8124463291164634329
+--- !u!114 &1080491118591406975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,27 +419,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8124463291164634322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01474f35c782eb84fabc16398aa524d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 11b21360eb723d145933731f916da6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 35
---- !u!114 &8124463291164634331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8124463291164634322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd83a10d07dcf0a4cbe76f526245fdcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 8170298102685492474, guid: 4dd759fa685e5124393738e08d86fd24, type: 3}
+  speed: 40
+  direction: {x: 0, y: 0}
+  rBody: {fileID: 8124463291164634326}
+  shieldObject: {fileID: 8124463289966382250}
+  shieldDuration: 2
   enabledWeapons:
   - {fileID: 8170298102685492474, guid: 4dd759fa685e5124393738e08d86fd24, type: 3}
-  - {fileID: 5804181332025649408, guid: a01fb5a23f0226749b1423006385343e, type: 3}
+  disabledWeapons:
   - {fileID: 7617357442327469995, guid: e8fb155ea6fc6a04dbca0b8dfe9abfbc, type: 3}
-  disabledWeapons: []
-  shieldObject: {fileID: 8124463289966382250}
-  shieldDuration: 1
+  - {fileID: 5804181332025649408, guid: a01fb5a23f0226749b1423006385343e, type: 3}

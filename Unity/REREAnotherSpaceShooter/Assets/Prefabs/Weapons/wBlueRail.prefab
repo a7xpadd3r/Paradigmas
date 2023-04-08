@@ -44,4 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4f10bde6aa5cf4a8f11e94fa8ed147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recoilTime: 0.4
+  ThisType: 0
   prefab: {fileID: 2925754733312446922, guid: 01211eaca1779b54892593b605fa465b, type: 3}
+  canShoot: 1
+  currentRecoil: 0.4
+  ammo: 1

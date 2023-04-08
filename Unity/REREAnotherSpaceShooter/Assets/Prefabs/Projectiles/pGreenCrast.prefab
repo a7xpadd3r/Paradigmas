@@ -90,6 +90,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2925754733312446922, guid: 01211eaca1779b54892593b605fa465b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 01211eaca1779b54892593b605fa465b, type: 3}
+--- !u!50 &5797714581617266603 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7394990329069685150, guid: 01211eaca1779b54892593b605fa465b, type: 3}
+  m_PrefabInstance: {fileID: 3951299783620265525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6448812041571003344 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8046558512112365029, guid: 01211eaca1779b54892593b605fa465b, type: 3}
@@ -111,6 +116,6 @@ MonoBehaviour:
   speed: 7
   startingSpeedMultiplier: 18
   life: 1
-  rBody: {fileID: 0}
+  rBody: {fileID: 5797714581617266603}
   position: {x: 0, y: 0}
   delta: 0

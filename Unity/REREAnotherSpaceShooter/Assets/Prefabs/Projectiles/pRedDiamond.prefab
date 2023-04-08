@@ -107,7 +107,7 @@ MonoBehaviour:
   damage: 3
   speed: 2
   startingSpeedMultiplier: 15
-  life: 5
+  life: 3
   rBody: {fileID: 7020745415677092045}
   position: {x: 0, y: 0}
   delta: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GreenCrast : BaseProjectile
@@ -9,8 +10,7 @@ public class GreenCrast : BaseProjectile
 
     public override void Start()
     {
-        if (this.rBody == null) this.rBody = GetComponent<Rigidbody2D>();
-        this.rBody.AddForceAtPosition(Vector2.up * (this.speed * this.startingSpeedMultiplier), this.transform.position);
+
     }
 
 }

@@ -1,19 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipLogic : MonoBehaviour
+public abstract class ShipLogic : MonoBehaviour
 {
-    // Status
-    //[SerializeField] private bool hasWeapon = true;
-    //private float currentLife = 10;
-    //private float maxLife = 20;
-
-    // Weapons
-    private int currentWeaponIndex = 0;
-    public BaseWeapons currentWeapon;
-    public List<BaseWeapons> enabledWeapons = new List<BaseWeapons>();
-    public List<BaseWeapons> disabledWeapons = new List<BaseWeapons>();
+    // Basic
+    [SerializeField, Range(1, 100)] private float speed = 50;
+    [HideInInspector] public Vector2 direction = Vector2.zero;
+    public Rigidbody2D rBody;
 
     // Shield
     [SerializeField] private GameObject shieldObject;
@@ -21,18 +14,35 @@ public class ShipLogic : MonoBehaviour
     private float currentShieldTime = 0;
     private bool isShielding = false;
 
+    public bool IsShielding => isShielding;
 
-    void Start()
+    public abstract void Start();
+    public abstract void Update();
+
+    public virtual void FixedUpdate()
     {
+        if (this.direction != Vector2.zero && this.rBody != null)
+        {
+            this.rBody.AddForce(this.direction * (Time.deltaTime * this.speed), ForceMode2D.Impulse);
+            this.direction = Vector2.zero;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void Move(Vector2 newDirection)
     {
-        float delta = Time.deltaTime;
+        this.direction = newDirection;
+    }
 
-        if (this.currentWeapon != null) this.currentWeapon.UpdateThis(delta);
+    public abstract void Fire(Vector2 spawnPoint);
+    public abstract void SwapWeapon(float direction);   // Direction is just Previous/Next weapon available.
 
+    public virtual void GetWeapon(fWeapons.WeaponTypes type)
+    {
+        print($"new weapon event= {type}");
+    }
+
+    public virtual void ShieldUpdate(float delta)
+    {
         if (this.currentShieldTime > 0)
         {
             this.currentShieldTime -= delta;
@@ -41,42 +51,12 @@ public class ShipLogic : MonoBehaviour
 
             this.isShielding = true;
         }
+
         if (this.currentShieldTime <= 0 && this.shieldObject.activeSelf)
         {
             this.shieldObject.SetActive(false);
             this.isShielding = false;
         }
-    }
-
-    public void SwapWeapon(float direction)
-    {
-        if (enabledWeapons.Count > 1)
-        {
-            if (direction > 0)
-            {
-                if (this.currentWeaponIndex == this.enabledWeapons.Count - 1)
-                    this.currentWeaponIndex = 0;
-
-                else
-                    this.currentWeaponIndex++;
-            }
-
-            else
-            {
-                if (this.currentWeaponIndex == 0)
-                    this.currentWeaponIndex = this.enabledWeapons.Count - 1;
-
-                else
-                    this.currentWeaponIndex--;
-            }
-
-            this.currentWeapon = this.enabledWeapons[this.currentWeaponIndex];
-        }
-    }
-
-    public void GetWeapon(fWeapons.WeaponTypes type)
-    {
-        print($"new weapon event= {type}");
     }
 
     public void TESTSHIELD()
