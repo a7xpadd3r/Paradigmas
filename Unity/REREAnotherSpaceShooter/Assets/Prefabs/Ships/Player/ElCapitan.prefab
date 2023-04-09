@@ -426,7 +426,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   rBody: {fileID: 8124463291164634326}
   shieldObject: {fileID: 8124463289966382250}
-  shieldDuration: 2
+  shieldDuration: 1
   enabledWeapons:
   - {fileID: 8170298102685492474, guid: 4dd759fa685e5124393738e08d86fd24, type: 3}
   disabledWeapons:

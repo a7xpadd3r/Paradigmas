@@ -26,7 +26,7 @@ public class PlayerShip : ShipLogic
         if (this.enabledWeapons[currentWeaponIndex] != null)
             this.enabledWeapons[currentWeaponIndex].UpdateThis(delta);
 
-        ShieldUpdate(delta);
+        ShieldUpdateDelta(delta);
     }
 
     public override void SwapWeapon(float direction)

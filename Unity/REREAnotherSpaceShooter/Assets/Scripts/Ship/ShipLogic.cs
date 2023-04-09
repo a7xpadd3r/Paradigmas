@@ -18,6 +18,8 @@ public abstract class ShipLogic : MonoBehaviour
 
     public abstract void Start();
     public abstract void Update();
+    public abstract void Fire(Vector2 spawnPoint);
+    public abstract void SwapWeapon(float direction);   // Previous -1 / Next 1.
 
     public virtual void FixedUpdate()
     {
@@ -33,15 +35,12 @@ public abstract class ShipLogic : MonoBehaviour
         this.direction = newDirection;
     }
 
-    public abstract void Fire(Vector2 spawnPoint);
-    public abstract void SwapWeapon(float direction);   // Direction is just Previous/Next weapon available.
-
     public virtual void GetWeapon(fWeapons.WeaponTypes type)
     {
         print($"new weapon event= {type}");
     }
 
-    public virtual void ShieldUpdate(float delta)
+    public virtual void ShieldUpdateDelta(float delta)
     {
         if (this.currentShieldTime > 0)
         {
@@ -58,6 +57,8 @@ public abstract class ShipLogic : MonoBehaviour
             this.isShielding = false;
         }
     }
+
+
 
     public void TESTSHIELD()
     {

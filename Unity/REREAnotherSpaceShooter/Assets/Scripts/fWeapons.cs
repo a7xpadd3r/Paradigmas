@@ -6,7 +6,7 @@ public class fWeapons : MonoBehaviour
 {
     public enum WeaponTypes
     {
-        BlueRail, RedDiamond, RedDiamondBall, GreenCrast, HeatTrail, OrbWeaver, Gamma, // Player weapons
+        Template, BlueRail, RedDiamond, RedDiamondBall, GreenCrast, HeatTrail, OrbWeaver, Gamma, // Player weapons
         Enemy1, Enemy2, Enemy3                                                         // Enemy weapons
     }
 }

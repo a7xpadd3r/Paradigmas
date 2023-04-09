@@ -76,8 +76,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoilTime: 0.25
-  ThisType: 0
-  prefab: {fileID: 3728774672613329067, guid: 4969cfdbe496d7c4a86fc1f59ecd883b, type: 3}
   canShoot: 1
   currentRecoil: 0.25
-  ammo: 80
+  ThisType: 4
+  prefab: {fileID: 3728774672613329067, guid: 4969cfdbe496d7c4a86fc1f59ecd883b, type: 3}
+  ammo: 0
+  WeaponOriginalAmmo: 50

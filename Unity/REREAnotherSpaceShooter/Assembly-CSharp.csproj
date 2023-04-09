@@ -60,16 +60,16 @@
     <Compile Include="Assets\Scripts\Weapons\wGreenCrast.cs" />
     <Compile Include="Assets\Scripts\Weapons\wRedDiamond.cs" />
     <Compile Include="Assets\Scripts\Projectiles\BaseProjectile.cs" />
+    <Compile Include="Assets\Scripts\Ship\PlayerShip.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Weapons\BaseWeapons.cs" />
     <Compile Include="Assets\Scripts\Ship\ShipLogic.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Player\RedDiamond.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Player\GreenCrast.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\fWeapons.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Player\BlueRail.cs" />
     <Compile Include="Assets\Scripts\UI\TEST_AmmoCount.cs" />
-    <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\Ship\PlayerShip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Pool;
 using static fWeapons;
@@ -5,17 +6,19 @@ using static fWeapons;
 public abstract class BaseWeapons : MonoBehaviour
 {
     [SerializeField] private float recoilTime = 0.4f;
-    public WeaponTypes ThisType = WeaponTypes.BlueRail;
+    [HideInInspector] public ObjectPool<BaseProjectile> pool;
+    [HideInInspector] public bool canShoot = true;
+    [HideInInspector] public float currentRecoil = 0;
 
+    public WeaponTypes ThisType = WeaponTypes.Template;
     public BaseProjectile prefab;
-    public ObjectPool<BaseProjectile> pool;
-
-    public bool canShoot = true;
-    public float currentRecoil = 0;
     public int ammo = 0;
 
+    public WeaponTypes Type => ThisType;
     public int CurrentAmmo => ammo;
     public float RecoilTime => recoilTime;
+    public Action<BaseWeapons> OnAmmoDepleted;
+    //public Action<int> OnAmmoGrab;
 
     public virtual void Fire(Vector2 spawnPosition)
     {
@@ -25,6 +28,8 @@ public abstract class BaseWeapons : MonoBehaviour
             this.canShoot = false;
             BaseProjectile pooledprojectile = this.pool.Get();
             pooledprojectile.Reset(spawnPosition, PoolCall);
+
+            if (ammo <= 0) OnAmmoDepleted.Invoke(this);
         }
     }
 
@@ -48,9 +53,11 @@ public abstract class BaseWeapons : MonoBehaviour
             }, false, 10, 30);
         }
 
+
         ExtraParameters();
     }
 
+    // If needed
     public virtual void ExtraParameters() { }
 
     public void PoolCall(BaseProjectile projectile)
@@ -58,6 +65,7 @@ public abstract class BaseWeapons : MonoBehaviour
         this.pool.Release(projectile);
     }
 
+    // Recoil goes here?
     public virtual void UpdateThis(float delta)
     {
         if (!this.canShoot)

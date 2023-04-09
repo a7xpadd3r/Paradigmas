@@ -7,5 +7,6 @@ public class wGreenCrast : BaseWeapons
     public override void ExtraParameters()
     {
         this.ammo = this.WeaponOriginalAmmo;
+        this.ThisType = fWeapons.WeaponTypes.GreenCrast;
     }
 }

@@ -11,4 +11,9 @@ public class wBlueRail : BaseWeapons
             pooledprojectile.Reset(spawnPoint, PoolCall);
         }
     }
+
+    public override void ExtraParameters()
+    {
+        this.ThisType = fWeapons.WeaponTypes.BlueRail;
+    }
 }
